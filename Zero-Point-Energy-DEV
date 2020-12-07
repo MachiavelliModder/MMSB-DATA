@@ -521,7 +521,7 @@ end
 -- Created by Quenty (@Quenty, follow me on twitter).
 
 end))
-LocalScript6.Name = "Animate"
+--[[LocalScript6.Name = "Animate"
 LocalScript6.Parent = Tool0
 table.insert(cors,sandbox(LocalScript6,function()
 local arms = nil
@@ -678,7 +678,7 @@ end
 
 Tool.AnimateValue.Changed:connect(Animate)
 
-end))
+end))]]
 Script7.Name = "LineConnect"
 Script7.Parent = Tool0
 Script7.Disabled = true
