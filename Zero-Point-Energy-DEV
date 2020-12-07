@@ -83,6 +83,8 @@ Part3.Position = Vector3.new(-54.7998123, 0.774299085, -0.757350147)
 Part3.Orientation = Vector3.new(88.9899979, 164.87999, 73.4700012)
 Part3.Color = Color3.new(0.0156863, 0.686275, 0.92549)
 LocalScript4.Parent = Tool0
+anchored = false
+
 table.insert(cors,sandbox(LocalScript4,function()
 -- Variables for services
 local render = game:GetService("RunService").RenderStepped
@@ -811,7 +813,7 @@ function onButton1Down(mouse)
 			local t = mouse.Target
             
 			if (t.Anchored==true) then 
-        if t.Name == '@*sjfn@Yd31' then
+       			 if anchored == true then
 				object = t
 				dist = (object.Position-front.Position).magnitude
     
@@ -838,22 +840,26 @@ end
 	object = nil
 	objval.Value = nil
 end
-
+local zpegui = game.Players.LocalPlayer.PlayerGui.ZPE_MMSB
 function onKeyDown(key,mouse) 
 	local key = key:lower() 
 	local yesh = false 
 	if (key=="q") then 
 		if (dist>=1) then 
+			if zpegui.Mainframe.Selected.SelectM.PP.Value == true then
 			dist = dist-1 
 		end 
+end
 	end 
 	if key == "t" then 
+	if zpegui.Mainframe.Selected.SelectM.ARG.Value == true then
 	if (object==nil) then return end 
 	for _,v in pairs(object:children()) do 
 	if v.className == "BodyGyro" then 
 	return nil 
 	end 
 	end 
+	end
 	BG = Instance.new("BodyGyro") 
 	BG.maxTorque = Vector3.new(math.huge,math.huge,math.huge) 
 	BG.cframe = CFrame.new(object.CFrame.p) 
@@ -869,6 +875,8 @@ function onKeyDown(key,mouse)
 	object.Velocity = Vector3.new(0,0,0) 
 	object.RotVelocity = Vector3.new(0,0,0) 
 	end 
+
+	if zpegui.Mainframe.Selected.SelectM.LEG.Value == true then
 	if (key=="e") then
 		dist = dist+1
 	end
@@ -877,20 +885,94 @@ function onKeyDown(key,mouse)
 	end
 	if (key=="c") then 
 			dist = dist+10 
-		end
+		end	
+if (key=="q") then 
+		if (dist>=1) then 
+			dist = dist-1 
+		end 
+	end 
 if (key=="r") then 
 object.BodyGyro:Destroy()
 end
 local ffval = Instance.new("StringValue")
 if (key=="x") then 
-ffval.Parent = workspace
-ffval.Value = object.Name
-object.Name = '@*sjfn@Yd31'
+if anchored == false then
+anchored = true
 object.Anchored = true
+else
+end
 end
 if (key=="v") then 
-object.Name = ffval.Value
+if anchored == true then
+anchored = false
 object.Anchored = false
+end
+
+	if key == "t" then 
+	if (object==nil) then return end 
+	for _,v in pairs(object:children()) do 
+	if v.className == "BodyGyro" then 
+	return nil 
+	end 
+	end
+	BG = Instance.new("BodyGyro") 
+	BG.maxTorque = Vector3.new(math.huge,math.huge,math.huge) 
+	BG.cframe = CFrame.new(object.CFrame.p) 
+	BG.Parent = object 
+	repeat wait() until(object.CFrame == CFrame.new(object.CFrame.p)) 
+	BG.Parent = nil 
+	if (object==nil) then return end 
+	for _,v in pairs(object:children()) do 
+	if v.className == "BodyGyro" then 
+	v.Parent = nil 
+	end 
+	end 
+	object.Velocity = Vector3.new(0,0,0) 
+	object.RotVelocity = Vector3.new(0,0,0) 
+	end 
+else
+end
+end
+
+
+	if (key=="e") then
+		if zpegui.Mainframe.Selected.SelectM.PP.Value == true then
+		dist = dist+1
+	end
+end
+	if (key=="z") then
+		if zpegui.Mainframe.Selected.SelectM.PP.Value == true then
+		dist = dist-10
+	end
+end
+	if (key=="c") then 
+		if zpegui.Mainframe.Selected.SelectM.PP.Value == true then
+			dist = dist+10 
+		end
+end
+if (key=="r") then 
+if zpegui.Mainframe.Selected.SelectM.ARG.Value == true then
+object.BodyGyro:Destroy()
+end
+end
+local ffval = Instance.new("StringValue")
+if (key=="x") then 
+	if zpegui.Mainframe.Selected.SelectM.AU.Value == true then
+if anchored == false then
+anchored = true
+object.Anchored = true
+else
+end
+end
+end
+if (key=="v") then 
+	if zpegui.Mainframe.Selected.SelectM.AU.Value == true then
+if anchored == true then
+object.Anchored = false
+anchored = false
+else
+end
+end
 end
 	if (string.byte(key)==27) then 
 		if (object==nil) then return end
@@ -1121,277 +1203,956 @@ end
 
 -- Instances:
 
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
+local ZPE_MMSB = Instance.new("ScreenGui")
+local Mainframe = Instance.new("Frame")
+local Options = Instance.new("Frame")
+local Outline = Instance.new("ImageLabel")
 local TextLabel = Instance.new("TextLabel")
-local TextButton = Instance.new("TextButton")
-
---Properties:
-
-
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(0, 1167, 0, 0)
-Frame.Size = UDim2.new(0, 250, 0, 93)
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.Position = UDim2.new(0.0240000486, 0, 0.0322580636, 0)
-TextLabel.Size = UDim2.new(0, 238, 0, 87)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "|| T > Add Gyro |||| R > Remove Gyro |||| E > Short Range Part Manipulator Forward |||| Q > Short Range Part Manipulator Backward |||| C > Long Range Part Manipulator Forward |||| Z > Long Range Part Manipulator Backward ||"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.Position = UDim2.new(1, 0, -0.0666666776, 0)
-TextButton.Size = UDim2.new(0, 20, 0, 20)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "X"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 14.000
-
--- Scripts:
-
-local function YCMNYLJ_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
-
-	local txtscreen = script.Parent.Parent.Parent
-	
-	script.Parent.MouseButton1Click:Connect(function()
-	txtscreen:Destroy()
-	end)
-	
-end
-coroutine.wrap(YCMNYLJ_fake_script)()
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
+local Outline_2 = Instance.new("ImageLabel")
+local OptionsClose = Instance.new("TextButton")
+local Outline_3 = Instance.new("ImageLabel")
+local Changelog = Instance.new("TextButton")
+local Changelog_Roundify_12px = Instance.new("ImageLabel")
+local Frame = Instance.new("ImageLabel")
 local TextLabel_2 = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local Selected = Instance.new("Frame")
+local Outline_4 = Instance.new("ImageLabel")
+local SelectM = Instance.new("TextButton")
+local Roundify = Instance.new("ImageLabel")
+local OptionsOpen = Instance.new("TextButton")
+local Outline_5 = Instance.new("ImageLabel")
 local TextLabel_3 = Instance.new("TextLabel")
-local TextButton = Instance.new("TextButton")
+local Outline_6 = Instance.new("ImageLabel")
+local Mode = Instance.new("Frame")
+local Outline_7 = Instance.new("ImageLabel")
 local TextLabel_4 = Instance.new("TextLabel")
+local Outline_8 = Instance.new("ImageLabel")
+local PP = Instance.new("TextButton")
+local Changelog_Roundify_12px_2 = Instance.new("ImageLabel")
+local Frame_2 = Instance.new("ImageLabel")
 local TextLabel_5 = Instance.new("TextLabel")
+local TextBox_2 = Instance.new("TextBox")
+local AU = Instance.new("TextButton")
+local Changelog_Roundify_12px_3 = Instance.new("ImageLabel")
+local Frame_3 = Instance.new("ImageLabel")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextBox_3 = Instance.new("TextBox")
+local ARG = Instance.new("TextButton")
+local Changelog_Roundify_12px_4 = Instance.new("ImageLabel")
+local Frame_4 = Instance.new("ImageLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextBox_4 = Instance.new("TextBox")
+local LEG = Instance.new("TextButton")
+local Changelog_Roundify_12px_5 = Instance.new("ImageLabel")
+local Frame_5 = Instance.new("ImageLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local TextBox_5 = Instance.new("TextBox")
+local NVM = Instance.new("TextButton")
+local Changelog_Roundify_12px_6 = Instance.new("ImageLabel")
+local Frame_6 = Instance.new("ImageLabel")
+local TextLabel_9 = Instance.new("TextLabel")
+local TextBox_6 = Instance.new("TextBox")
+local Button = Instance.new("Sound")
+local ClickFast = Instance.new("Sound")
+local Copy = Instance.new("Sound")
+local Kerplunk = Instance.new("Sound")
+local Switch = Instance.new("Sound")
+local PP2 = Instance.new("BoolValue")
+local AU2 = Instance.new("BoolValue")
+local ARG2 = Instance.new("BoolValue")
+local LEG2 = Instance.new("BoolValue")
+local NVM2 = Instance.new("BoolValue")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ZPE_MMSB.Name = "ZPE_MMSB"
+ZPE_MMSB.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(0, 1167, 0, 584)
-Frame.Size = UDim2.new(0, 250, 0, 300)
+Mainframe.Name = "Mainframe"
+Mainframe.Parent = ZPE_MMSB
+Mainframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Mainframe.BackgroundTransparency = 1.000
+Mainframe.Position = UDim2.new(0.171916008, 0, 0.208860755, 0)
+Mainframe.Size = UDim2.new(0, 500, 0, 500)
 
-TextLabel.Parent = Frame
+Options.Name = "Options"
+Options.Parent = Mainframe
+Options.Active = true
+Options.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Options.BackgroundTransparency = 1.000
+Options.BorderSizePixel = 0
+Options.Position = UDim2.new(0.200000003, 0, 0.159999996, 0)
+Options.Size = UDim2.new(0, 300, 0, 128)
+Options.Visible = false
+
+Outline.Name = "Outline"
+Outline.Parent = Options
+Outline.AnchorPoint = Vector2.new(0.5, 0.5)
+Outline.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Outline.BackgroundTransparency = 1.000
+Outline.Position = UDim2.new(0.5, 0, 0.628823638, 0)
+Outline.Size = UDim2.new(0, 300, 0, 100)
+Outline.ZIndex = 2
+Outline.Image = "rbxassetid://3570695787"
+Outline.ScaleType = Enum.ScaleType.Slice
+Outline.SliceCenter = Rect.new(100, 100, 100, 100)
+Outline.SliceScale = 0.120
+
+TextLabel.Parent = Options
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.Size = UDim2.new(0, 250, 0, 31)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "|||This script is to be kept private, unless told otherwise by Machiavelli_Modder#0453|||"
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0, 0, 0.00764706731, 0)
+TextLabel.Size = UDim2.new(0, 140, 0, 40)
+TextLabel.Font = Enum.Font.RobotoMono
+TextLabel.Text = "ZPE-V2.3"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+TextLabel.TextSize = 25.000
+
+Outline_2.Name = "Outline"
+Outline_2.Parent = TextLabel
+Outline_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Outline_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Outline_2.BackgroundTransparency = 1.000
+Outline_2.Position = UDim2.new(0.5, 0, 0.625, 0)
+Outline_2.Size = UDim2.new(1, 0, 1.25, 0)
+Outline_2.ZIndex = 0
+Outline_2.Image = "rbxassetid://3570695787"
+Outline_2.ScaleType = Enum.ScaleType.Slice
+Outline_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Outline_2.SliceScale = 0.120
+
+OptionsClose.Name = "OptionsClose"
+OptionsClose.Parent = Options
+OptionsClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OptionsClose.BackgroundTransparency = 1.000
+OptionsClose.BorderSizePixel = 0
+OptionsClose.Position = UDim2.new(0.76666671, 0, 0.039816156, 0)
+OptionsClose.Size = UDim2.new(0, 70, 0, 40)
+OptionsClose.ZIndex = 2
+OptionsClose.Font = Enum.Font.RobotoMono
+OptionsClose.Text = "Close Options"
+OptionsClose.TextColor3 = Color3.fromRGB(0, 0, 0)
+OptionsClose.TextSize = 18.000
+OptionsClose.TextWrapped = true
+
+Outline_3.Name = "Outline"
+Outline_3.Parent = OptionsClose
+Outline_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Outline_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Outline_3.BackgroundTransparency = 1.000
+Outline_3.Position = UDim2.new(0.5, 0, 0.5625, 0)
+Outline_3.Size = UDim2.new(1, 0, 1.375, 0)
+Outline_3.ZIndex = 0
+Outline_3.Image = "rbxassetid://3570695787"
+Outline_3.ScaleType = Enum.ScaleType.Slice
+Outline_3.SliceCenter = Rect.new(100, 100, 100, 100)
+Outline_3.SliceScale = 0.120
+
+Changelog.Name = "Changelog"
+Changelog.Parent = Options
+Changelog.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Changelog.BackgroundTransparency = 1.000
+Changelog.BorderSizePixel = 0
+Changelog.Position = UDim2.new(0.0666666925, 0, 0.3125, 0)
+Changelog.Size = UDim2.new(0, 100, 0, 50)
+Changelog.ZIndex = 100
+Changelog.Font = Enum.Font.SourceSans
+Changelog.Text = "Changelog"
+Changelog.TextColor3 = Color3.fromRGB(0, 0, 0)
+Changelog.TextScaled = true
+Changelog.TextSize = 14.000
+Changelog.TextWrapped = true
+
+Changelog_Roundify_12px.Name = "Changelog_Roundify_12px"
+Changelog_Roundify_12px.Parent = Changelog
+Changelog_Roundify_12px.Active = true
+Changelog_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+Changelog_Roundify_12px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Changelog_Roundify_12px.BackgroundTransparency = 1.000
+Changelog_Roundify_12px.Position = UDim2.new(0.5, 0, 0.5, 0)
+Changelog_Roundify_12px.Selectable = true
+Changelog_Roundify_12px.Size = UDim2.new(1, 0, 1, 0)
+Changelog_Roundify_12px.ZIndex = 99
+Changelog_Roundify_12px.Image = "rbxassetid://3570695787"
+Changelog_Roundify_12px.ImageColor3 = Color3.fromRGB(193, 193, 193)
+Changelog_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+Changelog_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+Changelog_Roundify_12px.SliceScale = 0.120
+
+Frame.Name = "Frame"
+Frame.Parent = Changelog
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.0772079453, 0, -3.88000011, 0)
+Frame.Size = UDim2.new(0, 244, 0, 144)
+Frame.Visible = false
+Frame.Image = "rbxassetid://3570695787"
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.120
 
 TextLabel_2.Parent = Frame
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.Position = UDim2.new(0, 0, 0.229999959, 0)
-TextLabel_2.Size = UDim2.new(0, 250, 0, 89)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Size = UDim2.new(0, 244, 0, 44)
 TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Thank you for using my Zero Point Energy Script, AKA PhysicsGun V3, I made this script to intend to fix Physicsgun V2 because it has several clientside scripts that get in the way easily. This version was edited so it comes with this GUI and all scripts for this physgun is ServerSided, Changelist is below."
+TextLabel_2.Text = "Hello, Person! Thank you for spending your time using ZPE. On to the changelog now."
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 14.000
 TextLabel_2.TextWrapped = true
 
-TextLabel_3.Parent = Frame
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.Position = UDim2.new(0.0860657021, 0, 0.409722209, 0)
+TextBox.Selectable = false
+TextBox.Size = UDim2.new(0, 200, 0, 70)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog/ for list."
+TextBox.ShowNativeInput = false
+TextBox.Text = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog for list."
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+Selected.Name = "Selected"
+Selected.Parent = Mainframe
+Selected.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Selected.BackgroundTransparency = 1.000
+Selected.BorderSizePixel = 0
+Selected.Position = UDim2.new(0.200000003, 0, 0.409999996, 0)
+Selected.Size = UDim2.new(0, 300, 0, 100)
+Selected.ZIndex = 0
+
+Outline_4.Name = "Outline"
+Outline_4.Parent = Selected
+Outline_4.AnchorPoint = Vector2.new(0.5, 0.5)
+Outline_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Outline_4.BackgroundTransparency = 1.000
+Outline_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+Outline_4.Size = UDim2.new(0, 300, 0, 100)
+Outline_4.Image = "rbxassetid://3570695787"
+Outline_4.ScaleType = Enum.ScaleType.Slice
+Outline_4.SliceCenter = Rect.new(100, 100, 100, 100)
+Outline_4.SliceScale = 0.120
+
+SelectM.Name = "SelectM"
+SelectM.Parent = Selected
+SelectM.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SelectM.BackgroundTransparency = 1.000
+SelectM.BorderSizePixel = 0
+SelectM.Position = UDim2.new(0.0833333358, 0, 0.25, 0)
+SelectM.Size = UDim2.new(0, 250, 0, 50)
+SelectM.ZIndex = 2
+SelectM.Font = Enum.Font.SourceSans
+SelectM.Text = "Select Mode"
+SelectM.TextColor3 = Color3.fromRGB(0, 0, 0)
+SelectM.TextScaled = true
+SelectM.TextSize = 40.000
+SelectM.TextWrapped = true
+
+Roundify.Name = "Roundify"
+Roundify.Parent = SelectM
+Roundify.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify.BackgroundTransparency = 1.000
+Roundify.Position = UDim2.new(0.5, 0, 0.479999989, 0)
+Roundify.Size = UDim2.new(1, 24, 1, 24)
+Roundify.Image = "rbxassetid://3570695787"
+Roundify.ImageColor3 = Color3.fromRGB(193, 193, 193)
+Roundify.ScaleType = Enum.ScaleType.Slice
+Roundify.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify.SliceScale = 0.120
+
+OptionsOpen.Name = "OptionsOpen"
+OptionsOpen.Parent = Mainframe
+OptionsOpen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OptionsOpen.BackgroundTransparency = 1.000
+OptionsOpen.BorderSizePixel = 0
+OptionsOpen.Position = UDim2.new(0.660000026, 0, 0.359999985, 0)
+OptionsOpen.Size = UDim2.new(0, 70, 0, 40)
+OptionsOpen.Font = Enum.Font.RobotoMono
+OptionsOpen.Text = "Options"
+OptionsOpen.TextColor3 = Color3.fromRGB(0, 0, 0)
+OptionsOpen.TextSize = 18.000
+
+Outline_5.Name = "Outline"
+Outline_5.Parent = OptionsOpen
+Outline_5.AnchorPoint = Vector2.new(0.5, 0.5)
+Outline_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Outline_5.BackgroundTransparency = 1.000
+Outline_5.Position = UDim2.new(0.5, 0, 0.5, 0)
+Outline_5.Size = UDim2.new(1, 0, 1.25, 0)
+Outline_5.ZIndex = 0
+Outline_5.Image = "rbxassetid://3570695787"
+Outline_5.ScaleType = Enum.ScaleType.Slice
+Outline_5.SliceCenter = Rect.new(100, 100, 100, 100)
+Outline_5.SliceScale = 0.120
+
+TextLabel_3.Parent = Mainframe
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.Position = UDim2.new(0, 0, 0.526666641, 0)
-TextLabel_3.Size = UDim2.new(0, 250, 0, 103)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "|| Added Long and Short model mover || Removed Original Model Mover and replaced it with Long&Short || Removed Spawn Cube, Removed Duplicate Part and Removed Remove Part||"
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.200000003, 0, 0.350000024, 0)
+TextLabel_3.Rotation = 0.300
+TextLabel_3.Size = UDim2.new(0, 140, 0, 40)
+TextLabel_3.Font = Enum.Font.RobotoMono
+TextLabel_3.Text = "ZPE-V2.3"
 TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 20.000
-TextLabel_3.TextWrapped = true
-TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
-TextLabel_3.TextYAlignment = Enum.TextYAlignment.Top
+TextLabel_3.TextSize = 25.000
 
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.Position = UDim2.new(1, 0, -0.0666666776, 0)
-TextButton.Size = UDim2.new(0, 20, 0, 20)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "X"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 14.000
+Outline_6.Name = "Outline"
+Outline_6.Parent = TextLabel_3
+Outline_6.AnchorPoint = Vector2.new(0.5, 0.5)
+Outline_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Outline_6.BackgroundTransparency = 1.000
+Outline_6.Position = UDim2.new(0.5, 0, 0.625, 0)
+Outline_6.Size = UDim2.new(1, 0, 1.25, 0)
+Outline_6.ZIndex = 0
+Outline_6.Image = "rbxassetid://3570695787"
+Outline_6.ScaleType = Enum.ScaleType.Slice
+Outline_6.SliceCenter = Rect.new(100, 100, 100, 100)
+Outline_6.SliceScale = 0.120
 
-TextLabel_4.Parent = Frame
+Mode.Name = "Mode"
+Mode.Parent = Mainframe
+Mode.Active = true
+Mode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Mode.BackgroundTransparency = 1.000
+Mode.BorderSizePixel = 0
+Mode.Position = UDim2.new(0.200000003, 0, 0.159999996, 0)
+Mode.Size = UDim2.new(0, 300, 0, 128)
+Mode.Visible = false
+
+Outline_7.Name = "Outline"
+Outline_7.Parent = Mode
+Outline_7.AnchorPoint = Vector2.new(0.5, 0.5)
+Outline_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Outline_7.BackgroundTransparency = 1.000
+Outline_7.Position = UDim2.new(0.5, 0, 0.628823638, 0)
+Outline_7.Size = UDim2.new(0, 300, 0, 100)
+Outline_7.ZIndex = 2
+Outline_7.Image = "rbxassetid://3570695787"
+Outline_7.ScaleType = Enum.ScaleType.Slice
+Outline_7.SliceCenter = Rect.new(100, 100, 100, 100)
+Outline_7.SliceScale = 0.120
+
+TextLabel_4.Parent = Mode
 TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.Position = UDim2.new(0, 0, 0.103333332, 0)
-TextLabel_4.Size = UDim2.new(0, 250, 0, 38)
-TextLabel_4.Font = Enum.Font.SourceSans
-TextLabel_4.Text = "2 Arms stick out because its harder to make 1 arm not be affected, Sorry! (Arm positions are not serversided, They will appear like your holding a regular tool)"
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0, 0, 0.00764706731, 0)
+TextLabel_4.Size = UDim2.new(0, 140, 0, 40)
+TextLabel_4.Font = Enum.Font.RobotoMono
+TextLabel_4.Text = "ZPE-V2.3"
 TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.TextScaled = true
-TextLabel_4.TextSize = 14.000
-TextLabel_4.TextWrapped = true
+TextLabel_4.TextSize = 25.000
 
-TextLabel_5.Parent = Frame
+Outline_8.Name = "Outline"
+Outline_8.Parent = TextLabel_4
+Outline_8.AnchorPoint = Vector2.new(0.5, 0.5)
+Outline_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Outline_8.BackgroundTransparency = 1.000
+Outline_8.Position = UDim2.new(0.5, 0, 0.625, 0)
+Outline_8.Size = UDim2.new(1, 0, 1.25, 0)
+Outline_8.ZIndex = 0
+Outline_8.Image = "rbxassetid://3570695787"
+Outline_8.ScaleType = Enum.ScaleType.Slice
+Outline_8.SliceCenter = Rect.new(100, 100, 100, 100)
+Outline_8.SliceScale = 0.120
+
+PP.Name = "PP"
+PP.Parent = Mode
+PP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PP.BackgroundTransparency = 1.000
+PP.BorderSizePixel = 0
+PP.Position = UDim2.new(0.0666666925, 0, 0.3125, 0)
+PP.Size = UDim2.new(0, 70, 0, 30)
+PP.ZIndex = 100
+PP.Font = Enum.Font.SourceSans
+PP.Text = "Push/Pull"
+PP.TextColor3 = Color3.fromRGB(0, 0, 0)
+PP.TextScaled = true
+PP.TextSize = 14.000
+PP.TextWrapped = true
+PP2.Name = "PP"
+PP2.Parent = SelectM
+
+Changelog_Roundify_12px_2.Name = "Changelog_Roundify_12px"
+Changelog_Roundify_12px_2.Parent = PP
+Changelog_Roundify_12px_2.Active = true
+Changelog_Roundify_12px_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Changelog_Roundify_12px_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Changelog_Roundify_12px_2.BackgroundTransparency = 1.000
+Changelog_Roundify_12px_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+Changelog_Roundify_12px_2.Selectable = true
+Changelog_Roundify_12px_2.Size = UDim2.new(1, 0, 1, 0)
+Changelog_Roundify_12px_2.ZIndex = 99
+Changelog_Roundify_12px_2.Image = "rbxassetid://3570695787"
+Changelog_Roundify_12px_2.ImageColor3 = Color3.fromRGB(193, 193, 193)
+Changelog_Roundify_12px_2.ScaleType = Enum.ScaleType.Slice
+Changelog_Roundify_12px_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Changelog_Roundify_12px_2.SliceScale = 0.120
+
+Frame_2.Name = "Frame"
+Frame_2.Parent = PP
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.Position = UDim2.new(0.0772079453, 0, -3.88000011, 0)
+Frame_2.Size = UDim2.new(0, 244, 0, 144)
+Frame_2.Visible = false
+Frame_2.Image = "rbxassetid://3570695787"
+Frame_2.ScaleType = Enum.ScaleType.Slice
+Frame_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame_2.SliceScale = 0.120
+
+TextLabel_5.Parent = Frame_2
 TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.Position = UDim2.new(0, 0, 0.870000005, 0)
-TextLabel_5.Size = UDim2.new(0, 250, 0, 39)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Size = UDim2.new(0, 244, 0, 44)
 TextLabel_5.Font = Enum.Font.SourceSans
-TextLabel_5.Text = "Credits:  Ƶwolf, Moon, Edge, Quenty, Killersoldier45"
+TextLabel_5.Text = "Hello, Person! Thank you for spending your time using ZPE. On to the changelog now."
 TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_5.TextScaled = true
-TextLabel_5.TextSize = 20.000
+TextLabel_5.TextSize = 14.000
 TextLabel_5.TextWrapped = true
-TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
-TextLabel_5.TextYAlignment = Enum.TextYAlignment.Top
+
+TextBox_2.Parent = Frame_2
+TextBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_2.Position = UDim2.new(0.0860657021, 0, 0.409722209, 0)
+TextBox_2.Selectable = false
+TextBox_2.Size = UDim2.new(0, 200, 0, 70)
+TextBox_2.ClearTextOnFocus = false
+TextBox_2.Font = Enum.Font.SourceSans
+TextBox_2.PlaceholderText = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog/ for list."
+TextBox_2.ShowNativeInput = false
+TextBox_2.Text = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog for list."
+TextBox_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_2.TextSize = 14.000
+TextBox_2.TextWrapped = true
+
+AU.Name = "AU"
+AU.Parent = Mode
+AU.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AU.BackgroundTransparency = 1.000
+AU.BorderSizePixel = 0
+AU.Position = UDim2.new(0.383333355, 0, 0.3125, 0)
+AU.Size = UDim2.new(0, 70, 0, 30)
+AU.ZIndex = 100
+AU.Font = Enum.Font.SourceSans
+AU.Text = "Anchor/Unanchor"
+AU.TextColor3 = Color3.fromRGB(0, 0, 0)
+AU.TextScaled = true
+AU.TextSize = 14.000
+AU.TextWrapped = true
+AU2.Name = "AU"
+AU2.Parent = SelectM
+
+Changelog_Roundify_12px_3.Name = "Changelog_Roundify_12px"
+Changelog_Roundify_12px_3.Parent = AU
+Changelog_Roundify_12px_3.Active = true
+Changelog_Roundify_12px_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Changelog_Roundify_12px_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Changelog_Roundify_12px_3.BackgroundTransparency = 1.000
+Changelog_Roundify_12px_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+Changelog_Roundify_12px_3.Selectable = true
+Changelog_Roundify_12px_3.Size = UDim2.new(1, 0, 1, 0)
+Changelog_Roundify_12px_3.ZIndex = 99
+Changelog_Roundify_12px_3.Image = "rbxassetid://3570695787"
+Changelog_Roundify_12px_3.ImageColor3 = Color3.fromRGB(193, 193, 193)
+Changelog_Roundify_12px_3.ScaleType = Enum.ScaleType.Slice
+Changelog_Roundify_12px_3.SliceCenter = Rect.new(100, 100, 100, 100)
+Changelog_Roundify_12px_3.SliceScale = 0.120
+
+Frame_3.Name = "Frame"
+Frame_3.Parent = AU
+Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.BackgroundTransparency = 1.000
+Frame_3.Position = UDim2.new(0.0772079453, 0, -3.88000011, 0)
+Frame_3.Size = UDim2.new(0, 244, 0, 144)
+Frame_3.Visible = false
+Frame_3.Image = "rbxassetid://3570695787"
+Frame_3.ScaleType = Enum.ScaleType.Slice
+Frame_3.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame_3.SliceScale = 0.120
+
+TextLabel_6.Parent = Frame_3
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Size = UDim2.new(0, 244, 0, 44)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "Hello, Person! Thank you for spending your time using ZPE. On to the changelog now."
+TextLabel_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 14.000
+TextLabel_6.TextWrapped = true
+
+TextBox_3.Parent = Frame_3
+TextBox_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_3.Position = UDim2.new(0.0860657021, 0, 0.409722209, 0)
+TextBox_3.Selectable = false
+TextBox_3.Size = UDim2.new(0, 200, 0, 70)
+TextBox_3.ClearTextOnFocus = false
+TextBox_3.Font = Enum.Font.SourceSans
+TextBox_3.PlaceholderText = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog/ for list."
+TextBox_3.ShowNativeInput = false
+TextBox_3.Text = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog for list."
+TextBox_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_3.TextSize = 14.000
+TextBox_3.TextWrapped = true
+
+ARG.Name = "ARG"
+ARG.Parent = Mode
+ARG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ARG.BackgroundTransparency = 1.000
+ARG.BorderSizePixel = 0
+ARG.Position = UDim2.new(0.703333378, 0, 0.3125, 0)
+ARG.Size = UDim2.new(0, 70, 0, 30)
+ARG.ZIndex = 100
+ARG.Font = Enum.Font.SourceSans
+ARG.Text = "Add/Remove Gyro"
+ARG.TextColor3 = Color3.fromRGB(0, 0, 0)
+ARG.TextScaled = true
+ARG.TextSize = 14.000
+ARG.TextWrapped = true
+ARG2.Name = "ARG"
+ARG2.Parent = SelectM
+
+Changelog_Roundify_12px_4.Name = "Changelog_Roundify_12px"
+Changelog_Roundify_12px_4.Parent = ARG
+Changelog_Roundify_12px_4.Active = true
+Changelog_Roundify_12px_4.AnchorPoint = Vector2.new(0.5, 0.5)
+Changelog_Roundify_12px_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Changelog_Roundify_12px_4.BackgroundTransparency = 1.000
+Changelog_Roundify_12px_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+Changelog_Roundify_12px_4.Selectable = true
+Changelog_Roundify_12px_4.Size = UDim2.new(1, 0, 1, 0)
+Changelog_Roundify_12px_4.ZIndex = 99
+Changelog_Roundify_12px_4.Image = "rbxassetid://3570695787"
+Changelog_Roundify_12px_4.ImageColor3 = Color3.fromRGB(193, 193, 193)
+Changelog_Roundify_12px_4.ScaleType = Enum.ScaleType.Slice
+Changelog_Roundify_12px_4.SliceCenter = Rect.new(100, 100, 100, 100)
+Changelog_Roundify_12px_4.SliceScale = 0.120
+
+Frame_4.Name = "Frame"
+Frame_4.Parent = ARG
+Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_4.BackgroundTransparency = 1.000
+Frame_4.Position = UDim2.new(0.0772079453, 0, -3.88000011, 0)
+Frame_4.Size = UDim2.new(0, 244, 0, 144)
+Frame_4.Visible = false
+Frame_4.Image = "rbxassetid://3570695787"
+Frame_4.ScaleType = Enum.ScaleType.Slice
+Frame_4.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame_4.SliceScale = 0.120
+
+TextLabel_7.Parent = Frame_4
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Size = UDim2.new(0, 244, 0, 44)
+TextLabel_7.Font = Enum.Font.SourceSans
+TextLabel_7.Text = "Hello, Person! Thank you for spending your time using ZPE. On to the changelog now."
+TextLabel_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 14.000
+TextLabel_7.TextWrapped = true
+
+TextBox_4.Parent = Frame_4
+TextBox_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_4.Position = UDim2.new(0.0860657021, 0, 0.409722209, 0)
+TextBox_4.Selectable = false
+TextBox_4.Size = UDim2.new(0, 200, 0, 70)
+TextBox_4.ClearTextOnFocus = false
+TextBox_4.Font = Enum.Font.SourceSans
+TextBox_4.PlaceholderText = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog/ for list."
+TextBox_4.ShowNativeInput = false
+TextBox_4.Text = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog for list."
+TextBox_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_4.TextSize = 14.000
+TextBox_4.TextWrapped = true
+
+LEG.Name = "LEG"
+LEG.Parent = Mode
+LEG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LEG.BackgroundTransparency = 1.000
+LEG.BorderSizePixel = 0
+LEG.Position = UDim2.new(0.0666666925, 0, 0.6796875, 0)
+LEG.Size = UDim2.new(0, 70, 0, 30)
+LEG.ZIndex = 100
+LEG.Font = Enum.Font.SourceSans
+LEG.Text = "Legacy"
+LEG.TextColor3 = Color3.fromRGB(0, 0, 0)
+LEG.TextSize = 20.000
+LEG.TextWrapped = true
+LEG2.Name = "LEG"
+LEG2.Parent = SelectM
+
+Changelog_Roundify_12px_5.Name = "Changelog_Roundify_12px"
+Changelog_Roundify_12px_5.Parent = LEG
+Changelog_Roundify_12px_5.Active = true
+Changelog_Roundify_12px_5.AnchorPoint = Vector2.new(0.5, 0.5)
+Changelog_Roundify_12px_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Changelog_Roundify_12px_5.BackgroundTransparency = 1.000
+Changelog_Roundify_12px_5.Position = UDim2.new(0.5, 0, 0.5, 0)
+Changelog_Roundify_12px_5.Selectable = true
+Changelog_Roundify_12px_5.Size = UDim2.new(1, 0, 1, 0)
+Changelog_Roundify_12px_5.ZIndex = 99
+Changelog_Roundify_12px_5.Image = "rbxassetid://3570695787"
+Changelog_Roundify_12px_5.ImageColor3 = Color3.fromRGB(193, 193, 193)
+Changelog_Roundify_12px_5.ScaleType = Enum.ScaleType.Slice
+Changelog_Roundify_12px_5.SliceCenter = Rect.new(100, 100, 100, 100)
+Changelog_Roundify_12px_5.SliceScale = 0.120
+
+Frame_5.Name = "Frame"
+Frame_5.Parent = LEG
+Frame_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_5.BackgroundTransparency = 1.000
+Frame_5.Position = UDim2.new(0.0772079453, 0, -3.88000011, 0)
+Frame_5.Size = UDim2.new(0, 244, 0, 144)
+Frame_5.Visible = false
+Frame_5.Image = "rbxassetid://3570695787"
+Frame_5.ScaleType = Enum.ScaleType.Slice
+Frame_5.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame_5.SliceScale = 0.120
+
+TextLabel_8.Parent = Frame_5
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.Size = UDim2.new(0, 244, 0, 44)
+TextLabel_8.Font = Enum.Font.SourceSans
+TextLabel_8.Text = "Hello, Person! Thank you for spending your time using ZPE. On to the changelog now."
+TextLabel_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 14.000
+TextLabel_8.TextWrapped = true
+
+TextBox_5.Parent = Frame_5
+TextBox_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_5.Position = UDim2.new(0.0860657021, 0, 0.409722209, 0)
+TextBox_5.Selectable = false
+TextBox_5.Size = UDim2.new(0, 200, 0, 70)
+TextBox_5.ClearTextOnFocus = false
+TextBox_5.Font = Enum.Font.SourceSans
+TextBox_5.PlaceholderText = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog/ for list."
+TextBox_5.ShowNativeInput = false
+TextBox_5.Text = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog for list."
+TextBox_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_5.TextSize = 14.000
+TextBox_5.TextWrapped = true
+
+NVM.Name = "NVM"
+NVM.Parent = Mode
+NVM.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NVM.BackgroundTransparency = 1.000
+NVM.BorderSizePixel = 0
+NVM.Position = UDim2.new(0.703333378, 0, 0.6796875, 0)
+NVM.Size = UDim2.new(0, 70, 0, 30)
+NVM.ZIndex = 100
+NVM.Font = Enum.Font.SourceSans
+NVM.Text = "Nevermind!"
+NVM.TextColor3 = Color3.fromRGB(0, 0, 0)
+NVM.TextScaled = true
+NVM.TextSize = 14.000
+NVM.TextWrapped = true
+NVM2.Parent = SelectM
+NVM2.Name = "NVM"
+
+Changelog_Roundify_12px_6.Name = "Changelog_Roundify_12px"
+Changelog_Roundify_12px_6.Parent = NVM
+Changelog_Roundify_12px_6.Active = true
+Changelog_Roundify_12px_6.AnchorPoint = Vector2.new(0.5, 0.5)
+Changelog_Roundify_12px_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Changelog_Roundify_12px_6.BackgroundTransparency = 1.000
+Changelog_Roundify_12px_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+Changelog_Roundify_12px_6.Selectable = true
+Changelog_Roundify_12px_6.Size = UDim2.new(1, 0, 1, 0)
+Changelog_Roundify_12px_6.ZIndex = 99
+Changelog_Roundify_12px_6.Image = "rbxassetid://3570695787"
+Changelog_Roundify_12px_6.ImageColor3 = Color3.fromRGB(255, 0, 0)
+Changelog_Roundify_12px_6.ScaleType = Enum.ScaleType.Slice
+Changelog_Roundify_12px_6.SliceCenter = Rect.new(100, 100, 100, 100)
+Changelog_Roundify_12px_6.SliceScale = 0.120
+
+Frame_6.Name = "Frame"
+Frame_6.Parent = NVM
+Frame_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_6.BackgroundTransparency = 1.000
+Frame_6.Position = UDim2.new(0.0772079453, 0, -3.88000011, 0)
+Frame_6.Size = UDim2.new(0, 244, 0, 144)
+Frame_6.Visible = false
+Frame_6.Image = "rbxassetid://3570695787"
+Frame_6.ScaleType = Enum.ScaleType.Slice
+Frame_6.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame_6.SliceScale = 0.120
+
+TextLabel_9.Parent = Frame_6
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.Size = UDim2.new(0, 244, 0, 44)
+TextLabel_9.Font = Enum.Font.SourceSans
+TextLabel_9.Text = "Hello, Person! Thank you for spending your time using ZPE. On to the changelog now."
+TextLabel_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 14.000
+TextLabel_9.TextWrapped = true
+
+TextBox_6.Parent = Frame_6
+TextBox_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_6.Position = UDim2.new(0.0860657021, 0, 0.409722209, 0)
+TextBox_6.Selectable = false
+TextBox_6.Size = UDim2.new(0, 200, 0, 70)
+TextBox_6.ClearTextOnFocus = false
+TextBox_6.Font = Enum.Font.SourceSans
+TextBox_6.PlaceholderText = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog/ for list."
+TextBox_6.ShowNativeInput = false
+TextBox_6.Text = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog for list."
+TextBox_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_6.TextSize = 14.000
+TextBox_6.TextWrapped = true
+
+Button.SoundId = "http://www.roblox.com/asset/?id=12221967"
+Button.Volume = 1
+Button.Name = "Button"
+Button.Parent = ZPE_MMSB
+ClickFast.SoundId = "http://www.roblox.com/asset/?id=12221976"
+ClickFast.Volume = 1
+ClickFast.Name = "ClickFast"
+ClickFast.Parent = ZPE_MMSB
+Copy.SoundId = "http://www.roblox.com/asset/?id=12221990"
+Copy.Volume = 1
+Copy.Name = "Copy"
+Copy.Parent = ZPE_MMSB
+Kerplunk.SoundId = "http://www.roblox.com/asset/?id=12222054"
+Kerplunk.Volume = 1
+Kerplunk.Name = "Kerplunk"
+Kerplunk.Parent = ZPE_MMSB
+Switch.SoundId = "http://www.roblox.com/asset/?id=12222170"
+Switch.Volume = 1
+Switch.Name = "Switch"
+Switch.Parent = ZPE_MMSB
+
+
 
 -- Scripts:
 
-local function NKWCOT_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
+local function FFPAK_fake_script() -- Mainframe.Dragify 
+	local script = Instance.new('LocalScript', Mainframe)
 
-	local txtscreen = script.Parent.Parent.Parent
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0.50
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
 	
+	dragify(script.Parent)
+end
+coroutine.wrap(FFPAK_fake_script)()
+local function YKZOREC_fake_script() -- OptionsClose.LocalScript 
+	local script = Instance.new('LocalScript', OptionsClose)
+
 	script.Parent.MouseButton1Click:Connect(function()
-	txtscreen:Destroy()
+	script.Parent.Parent.Parent.Parent.ClickFast:Play()
+	script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(YKZOREC_fake_script)()
+local function ZPREF_fake_script() -- Changelog.LocalScript 
+	local script = Instance.new('LocalScript', Changelog)
+
+	deb = false
+	script.Parent.MouseButton1Click:Connect(function()
+	if deb == false then
+	script.Parent.Frame.Visible = true
+	script.Parent.Parent.Parent.OptionsOpen.Visible = false
+	deb = true
+	elseif deb == true then
+	script.Parent.Frame.Visible = false
+	script.Parent.Parent.Parent.OptionsOpen.Visible = true
+	deb = false
+	end
+	if deb == true then
+	script.Parent.Parent.Parent.Parent.Button:Play()
+	else
+	script.Parent.Parent.Parent.Parent.Button:Play()
+	end
 	end)
 	
 end
-coroutine.wrap(NKWCOT_fake_script)()
---[[	if game.Players.LocalPlayer.UserId == whitelist then
-print('Whitelisted!')elseif game.Players.LocalPlayer.UserId == blacklist then
-print('Blacklisted!')
-chat('i am a script kiddie and attempted to use a script that im blacklisted from using')
-chat('i am a script kiddie and attempted to use a script that im blacklisted from using')
-chat('i am a script kiddie and attempted to use a script that im blacklisted from using')
-chat('i am a script kiddie and attempted to use a script that im blacklisted from using')
-chat('i am a script kiddie and attempted to use a script that im blacklisted from using')
-chat('i am a script kiddie and attempted to use a script that im blacklisted from using')
-chat('i am a script kiddie and attempted to use a script that im blacklisted from using')
-chat('i am a script kiddie and attempted to use a script that im blacklisted from using')
-chat('i am a script kiddie and attempted to use a script that im blacklisted from using')
-wait(2)
-local snd = Instance.new("Sound")
-snd.Parent = workspace
-snd.SoundId = 'rbxassetid://5171091339'
-snd.Playing = true
-snd.Volume = 100
-local blur = Instance.new("BlurEffect")
-blur.Parent = game.Lighting
-blur.Size = 1000
+coroutine.wrap(ZPREF_fake_script)()
+local function JENLT_fake_script() -- SelectM.LocalScript 
+	local script = Instance.new('LocalScript', SelectM)
 
--- Gui to Lua
--- Version: 3.2
+	confirmed = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	if confirmed == false then
+	script.Parent.Text = "Confirm"
+	script.Parent.Parent.Parent.Parent.Kerplunk:Play()
+	script.Parent.Parent.Parent.Mode.Visible = true
+	confirmed = true
+	elseif confirmed == true then
+	if script.Parent.PP.Value == true then
+	script.Parent.Text = "Push / Pull"
+	confirmed = false
+	script.Parent.Parent.Parent.Mode.Visible = false
+	script.Parent.Parent.Parent.Parent.Copy:Play()
+	elseif script.Parent.AU.Value == true then
+	confirmed = false
+	script.Parent.Parent.Parent.Mode.Visible = false
+	script.Parent.Parent.Parent.Parent.Copy:Play()
+	script.Parent.Text = "Anchor / Unanchor"
+	elseif script.Parent.ARG.Value == true then
+	confirmed = false
+	script.Parent.Parent.Parent.Mode.Visible = false
+	script.Parent.Parent.Parent.Parent.Copy:Play()
+	script.Parent.Text = "Add / Remove Gyro"
+	elseif script.Parent.LEG.Value == true then
+	confirmed = false
+	script.Parent.Parent.Parent.Mode.Visible = false
+	script.Parent.Parent.Parent.Parent.Copy:Play()
+	script.Parent.Text = "Legacy (All Modes)"
+	elseif script.Parent.NVM.Value == true then
+	confirmed = false
+	script.Parent.Parent.Parent.Mode.Visible = false
+	script.Parent.Parent.Parent.Parent.Kerplunk:Play()
+	script.Parent.Text = "Select Mode"
+	end
+	end
+	end)
+	script.Parent.PP.Changed:Connect(function()
+	if script.Parent.PP.Value == true then
+	script.Parent.Text = "Confirm Push/Pull"
+	end
+	end)
+	script.Parent.AU.Changed:Connect(function()
+	if script.Parent.AU.Value == true then
+	script.Parent.Text = "Confirm Anchor/Unanchor"
+	end
+	end)
+	script.Parent.ARG.Changed:Connect(function()
+	if script.Parent.ARG.Value == true then
+	script.Parent.Text = "Confirm Add/Remove Gyro"
+	end
+	end)
+	script.Parent.LEG.Changed:Connect(function()
+	if script.Parent.LEG.Value == true then
+	script.Parent.Text = "Confirm Legacy"
+	end
+	end)
+	script.Parent.NVM.Changed:Connect(function()
+	if script.Parent.NVM.Value == true then
+	confirmed = false
+	script.Parent.Text = "Select Mode"
+	script.Parent.Parent.Parent.Parent.Kerplunk:Play()
+	script.Parent.Parent.Parent.Mode.Visible = false
+	end
+	end)
+end
+coroutine.wrap(JENLT_fake_script)()
+local function BZWD_fake_script() -- OptionsOpen.LocalScript 
+	local script = Instance.new('LocalScript', OptionsOpen)
 
--- Instances:
+	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.Parent.Options.Visible = true
+	script.Parent.Parent.Parent.ClickFast:Play()
+	end)
+end
+coroutine.wrap(BZWD_fake_script)()
+local function SBYJB_fake_script() -- PP.LocalScript 
+	local script = Instance.new('LocalScript', PP)
 
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local ImageLabel = Instance.new("ImageLabel")
-local TextLabel = Instance.new("TextLabel")
+	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.Parent.Parent.Parent.Switch:Play()
+	script.Parent.Parent.Parent.Selected.SelectM.PP.Value = true
+	script.Parent.Parent.Parent.Selected.SelectM.AU.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.ARG.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.LEG.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.NVM.Value = false
+	end)
+end
+coroutine.wrap(SBYJB_fake_script)()
+local function KPAKX_fake_script() -- AU.LocalScript 
+	local script = Instance.new('LocalScript', AU)
 
---Properties:
+	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.Parent.Parent.Parent.Switch:Play()
+	script.Parent.Parent.Parent.Selected.SelectM.PP.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.AU.Value = true
+	script.Parent.Parent.Parent.Selected.SelectM.ARG.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.LEG.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.NVM.Value = false
+	end)
+end
+coroutine.wrap(KPAKX_fake_script)()
+local function HNEGK_fake_script() -- ARG.LocalScript 
+	local script = Instance.new('LocalScript', ARG)
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.Parent.Parent.Parent.Switch:Play()
+	script.Parent.Parent.Parent.Selected.SelectM.PP.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.AU.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.ARG.Value = true
+	script.Parent.Parent.Parent.Selected.SelectM.LEG.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.NVM.Value = false
+	end)
+end
+coroutine.wrap(HNEGK_fake_script)()
+local function TSQCD_fake_script() -- LEG.LocalScript 
+	local script = Instance.new('LocalScript', LEG)
 
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.BackgroundTransparency = 1.000
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.377099246, 0, 0.330309749, 0)
-Frame.Size = UDim2.new(0, 322, 0, 305)
+	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.Parent.Parent.Parent.Switch:Play()
+	script.Parent.Parent.Parent.Selected.SelectM.PP.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.AU.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.ARG.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.LEG.Value = true
+	script.Parent.Parent.Parent.Selected.SelectM.NVM.Value = false
+	end)
+end
+coroutine.wrap(TSQCD_fake_script)()
+local function YTLA_fake_script() -- NVM.LocalScript 
+	local script = Instance.new('LocalScript', NVM)
 
-ImageLabel.Parent = ScreenGui
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.377099246, 0, 0.329646021, 0)
-ImageLabel.Size = UDim2.new(0, 322, 0, 305)
-ImageLabel.Image = "http://www.roblox.com/asset/?id=251582518"
-
-TextLabel.Parent = ImageLabel
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Size = UDim2.new(0, 322, 0, 304)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "you're blacklisted lol"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-Tool0:Destroy()
-wait(3)
-		
-
-else
-local snd = Instance.new("Sound")
-snd.Parent = workspace
-snd.SoundId = 'rbxassetid://5171091339'
-snd.Playing = true
-snd.Volume = 100
-local blur = Instance.new("BlurEffect")
-blur.Parent = game.Lighting
-blur.Size = 1000
-
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local ImageLabel = Instance.new("ImageLabel")
-local TextLabel = Instance.new("TextLabel")
-
---Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.BackgroundTransparency = 1.000
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.377099246, 0, 0.330309749, 0)
-Frame.Size = UDim2.new(0, 322, 0, 305)
-
-ImageLabel.Parent = ScreenGui
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.377099246, 0, 0.329646021, 0)
-ImageLabel.Size = UDim2.new(0, 322, 0, 305)
-ImageLabel.Image = "http://www.roblox.com/asset/?id=1541381200"
-
-TextLabel.Parent = ImageLabel
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Size = UDim2.new(0, 322, 0, 304)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "You do not have permission to use this script!"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-Tool0:Destroy()
-wait(3)
-		
-end]]
-
-
+	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.Parent.Parent.Parent.Switch:Play()
+	script.Parent.Parent.Parent.Selected.SelectM.PP.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.AU.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.ARG.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.LEG.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.NVM.Value = true
+	end)
+end
+coroutine.wrap(YTLA_fake_script)()
