@@ -1,0 +1,12 @@
+12/16/2020
+V^V^V^V^V^V
+This is basically a giant rewrite of the main feature of the code, moving parts. I added this gui to decrease the complications using ZPE.
+
+***NOTE If you do get banned from games using this script do not blame me. It's your decision on how to utilize this script, Not mine.***
+
+1, removed those pesky animations making ZPE fully compatible with filtering enabled part wise.
+2, added this entire gui that i made myself that you can drag by dragging the outlines or the title of the script.
+3, removed the method used to anchor objects since it breaks a lot of things when you anchor them. It now uses a method used for debouce.
+4, I hopefully added a clientside portal generator on 12/16/2020, if not i'll find a way to add it later. Credits go to EgoMoose
+5, removed old gui that was ugly and annoying to deal with
+^^^^^^^^^^
