@@ -598,7 +598,7 @@ else
 print("arms")
 end
 end
---[[Tool.Equipped:connect(Equip)
+Tool.Equipped:connect(Equip)
 Tool.Unequipped:connect(Unequip)
 
 function Animate()
@@ -678,7 +678,7 @@ end
 
 Tool.AnimateValue.Changed:connect(Animate)
 
-end))]]]]
+end))]]
 Script7.Name = "LineConnect"
 Script7.Parent = Tool0
 Script7.Disabled = true
