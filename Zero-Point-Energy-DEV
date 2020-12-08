@@ -83,7 +83,6 @@ Part3.Position = Vector3.new(-54.7998123, 0.774299085, -0.757350147)
 Part3.Orientation = Vector3.new(88.9899979, 164.87999, 73.4700012)
 Part3.Color = Color3.new(0.0156863, 0.686275, 0.92549)
 LocalScript4.Parent = Tool0
-anchored = false
 
 table.insert(cors,sandbox(LocalScript4,function()
 -- Variables for services
@@ -813,11 +812,11 @@ function onButton1Down(mouse)
 			local t = mouse.Target
             
 			if (t.Anchored==true) then 
-       			 if anchored == true then
+			--	object.Material = "ForceField"
 				object = t
 				dist = (object.Position-front.Position).magnitude
     
-       end	
+       	
 else
 				object = t
 				dist = (object.Position-front.Position).magnitude
@@ -833,6 +832,7 @@ end
 		if (object.Parent==nil) then break end
 		local lv = CFrame.new(front.Position,mouse.Hit.p)
 		BP.Parent = object
+		--BP.Material = "ForceField"
 		BP.position = front.Position+lv.lookVector*dist
 		wait()
 	end
@@ -896,18 +896,26 @@ object.BodyGyro:Destroy()
 end
 local ffval = Instance.new("StringValue")
 if (key=="x") then 
-if anchored == false then
-anchored = true
+local adornment1 = Instance.new("SphereHandleAdornment")
+adornment1.Name = "Outline"
+adornment1.Color3 = Color3.fromRGB(255,0,0)
+adornment1.Radius = .5
+adornment1.Adornee = object
+adornment1.AlwaysOnTop = true
+adornment1.ZIndex = 1
+adornment1.Parent = object
+adornment1.Visible = true
+
 object.Anchored = true
+
+else
+end
+if (key=="v") then 
+object.Anchored = false
+object.Outline:Destroy()
 else
 end
 end
-if (key=="v") then 
-if anchored == true then
-anchored = false
-object.Anchored = false
-end
-
 	if key == "t" then 
 	if (object==nil) then return end 
 	for _,v in pairs(object:children()) do 
@@ -930,9 +938,7 @@ end
 	object.Velocity = Vector3.new(0,0,0) 
 	object.RotVelocity = Vector3.new(0,0,0) 
 	end 
-else
-end
-end
+
 
 
 	if (key=="e") then
@@ -958,22 +964,29 @@ end
 local ffval = Instance.new("StringValue")
 if (key=="x") then 
 	if zpegui.Mainframe.Selected.SelectM.AU.Value == true then
-if anchored == false then
-anchored = true
+local adornment1 = Instance.new("SphereHandleAdornment")
+adornment1.Name = "Outline"
+adornment1.Color3 = Color3.fromRGB(255,0,0)
+adornment1.Radius = .5
+adornment1.Adornee = object
+adornment1.AlwaysOnTop = true
+adornment1.ZIndex = 1
+adornment1.Parent = object
+adornment1.Visible = true
+
 object.Anchored = true
 else
 end
 end
-end
 if (key=="v") then 
-	if zpegui.Mainframe.Selected.SelectM.AU.Value == true then
-if anchored == true then
+if zpegui.Mainframe.Selected.SelectM.AU.Value == true then
 object.Anchored = false
-anchored = false
+object.Outline:Destroy()
 else
 end
 end
-end
+
+
 	if (string.byte(key)==27) then 
 		if (object==nil) then return end
 		local e = Instance.new("Explosion")
@@ -1411,7 +1424,7 @@ TextBox.Selectable = false
 TextBox.Size = UDim2.new(0, 200, 0, 70)
 TextBox.ClearTextOnFocus = false
 TextBox.Font = Enum.Font.SourceSans
-TextBox.PlaceholderText = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog/ for list."
+TextBox.PlaceholderText = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog for list."
 TextBox.ShowNativeInput = false
 TextBox.Text = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog for list."
 TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
