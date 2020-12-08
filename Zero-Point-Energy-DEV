@@ -864,6 +864,15 @@ end
 	BG.maxTorque = Vector3.new(math.huge,math.huge,math.huge) 
 	BG.cframe = CFrame.new(object.CFrame.p) 
 	BG.Parent = object 
+	local adornment2 = Instance.new("SphereHandleAdornment")
+	adornment2.Name = "Outline2"
+	adornment2.Color3 = Color3.fromRGB(0,255,0)
+	adornment2.Radius = .5
+	adornment2.Adornee = object
+	adornment2.AlwaysOnTop = true
+	adornment2.ZIndex = 1
+	adornment2.Parent = object
+	adornment2.Visible = true
 	repeat wait() until(object.CFrame == CFrame.new(object.CFrame.p)) 
 	BG.Parent = nil 
 	if (object==nil) then return end 
@@ -893,6 +902,7 @@ if (key=="q") then
 	end 
 if (key=="r") then 
 object.BodyGyro:Destroy()
+object.Outline2:Destroy()
 end
 local ffval = Instance.new("StringValue")
 if (key=="x") then 
@@ -959,6 +969,7 @@ end
 if (key=="r") then 
 if zpegui.Mainframe.Selected.SelectM.ARG.Value == true then
 object.BodyGyro:Destroy()
+object.Outline2:Destroy()
 end
 end
 local ffval = Instance.new("StringValue")
