@@ -43,9 +43,11 @@ Part11 = Instance.new("Part")
 Script12 = Instance.new("Script")
 Part13 = Instance.new("Part")
 Script14 = Instance.new("Script")
+weldedval = Instance.new("ObjectValue")
 Tool0.Name = "Zero Point Energy"
 Tool0.Parent = mas
 Tool0.CanBeDropped = false
+weldedval.Parent = script.Parent
 Part1.Name = "Handle"
 Part1.Parent = Tool0
 Part1.Material = Enum.Material.Neon
@@ -83,6 +85,7 @@ Part3.Position = Vector3.new(-54.7998123, 0.774299085, -0.757350147)
 Part3.Orientation = Vector3.new(88.9899979, 164.87999, 73.4700012)
 Part3.Color = Color3.new(0.0156863, 0.686275, 0.92549)
 LocalScript4.Parent = Tool0
+
 
 table.insert(cors,sandbox(LocalScript4,function()
 -- Variables for services
@@ -676,7 +679,7 @@ arms = {Tool.Parent:FindFirstChild("Left Arm"), Tool.Parent:FindFirstChild("Righ
 end 
 
 Tool.AnimateValue.Changed:connect(Animate)
-
+	
 end))]]
 Script7.Name = "LineConnect"
 Script7.Parent = Tool0
@@ -885,6 +888,97 @@ end
 	object.RotVelocity = Vector3.new(0,0,0) 
 	end 
 
+
+
+	if zpegui.Mainframe.Selected.SelectM.WLD.Value == true then
+	local weldconst1 = Instance.new("WeldConstraint")
+	local weldoutlineactive = false
+	local weldval = false
+	local adornment3 = Instance.new("SphereHandleAdornment")
+	if (key=="m") then
+print("pressed m")
+		adornment3.Name = "Outline3"
+		adornment3.Color3 = Color3.fromRGB(255,255,255)
+		adornment3.Radius = .5
+		adornment3.Adornee = object
+		adornment3.AlwaysOnTop = true
+		adornment3.ZIndex = 1
+		adornment3.Parent = object
+		adornment3.Visible = true
+		weldconst1.Parent = object
+		weldconst1.Name = "Weld1"
+		weldconst1.Part0 = object
+		weldoutlineactive = true
+		weldval = true
+		weldedval.Value = object
+		--object.Name = 'welding1'
+	function killobj()
+	adornment3:Destroy()
+	weldconst1:Destroy()
+	end
+	function adorn3()
+	adornment3.Color3 = Color3.fromRGB(170, 170, 255)
+	end
+	elseif (key=="n") then
+print("pressed n")
+		if weldval == nil then
+		print("A005")
+			else
+				--[[if object.Name == 'welding1' then
+					print("Object Already highlighted.")
+					else]]
+					local adornment4 = Instance.new("SphereHandleAdornment")
+					local object5443 = weldedval.Value
+					adorn3()
+				--	weldoutlineactive = false
+				--	weldval = "Welded"
+------------------------------------------------------------------------
+					adornment4.Name = "Outline4"
+					adornment4.Color3 = Color3.fromRGB(170,0,255)
+					adornment4.Radius = .5
+					adornment4.Adornee = object
+					adornment4.AlwaysOnTop = true 
+					adornment4.ZIndex = 1
+					adornment4.Parent = object
+					adornment4.Visible = true
+					object5443.Weld1.Part1 = object
+				end
+			
+		--end
+
+		end
+	if (key=="r") then
+print("pressed r")
+local weldddd1 = object:FindFirstChild("Weld1")
+local out3 = object:FindFirstChild("Outline3")
+--local out4 =object:FindFirstChild("Outline4")
+local obj3343 = weldddd1.Part1
+
+obj3343.Outline4:Destroy()
+weldddd1:Destroy()
+out3:Destroy()
+end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	if zpegui.Mainframe.Selected.SelectM.LEG.Value == true then
 	if (key=="e") then
 		dist = dist+1
@@ -916,6 +1010,8 @@ adornment1.ZIndex = 1
 adornment1.Parent = object
 adornment1.Visible = true
 
+object.Velocity = Vector3.new(0,0,0)
+object.RotVelocity = Vector3.new(0,0,0)
 object.Anchored = true
 
 else
@@ -1257,7 +1353,7 @@ local Changelog_Roundify_12px_2 = Instance.new("ImageLabel")
 local Frame_2 = Instance.new("ImageLabel")
 local TextLabel_5 = Instance.new("TextLabel")
 local TextBox_2 = Instance.new("TextBox")
-local AU = Instance.new("TextButton")
+local WLD = Instance.new("TextButton")
 local Changelog_Roundify_12px_3 = Instance.new("ImageLabel")
 local Frame_3 = Instance.new("ImageLabel")
 local TextLabel_6 = Instance.new("TextLabel")
@@ -1277,6 +1373,11 @@ local Changelog_Roundify_12px_6 = Instance.new("ImageLabel")
 local Frame_6 = Instance.new("ImageLabel")
 local TextLabel_9 = Instance.new("TextLabel")
 local TextBox_6 = Instance.new("TextBox")
+local AU = Instance.new("TextButton")
+local Changelog_Roundify_12px_7 = Instance.new("ImageLabel")
+local Frame_7 = Instance.new("ImageLabel")
+local TextLabel_10 = Instance.new("TextLabel")
+local TextBox_7 = Instance.new("TextBox")
 local Button = Instance.new("Sound")
 local ClickFast = Instance.new("Sound")
 local Copy = Instance.new("Sound")
@@ -1287,6 +1388,7 @@ local AU2 = Instance.new("BoolValue")
 local ARG2 = Instance.new("BoolValue")
 local LEG2 = Instance.new("BoolValue")
 local NVM2 = Instance.new("BoolValue")
+local WLD2 = Instance.new("BoolValue")
 
 --Properties:
 
@@ -1330,7 +1432,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0, 0, 0.00764706731, 0)
 TextLabel.Size = UDim2.new(0, 140, 0, 40)
 TextLabel.Font = Enum.Font.RobotoMono
-TextLabel.Text = "ZPE-V2.3"
+TextLabel.Text = "ZPE-V2.4"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextSize = 25.000
 
@@ -1435,7 +1537,7 @@ TextBox.Selectable = false
 TextBox.Size = UDim2.new(0, 200, 0, 70)
 TextBox.ClearTextOnFocus = false
 TextBox.Font = Enum.Font.SourceSans
-TextBox.PlaceholderText = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog for list."
+TextBox.PlaceholderText = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog/ for list."
 TextBox.ShowNativeInput = false
 TextBox.Text = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog for list."
 TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -1524,7 +1626,7 @@ TextLabel_3.Position = UDim2.new(0.200000003, 0, 0.350000024, 0)
 TextLabel_3.Rotation = 0.300
 TextLabel_3.Size = UDim2.new(0, 140, 0, 40)
 TextLabel_3.Font = Enum.Font.RobotoMono
-TextLabel_3.Text = "ZPE-V2.3"
+TextLabel_3.Text = "ZPE-V2.4"
 TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_3.TextSize = 25.000
 
@@ -1571,7 +1673,7 @@ TextLabel_4.BorderSizePixel = 0
 TextLabel_4.Position = UDim2.new(0, 0, 0.00764706731, 0)
 TextLabel_4.Size = UDim2.new(0, 140, 0, 40)
 TextLabel_4.Font = Enum.Font.RobotoMono
-TextLabel_4.Text = "ZPE-V2.3"
+TextLabel_4.Text = "ZPE-V2.4"
 TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_4.TextSize = 25.000
 
@@ -1602,8 +1704,8 @@ PP.TextColor3 = Color3.fromRGB(0, 0, 0)
 PP.TextScaled = true
 PP.TextSize = 14.000
 PP.TextWrapped = true
-PP2.Name = "PP"
 PP2.Parent = SelectM
+PP2.Name = "PP"
 
 Changelog_Roundify_12px_2.Name = "Changelog_Roundify_12px"
 Changelog_Roundify_12px_2.Parent = PP
@@ -1658,25 +1760,25 @@ TextBox_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextBox_2.TextSize = 14.000
 TextBox_2.TextWrapped = true
 
-AU.Name = "AU"
-AU.Parent = Mode
-AU.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AU.BackgroundTransparency = 1.000
-AU.BorderSizePixel = 0
-AU.Position = UDim2.new(0.383333355, 0, 0.3125, 0)
-AU.Size = UDim2.new(0, 70, 0, 30)
-AU.ZIndex = 100
-AU.Font = Enum.Font.SourceSans
-AU.Text = "Anchor/Unanchor"
-AU.TextColor3 = Color3.fromRGB(0, 0, 0)
-AU.TextScaled = true
-AU.TextSize = 14.000
-AU.TextWrapped = true
-AU2.Name = "AU"
-AU2.Parent = SelectM
+WLD.Name = "WLD"
+WLD.Parent = Mode
+WLD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WLD.BackgroundTransparency = 1.000
+WLD.BorderSizePixel = 0
+WLD.Position = UDim2.new(0.382999986, 0, 0.680000007, 0)
+WLD.Size = UDim2.new(0, 70, 0, 30)
+WLD.ZIndex = 100
+WLD.Font = Enum.Font.SourceSans
+WLD.Text = "Weld/Unweld"
+WLD.TextColor3 = Color3.fromRGB(0, 0, 0)
+WLD.TextScaled = true
+WLD.TextSize = 14.000
+WLD.TextWrapped = true
+WLD2.Parent = SelectM
+WLD2.Name = "WLD"
 
 Changelog_Roundify_12px_3.Name = "Changelog_Roundify_12px"
-Changelog_Roundify_12px_3.Parent = AU
+Changelog_Roundify_12px_3.Parent = WLD
 Changelog_Roundify_12px_3.Active = true
 Changelog_Roundify_12px_3.AnchorPoint = Vector2.new(0.5, 0.5)
 Changelog_Roundify_12px_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1692,7 +1794,7 @@ Changelog_Roundify_12px_3.SliceCenter = Rect.new(100, 100, 100, 100)
 Changelog_Roundify_12px_3.SliceScale = 0.120
 
 Frame_3.Name = "Frame"
-Frame_3.Parent = AU
+Frame_3.Parent = WLD
 Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame_3.BackgroundTransparency = 1.000
 Frame_3.Position = UDim2.new(0.0772079453, 0, -3.88000011, 0)
@@ -1742,8 +1844,8 @@ ARG.TextColor3 = Color3.fromRGB(0, 0, 0)
 ARG.TextScaled = true
 ARG.TextSize = 14.000
 ARG.TextWrapped = true
-ARG2.Name = "ARG"
 ARG2.Parent = SelectM
+ARG2.Name = "ARG"
 
 Changelog_Roundify_12px_4.Name = "Changelog_Roundify_12px"
 Changelog_Roundify_12px_4.Parent = ARG
@@ -1811,8 +1913,8 @@ LEG.Text = "Legacy"
 LEG.TextColor3 = Color3.fromRGB(0, 0, 0)
 LEG.TextSize = 20.000
 LEG.TextWrapped = true
-LEG2.Name = "LEG"
 LEG2.Parent = SelectM
+LEG2.Name = "LEG"
 
 Changelog_Roundify_12px_5.Name = "Changelog_Roundify_12px"
 Changelog_Roundify_12px_5.Parent = LEG
@@ -1958,11 +2060,79 @@ Switch.Volume = 1
 Switch.Name = "Switch"
 Switch.Parent = ZPE_MMSB
 
+AU.Name = "AU"
+AU.Parent = Mode
+AU.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AU.BackgroundTransparency = 1.000
+AU.BorderSizePixel = 0
+AU.Position = UDim2.new(0.383333355, 0, 0.3125, 0)
+AU.Size = UDim2.new(0, 70, 0, 30)
+AU.ZIndex = 100
+AU.Font = Enum.Font.SourceSans
+AU.Text = "Anchor/Unanchor"
+AU.TextColor3 = Color3.fromRGB(0, 0, 0)
+AU.TextScaled = true
+AU.TextSize = 14.000
+AU.TextWrapped = true
+AU2.Parent = SelectM
+AU2.Name = "AU"
 
+Changelog_Roundify_12px_7.Name = "Changelog_Roundify_12px"
+Changelog_Roundify_12px_7.Parent = AU
+Changelog_Roundify_12px_7.Active = true
+Changelog_Roundify_12px_7.AnchorPoint = Vector2.new(0.5, 0.5)
+Changelog_Roundify_12px_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Changelog_Roundify_12px_7.BackgroundTransparency = 1.000
+Changelog_Roundify_12px_7.Position = UDim2.new(0.5, 0, 0.5, 0)
+Changelog_Roundify_12px_7.Selectable = true
+Changelog_Roundify_12px_7.Size = UDim2.new(1, 0, 1, 0)
+Changelog_Roundify_12px_7.ZIndex = 99
+Changelog_Roundify_12px_7.Image = "rbxassetid://3570695787"
+Changelog_Roundify_12px_7.ImageColor3 = Color3.fromRGB(193, 193, 193)
+Changelog_Roundify_12px_7.ScaleType = Enum.ScaleType.Slice
+Changelog_Roundify_12px_7.SliceCenter = Rect.new(100, 100, 100, 100)
+Changelog_Roundify_12px_7.SliceScale = 0.120
+
+Frame_7.Name = "Frame"
+Frame_7.Parent = AU
+Frame_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_7.BackgroundTransparency = 1.000
+Frame_7.Position = UDim2.new(0.0772079453, 0, -3.88000011, 0)
+Frame_7.Size = UDim2.new(0, 244, 0, 144)
+Frame_7.Visible = false
+Frame_7.Image = "rbxassetid://3570695787"
+Frame_7.ScaleType = Enum.ScaleType.Slice
+Frame_7.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame_7.SliceScale = 0.120
+
+TextLabel_10.Parent = Frame_7
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.Size = UDim2.new(0, 244, 0, 44)
+TextLabel_10.Font = Enum.Font.SourceSans
+TextLabel_10.Text = "Hello, Person! Thank you for spending your time using ZPE. On to the changelog now."
+TextLabel_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_10.TextScaled = true
+TextLabel_10.TextSize = 14.000
+TextLabel_10.TextWrapped = true
+
+TextBox_7.Parent = Frame_7
+TextBox_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_7.Position = UDim2.new(0.0860657021, 0, 0.409722209, 0)
+TextBox_7.Selectable = false
+TextBox_7.Size = UDim2.new(0, 200, 0, 70)
+TextBox_7.ClearTextOnFocus = false
+TextBox_7.Font = Enum.Font.SourceSans
+TextBox_7.PlaceholderText = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog/ for list."
+TextBox_7.ShowNativeInput = false
+TextBox_7.Text = "Go to raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/Changelog for list."
+TextBox_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_7.TextSize = 14.000
+TextBox_7.TextWrapped = true
 
 -- Scripts:
 
-local function FFPAK_fake_script() -- Mainframe.Dragify 
+local function XJTJR_fake_script() -- Mainframe.Dragify 
 	local script = Instance.new('LocalScript', Mainframe)
 
 	local UIS = game:GetService("UserInputService")
@@ -2003,8 +2173,8 @@ local function FFPAK_fake_script() -- Mainframe.Dragify
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(FFPAK_fake_script)()
-local function YKZOREC_fake_script() -- OptionsClose.LocalScript 
+coroutine.wrap(XJTJR_fake_script)()
+local function GVJY_fake_script() -- OptionsClose.LocalScript 
 	local script = Instance.new('LocalScript', OptionsClose)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2012,8 +2182,8 @@ local function YKZOREC_fake_script() -- OptionsClose.LocalScript
 	script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(YKZOREC_fake_script)()
-local function ZPREF_fake_script() -- Changelog.LocalScript 
+coroutine.wrap(GVJY_fake_script)()
+local function FFSOO_fake_script() -- Changelog.LocalScript 
 	local script = Instance.new('LocalScript', Changelog)
 
 	deb = false
@@ -2035,8 +2205,8 @@ local function ZPREF_fake_script() -- Changelog.LocalScript
 	end)
 	
 end
-coroutine.wrap(ZPREF_fake_script)()
-local function JENLT_fake_script() -- SelectM.LocalScript 
+coroutine.wrap(FFSOO_fake_script)()
+local function ALUOI_fake_script() -- SelectM.LocalScript 
 	local script = Instance.new('LocalScript', SelectM)
 
 	confirmed = false
@@ -2073,6 +2243,11 @@ local function JENLT_fake_script() -- SelectM.LocalScript
 	script.Parent.Parent.Parent.Mode.Visible = false
 	script.Parent.Parent.Parent.Parent.Kerplunk:Play()
 	script.Parent.Text = "Select Mode"
+	elseif script.Parent.WLD.Value == true then
+	confirmed = false
+	script.Parent.Parent.Parent.Mode.Visible = false
+	script.Parent.Parent.Parent.Parent.Kerplunk:Play()
+	script.Parent.Text = "Make / Destroy Weld"
 	end
 	end
 	end)
@@ -2096,6 +2271,11 @@ local function JENLT_fake_script() -- SelectM.LocalScript
 	script.Parent.Text = "Confirm Legacy"
 	end
 	end)
+	script.Parent.WLD.Changed:Connect(function()
+	if script.Parent.WLD.Value == true then
+	script.Parent.Text = "Confirm Weld"
+	end
+	end)
 	script.Parent.NVM.Changed:Connect(function()
 	if script.Parent.NVM.Value == true then
 	confirmed = false
@@ -2105,8 +2285,8 @@ local function JENLT_fake_script() -- SelectM.LocalScript
 	end
 	end)
 end
-coroutine.wrap(JENLT_fake_script)()
-local function BZWD_fake_script() -- OptionsOpen.LocalScript 
+coroutine.wrap(ALUOI_fake_script)()
+local function JADHNY_fake_script() -- OptionsOpen.LocalScript 
 	local script = Instance.new('LocalScript', OptionsOpen)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2114,8 +2294,8 @@ local function BZWD_fake_script() -- OptionsOpen.LocalScript
 	script.Parent.Parent.Parent.ClickFast:Play()
 	end)
 end
-coroutine.wrap(BZWD_fake_script)()
-local function SBYJB_fake_script() -- PP.LocalScript 
+coroutine.wrap(JADHNY_fake_script)()
+local function KNDU_fake_script() -- PP.LocalScript 
 	local script = Instance.new('LocalScript', PP)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2123,25 +2303,27 @@ local function SBYJB_fake_script() -- PP.LocalScript
 	script.Parent.Parent.Parent.Selected.SelectM.PP.Value = true
 	script.Parent.Parent.Parent.Selected.SelectM.AU.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.ARG.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.WLD.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.LEG.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.NVM.Value = false
 	end)
 end
-coroutine.wrap(SBYJB_fake_script)()
-local function KPAKX_fake_script() -- AU.LocalScript 
-	local script = Instance.new('LocalScript', AU)
+coroutine.wrap(KNDU_fake_script)()
+local function UEJAY_fake_script() -- WLD.LocalScript 
+	local script = Instance.new('LocalScript', WLD)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	script.Parent.Parent.Parent.Parent.Switch:Play()
 	script.Parent.Parent.Parent.Selected.SelectM.PP.Value = false
-	script.Parent.Parent.Parent.Selected.SelectM.AU.Value = true
+	script.Parent.Parent.Parent.Selected.SelectM.AU.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.WLD.Value = true
 	script.Parent.Parent.Parent.Selected.SelectM.ARG.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.LEG.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.NVM.Value = false
 	end)
 end
-coroutine.wrap(KPAKX_fake_script)()
-local function HNEGK_fake_script() -- ARG.LocalScript 
+coroutine.wrap(UEJAY_fake_script)()
+local function PHJT_fake_script() -- ARG.LocalScript 
 	local script = Instance.new('LocalScript', ARG)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2150,11 +2332,12 @@ local function HNEGK_fake_script() -- ARG.LocalScript
 	script.Parent.Parent.Parent.Selected.SelectM.AU.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.ARG.Value = true
 	script.Parent.Parent.Parent.Selected.SelectM.LEG.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.WLD.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.NVM.Value = false
 	end)
 end
-coroutine.wrap(HNEGK_fake_script)()
-local function TSQCD_fake_script() -- LEG.LocalScript 
+coroutine.wrap(PHJT_fake_script)()
+local function VMZQDB_fake_script() -- LEG.LocalScript 
 	local script = Instance.new('LocalScript', LEG)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2163,20 +2346,36 @@ local function TSQCD_fake_script() -- LEG.LocalScript
 	script.Parent.Parent.Parent.Selected.SelectM.AU.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.ARG.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.LEG.Value = true
+	script.Parent.Parent.Parent.Selected.SelectM.WLD.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.NVM.Value = false
 	end)
 end
-coroutine.wrap(TSQCD_fake_script)()
-local function YTLA_fake_script() -- NVM.LocalScript 
+coroutine.wrap(VMZQDB_fake_script)()
+local function MBBC_fake_script() -- NVM.LocalScript 
 	local script = Instance.new('LocalScript', NVM)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	script.Parent.Parent.Parent.Parent.Switch:Play()
 	script.Parent.Parent.Parent.Selected.SelectM.PP.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.AU.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.WLD.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.ARG.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.LEG.Value = false
 	script.Parent.Parent.Parent.Selected.SelectM.NVM.Value = true
 	end)
 end
-coroutine.wrap(YTLA_fake_script)()
+coroutine.wrap(MBBC_fake_script)()
+local function BDOFZXC_fake_script() -- AU.LocalScript 
+	local script = Instance.new('LocalScript', AU)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.Parent.Parent.Parent.Switch:Play()
+	script.Parent.Parent.Parent.Selected.SelectM.PP.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.AU.Value = true
+	script.Parent.Parent.Parent.Selected.SelectM.ARG.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.LEG.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.WLD.Value = false
+	script.Parent.Parent.Parent.Selected.SelectM.NVM.Value = false
+	end)
+end
+coroutine.wrap(BDOFZXC_fake_script)()
