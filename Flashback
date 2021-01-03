@@ -1,0 +1,35 @@
+mouse = game.Players.LocalPlayer:GetMouse()
+
+sound = Instance.new("Sound")
+sound.SoundId = 'rbxassetid://690607937'
+sound.Volume = 1
+
+player = game.Players.LocalPlayer
+character = workspace:WaitForChild(player.Name)
+
+local tppart = Instance.new("Part")
+sound.Parent = tppart
+tppart.Parent = workspace
+tppart.Anchored = true
+
+tppart.Material = "ForceField"
+
+active = false
+
+
+mouse.KeyDown:Connect(function(key)
+
+tppart.Size = Vector3.new(1,1,1)
+tppart.CanCollide = false
+	if key == "h" then
+		tppart.Position = character.Torso.Position
+end	
+		
+	if key == "g" then
+	character:MoveTo(tppart.Position)
+	sound:Play()
+	active = false
+	
+
+	end
+end)
