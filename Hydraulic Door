@@ -1,0 +1,148 @@
+tweenservice = game:GetService("TweenService")
+part = script.Parent.Parent.door
+
+opened = script.Parent.Parent.values.debounce
+enabled = script.Parent.Parent.values.enabled
+isactive = script.Parent.Parent.values.isactive
+
+openval = script.Parent.Parent.values.functions.open
+closeval = script.Parent.Parent.values.functions.close
+
+orginlocation = script.Parent.Parent.door.CFrame
+
+local timesequence = 3
+local timesequence2 = 1
+
+
+local repeats = 0
+local reversing = false
+local delays = 0
+
+local killvar = false
+
+info = TweenInfo.new(timesequence,Enum.EasingStyle.Sine,Enum.EasingDirection.InOut,repeats,reversing,delays)
+info2 = TweenInfo.new(timesequence2,Enum.EasingStyle.Quart,Enum.EasingDirection.In,repeats,reversing,delays)
+goal = {CFrame = script.Parent.Parent.director.CFrame;}
+goal2 = {CFrame = orginlocation;}
+
+open = tweenservice:Create(part, info, goal)
+close = tweenservice:Create(part, info2, goal2)
+
+script.Parent.ClickDetector.MouseClick:Connect(function()
+script.Parent.Press:Play()
+if script.Parent.Parent.values.isactive.Value == true then
+wait(timesequence)
+script.Parent.Parent.values.isactive.Value = false
+elseif script.Parent.Parent.values.isactive.Value == false then
+if enabled.Value == false then
+	elseif enabled.Value == true then
+		if opened.Value == false then
+			script.Parent.Parent.values.isactive.Value = true
+			open:Play()
+			opened.Value = true
+			script.Parent.Parent.Light.Material = "Neon"
+			script.Parent.Parent.Light.SpotLight.Enabled = true
+			script.Parent.Parent.Nozzle.Smoke.Enabled = true
+			script.Parent.Parent.Nozzle.steam:Play()
+			script.Parent.Parent.door.hydralic.TimePosition = 0
+			script.Parent.Parent.door.hydralic:Play()
+			wait(timesequence)
+			script.Parent.Parent.Light.Material = "Glass"
+			script.Parent.Parent.Light.SpotLight.Enabled = false
+			script.Parent.Parent.door.hydralic.TimePosition = 7
+			wait(4.5)
+			script.Parent.Parent.Nozzle.Smoke.Enabled = false
+			elseif opened.Value == true then
+			close:Play()
+			script.Parent.Parent.values.isactive.Value = true
+			killvar = true
+
+			script.Parent.Parent.door.hitpart.Touched:Connect(function(hit)
+			if killvar == true then
+				if hit.Name == "Head" then
+				local bruh = Instance.new("Sound")
+				bruh.Parent = hit
+				bruh.SoundId = "rbxassetid://4275842574"
+				bruh:Play()
+				hit.Parent.Humanoid.Health = 0
+				end
+				end
+			end)
+			opened.Value= false
+			script.Parent.Parent.Light2.Material = "Neon"
+			script.Parent.Parent.Light2.SpotLight.Enabled = true
+			wait(timesequence2)
+			script.Parent.Parent.door.hit:Play()
+			script.Parent.Parent.impact.Smoke:Emit(50)
+			script.Parent.Parent.Light2.Material = "Glass"
+			script.Parent.Parent.Light2.SpotLight.Enabled = false
+			script.Parent.Parent.door.hitpart.Script.Disabled = true
+			killvar = false
+		end
+	end
+end
+end)
+--[[
+while true do
+wait(1)
+script.Parent.Parent.values.stopitsnotfunny.Value = 0
+end]]
+
+openval.Changed:Connect(function()
+	if openval.Value == true then
+		openval.Value = false
+		if enabled.Value == false then
+			elseif enabled.Value == true then
+				if opened.Value == false then
+				script.Parent.Parent.values.isactive.Value = true
+				open:Play()
+				opened.Value = true
+				script.Parent.Parent.Light.Material = "Neon"
+				script.Parent.Parent.Light.SpotLight.Enabled = true
+				script.Parent.Parent.Nozzle.Smoke.Enabled = true
+				script.Parent.Parent.Nozzle.steam:Play()
+				script.Parent.Parent.door.hydralic.TimePosition = 0
+				script.Parent.Parent.door.hydralic:Play()
+				wait(timesequence)
+				script.Parent.Parent.Light.Material = "Glass"
+				script.Parent.Parent.Light.SpotLight.Enabled = false
+				script.Parent.Parent.door.hydralic.TimePosition = 7
+				wait(4.5)
+				script.Parent.Parent.Nozzle.Smoke.Enabled = false
+end
+end
+	end
+end)
+
+closeval.Changed:Connect(function()
+	if closeval.Value == true then
+		closeval.Value = false
+		if opened.Value == true then
+			close:Play()
+			script.Parent.Parent.values.isactive.Value = true
+			killvar = true
+
+			script.Parent.Parent.door.hitpart.Touched:Connect(function(hit)
+			if killvar == true then
+				if hit.Name == "Head" then
+				local bruh = Instance.new("Sound")
+				bruh.Parent = hit
+				bruh.SoundId = "rbxassetid://4275842574"
+				bruh:Play()
+				hit.Parent.Humanoid.Health = 0
+				end
+				end
+			end)
+			opened.Value= false
+			script.Parent.Parent.Light2.Material = "Neon"
+			script.Parent.Parent.Light2.SpotLight.Enabled = true
+			wait(timesequence2)
+			script.Parent.Parent.door.hit:Play()
+			script.Parent.Parent.impact.Smoke:Emit(50)
+			script.Parent.Parent.Light2.Material = "Glass"
+			script.Parent.Parent.Light2.SpotLight.Enabled = false
+			script.Parent.Parent.door.hitpart.Script.Disabled = true
+			killvar = false
+end
+end
+		end)
