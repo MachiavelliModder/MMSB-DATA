@@ -1,0 +1,203 @@
+tweenservice = game:GetService("TweenService")
+part = script.Parent.doormodel
+part2 = script.Parent.DoorKnob
+
+doorrammed = false
+
+orginlocation = script.Parent.doormodel.CFrame
+doorknoborigin = script.Parent.DoorKnob.CFrame
+
+locked = false
+--urbreakingmydoor = script.Parent.urbreakingmydoor
+canyounotdeb = false
+securedlock = false
+willbreak = 0
+
+local timesequence = 2
+local timesequence2 = 2
+local timesequence3 = 1
+
+dooropened = false
+
+local repeats = 0
+local reversing = false
+local delays = 0
+
+local repeats2 = 0
+local reversing2 = true
+local delays2 = 0
+
+info = TweenInfo.new(timesequence,Enum.EasingStyle.Sine,Enum.EasingDirection.InOut,repeats,reversing,delays)
+info2 = TweenInfo.new(timesequence2,Enum.EasingStyle.Quart,Enum.EasingDirection.In,repeats,reversing,delays)
+info3 = TweenInfo.new(timesequence3,Enum.EasingStyle.Sine,Enum.EasingDirection.Out,repeats2,reversing2,delays2)
+director1 = {CFrame = script.Parent.Parent.director1.CFrame;}
+director2 = {CFrame = script.Parent.Parent.director2.CFrame;}
+goal2 = {CFrame = orginlocation;}
+--goal3 = {CFrame = script.Parent.DoorKnobDEST.CFrame;}
+
+open = tweenservice:Create(part, info, director1)
+open2 = tweenservice:Create(part, info, director2)
+
+close = tweenservice:Create(part, info2, goal2)
+--knob = tweenservice:Create(part2, info3, goal3)
+
+script.Parent.doormodel.Touched:Connect(function(hit)
+	if hit.Name == "director1" or hit.Name == "director2" then
+		dooropened = true
+	end
+end)
+
+script.Parent.doormodel.TouchEnded:Connect(function(hitended)
+	if hitended.Name == "director1" or hitended.Name == "director2" then
+		dooropened = false
+	end
+end)
+
+
+script.Parent.knob1.ClickDetector.MouseClick:Connect(function()
+	if securedlock == true then
+		script.Parent.DoorKnob.lock:Play()
+	else
+		if dooropened == false then
+			dooropened = true
+			open:Play()
+			script.Parent.DoorKnob.open:Play()
+			--	knob:Play()
+		elseif dooropened == true then
+			close:Play()
+			script.Parent.DoorKnob.open:Play()
+			dooropened = false
+			--	knob:Play()
+		end
+	end
+end)
+script.Parent.knob2.ClickDetector.MouseClick:Connect(function()
+	if securedlock == true then
+		script.Parent.DoorKnob.lock:Play()
+	else
+		if dooropened == false then
+			dooropened = true
+			open2:Play()
+			script.Parent.DoorKnob.open:Play()
+			--	knob:Play()
+		elseif dooropened == true then
+			close:Play()
+			script.Parent.DoorKnob.open:Play()
+			dooropened = false
+			--	knob:Play()
+		end
+	end
+end)
+
+script.Parent.lock.ClickDetector.MouseClick:Connect(function()
+	if locked == false then
+		script.Parent.lock.lock:Play()
+		locked = true
+		script.Parent.lockmech.CanCollide = true
+		script.Parent.lockmech.Transparency = 0
+	elseif locked == true then
+		script.Parent.lock.lock:Play()
+		locked = false
+		securedlock = false
+		script.Parent.lockmech.CanCollide = false
+		script.Parent.lockmech.Transparency = 1
+	end
+end)
+
+--while true do
+--	wait(.5)
+--	script.Parent.willbreak.Value = math.random(1,2)
+--end
+
+--[[function ram()
+	if doorrammed == false then doorrammed = true
+		if script.Parent.willbreak.Value == 1 then
+			script.Parent.doormodel.slam:Play()
+		elseif script.Parent.willbreak.Value == 2 then
+			script.Parent.doormodel.doorbreak:Play()
+			for i,v in pairs(script.Parent.frame:GetChildren()) do
+				if v.Name == "lockingframe" then
+					script.Parent.DoorKnob.Smoke:Emit(15)
+					v.CanCollide = false
+					wait(.5)
+					v.CanCollide = true
+				end
+			end
+		elseif doorrammed == true then
+			wait(script.Parent.doormodel.slam.TimeLength)
+			doorrammed = false
+		end
+	end
+end
+
+script.Parent.doormodel.Touched:Connect(function(hit)
+	if hit.Name == "Torso" then
+		if hit.Parent.Values.Running.Value == true then
+			if dooropened == true then
+			elseif dooropened == false then
+				ram()
+			end
+		end
+	end
+end)]]
+
+script.Parent.Parent.frame.lockhitbox.Touched:Connect(function(hit)
+	if hit.Name == "lockmech" then
+		if locked == true then
+			securedlock = true
+		end
+	end
+end)
+
+script.Parent.Parent.frame.outerhitbox1.Touched:Connect(function(hitended)
+	if hitended.Name == "lockmech" then
+		securedlock = false
+	end
+end)
+script.Parent.Parent.frame.outerhitbox2.Touched:Connect(function(hitended)
+	if hitended.Name == "lockmech" then
+		securedlock = false
+	end
+end)
+--[[
+script.Parent.doormodel.ClickDetector.MouseClick:Connect(function()
+	if urbreakingmydoor.Value <=5 then
+		if canyounotdeb == false then
+			urbreakingmydoor.Value = urbreakingmydoor.Value + 1
+			script.Parent.doormodel.knocking:Play()
+			canyounotdeb = true
+		elseif canyounotdeb == true then
+			wait(script.Parent.doormodel.knocking.TimeLength)
+			canyounotdeb = false
+		end
+	elseif urbreakingmydoor.Value >=5 then
+		if canyounotdeb == false then
+			urbreakingmydoor.Value = urbreakingmydoor.Value + 1
+			script.Parent.doormodel.banging:Play()
+			canyounotdeb = true
+		elseif canyounotdeb == true then
+			wait(script.Parent.doormodel.banging.TimeLength)
+			canyounotdeb = false
+		end
+	end
+end)
+
+urbreakingmydoor.Changed:Connect(function()
+	if urbreakingmydoor.Value >=10 then
+		wait(15)
+		urbreakingmydoor.Value = 0
+	end
+end)
+
+
+script.Parent.bypasslock.Touched:Connect(function(hit)
+	if hit.Name == "Hitbox" then
+		if locked == true then
+			script.Parent.bypasslock.lock:Play()
+			locked = false
+			securedlock = false
+			script.Parent.lockmech.CanCollide = false
+			script.Parent.lockmech.Transparency = 1
+		end
+	end
+end)]]
