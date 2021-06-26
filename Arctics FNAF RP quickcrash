@@ -206,6 +206,6 @@ else
     startloop()
     startloop()
     startloop()
-    PR.Text = "You may leave the game now. Server has been successfully closed"
+    PR.Text = "Please wait a few seconds before leaving. DO NOT MOVE YOUR CHARACTER"
 end
 end)
