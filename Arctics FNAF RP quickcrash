@@ -206,8 +206,6 @@ else
     startloop()
     startloop()
     startloop()
-    PR.Text = "You may leave the game now. Server has been successfully closed; AUTOMATIC LEAVE IN 10 SECONDS"
-    wait(10)
-    game.Players.LocalPlayer:Kick("Server forcefully closed.")
+    PR.Text = "You may leave the game now. Server has been successfully closed"
 end
 end)
