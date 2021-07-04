@@ -1,0 +1,101 @@
+
+workspace.GameObjects.TitleScreen.LoadCharacter:FireServer()
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Logo = Instance.new("ImageLabel")
+local PR = Instance.new("TextLabel")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Frame.Size = UDim2.new(1, 0, 1, 0)
+
+Logo.Name = "Logo"
+Logo.Parent = Frame
+Logo.AnchorPoint = Vector2.new(0.5, 0.5)
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.BackgroundTransparency = 1.000
+Logo.Position = UDim2.new(0.5, 0, 0.5, 0)
+Logo.Size = UDim2.new(0, 100, 0, 100)
+Logo.Image = "http://www.roblox.com/asset/?id=3689896955"
+
+PR.Name = "PR"
+PR.Parent = Frame
+PR.AnchorPoint = Vector2.new(0.5, 0.699999988)
+PR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PR.BackgroundTransparency = 1.000
+PR.Position = UDim2.new(0.5, 0, 0.699999988, 0)
+PR.Size = UDim2.new(0, 379, 0, 50)
+PR.Font = Enum.Font.ArialBold
+PR.TextColor3 = Color3.fromRGB(255, 255, 255)
+PR.TextScaled = true
+PR.TextSize = 14.000
+PR.TextWrapped = true
+
+PR.Text = "Automatically Closed!"
+
+function startloop()
+      for _,a in pairs(workspace:GetDescendants()) do
+        if a:IsA("ClickDetector") then
+           fireclickdetector(a)
+        end
+    end
+end
+
+
+local bruh = Instance.new("Part", workspace)
+bruh.Anchored = true
+bruh.Size = Vector3.new(10,0,10)
+bruh.Position = Vector3.new(0,-100,0)
+game.Players.LocalPlayer.Character:MoveTo(bruh.Position)
+
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
+    startloop()
