@@ -1,9 +1,12 @@
 
 local Frame = script.Parent
 local PingLabel = Frame:WaitForChild('PingLabel')
-while wait(1) do
+while wait() do
 	local Ping = 300-((1/wait())*10)
-	if Ping > 10000 then
+	wait(.5)
+	SPing = ping
+	wait(.5)
+	if SPing == ping then
 	    -- Instances:
 
 local SRV = Instance.new("ScreenGui")
