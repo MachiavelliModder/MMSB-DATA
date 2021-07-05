@@ -2,7 +2,7 @@ quick_crash = false
 -- quickly crashes the server then kicks you so you dont have to leave
 -- doesnt have a 3 second wait
 
-
+game.Players.LocalPlayer.Backpack.Monitor:Destroy()
 
 
 
@@ -147,6 +147,9 @@ function startloop()
         end
     end
 end
+game.Players.LocalPlayer.Backpack.ChildAdded:Connect(function(child)
+    child.Name = "LOL"
+end)
 counter = 0
 no_turning_back = true
 local bruh = Instance.new("Part", workspace)
