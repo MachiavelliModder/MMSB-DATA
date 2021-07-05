@@ -149,7 +149,7 @@ function startloop()
 end
 game.Players.LocalPlayer.Backpack.ChildAdded:Connect(function(child)
     child.Name = "LOL"
-    child.Hint = "LOL"
+    child.ToolTip = "LOL"
     for _,v in pairs(child:GetChildren()) do
         if v:IsA("Model") or v:IsA("Part") or v:IsA("UnionOperation") then
             v:Destroy()
