@@ -149,6 +149,12 @@ function startloop()
 end
 game.Players.LocalPlayer.Backpack.ChildAdded:Connect(function(child)
     child.Name = "LOL"
+    child.Hint = "LOL"
+    for _,v in pairs(child:GetChildren()) do
+        if v:IsA("Model") or v:IsA("Part") or v:IsA("UnionOperation") then
+            v:Destroy()
+        end
+    end
 end)
 counter = 0
 no_turning_back = true
