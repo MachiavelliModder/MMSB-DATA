@@ -231,12 +231,12 @@ UICorner_7.Parent = Three
 
 -- Scripts:
 
-local function USDZQBP_fake_script() -- Mainscreen.MainScript 
+local function FS() -- Mainscreen.MainScript 
 	local script = Instance.new('LocalScript', Mainscreen)
 
-	
 
-	
+
+
 	script.Parent.LoadingScreen.Load.MouseButton1Click:Connect(function()
 		script.Parent.Output.Visible = true
 		for _,v in pairs(script.Parent.Parent:GetDescendants()) do
@@ -246,9 +246,9 @@ local function USDZQBP_fake_script() -- Mainscreen.MainScript
 		script.Parent.Controls.Visible = true
 		script.Parent.LoadingScreen.Visible = false
 	end)
-	
+
 	tog = false
-	
+
 	script.Parent.Controls.button.MouseButton1Click:Connect(function()
 		if tog == false then
 			script.Parent.MainControls.Visible = true
@@ -259,4 +259,4 @@ local function USDZQBP_fake_script() -- Mainscreen.MainScript
 		end
 	end)
 end
-coroutine.wrap(USDZQBP_fake_script)()
+coroutine.wrap(FS)
