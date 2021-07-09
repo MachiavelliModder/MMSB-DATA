@@ -2,17 +2,17 @@
 
 
 -- Scripts:
-
-local function QXYMA_fake_script() -- Frame.FixedBlock 
+wait(5)
+local function FS() -- Frame.FixedBlock 
 	local localscript = Instance.new('LocalScript',game.Players.LocalPlayer.Character)
 
 	localscript.Name = "FixedBlock"
 
 	local localPlayer = game.Players.LocalPlayer
 
-	local doorA = game.Workspace:WaitForChild("DoorwayA")
-	local doorB = game.Workspace:WaitForChild("DoorwayB")
-	local world = game.Workspace:WaitForChild("World")
+	local doorA = game.Workspace.DoorwayA
+	local doorB = game.Workspace.DoorwayB
+	local world = game.Workspace.World
 
 	--
 
@@ -40,11 +40,11 @@ local function QXYMA_fake_script() -- Frame.FixedBlock
 		end
 	end
 
-	for _,player in pairs(game.Players:GetChildren()) do
+	game.Players.PlayerAdded:Connect(function(player)
 		player.CharacterAdded:Connect(onCharacter)
-	end
+	end)
 	
-	game.Players.LocalPlayer.CharacterAdded:Connect(onCharacter)
+	onCharacter()
 	
 	wait(1)
 
@@ -52,11 +52,11 @@ local function QXYMA_fake_script() -- Frame.FixedBlock
 		onCharacter(player.Character)
 		player.CharacterAdded:Connect(onCharacter)
 	end
-	
+
 	game:GetService("RunService").RenderStepped:Connect(function(dt)
 		for i = 1, #clones do
 			clones[i]:Update()
 		end
 	end)
 end
-coroutine.wrap(QXYMA_fake_script)()
+coroutine.wrap(FS)
