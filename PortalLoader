@@ -23,6 +23,8 @@ DB.CanCollide = false
 DA.Size = Vector3.new(8, 11, 1)
 DB.Size = Vector3.new(8, 11, 1)
 
+wait(.5)
+
 -- Instances:
 
 local Loader = Instance.new("ScreenGui")
