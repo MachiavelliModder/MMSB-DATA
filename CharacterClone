@@ -4,11 +4,16 @@
 -- Instances:
 
 
+
+--Properties:
+
+
+
 -- Module Scripts:
 
 local fake_module_scripts = {}
 
-do -- ScreenGui.CharacterClone
+do -- nil.CharacterClone
 	local script = Instance.new('ModuleScript', game.ReplicatedStorage)
 	script.Name = "CharacterClone"
 	local function module_script()
