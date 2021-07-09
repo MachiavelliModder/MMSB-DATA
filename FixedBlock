@@ -4,8 +4,10 @@
 -- Scripts:
 
 local function QXYMA_fake_script() -- Frame.FixedBlock 
-	local script = Instance.new('LocalScript',workspace)
-
+	local localscript = Instance.new('LocalScript',workspace)
+	
+	localscript.Name = "FixedBlock"
+	
 	local localPlayer = game.Players.LocalPlayer
 	
 	local doorA = game.Workspace.DoorwayA
