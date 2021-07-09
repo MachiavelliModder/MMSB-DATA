@@ -1,36 +1,35 @@
 -- >CREDIT TO EGOMOOSE<
 
-
 -- Scripts:
 
 local function QXYMA_fake_script() -- Frame.FixedBlock 
-	local localscript = Instance.new('LocalScript',workspace)
-	
+	local localscript = Instance.new('LocalScript',game.Players.LocalPlayer.Character)
+
 	localscript.Name = "FixedBlock"
-	
+
 	local localPlayer = game.Players.LocalPlayer
-	
-	local doorA = game.Workspace.DoorwayA
-	local doorB = game.Workspace.DoorwayB
-	local world = game.Workspace.World
-	
+
+	local doorA = game.Workspace:WaitForChild("DoorwayA")
+	local doorB = game.Workspace:WaitForChild("DoorwayB")
+	local world = game.Workspace:WaitForChild("World")
+
 	--
-	
+
 	local dualWorld = require(game.ReplicatedStorage.DualWorlds).new(localPlayer.Character, doorA, doorB, Enum.NormalId.Front, localPlayer.PlayerGui)
-	
+
 	dualWorld.PortalA:AddToWorld(dualWorld.PortalB:ClipModel(world:Clone()))
 	dualWorld.PortalB:AddToWorld(dualWorld.PortalA:ClipModel(world:Clone()))
-	
+
 	--
-	
+
 	local characterClone = require(game.ReplicatedStorage.CharacterClone)
 	local clones = {}
-	
+
 	local function onCharacter(character)
 		if (character) then
 			character.Archivable = true
 			character:WaitForChild("Humanoid") -- weird bug
-			
+
 			local cloneA = characterClone.new(character)
 			local cloneB = characterClone.new(character)
 			dualWorld.PortalA:AddToWorld(cloneA.Clone)
@@ -39,18 +38,18 @@ local function QXYMA_fake_script() -- Frame.FixedBlock
 			table.insert(clones, cloneB)
 		end
 	end
-	
-	game.Players.PlayerAdded:Connect(function(player)
+
+	for _,player in pairs(game.Players:GetChildren()) do
 		player.CharacterAdded:Connect(onCharacter)
-	end)
-	
+	end
+
 	wait(1)
-	
+
 	for _, player in next, game.Players:GetPlayers() do
 		onCharacter(player.Character)
 		player.CharacterAdded:Connect(onCharacter)
 	end
-	
+
 	game:GetService("RunService").RenderStepped:Connect(function(dt)
 		for i = 1, #clones do
 			clones[i]:Update()
