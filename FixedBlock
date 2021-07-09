@@ -1,3 +1,4 @@
+wait(5)
 local localPlayer = game.Players.LocalPlayer
 
 local doorA = game.Workspace.DoorwayA
@@ -20,7 +21,7 @@ local function onCharacter(character)
 	if (character) then
 		character.Archivable = true
 		character:WaitForChild("Humanoid") -- weird bug
-		
+
 		local cloneA = characterClone.new(character)
 		local cloneB = characterClone.new(character)
 		dualWorld.PortalA:AddToWorld(cloneA.Clone)
