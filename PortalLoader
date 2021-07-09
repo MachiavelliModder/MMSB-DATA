@@ -1,0 +1,254 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Loader = Instance.new("ScreenGui")
+local Mainscreen = Instance.new("Frame")
+local LoadingScreen = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Load = Instance.new("TextButton")
+local UIGradient = Instance.new("UIGradient")
+local Output = Instance.new("Frame")
+local UIGradient_2 = Instance.new("UIGradient")
+local UICorner_2 = Instance.new("UICorner")
+local Code = Instance.new("TextButton")
+local Controls = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local Controls_2 = Instance.new("TextLabel")
+local UIGradient_3 = Instance.new("UIGradient")
+local button = Instance.new("TextButton")
+local MainControls = Instance.new("Frame")
+local UIGradient_4 = Instance.new("UIGradient")
+local UICorner_4 = Instance.new("UICorner")
+local One = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+local Two = Instance.new("TextLabel")
+local UICorner_6 = Instance.new("UICorner")
+local Three = Instance.new("TextLabel")
+local UICorner_7 = Instance.new("UICorner")
+
+--Properties:
+
+Loader.Name = "Loader"
+Loader.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Loader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Mainscreen.Name = "Mainscreen"
+Mainscreen.Parent = Loader
+Mainscreen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Mainscreen.BackgroundTransparency = 1.000
+Mainscreen.Size = UDim2.new(1, 0, 1, 0)
+
+LoadingScreen.Name = "LoadingScreen"
+LoadingScreen.Parent = Mainscreen
+LoadingScreen.AnchorPoint = Vector2.new(0.5, 0.899999976)
+LoadingScreen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoadingScreen.BackgroundTransparency = 0.500
+LoadingScreen.Position = UDim2.new(0.5, 0, 0.899999976, 0)
+LoadingScreen.Size = UDim2.new(0, 400, 0, 50)
+
+UICorner.CornerRadius = UDim.new(0, 23532534)
+UICorner.Parent = LoadingScreen
+
+Load.Name = "Load"
+Load.Parent = LoadingScreen
+Load.AnchorPoint = Vector2.new(0.5, 0.5)
+Load.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Load.BackgroundTransparency = 1.000
+Load.Position = UDim2.new(0.5, 0, 0.5, 0)
+Load.Size = UDim2.new(0, 400, 0, 50)
+Load.Font = Enum.Font.ArialBold
+Load.Text = "Start Loader"
+Load.TextColor3 = Color3.fromRGB(0, 0, 0)
+Load.TextSize = 30.000
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 0))}
+UIGradient.Rotation = 90
+UIGradient.Parent = LoadingScreen
+
+Output.Name = "Output"
+Output.Parent = Mainscreen
+Output.AnchorPoint = Vector2.new(1, 1)
+Output.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Output.BackgroundTransparency = 0.500
+Output.Position = UDim2.new(1, 0, 1, 0)
+Output.Size = UDim2.new(0, 200, 0, 20)
+Output.Visible = false
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(20, 61, 0))}
+UIGradient_2.Rotation = 90
+UIGradient_2.Parent = Output
+
+UICorner_2.CornerRadius = UDim.new(0, 23532534)
+UICorner_2.Parent = Output
+
+Code.Name = "Code"
+Code.Parent = Output
+Code.AnchorPoint = Vector2.new(0.5, 0.5)
+Code.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Code.BackgroundTransparency = 1.000
+Code.Position = UDim2.new(0.5, 0, 0.5, 0)
+Code.Size = UDim2.new(0, 200, 0, 20)
+Code.Font = Enum.Font.Code
+Code.Text = "Warn(\"Console\")"
+Code.TextColor3 = Color3.fromRGB(85, 255, 0)
+Code.TextSize = 15.000
+Code.TextWrapped = true
+
+Controls.Name = "Controls"
+Controls.Parent = Mainscreen
+Controls.AnchorPoint = Vector2.new(1, 0.5)
+Controls.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Controls.BackgroundTransparency = 0.700
+Controls.Position = UDim2.new(1, 0, 0.5, 0)
+Controls.Size = UDim2.new(0, 40, 0, 400)
+Controls.Visible = false
+
+UICorner_3.CornerRadius = UDim.new(0, 23532534)
+UICorner_3.Parent = Controls
+
+Controls_2.Name = "Controls"
+Controls_2.Parent = Controls
+Controls_2.AnchorPoint = Vector2.new(0.569999993, 0.5)
+Controls_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Controls_2.BackgroundTransparency = 1.000
+Controls_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+Controls_2.Rotation = 90.000
+Controls_2.Size = UDim2.new(0, 400, 0, 40)
+Controls_2.Font = Enum.Font.ArialBold
+Controls_2.Text = "Controls"
+Controls_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Controls_2.TextSize = 35.000
+Controls_2.TextWrapped = true
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 0))}
+UIGradient_3.Rotation = 90
+UIGradient_3.Parent = Controls
+
+button.Name = "button"
+button.Parent = Controls
+button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+button.BackgroundTransparency = 1.000
+button.Size = UDim2.new(0, 36, 0, 400)
+button.ZIndex = 10
+button.Font = Enum.Font.SourceSans
+button.TextColor3 = Color3.fromRGB(0, 0, 0)
+button.TextSize = 14.000
+button.TextTransparency = 1.000
+
+MainControls.Name = "MainControls"
+MainControls.Parent = Mainscreen
+MainControls.AnchorPoint = Vector2.new(0.5, 0.5)
+MainControls.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainControls.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainControls.Size = UDim2.new(0, 500, 0, 400)
+MainControls.Visible = false
+
+UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 0))}
+UIGradient_4.Rotation = 90
+UIGradient_4.Parent = MainControls
+
+UICorner_4.CornerRadius = UDim.new(0, 40)
+UICorner_4.Parent = MainControls
+
+One.Name = "One"
+One.Parent = MainControls
+One.AnchorPoint = Vector2.new(0.100000001, 0.100000001)
+One.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+One.BackgroundTransparency = 1.000
+One.BorderColor3 = Color3.fromRGB(27, 42, 53)
+One.Position = UDim2.new(0.100000001, 0, 0.100000001, 0)
+One.Size = UDim2.new(0, 300, 0, 50)
+One.Font = Enum.Font.ArialBold
+One.Text = "Tab : Portal controls Toggle"
+One.TextColor3 = Color3.fromRGB(0, 0, 0)
+One.TextScaled = true
+One.TextSize = 35.000
+One.TextWrapped = true
+
+UICorner_5.CornerRadius = UDim.new(0, 40)
+UICorner_5.Parent = One
+
+Two.Name = "Two"
+Two.Parent = MainControls
+Two.AnchorPoint = Vector2.new(0.100000001, 0.300000012)
+Two.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Two.BackgroundTransparency = 1.000
+Two.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Two.Position = UDim2.new(0.100000001, 0, 0.300000012, 0)
+Two.Size = UDim2.new(0, 300, 0, 50)
+Two.Font = Enum.Font.ArialBold
+Two.Text = "LMB : Create Red Portal"
+Two.TextColor3 = Color3.fromRGB(0, 0, 0)
+Two.TextScaled = true
+Two.TextSize = 35.000
+Two.TextWrapped = true
+
+UICorner_6.CornerRadius = UDim.new(0, 40)
+UICorner_6.Parent = Two
+
+Three.Name = "Three"
+Three.Parent = MainControls
+Three.Active = true
+Three.AnchorPoint = Vector2.new(0.100000001, 0.5)
+Three.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Three.BackgroundTransparency = 1.000
+Three.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Three.Position = UDim2.new(0.100000001, 0, 0.5, 0)
+Three.Size = UDim2.new(0, 300, 0, 50)
+Three.Font = Enum.Font.ArialBold
+Three.Text = "RMB : Create Yellow Portal"
+Three.TextColor3 = Color3.fromRGB(0, 0, 0)
+Three.TextScaled = true
+Three.TextSize = 35.000
+Three.TextWrapped = true
+
+UICorner_7.CornerRadius = UDim.new(0, 40)
+UICorner_7.Parent = Three
+
+-- Scripts:
+
+local function USDZQBP_fake_script() -- Mainscreen.MainScript 
+	local script = Instance.new('LocalScript', Mainscreen)
+
+	
+	local DA = Instance.new("Part",workspace)
+	local DB = Instance.new("Part",workspace)
+	
+	DA.BrickColor = BrickColor.new("New Yeller")
+	DB.BrickColor = BrickColor.new("Really red")
+	DA.Material = "ForceField"
+	DB.Material = "ForceField"
+	DA.Transparency = .5
+	DB.Transparency = .5
+	DA.Anchored = true
+	DB.Anchored = true
+	DA.Position = Vector3.new(0,0,0)
+	DB.Position = Vector3.new(0,0,0)
+	DA.Name = "DoorwayA"
+	DB.Name = "DoorwayB"
+	
+	script.Parent.LoadingScreen.Load.MouseButton1Click:Connect(function()
+		script.Parent.Output.Visible = true
+		for _,v in pairs(script.Parent.Parent:GetDescendants()) do
+			script.Parent.Output.Code.Text = ("Loading "..v.Name)
+			wait(math.random(0,.1))
+		end
+		script.Parent.Controls.Visible = true
+		script.Parent.LoadingScreen.Visible = false
+	end)
+	
+	tog = false
+	
+	script.Parent.Controls.button.MouseButton1Click:Connect(function()
+		if tog == false then
+			script.Parent.MainControls.Visible = true
+			tog = true
+		else
+			tog = false
+			script.Parent.MainControls.Visible = false
+		end
+	end)
+end
+coroutine.wrap(USDZQBP_fake_script)()
