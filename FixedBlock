@@ -1,62 +1,48 @@
--- >CREDIT TO EGOMOOSE<
+local localPlayer = game.Players.LocalPlayer
 
+local doorA = game.Workspace.DoorwayA
+local doorB = game.Workspace.DoorwayB
+local world = game.Workspace.World
 
--- Scripts:
-wait(5)
-local function FS() -- Frame.FixedBlock 
-	local localscript = Instance.new('LocalScript',game.Players.LocalPlayer.Character)
+--
 
-	localscript.Name = "FixedBlock"
+local dualWorld = require(game.ReplicatedStorage.DualWorlds).new(localPlayer.Character, doorA, doorB, Enum.NormalId.Front, localPlayer.PlayerGui)
 
-	local localPlayer = game.Players.LocalPlayer
+dualWorld.PortalA:AddToWorld(dualWorld.PortalB:ClipModel(world:Clone()))
+dualWorld.PortalB:AddToWorld(dualWorld.PortalA:ClipModel(world:Clone()))
 
-	local doorA = game.Workspace.DoorwayA
-	local doorB = game.Workspace.DoorwayB
-	local world = game.Workspace.World
+--
 
-	--
+local characterClone = require(game.ReplicatedStorage.CharacterClone)
+local clones = {}
 
-	local dualWorld = require(game.ReplicatedStorage.DualWorlds).new(localPlayer.Character, doorA, doorB, Enum.NormalId.Front, localPlayer.PlayerGui)
-
-	dualWorld.PortalA:AddToWorld(dualWorld.PortalB:ClipModel(world:Clone()))
-	dualWorld.PortalB:AddToWorld(dualWorld.PortalA:ClipModel(world:Clone()))
-
-	--
-
-	local characterClone = require(game.ReplicatedStorage.CharacterClone)
-	local clones = {}
-
-	local function onCharacter(character)
-		if (character) then
-			character.Archivable = true
-			character:WaitForChild("Humanoid") -- weird bug
-
-			local cloneA = characterClone.new(character)
-			local cloneB = characterClone.new(character)
-			dualWorld.PortalA:AddToWorld(cloneA.Clone)
-			dualWorld.PortalB:AddToWorld(cloneB.Clone)
-			table.insert(clones, cloneA)
-			table.insert(clones, cloneB)
-		end
+local function onCharacter(character)
+	if (character) then
+		character.Archivable = true
+		character:WaitForChild("Humanoid") -- weird bug
+		
+		local cloneA = characterClone.new(character)
+		local cloneB = characterClone.new(character)
+		dualWorld.PortalA:AddToWorld(cloneA.Clone)
+		dualWorld.PortalB:AddToWorld(cloneB.Clone)
+		table.insert(clones, cloneA)
+		table.insert(clones, cloneB)
 	end
-
-	game.Players.PlayerAdded:Connect(function(player)
-		player.CharacterAdded:Connect(onCharacter)
-	end)
-	
-	onCharacter()
-	
-	wait(1)
-
-	for _, player in next, game.Players:GetPlayers() do
-		onCharacter(player.Character)
-		player.CharacterAdded:Connect(onCharacter)
-	end
-
-	game:GetService("RunService").RenderStepped:Connect(function(dt)
-		for i = 1, #clones do
-			clones[i]:Update()
-		end
-	end)
 end
-coroutine.wrap(FS)
+
+game.Players.PlayerAdded:Connect(function(player)
+	player.CharacterAdded:Connect(onCharacter)
+end)
+
+wait(1)
+
+for _, player in next, game.Players:GetPlayers() do
+	onCharacter(player.Character)
+	player.CharacterAdded:Connect(onCharacter)
+end
+
+game:GetService("RunService").RenderStepped:Connect(function(dt)
+	for i = 1, #clones do
+		clones[i]:Update()
+	end
+end)
