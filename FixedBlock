@@ -1,5 +1,6 @@
 -- >CREDIT TO EGOMOOSE<
 
+
 -- Scripts:
 
 local function QXYMA_fake_script() -- Frame.FixedBlock 
@@ -42,14 +43,16 @@ local function QXYMA_fake_script() -- Frame.FixedBlock
 	for _,player in pairs(game.Players:GetChildren()) do
 		player.CharacterAdded:Connect(onCharacter)
 	end
-
+	
+	game.Players.LocalPlayer.CharacterAdded:Connect(onCharacter)
+	
 	wait(1)
 
 	for _, player in next, game.Players:GetPlayers() do
 		onCharacter(player.Character)
 		player.CharacterAdded:Connect(onCharacter)
 	end
-
+	
 	game:GetService("RunService").RenderStepped:Connect(function(dt)
 		for i = 1, #clones do
 			clones[i]:Update()
