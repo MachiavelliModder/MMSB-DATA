@@ -6,12 +6,12 @@
 local fake_module_scripts = {}
 
 do -- Frame.DualWorlds
-	local script = Instance.new('ModuleScript', game.ReplicatedStorage)
-	script.Name = "DualWorlds"
+	local MD = Instance.new('ModuleScript', game.ReplicatedStorage)
+	MD.Name = "DualWorlds"
 	local function module_script()
 		local Y_SPIN = CFrame.Angles(0, math.pi, 0)
 		
-		local PortalClass = require(script:WaitForChild("Portal"))
+		local PortalClass = require(MD:WaitForChild("Portal"))
 		
 		--
 		
@@ -171,11 +171,11 @@ do -- Frame.DualWorlds
 		
 		return DualWorlds
 	end
-	fake_module_scripts[script] = module_script
+	fake_module_scripts[MD] = module_script
 end
 do -- nil.Portal
-	local script = Instance.new('ModuleScript', nil)
-	script.Name = "Portal"
+	local MP = Instance.new('ModuleScript', nil)
+	MP.Name = "Portal"
 	local function module_script()
 		local UP = Vector3.new(0, 1, 0)
 		local FOV120 = math.rad(120)
@@ -326,5 +326,5 @@ do -- nil.Portal
 		
 		return Portal
 	end
-	fake_module_scripts[script] = module_script
+	fake_module_scripts[MP] = module_script
 end
