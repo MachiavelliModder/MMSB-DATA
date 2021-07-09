@@ -1,3 +1,4 @@
+script.Parent = game.Players.LocalPlayer.Character
 wait(5)
 local localPlayer = game.Players.LocalPlayer
 
