@@ -232,10 +232,8 @@ UICorner_7.Parent = Three
 -- Scripts:
 
 local function USDZQBP_fake_script() -- Mainscreen.MainScript 
-	local script = Instance.new('LocalScript', Mainscreen)
-
-	
-
+	local LS = Instance.new('LocalScript', Mainscreen)
+	LS.Name = "MainScript"
 	
 	script.Parent.LoadingScreen.Load.MouseButton1Click:Connect(function()
 		script.Parent.Output.Visible = true
