@@ -4,11 +4,16 @@
 -- Instances:
 
 
+
+--Properties:
+
+
+
 -- Module Scripts:
 
 local fake_module_scripts = {}
 
-do -- ScreenGui.DualWorlds
+do -- nil.DualWorlds
 	local script = Instance.new('ModuleScript', game.ReplicatedStorage)
 	script.Name = "DualWorlds"
 	local function module_script()
@@ -177,7 +182,7 @@ do -- ScreenGui.DualWorlds
 	fake_module_scripts[script] = module_script
 end
 do -- nil.Portal
-	local script = Instance.new('ModuleScript', nil)
+	local script = Instance.new('ModuleScript', game.ReplicatedStorage.DualPortals)
 	script.Name = "Portal"
 	local function module_script()
 		local UP = Vector3.new(0, 1, 0)
