@@ -1,5 +1,5 @@
+wait(2)
 script.Parent = game.Players.LocalPlayer.Character
-wait(5)
 local localPlayer = game.Players.LocalPlayer
 
 local doorA = game.Workspace.DoorwayA
@@ -7,6 +7,7 @@ local doorB = game.Workspace.DoorwayB
 local world = game.Workspace.World
 
 --
+game.ReplicatedStorage:WaitForChild("DualWorlds")
 
 local dualWorld = require(game.ReplicatedStorage.DualWorlds).new(localPlayer.Character, doorA, doorB, Enum.NormalId.Front, localPlayer.PlayerGui)
 
