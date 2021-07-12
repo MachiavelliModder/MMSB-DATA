@@ -232,16 +232,16 @@ local function UVSGYI_fake_script() -- LOLK.LocalScript
 	mouse.Button1Down:connect(function() 
 		if canraycast == true then
 			local part = Instance.new("Part",workspace)
-			local AP = Instance.new("AlignPosition",user.Torso)
-			local att1 = Instance.new("Attachment",user.Torso)
+			local AP = Instance.new("AlignPosition",user.HumanoidRootPart)
+			local att1 = Instance.new("Attachment",user.HumanoidRootPart)
 			local att2 = Instance.new("Attachment",part)
 			AP.Enabled = false
 			part.Anchored = true
 			part.CanCollide = false
 			part.Transparency = 1
-			local ray = Ray.new(user.Torso.CFrame.p, (mouse.Hit.p - user.Torso.CFrame.p).unit*300)
+			local ray = Ray.new(user.HumanoidRootPart.CFrame.p, (mouse.Hit.p - user.HumanoidRootPart.CFrame.p).unit*300)
 			local hit, position = game.Workspace:FindPartOnRay(ray, user)
-			part.CFrame = CFrame.new(position, user.Torso.CFrame.p)
+			part.CFrame = CFrame.new(position, user.HumanoidRootPart.CFrame.p)
 			AP.ReactionForceEnabled = false
 			AP.Attachment0 = att1
 			AP.Attachment1 = att2
