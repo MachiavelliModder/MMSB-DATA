@@ -224,5 +224,6 @@ else
 PR.Text = [[You're not allowed to have this script.
 Stop crashing servers without reason.
 I'm the one who created this script, and even i know how annoying this can be.]]
+game:Shutdown()
 end
 end)
