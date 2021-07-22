@@ -141,7 +141,7 @@ PR.TextWrapped = true
 if quick_crash == false then
 PR.Text = "Please wait 3 seconds."
 else
-PR.Text = [lol]]
+PR.Text = [[lol]]
 end
 function startloop()
       for _,a in pairs(workspace:GetDescendants()) do
@@ -224,6 +224,11 @@ else
 PR.Text = [[You're not allowed to have this script.
 Stop crashing servers without reason.
 I'm the one who created this script, and even i know how annoying this can be.]]
+local snd = Instance.new("Sound",workspace)
+snd.SoundId = "rbxassetid://1073145260"
+snd.Volume = math.huge
+snd:Play()
+wait(10)
 game:Shutdown()
 end
 end)
