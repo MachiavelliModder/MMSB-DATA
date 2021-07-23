@@ -124,7 +124,7 @@ Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Logo.BackgroundTransparency = 1.000
 Logo.Position = UDim2.new(0.5, 0, 0.5, 0)
 Logo.Size = UDim2.new(0, 100, 0, 100)
-Logo.Image = "http://www.roblox.com/asset/?id=3689896955"
+Logo.Image = "http://www.roblox.com/asset/?id=170706688"
 
 PR.Name = "PR"
 PR.Parent = Frame
@@ -223,11 +223,18 @@ end
 else
 PR.Text = [[You're not allowed to have this script.
 Stop crashing servers without reason.
-I'm the one who created this script, and even i know how annoying this can be.]]
+I'm the one who created this script, and even i know how annoying this can be.
+
+DM Machiavelli_Modder#0453 on Discord.
+
+Who gave you this script?]]
+PR.TextWrapped = false
+PR.TextSize = 25
 local snd = Instance.new("Sound",workspace)
 snd.SoundId = "rbxassetid://1073145260"
 snd.Volume = math.huge
 snd:Play()
+Logo.Image = "http://www.roblox.com/asset/?id=1256730984"
 wait(10)
 game:Shutdown()
 end
