@@ -176,7 +176,7 @@ if quick_crash == true then
 wait(3)
 PR.Text = "Be patient. This could take a while."
 end
-if game.Players.LocalPlayer.Name == "Machiavelli_Modder" then
+if game.Players.LocalPlayer.Name == "Machiavelli_Modder" or game.Players.LocalPlayer.Name == "iamgoodatthisgame412" then
 if quick_crash == false then
     while no_turning_back == true do
     wait()
