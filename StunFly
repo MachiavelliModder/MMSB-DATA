@@ -19,17 +19,11 @@ local TOTOGGLE = Instance.new("TextLabel")
 local CloseFrame = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
 local bar = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
 local Close = Instance.new("TextButton")
-local S1 = Instance.new("Sound")
-local S2 = Instance.new("Sound")
-local S3 = Instance.new("Sound")
+local Waittime = Instance.new("TextBox")
+local UICorner_6 = Instance.new("UICorner")
 
 --Properties:
-
-S1.SoundId = "rbxassetid://12221944"
-S2.SoundId = "rbxassetid://12221967"
-S3.SoundId = "rbxassetid://12222170"
 
 LOLK.Name = "LOLK"
 LOLK.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -148,11 +142,9 @@ bar.Name = "bar"
 bar.Parent = Seeker
 bar.AnchorPoint = Vector2.new(0.5, 0.824999988)
 bar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+bar.BorderSizePixel = 0
 bar.Position = UDim2.new(0.5, 0, 0.824999988, 0)
 bar.Size = UDim2.new(0, 100, 0, 50)
-
-UICorner_6.CornerRadius = UDim.new(0, 10)
-UICorner_6.Parent = bar
 
 Close.Name = "Close"
 Close.Parent = Seeker
@@ -170,26 +162,44 @@ Close.TextScaled = true
 Close.TextSize = 14.000
 Close.TextWrapped = true
 
+Waittime.Name = "Waittime"
+Waittime.Parent = Seeker
+Waittime.AnchorPoint = Vector2.new(0, 1)
+Waittime.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Waittime.Position = UDim2.new(0, 0, 1, 0)
+Waittime.Size = UDim2.new(0, 40, 0, 40)
+Waittime.Font = Enum.Font.SourceSans
+Waittime.PlaceholderText = "1"
+Waittime.Text = "1"
+Waittime.TextColor3 = Color3.fromRGB(255, 255, 255)
+Waittime.TextScaled = true
+Waittime.TextSize = 14.000
+Waittime.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Waittime.TextWrapped = true
+
+UICorner_6.CornerRadius = UDim.new(0, 10)
+UICorner_6.Parent = Waittime
+
 -- Scripts:
 
-local function UVSGYI_fake_script() -- LOLK.LocalScript 
+local function QZNXNMX_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
-	local tog = false
-	local canraycast = false
-	local closetog = false
+	tog = false
+	canraycast = false
+	closetog = false
 	script.Parent.Load.RunScript.MouseButton1Click:Connect(function()
 		if tog == false then
 			tog = true
 			script.Parent.Load.Visible = false
 			script.Parent.Seeker.Visible = true
-			S1:Play()
+			script.Parent.bass:Play()
 		end
 	end)
 	
 	script.Parent.Seeker.Close.MouseButton1Click:Connect(function()
-		S3:Play()
+		script.Parent.switch:Play()
 		if closetog == false then
 			closetog = true
 			script.Parent.Seeker.Close.Text = "|<|"
@@ -211,7 +221,6 @@ local function UVSGYI_fake_script() -- LOLK.LocalScript
 	
 	mouse.KeyUp:connect(function(key)
 		if key == "f" and tog == true then
-			S2:Play()
 			if canraycast == false then
 				canraycast = true
 				script.Parent.Seeker.bar.BackgroundColor3 = Color3.new(0,255,0)
@@ -232,21 +241,21 @@ local function UVSGYI_fake_script() -- LOLK.LocalScript
 	mouse.Button1Down:connect(function() 
 		if canraycast == true then
 			local part = Instance.new("Part",workspace)
-			local AP = Instance.new("AlignPosition",user.HumanoidRootPart)
-			local att1 = Instance.new("Attachment",user.HumanoidRootPart)
+			local AP = Instance.new("AlignPosition",user.Torso)
+			local att1 = Instance.new("Attachment",user.Torso)
 			local att2 = Instance.new("Attachment",part)
 			AP.Enabled = false
 			part.Anchored = true
 			part.CanCollide = false
 			part.Transparency = 1
-			local ray = Ray.new(user.HumanoidRootPart.CFrame.p, (mouse.Hit.p - user.HumanoidRootPart.CFrame.p).unit*300)
+			local ray = Ray.new(user.Torso.CFrame.p, (mouse.Hit.p - user.Torso.CFrame.p).unit*300)
 			local hit, position = game.Workspace:FindPartOnRay(ray, user)
-			part.CFrame = CFrame.new(position, user.HumanoidRootPart.CFrame.p)
+			part.CFrame = CFrame.new(position, user.Torso.CFrame.p)
 			AP.ReactionForceEnabled = false
 			AP.Attachment0 = att1
 			AP.Attachment1 = att2
 			AP.Enabled = true
-			wait(1)
+			wait(tonumber(script.Parent.Seeker.Waittime.Text))
 			AP:Destroy()
 			att1:Destroy()
 			att2:Destroy()
@@ -254,4 +263,4 @@ local function UVSGYI_fake_script() -- LOLK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UVSGYI_fake_script)()
+coroutine.wrap(QZNXNMX_fake_script)()
