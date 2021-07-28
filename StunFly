@@ -201,6 +201,65 @@ end)
 script.Parent.Seeker.Close.MouseButton1Click:Connect(function()
 	if closetog == false then
 		closetog = true
-		scr
+		script.Parent.Seeker.Close.Text = "|<|"
+		script.Parent.Seeker.bar.Visible = false
+		script.Parent.Seeker.Keybind.Visible = false
+		script.Parent.Seeker.TOTOGGLE.Visible = false
+		script.Parent.Seeker.Logo.Visible = false
+		script.Parent.Seeker.BackgroundTransparency = 1
+	else
+		closetog = false
+		script.Parent.Seeker.Close.Text = "|>|"
+		script.Parent.Seeker.bar.Visible = true
+		script.Parent.Seeker.Keybind.Visible = true
+		script.Parent.Seeker.TOTOGGLE.Visible = true
+		script.Parent.Seeker.Logo.Visible = true
+		script.Parent.Seeker.BackgroundTransparency = 0
+	end
+end)
+
+mouse.KeyUp:connect(function(key)
+	if key == "f" and tog == true then
+		if canraycast == false then
+			canraycast = true
+			script.Parent.Seeker.bar.BackgroundColor3 = Color3.new(0,255,0)
+			script.Parent.Seeker.Close.TextColor3 = Color3.new(0,255,0)
+		else
+			canraycast = false
+			script.Parent.Seeker.bar.BackgroundColor3 = Color3.new(255,0,0)
+			script.Parent.Seeker.Close.TextColor3 = Color3.new(255,0,0)
+		end
+	end
+end)
+
+local user
+
+user = game.Players.LocalPlayer.Character
+
+
+mouse.Button1Down:connect(function() 
+	if canraycast == true then
+		local part = Instance.new("Part",workspace)
+		local AP = Instance.new("AlignPosition",user.Torso)
+		local att1 = Instance.new("Attachment",user.Torso)
+		local att2 = Instance.new("Attachment",part)
+		AP.Enabled = false
+		part.Anchored = true
+		part.CanCollide = false
+		part.Transparency = 1
+		local ray = Ray.new(user.Torso.CFrame.p, (mouse.Hit.p - user.Torso.CFrame.p).unit*300)
+		local hit, position = game.Workspace:FindPartOnRay(ray, user)
+		part.CFrame = CFrame.new(position, user.Torso.CFrame.p)
+		AP.ReactionForceEnabled = false
+		AP.Attachment0 = att1
+		AP.Attachment1 = att2
+		AP.Enabled = true
+		wait(tonumber(script.Parent.Seeker.Waittime.Text))
+		AP:Destroy()
+		att1:Destroy()
+		att2:Destroy()
+		part:Destroy()
+	end
+end)
 end
 coroutine.wrap(QZNXNMX_fake_script)()
