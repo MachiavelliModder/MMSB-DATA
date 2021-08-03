@@ -28,17 +28,15 @@ local bar2 = Instance.new("Frame")
 local UICorner_8 = Instance.new("UICorner")
 local MaxVelocity = Instance.new("TextBox")
 local UICorner_9 = Instance.new("UICorner")
-local Rigid = Instance.new("TextButton")
-local UICorner_10 = Instance.new("UICorner")
 local controls = Instance.new("Frame")
-local UICorner_11 = Instance.new("UICorner")
+local UICorner_10 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextLabel_3 = Instance.new("TextLabel")
 local TextLabel_4 = Instance.new("TextLabel")
 local TextLabel_5 = Instance.new("TextLabel")
 local controlsbutton = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 
 --Properties:
 
@@ -236,8 +234,8 @@ MaxVelocity.BorderSizePixel = 0
 MaxVelocity.Position = UDim2.new(0, 0, 1, 40)
 MaxVelocity.Size = UDim2.new(0, 50, 0, 40)
 MaxVelocity.Font = Enum.Font.ArialBold
-MaxVelocity.PlaceholderText = "math.huge"
-MaxVelocity.Text = "math.huge"
+MaxVelocity.PlaceholderText = "99999999"
+MaxVelocity.Text = "99999999"
 MaxVelocity.TextColor3 = Color3.fromRGB(255, 177, 19)
 MaxVelocity.TextScaled = true
 MaxVelocity.TextSize = 14.000
@@ -247,22 +245,6 @@ MaxVelocity.TextWrapped = true
 UICorner_9.CornerRadius = UDim.new(0, 10)
 UICorner_9.Parent = MaxVelocity
 
-Rigid.Name = "Rigid"
-Rigid.Parent = Seeker
-Rigid.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-Rigid.BackgroundTransparency = 0.500
-Rigid.Position = UDim2.new(0.600000143, 0, 1.01333332, 0)
-Rigid.Size = UDim2.new(0, 40, 0, 40)
-Rigid.Font = Enum.Font.ArialBold
-Rigid.Text = "Rigid"
-Rigid.TextColor3 = Color3.fromRGB(255, 255, 255)
-Rigid.TextScaled = true
-Rigid.TextSize = 14.000
-Rigid.TextWrapped = true
-
-UICorner_10.CornerRadius = UDim.new(0, 10)
-UICorner_10.Parent = Rigid
-
 controls.Name = "controls"
 controls.Parent = Seeker
 controls.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
@@ -270,8 +252,8 @@ controls.Position = UDim2.new(-1.29000008, 0, 0, 0)
 controls.Size = UDim2.new(0, 100, 0, 206)
 controls.Visible = false
 
-UICorner_11.CornerRadius = UDim.new(0, 10)
-UICorner_11.Parent = controls
+UICorner_10.CornerRadius = UDim.new(0, 10)
+UICorner_10.Parent = controls
 
 TextLabel.Parent = controls
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -354,12 +336,12 @@ controlsbutton.TextScaled = true
 controlsbutton.TextSize = 14.000
 controlsbutton.TextWrapped = true
 
-UICorner_12.CornerRadius = UDim.new(0, 10)
-UICorner_12.Parent = controlsbutton
+UICorner_11.CornerRadius = UDim.new(0, 10)
+UICorner_11.Parent = controlsbutton
 
 -- Scripts:
 
-local function EZTX_fake_script() -- LOLK.LocalScript 
+local function UYUP_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -431,11 +413,6 @@ local function EZTX_fake_script() -- LOLK.LocalScript
 			local ray = Ray.new(user.Torso.CFrame.p, (mouse.Hit.p - user.Torso.CFrame.p).unit*300)
 			local hit, position = game.Workspace:FindPartOnRay(ray, user)
 			part.CFrame = CFrame.new(position, user.Torso.CFrame.p)
-			if script.Parent.Seeker.Rigid.BackgroundColor3 == Color3.new(255,0,0) then
-				AP.RigidityEnabled = false
-			else
-				AP.RigidityEnabled = true
-			end
 			AP.ReactionForceEnabled = false
 			AP.MaxVelocity = tonumber(script.Parent.Seeker.MaxVelocity.Text)
 			AP.MaxForce = tonumber(script.Parent.Seeker.Speed.Text) * 10
@@ -450,13 +427,6 @@ local function EZTX_fake_script() -- LOLK.LocalScript
 		end
 	end)
 	
-	script.Parent.Seeker.Rigid.MouseButton1Click:Connect(function()
-		if script.Parent.Seeker.Rigid.BackgroundColor3 == Color3.new(255,0,0) then
-			script.Parent.Seeker.Rigid.BackgroundColor3 = Color3.new(0,255,0)
-		else
-			script.Parent.Seeker.Rigid.BackgroundColor3 = Color3.new(255,0,0)
-		end
-	end)
 	
 	script.Parent.Seeker.controlsbutton.MouseButton1Click:Connect(function()
 		if controlstog == false then
@@ -468,4 +438,4 @@ local function EZTX_fake_script() -- LOLK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(EZTX_fake_script)()
+coroutine.wrap(UYUP_fake_script)()
