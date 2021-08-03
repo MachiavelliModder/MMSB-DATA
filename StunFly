@@ -349,6 +349,7 @@ Dev.TextWrapped = true
 
 DevUI.Name = "DevUI"
 DevUI.Parent = LOLK
+DevUI.Enabled = false
 DevUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 DevUI.Active = true
 DevUI.MaxDistance = 100.000
@@ -391,7 +392,7 @@ speed_2.TextYAlignment = Enum.TextYAlignment.Bottom
 
 -- Scripts:
 
-local function VPXP_fake_script() -- LOLK.LocalScript 
+local function ANGCBU_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -475,6 +476,8 @@ local function VPXP_fake_script() -- LOLK.LocalScript
 			if devmode == true then
 				devui.Enabled = true
 				AP.Visible = true
+				att1.Visible = true
+				att2.Visible = true
 			end
 			wait(tonumber(script.Parent.Seeker.Waittime.Text))
 			AP:Destroy()
@@ -506,4 +509,4 @@ local function VPXP_fake_script() -- LOLK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VPXP_fake_script)()
+coroutine.wrap(ANGCBU_fake_script)()
