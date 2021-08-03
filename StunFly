@@ -22,6 +22,23 @@ local bar = Instance.new("Frame")
 local Close = Instance.new("TextButton")
 local Waittime = Instance.new("TextBox")
 local UICorner_6 = Instance.new("UICorner")
+local Speed = Instance.new("TextBox")
+local UICorner_7 = Instance.new("UICorner")
+local bar2 = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local MaxVelocity = Instance.new("TextBox")
+local UICorner_9 = Instance.new("UICorner")
+local Rigid = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local controls = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local controlsbutton = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
 
 --Properties:
 
@@ -35,6 +52,7 @@ Load.AnchorPoint = Vector2.new(0.5, 0.899999976)
 Load.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 Load.Position = UDim2.new(0.5, 0, 0.899999976, 0)
 Load.Size = UDim2.new(0, 500, 0, 100)
+Load.Visible = false
 
 UICorner.CornerRadius = UDim.new(0, 10)
 UICorner.Parent = Load
@@ -84,7 +102,6 @@ Seeker.AnchorPoint = Vector2.new(1, 0.5)
 Seeker.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 Seeker.Position = UDim2.new(1, 0, 0.5, 0)
 Seeker.Size = UDim2.new(0, 100, 0, 300)
-Seeker.Visible = false
 
 UICorner_3.CornerRadius = UDim.new(0, 10)
 UICorner_3.Parent = Seeker
@@ -167,11 +184,11 @@ Waittime.Parent = Seeker
 Waittime.AnchorPoint = Vector2.new(0, 1)
 Waittime.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
 Waittime.Position = UDim2.new(0, 0, 1, 0)
-Waittime.Size = UDim2.new(0, 40, 0, 40)
-Waittime.Font = Enum.Font.SourceSans
+Waittime.Size = UDim2.new(0, 30, 0, 40)
+Waittime.Font = Enum.Font.ArialBold
 Waittime.PlaceholderText = "1"
 Waittime.Text = "1"
-Waittime.TextColor3 = Color3.fromRGB(255, 255, 255)
+Waittime.TextColor3 = Color3.fromRGB(255, 255, 0)
 Waittime.TextScaled = true
 Waittime.TextSize = 14.000
 Waittime.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
@@ -180,86 +197,275 @@ Waittime.TextWrapped = true
 UICorner_6.CornerRadius = UDim.new(0, 10)
 UICorner_6.Parent = Waittime
 
+Speed.Name = "Speed"
+Speed.Parent = Seeker
+Speed.AnchorPoint = Vector2.new(0, 1)
+Speed.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Speed.BorderSizePixel = 0
+Speed.Position = UDim2.new(0, 30, 1, 0)
+Speed.Size = UDim2.new(0, 30, 0, 40)
+Speed.Font = Enum.Font.ArialBold
+Speed.PlaceholderText = "1"
+Speed.Text = "1"
+Speed.TextColor3 = Color3.fromRGB(0, 170, 255)
+Speed.TextScaled = true
+Speed.TextSize = 14.000
+Speed.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Speed.TextWrapped = true
+
+UICorner_7.CornerRadius = UDim.new(0, 10)
+UICorner_7.Parent = Speed
+
+bar2.Name = "bar2"
+bar2.Parent = Seeker
+bar2.AnchorPoint = Vector2.new(0.5, 0.824999988)
+bar2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+bar2.BorderSizePixel = 0
+bar2.Position = UDim2.new(0.5, 0, 1.10053706, 0)
+bar2.Size = UDim2.new(0, 100, 0, 84)
+bar2.ZIndex = -1
+
+UICorner_8.CornerRadius = UDim.new(0, 10)
+UICorner_8.Parent = bar2
+
+MaxVelocity.Name = "MaxVelocity"
+MaxVelocity.Parent = Seeker
+MaxVelocity.AnchorPoint = Vector2.new(0, 1)
+MaxVelocity.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+MaxVelocity.BorderSizePixel = 0
+MaxVelocity.Position = UDim2.new(0, 0, 1, 40)
+MaxVelocity.Size = UDim2.new(0, 50, 0, 40)
+MaxVelocity.Font = Enum.Font.ArialBold
+MaxVelocity.PlaceholderText = "math.huge"
+MaxVelocity.Text = "math.huge"
+MaxVelocity.TextColor3 = Color3.fromRGB(255, 177, 19)
+MaxVelocity.TextScaled = true
+MaxVelocity.TextSize = 14.000
+MaxVelocity.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+MaxVelocity.TextWrapped = true
+
+UICorner_9.CornerRadius = UDim.new(0, 10)
+UICorner_9.Parent = MaxVelocity
+
+Rigid.Name = "Rigid"
+Rigid.Parent = Seeker
+Rigid.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Rigid.BackgroundTransparency = 0.500
+Rigid.Position = UDim2.new(0.600000143, 0, 1.01333332, 0)
+Rigid.Size = UDim2.new(0, 40, 0, 40)
+Rigid.Font = Enum.Font.ArialBold
+Rigid.Text = "Rigid"
+Rigid.TextColor3 = Color3.fromRGB(255, 255, 255)
+Rigid.TextScaled = true
+Rigid.TextSize = 14.000
+Rigid.TextWrapped = true
+
+UICorner_10.CornerRadius = UDim.new(0, 10)
+UICorner_10.Parent = Rigid
+
+controls.Name = "controls"
+controls.Parent = Seeker
+controls.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+controls.Position = UDim2.new(-1.29000008, 0, 0, 0)
+controls.Size = UDim2.new(0, 100, 0, 206)
+controls.Visible = false
+
+UICorner_11.CornerRadius = UDim.new(0, 10)
+UICorner_11.Parent = controls
+
+TextLabel.Parent = controls
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 100, 0, 50)
+TextLabel.Font = Enum.Font.ArialBold
+TextLabel.Text = "CONTROLS"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = controls
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0, 0, 0.242718443, 0)
+TextLabel_2.Size = UDim2.new(0, 100, 0, 31)
+TextLabel_2.Font = Enum.Font.ArialBold
+TextLabel_2.Text = "yellow = waittime"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_2.TextYAlignment = Enum.TextYAlignment.Top
+
+TextLabel_3.Parent = controls
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0, 0, 0.427184463, 0)
+TextLabel_3.Size = UDim2.new(0, 100, 0, 31)
+TextLabel_3.Font = Enum.Font.ArialBold
+TextLabel_3.Text = "blue = speed"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 170, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_3.TextYAlignment = Enum.TextYAlignment.Top
+
+TextLabel_4.Parent = controls
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0, 0, 0.577669919, 0)
+TextLabel_4.Size = UDim2.new(0, 100, 0, 31)
+TextLabel_4.Font = Enum.Font.ArialBold
+TextLabel_4.Text = "orange = max velocity"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 170, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_4.TextYAlignment = Enum.TextYAlignment.Top
+
+TextLabel_5.Parent = controls
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(0, 0, 0.815533996, 0)
+TextLabel_5.Size = UDim2.new(0, 100, 0, 31)
+TextLabel_5.Font = Enum.Font.ArialBold
+TextLabel_5.Text = "math.huge is infinite"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 108, 34)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_5.TextYAlignment = Enum.TextYAlignment.Top
+
+controlsbutton.Name = "controlsbutton"
+controlsbutton.Parent = Seeker
+controlsbutton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+controlsbutton.BackgroundTransparency = 0.500
+controlsbutton.Position = UDim2.new(-0.50999999, 0, 0.396666676, 0)
+controlsbutton.Rotation = 90.000
+controlsbutton.Size = UDim2.new(0, 90, 0, 18)
+controlsbutton.Font = Enum.Font.ArialBold
+controlsbutton.Text = "CONTROLS"
+controlsbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+controlsbutton.TextScaled = true
+controlsbutton.TextSize = 14.000
+controlsbutton.TextWrapped = true
+
+UICorner_12.CornerRadius = UDim.new(0, 10)
+UICorner_12.Parent = controlsbutton
+
 -- Scripts:
 
-local function QZNXNMX_fake_script() -- LOLK.LocalScript 
+local function WIQYN_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
-
-local mouse = game.Players.LocalPlayer:GetMouse()
-tog = false
-canraycast = false
-closetog = false
-script.Parent.Load.RunScript.MouseButton1Click:Connect(function()
-	if tog == false then
-		tog = true
-		script.Parent.Load.Visible = false
-		script.Parent.Seeker.Visible = true
-	end
-end)
-
-script.Parent.Seeker.Close.MouseButton1Click:Connect(function()
-	if closetog == false then
-		closetog = true
-		script.Parent.Seeker.Close.Text = "|<|"
-		script.Parent.Seeker.bar.Visible = false
-		script.Parent.Seeker.Keybind.Visible = false
-		script.Parent.Seeker.TOTOGGLE.Visible = false
-		script.Parent.Seeker.Logo.Visible = false
-		script.Parent.Seeker.BackgroundTransparency = 1
-	else
-		closetog = false
-		script.Parent.Seeker.Close.Text = "|>|"
-		script.Parent.Seeker.bar.Visible = true
-		script.Parent.Seeker.Keybind.Visible = true
-		script.Parent.Seeker.TOTOGGLE.Visible = true
-		script.Parent.Seeker.Logo.Visible = true
-		script.Parent.Seeker.BackgroundTransparency = 0
-	end
-end)
-
-mouse.KeyUp:connect(function(key)
-	if key == "f" and tog == true then
-		if canraycast == false then
-			canraycast = true
-			script.Parent.Seeker.bar.BackgroundColor3 = Color3.new(0,255,0)
-			script.Parent.Seeker.Close.TextColor3 = Color3.new(0,255,0)
-		else
-			canraycast = false
-			script.Parent.Seeker.bar.BackgroundColor3 = Color3.new(255,0,0)
-			script.Parent.Seeker.Close.TextColor3 = Color3.new(255,0,0)
+	local mouse = game.Players.LocalPlayer:GetMouse()
+	local tog = false
+	local canraycast = false
+	local closetog = false
+	local controlstog = false
+	script.Parent.Load.RunScript.MouseButton1Click:Connect(function()
+		if tog == false then
+			tog = true
+			script.Parent.Load.Visible = false
+			script.Parent.Seeker.Visible = true
 		end
-	end
-end)
-
-local user
-
-user = game.Players.LocalPlayer.Character
-
-
-mouse.Button1Down:connect(function() 
-	if canraycast == true then
-		local part = Instance.new("Part",workspace)
-		local AP = Instance.new("AlignPosition",user.Torso)
-		local att1 = Instance.new("Attachment",user.Torso)
-		local att2 = Instance.new("Attachment",part)
-		AP.Enabled = false
-		part.Anchored = true
-		part.CanCollide = false
-		part.Transparency = 1
-		local ray = Ray.new(user.Torso.CFrame.p, (mouse.Hit.p - user.Torso.CFrame.p).unit*300)
-		local hit, position = game.Workspace:FindPartOnRay(ray, user)
-		part.CFrame = CFrame.new(position, user.Torso.CFrame.p)
-		AP.ReactionForceEnabled = false
-		AP.Attachment0 = att1
-		AP.Attachment1 = att2
-		AP.Enabled = true
-		wait(tonumber(script.Parent.Seeker.Waittime.Text))
-		AP:Destroy()
-		att1:Destroy()
-		att2:Destroy()
-		part:Destroy()
-	end
-end)
+	end)
+	
+	script.Parent.Seeker.Close.MouseButton1Click:Connect(function()
+		if closetog == false then
+			closetog = true
+			controlstog = false
+			script.Parent.Seeker.controls.Visible = false
+			script.Parent.Seeker.controlsbutton.Visible = false
+			script.Parent.Seeker.Close.Text = "|<|"
+			script.Parent.Seeker.bar.Visible = false
+			script.Parent.Seeker.Keybind.Visible = false
+			script.Parent.Seeker.TOTOGGLE.Visible = false
+			script.Parent.Seeker.Logo.Visible = false
+			script.Parent.Seeker.BackgroundTransparency = 1
+		else
+			closetog = false
+			script.Parent.Seeker.controlsbutton.Visible = true
+			script.Parent.Seeker.Close.Text = "|>|"
+			script.Parent.Seeker.bar.Visible = true
+			script.Parent.Seeker.Keybind.Visible = true
+			script.Parent.Seeker.TOTOGGLE.Visible = true
+			script.Parent.Seeker.Logo.Visible = true
+			script.Parent.Seeker.BackgroundTransparency = 0
+		end
+	end)
+	
+	mouse.KeyUp:connect(function(key)
+		if key == "f" and tog == true then
+			if canraycast == false then
+				canraycast = true
+				script.Parent.Seeker.bar.BackgroundColor3 = Color3.new(0,255,0)
+				script.Parent.Seeker.Close.TextColor3 = Color3.new(0,255,0)
+			else
+				canraycast = false
+				script.Parent.Seeker.bar.BackgroundColor3 = Color3.new(255,0,0)
+				script.Parent.Seeker.Close.TextColor3 = Color3.new(255,0,0)
+			end
+		end
+	end)
+	
+	local user
+	
+	user = game.Players.LocalPlayer.Character
+	
+	
+	mouse.Button1Down:connect(function() 
+		if canraycast == true then
+			local part = Instance.new("Part",workspace)
+			local AP = Instance.new("AlignPosition",user.Torso)
+			local att1 = Instance.new("Attachment",user.Torso)
+			local att2 = Instance.new("Attachment",part)
+			AP.Enabled = false
+			part.Anchored = true
+			part.CanCollide = false
+			part.Transparency = 1
+			local ray = Ray.new(user.Torso.CFrame.p, (mouse.Hit.p - user.Torso.CFrame.p).unit*300)
+			local hit, position = game.Workspace:FindPartOnRay(ray, user)
+			part.CFrame = CFrame.new(position, user.Torso.CFrame.p)
+			if script.Parent.Seeker.Rigid.BackgroundColor3 == Color3.new(255,0,0) then
+				AP.RigidityEnabled = false
+			else
+				AP.RigidityEnabled = true
+			end
+			AP.ReactionForceEnabled = false
+			AP.MaxVelocity = tonumber(script.Parent.Seeker.MaxVelocity.Text)
+			AP.MaxForce = tonumber(script.Parent.Seeker.Speed.Text) * 10
+			AP.Attachment0 = att1
+			AP.Attachment1 = att2
+			AP.Enabled = true
+			wait(tonumber(script.Parent.Seeker.Waittime.Text))
+			AP:Destroy()
+			att1:Destroy()
+			att2:Destroy()
+			part:Destroy()
+		end
+	end)
+	
+	script.Parent.Seeker.Rigid.MouseButton1Click:Connect(function()
+		if script.Parent.Seeker.Rigid.BackgroundColor3 == Color3.new(255,0,0) then
+			script.Parent.Seeker.Rigid.BackgroundColor3 = Color3.new(0,255,0)
+		else
+			script.Parent.Seeker.Rigid.BackgroundColor3 = Color3.new(255,0,0)
+		end
+	end)
+	
+	script.Parent.Seeker.controlsbutton.MouseButton1Click:Connect(function()
+		if controlstog == false then
+			controlstog = true
+			script.Parent.Seeker.controls.Visible = true
+		else
+			controlstog = false
+			script.Parent.Seeker.controls.Visible = false
+		end
+	end)
 end
-coroutine.wrap(QZNXNMX_fake_script)()
+coroutine.wrap(WIQYN_fake_script)()
