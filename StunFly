@@ -391,7 +391,7 @@ speed_2.TextYAlignment = Enum.TextYAlignment.Bottom
 
 -- Scripts:
 
-local function JQRMHGF_fake_script() -- LOLK.LocalScript 
+local function VPXP_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -472,9 +472,9 @@ local function JQRMHGF_fake_script() -- LOLK.LocalScript
 			AP.Attachment1 = att2
 			AP.Enabled = true
 			devui.Parent = att2
-			AP.Visible = true
 			if devmode == true then
 				devui.Enabled = true
+				AP.Visible = true
 			end
 			wait(tonumber(script.Parent.Seeker.Waittime.Text))
 			AP:Destroy()
@@ -506,4 +506,4 @@ local function JQRMHGF_fake_script() -- LOLK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JQRMHGF_fake_script)()
+coroutine.wrap(VPXP_fake_script)()
