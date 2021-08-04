@@ -392,7 +392,7 @@ maxforce.TextYAlignment = Enum.TextYAlignment.Bottom
 
 -- Scripts:
 
-local function TFZJEIM_fake_script() -- LOLK.LocalScript 
+local function ODQPZ_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -473,8 +473,8 @@ local function TFZJEIM_fake_script() -- LOLK.LocalScript
 			AP.Attachment1 = att2
 			AP.Enabled = true
 			devui.Parent = att2
-			devui.Frame.speed.Text = script.Parent.Seeker.MaxVelocity.Text
-			devui.Frame.maxforce.Text = script.Parent.Seeker.Speed.Text
+			devui.Frame.speed.Text = tostring(AP.Responsiveness)
+			devui.Frame.maxforce.Text = tostring(AP.MaxForce)
 			if devmode == true then
 				devui.Enabled = true
 				AP.Visible = true
@@ -511,4 +511,4 @@ local function TFZJEIM_fake_script() -- LOLK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(TFZJEIM_fake_script)()
+coroutine.wrap(ODQPZ_fake_script)()
