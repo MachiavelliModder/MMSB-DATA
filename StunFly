@@ -41,7 +41,7 @@ local DevUI = Instance.new("BillboardGui")
 local Frame = Instance.new("Frame")
 local speed = Instance.new("TextLabel")
 local UICorner_12 = Instance.new("UICorner")
-local speed_2 = Instance.new("TextLabel")
+local maxforce = Instance.new("TextLabel")
 
 --Properties:
 
@@ -240,7 +240,7 @@ MaxVelocity.Position = UDim2.new(0, 0, 1, 40)
 MaxVelocity.Size = UDim2.new(0, 50, 0, 40)
 MaxVelocity.Font = Enum.Font.ArialBold
 MaxVelocity.PlaceholderText = "99999999"
-MaxVelocity.Text = "99999999"
+MaxVelocity.Text = "1"
 MaxVelocity.TextColor3 = Color3.fromRGB(255, 177, 19)
 MaxVelocity.TextScaled = true
 MaxVelocity.TextSize = 14.000
@@ -376,23 +376,23 @@ speed.TextWrapped = true
 UICorner_12.CornerRadius = UDim.new(0, 10)
 UICorner_12.Parent = Frame
 
-speed_2.Name = "speed"
-speed_2.Parent = Frame
-speed_2.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-speed_2.BackgroundTransparency = 1.000
-speed_2.Position = UDim2.new(0, 0, 0, 30)
-speed_2.Size = UDim2.new(0, 50, 0, 20)
-speed_2.Font = Enum.Font.ArialBold
-speed_2.Text = "0"
-speed_2.TextColor3 = Color3.fromRGB(0, 170, 255)
-speed_2.TextScaled = true
-speed_2.TextSize = 14.000
-speed_2.TextWrapped = true
-speed_2.TextYAlignment = Enum.TextYAlignment.Bottom
+maxforce.Name = "maxforce"
+maxforce.Parent = Frame
+maxforce.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+maxforce.BackgroundTransparency = 1.000
+maxforce.Position = UDim2.new(0, 0, 0, 30)
+maxforce.Size = UDim2.new(0, 50, 0, 20)
+maxforce.Font = Enum.Font.ArialBold
+maxforce.Text = "0"
+maxforce.TextColor3 = Color3.fromRGB(0, 170, 255)
+maxforce.TextScaled = true
+maxforce.TextSize = 14.000
+maxforce.TextWrapped = true
+maxforce.TextYAlignment = Enum.TextYAlignment.Bottom
 
 -- Scripts:
 
-local function ANGCBU_fake_script() -- LOLK.LocalScript 
+local function TFZJEIM_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -473,6 +473,8 @@ local function ANGCBU_fake_script() -- LOLK.LocalScript
 			AP.Attachment1 = att2
 			AP.Enabled = true
 			devui.Parent = att2
+			devui.Frame.speed.Text = script.Parent.Seeker.MaxVelocity.Text
+			devui.Frame.maxforce.Text = script.Parent.Seeker.Speed.Text
 			if devmode == true then
 				devui.Enabled = true
 				AP.Visible = true
@@ -509,4 +511,4 @@ local function ANGCBU_fake_script() -- LOLK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ANGCBU_fake_script)()
+coroutine.wrap(TFZJEIM_fake_script)()
