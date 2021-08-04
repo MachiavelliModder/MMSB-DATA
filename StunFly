@@ -239,7 +239,7 @@ MaxVelocity.BorderSizePixel = 0
 MaxVelocity.Position = UDim2.new(0, 0, 1, 40)
 MaxVelocity.Size = UDim2.new(0, 50, 0, 40)
 MaxVelocity.Font = Enum.Font.ArialBold
-MaxVelocity.PlaceholderText = "99999999"
+MaxVelocity.PlaceholderText = "1"
 MaxVelocity.Text = "1"
 MaxVelocity.TextColor3 = Color3.fromRGB(255, 177, 19)
 MaxVelocity.TextScaled = true
@@ -392,7 +392,7 @@ maxforce.TextYAlignment = Enum.TextYAlignment.Bottom
 
 -- Scripts:
 
-local function ODQPZ_fake_script() -- LOLK.LocalScript 
+local function AGFVG_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -511,4 +511,4 @@ local function ODQPZ_fake_script() -- LOLK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ODQPZ_fake_script)()
+coroutine.wrap(AGFVG_fake_script)()
