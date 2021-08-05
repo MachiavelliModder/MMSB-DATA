@@ -252,6 +252,7 @@ MaxVelocity.Font = Enum.Font.ArialBold
 MaxVelocity.PlaceholderText = "1"
 MaxVelocity.Text = "1"
 MaxVelocity.TextColor3 = Color3.fromRGB(255, 177, 19)
+MaxVelocity.TextScaled = true
 MaxVelocity.TextSize = 30.000
 MaxVelocity.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 MaxVelocity.TextWrapped = true
@@ -496,7 +497,7 @@ Text.TextTransparency = 1.000
 
 -- Scripts:
 
-local function HJGEM_fake_script() -- LOLK.LocalScript 
+local function VFCZ_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -696,4 +697,4 @@ local function HJGEM_fake_script() -- LOLK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HJGEM_fake_script)()
+coroutine.wrap(VFCZ_fake_script)()
