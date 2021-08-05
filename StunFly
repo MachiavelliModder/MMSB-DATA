@@ -417,17 +417,20 @@ Dialog.Size = UDim2.new(1, 0, 1, 0)
 
 Frame3.Name = "Frame3"
 Frame3.Parent = Dialog
+Frame3.AnchorPoint = Vector2.new(0, 0.100000001)
 Frame3.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 Frame3.BackgroundTransparency = 1.000
 Frame3.BorderSizePixel = 0
-Frame3.Position = UDim2.new(0.400000006, 0, 0, 0)
+Frame3.Position = UDim2.new(0.400000006, 0, 0.100000001, 0)
 Frame3.Size = UDim2.new(0.200000003, 0, 0, 50)
 
 Frame1.Name = "Frame1"
 Frame1.Parent = Dialog
+Frame1.AnchorPoint = Vector2.new(0, 0.100000001)
 Frame1.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 Frame1.BackgroundTransparency = 1.000
 Frame1.BorderSizePixel = 0
+Frame1.Position = UDim2.new(0, 0, 0.100000001, 0)
 Frame1.Size = UDim2.new(0.400000006, 0, 0, 50)
 
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
@@ -436,11 +439,11 @@ UIGradient.Parent = Frame1
 
 Frame2.Name = "Frame2"
 Frame2.Parent = Dialog
-Frame2.AnchorPoint = Vector2.new(1, 0)
+Frame2.AnchorPoint = Vector2.new(1, 0.100000001)
 Frame2.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 Frame2.BackgroundTransparency = 1.000
 Frame2.BorderSizePixel = 0
-Frame2.Position = UDim2.new(1, 0, 0, 0)
+Frame2.Position = UDim2.new(1, 0, 0.100000001, 0)
 Frame2.Size = UDim2.new(0.400000006, 0, 0, 50)
 
 UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
@@ -450,19 +453,20 @@ UIGradient_2.Parent = Frame2
 
 Logo_3.Name = "Logo"
 Logo_3.Parent = Dialog
+Logo_3.AnchorPoint = Vector2.new(0, 0.100000001)
 Logo_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Logo_3.BackgroundTransparency = 1.000
-Logo_3.Position = UDim2.new(0.480694979, 0, -0.0015874356, 0)
+Logo_3.Position = UDim2.new(0.481000006, 0, 0.100000001, 0)
 Logo_3.Size = UDim2.new(0, 50, 0, 50)
 Logo_3.Image = "http://www.roblox.com/asset/?id=170706688"
 Logo_3.ImageTransparency = 1.000
 
 Text.Name = "Text"
 Text.Parent = Dialog
-Text.AnchorPoint = Vector2.new(0.5, 0)
+Text.AnchorPoint = Vector2.new(0.5, 0.100000001)
 Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Text.BackgroundTransparency = 1.000
-Text.Position = UDim2.new(0.5, 0, 0, 0)
+Text.Position = UDim2.new(0.5, 0, 0.100000001, 0)
 Text.Size = UDim2.new(0, 200, 0, 50)
 Text.Font = Enum.Font.ArialBold
 Text.Text = "Script Loaded without any issues."
@@ -472,7 +476,7 @@ Text.TextTransparency = 1.000
 
 -- Scripts:
 
-local function LPHOR_fake_script() -- LOLK.LocalScript 
+local function ENNLCI_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -671,4 +675,4 @@ local function LPHOR_fake_script() -- LOLK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LPHOR_fake_script)()
+coroutine.wrap(ENNLCI_fake_script)()
