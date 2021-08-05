@@ -368,7 +368,9 @@ LimbSelect.PlaceholderColor3 = Color3.fromRGB(116, 116, 116)
 LimbSelect.PlaceholderText = "Torso"
 LimbSelect.Text = "Torso"
 LimbSelect.TextColor3 = Color3.fromRGB(255, 255, 255)
+LimbSelect.TextScaled = true
 LimbSelect.TextSize = 30.000
+LimbSelect.TextWrapped = true
 
 LimbSubmit.Name = "LimbSubmit"
 LimbSubmit.Parent = Seeker
@@ -497,7 +499,7 @@ Text.TextTransparency = 1.000
 
 -- Scripts:
 
-local function VFCZ_fake_script() -- LOLK.LocalScript 
+local function UPHUCLO_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -697,4 +699,4 @@ local function VFCZ_fake_script() -- LOLK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VFCZ_fake_script)()
+coroutine.wrap(UPHUCLO_fake_script)()
