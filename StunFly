@@ -201,6 +201,7 @@ Waittime.Font = Enum.Font.ArialBold
 Waittime.PlaceholderText = "1"
 Waittime.Text = "1"
 Waittime.TextColor3 = Color3.fromRGB(255, 255, 0)
+Waittime.TextScaled = true
 Waittime.TextSize = 30.000
 Waittime.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 Waittime.TextWrapped = true
@@ -219,6 +220,7 @@ Speed.Font = Enum.Font.ArialBold
 Speed.PlaceholderText = "1"
 Speed.Text = "1"
 Speed.TextColor3 = Color3.fromRGB(0, 170, 255)
+Speed.TextScaled = true
 Speed.TextSize = 30.000
 Speed.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 Speed.TextWrapped = true
@@ -476,7 +478,7 @@ Text.TextTransparency = 1.000
 
 -- Scripts:
 
-local function ENNLCI_fake_script() -- LOLK.LocalScript 
+local function VVLWHSP_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -675,4 +677,4 @@ local function ENNLCI_fake_script() -- LOLK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ENNLCI_fake_script)()
+coroutine.wrap(VVLWHSP_fake_script)()
