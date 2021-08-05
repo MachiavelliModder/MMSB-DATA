@@ -37,11 +37,20 @@ local TextLabel_4 = Instance.new("TextLabel")
 local controlsbutton = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
 local Dev = Instance.new("TextButton")
+local LimbSelect = Instance.new("TextBox")
 local DevUI = Instance.new("BillboardGui")
 local Frame = Instance.new("Frame")
 local speed = Instance.new("TextLabel")
 local UICorner_12 = Instance.new("UICorner")
 local maxforce = Instance.new("TextLabel")
+local Dialog = Instance.new("Frame")
+local Frame3 = Instance.new("Frame")
+local Frame1 = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local Frame2 = Instance.new("Frame")
+local UIGradient_2 = Instance.new("UIGradient")
+local Logo_3 = Instance.new("ImageLabel")
+local Text = Instance.new("TextLabel")
 
 --Properties:
 
@@ -153,7 +162,7 @@ CloseFrame.Parent = Seeker
 CloseFrame.AnchorPoint = Vector2.new(1, 1)
 CloseFrame.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
 CloseFrame.Position = UDim2.new(1, 0, 1, 0)
-CloseFrame.Size = UDim2.new(0, 40, 0, 40)
+CloseFrame.Size = UDim2.new(0, 40, 0, 38)
 
 UICorner_5.CornerRadius = UDim.new(0, 10)
 UICorner_5.Parent = CloseFrame
@@ -173,7 +182,7 @@ Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Close.BackgroundTransparency = 1.000
 Close.BorderSizePixel = 0
 Close.Position = UDim2.new(1, 0, 1, 0)
-Close.Size = UDim2.new(0, 40, 0, 40)
+Close.Size = UDim2.new(0, 40, 0, 38)
 Close.ZIndex = 10
 Close.Font = Enum.Font.JosefinSans
 Close.Text = "|>|"
@@ -187,13 +196,12 @@ Waittime.Parent = Seeker
 Waittime.AnchorPoint = Vector2.new(0, 1)
 Waittime.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
 Waittime.Position = UDim2.new(0, 0, 1, 0)
-Waittime.Size = UDim2.new(0, 30, 0, 40)
+Waittime.Size = UDim2.new(0, 30, 0, 38)
 Waittime.Font = Enum.Font.ArialBold
 Waittime.PlaceholderText = "1"
 Waittime.Text = "1"
 Waittime.TextColor3 = Color3.fromRGB(255, 255, 0)
-Waittime.TextScaled = true
-Waittime.TextSize = 14.000
+Waittime.TextSize = 30.000
 Waittime.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 Waittime.TextWrapped = true
 
@@ -206,13 +214,12 @@ Speed.AnchorPoint = Vector2.new(0, 1)
 Speed.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
 Speed.BorderSizePixel = 0
 Speed.Position = UDim2.new(0, 30, 1, 0)
-Speed.Size = UDim2.new(0, 30, 0, 40)
+Speed.Size = UDim2.new(0, 30, 0, 38)
 Speed.Font = Enum.Font.ArialBold
 Speed.PlaceholderText = "1"
 Speed.Text = "1"
 Speed.TextColor3 = Color3.fromRGB(0, 170, 255)
-Speed.TextScaled = true
-Speed.TextSize = 14.000
+Speed.TextSize = 30.000
 Speed.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 Speed.TextWrapped = true
 
@@ -224,8 +231,8 @@ bar2.Parent = Seeker
 bar2.AnchorPoint = Vector2.new(0.5, 0.824999988)
 bar2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
 bar2.BorderSizePixel = 0
-bar2.Position = UDim2.new(0.5, 0, 1.10053706, 0)
-bar2.Size = UDim2.new(0, 100, 0, 84)
+bar2.Position = UDim2.new(0.5, 0, 1.19881892, 0)
+bar2.Size = UDim2.new(0, 100, 0, 119)
 bar2.ZIndex = -1
 
 UICorner_8.CornerRadius = UDim.new(0, 10)
@@ -242,8 +249,7 @@ MaxVelocity.Font = Enum.Font.ArialBold
 MaxVelocity.PlaceholderText = "1"
 MaxVelocity.Text = "1"
 MaxVelocity.TextColor3 = Color3.fromRGB(255, 177, 19)
-MaxVelocity.TextScaled = true
-MaxVelocity.TextSize = 14.000
+MaxVelocity.TextSize = 30.000
 MaxVelocity.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 MaxVelocity.TextWrapped = true
 
@@ -347,6 +353,19 @@ Dev.TextSize = 14.000
 Dev.TextTransparency = 0.500
 Dev.TextWrapped = true
 
+LimbSelect.Name = "LimbSelect"
+LimbSelect.Parent = Seeker
+LimbSelect.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LimbSelect.BackgroundTransparency = 1.000
+LimbSelect.Position = UDim2.new(0, 0, 1.13333333, 0)
+LimbSelect.Size = UDim2.new(0, 100, 0, 40)
+LimbSelect.Font = Enum.Font.ArialBold
+LimbSelect.PlaceholderColor3 = Color3.fromRGB(116, 116, 116)
+LimbSelect.PlaceholderText = "Torso"
+LimbSelect.Text = "Torso"
+LimbSelect.TextColor3 = Color3.fromRGB(255, 255, 255)
+LimbSelect.TextSize = 30.000
+
 DevUI.Name = "DevUI"
 DevUI.Parent = LOLK
 DevUI.Enabled = false
@@ -390,22 +409,145 @@ maxforce.TextSize = 14.000
 maxforce.TextWrapped = true
 maxforce.TextYAlignment = Enum.TextYAlignment.Bottom
 
+Dialog.Name = "Dialog"
+Dialog.Parent = LOLK
+Dialog.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Dialog.BackgroundTransparency = 1.000
+Dialog.Size = UDim2.new(1, 0, 1, 0)
+
+Frame3.Name = "Frame3"
+Frame3.Parent = Dialog
+Frame3.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Frame3.BackgroundTransparency = 1.000
+Frame3.BorderSizePixel = 0
+Frame3.Position = UDim2.new(0.400000006, 0, 0, 0)
+Frame3.Size = UDim2.new(0.200000003, 0, 0, 50)
+
+Frame1.Name = "Frame1"
+Frame1.Parent = Dialog
+Frame1.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Frame1.BackgroundTransparency = 1.000
+Frame1.BorderSizePixel = 0
+Frame1.Size = UDim2.new(0.400000006, 0, 0, 50)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 1.00), NumberSequenceKeypoint.new(0.30, 1.00), NumberSequenceKeypoint.new(1.00, 0.00)}
+UIGradient.Parent = Frame1
+
+Frame2.Name = "Frame2"
+Frame2.Parent = Dialog
+Frame2.AnchorPoint = Vector2.new(1, 0)
+Frame2.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Frame2.BackgroundTransparency = 1.000
+Frame2.BorderSizePixel = 0
+Frame2.Position = UDim2.new(1, 0, 0, 0)
+Frame2.Size = UDim2.new(0.400000006, 0, 0, 50)
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient_2.Rotation = 180
+UIGradient_2.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 1.00), NumberSequenceKeypoint.new(0.30, 1.00), NumberSequenceKeypoint.new(1.00, 0.00)}
+UIGradient_2.Parent = Frame2
+
+Logo_3.Name = "Logo"
+Logo_3.Parent = Dialog
+Logo_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo_3.BackgroundTransparency = 1.000
+Logo_3.Position = UDim2.new(0.480694979, 0, -0.0015874356, 0)
+Logo_3.Size = UDim2.new(0, 50, 0, 50)
+Logo_3.Image = "http://www.roblox.com/asset/?id=170706688"
+Logo_3.ImageTransparency = 1.000
+
+Text.Name = "Text"
+Text.Parent = Dialog
+Text.AnchorPoint = Vector2.new(0.5, 0)
+Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text.BackgroundTransparency = 1.000
+Text.Position = UDim2.new(0.5, 0, 0, 0)
+Text.Size = UDim2.new(0, 200, 0, 50)
+Text.Font = Enum.Font.ArialBold
+Text.Text = "Script Loaded without any issues."
+Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text.TextSize = 30.000
+Text.TextTransparency = 1.000
+
 -- Scripts:
 
-local function AGFVG_fake_script() -- LOLK.LocalScript 
+local function LPHOR_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
+	local text = Instance.new("StringValue",script.Parent)
+	local textcount = 0
 	local tog = false
 	local canraycast = false
 	local closetog = false
 	local controlstog = false
 	local devmode = false
+	local stupiduienabled = false
+	
+	local function firestupidstuff()
+		if stupiduienabled == false then
+			stupiduienabled = true
+			while wait() do
+				if script.Parent.Dialog.Frame1.BackgroundTransparency < .5 then
+					break
+				else
+					for _,dialogtext in pairs(script.Parent.Dialog:GetChildren()) do
+						if dialogtext:IsA("Frame") then
+							dialogtext.BackgroundTransparency = dialogtext.BackgroundTransparency - .01
+						elseif dialogtext:IsA("TextLabel") then
+							dialogtext.TextTransparency = dialogtext.TextTransparency - .015
+						elseif dialogtext:IsA("ImageLabel") then
+							if dialogtext.ImageTransparency == 0.5 then
+							else
+								dialogtext.ImageTransparency = dialogtext.ImageTransparency - .01
+							end
+						end
+					end
+				end
+			end
+			script.Parent.Dialog.Text.Text = text.Value
+			textcount = #text.Value
+			for _ = 1, textcount do
+				wait(.05)
+				script.Parent.Dialog.Text.MaxVisibleGraphemes = script.Parent.Dialog.Text.MaxVisibleGraphemes + 1
+			end
+			wait(3)
+			for _ = 1, textcount do
+				wait(.025)
+				script.Parent.Dialog.Text.MaxVisibleGraphemes = script.Parent.Dialog.Text.MaxVisibleGraphemes - 1
+			end
+			script.Parent.Dialog.Text.Text = "nil"
+			script.Parent.Dialog.Text.MaxVisibleGraphemes = 0
+			while wait(.1) do
+				if script.Parent.Dialog.Frame1.BackgroundTransparency > 1 then
+					break
+				else
+					for _,dialogtext in pairs(script.Parent.Dialog:GetChildren()) do
+						if dialogtext:IsA("Frame") then
+							dialogtext.BackgroundTransparency = dialogtext.BackgroundTransparency + .01
+						elseif dialogtext:IsA("TextLabel") then
+							dialogtext.TextTransparency = dialogtext.TextTransparency + .015
+						elseif dialogtext:IsA("ImageLabel") then
+							if dialogtext.ImageTransparency == 1 then
+							else
+								dialogtext.ImageTransparency = dialogtext.ImageTransparency + .01
+							end
+						end
+					end
+				end
+			end
+			stupiduienabled = false
+		end
+	end
+	
 	script.Parent.Load.RunScript.MouseButton1Click:Connect(function()
 		if tog == false then
 			tog = true
 			script.Parent.Load.Visible = false
 			script.Parent.Seeker.Visible = true
+			text.Value = "Script loaded without any issues."
+			firestupidstuff()
 		end
 	end)
 	
@@ -421,6 +563,8 @@ local function AGFVG_fake_script() -- LOLK.LocalScript
 			script.Parent.Seeker.TOTOGGLE.Visible = false
 			script.Parent.Seeker.Logo.Visible = false
 			script.Parent.Seeker.BackgroundTransparency = 1
+			text.Value = "Closed MainMenu"
+			firestupidstuff()
 		else
 			closetog = false
 			script.Parent.Seeker.controlsbutton.Visible = true
@@ -430,6 +574,8 @@ local function AGFVG_fake_script() -- LOLK.LocalScript
 			script.Parent.Seeker.TOTOGGLE.Visible = true
 			script.Parent.Seeker.Logo.Visible = true
 			script.Parent.Seeker.BackgroundTransparency = 0
+			text.Value = "Opened MainMenu"
+			firestupidstuff()
 		end
 	end)
 	
@@ -456,7 +602,7 @@ local function AGFVG_fake_script() -- LOLK.LocalScript
 		if canraycast == true then
 			local part = Instance.new("Part",workspace)
 			local AP = Instance.new("AlignPosition",user.Torso)
-			local att1 = Instance.new("Attachment",user.Torso)
+			local att1 = Instance.new("Attachment",user:FindFirstChild(script.Parent.Seeker.LimbSelect.Text))
 			local att2 = Instance.new("Attachment",part)
 			local devui = script.Parent.DevUI:Clone()
 			AP.Enabled = false
@@ -505,10 +651,24 @@ local function AGFVG_fake_script() -- LOLK.LocalScript
 		if devmode == false then
 			devmode = true
 			script.Parent.Seeker.Dev.TextTransparency = 0
+			text.Value = "DevMode Enabled"
+			firestupidstuff()
 		else
 			devmode = false
 			script.Parent.Seeker.Dev.TextTransparency = 0.5
+			text.Value = "DevMode Disabled"
+			firestupidstuff()
+		end
+	end)
+	
+	script.Parent.Seeker.LimbSelect.Changed:Connect(function()
+		local ltext = script.Parent.Seeker.LimbSelect
+		if ltext.Text == "Torso" or ltext.Text == "Head" or ltext.Text == "Left Arm" or ltext.Text == "Right Arm" or  ltext.Text == "Left Leg" or ltext.Text == "Right Leg" then
+		else
+			text.Value = ltext.Text.." Is not a valid member of your Character!"
+			firestupidstuff()
+			ltext.Text = "Torso"
 		end
 	end)
 end
-coroutine.wrap(AGFVG_fake_script)()
+coroutine.wrap(LPHOR_fake_script)()
