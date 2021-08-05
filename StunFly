@@ -38,6 +38,7 @@ local controlsbutton = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
 local Dev = Instance.new("TextButton")
 local LimbSelect = Instance.new("TextBox")
+local LimbSubmit = Instance.new("TextButton")
 local DevUI = Instance.new("BillboardGui")
 local Frame = Instance.new("Frame")
 local speed = Instance.new("TextLabel")
@@ -368,6 +369,23 @@ LimbSelect.Text = "Torso"
 LimbSelect.TextColor3 = Color3.fromRGB(255, 255, 255)
 LimbSelect.TextSize = 30.000
 
+LimbSubmit.Name = "LimbSubmit"
+LimbSubmit.Parent = Seeker
+LimbSubmit.AnchorPoint = Vector2.new(1, 1)
+LimbSubmit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LimbSubmit.BackgroundTransparency = 1.000
+LimbSubmit.BorderSizePixel = 0
+LimbSubmit.Position = UDim2.new(0.970000029, 0, 1.33533323, 0)
+LimbSubmit.Size = UDim2.new(0, 94, 0, 21)
+LimbSubmit.ZIndex = 10
+LimbSubmit.Font = Enum.Font.ArialBold
+LimbSubmit.Text = "Submit"
+LimbSubmit.TextColor3 = Color3.fromRGB(255, 255, 127)
+LimbSubmit.TextScaled = true
+LimbSubmit.TextSize = 14.000
+LimbSubmit.TextTransparency = 0.500
+LimbSubmit.TextWrapped = true
+
 DevUI.Name = "DevUI"
 DevUI.Parent = LOLK
 DevUI.Enabled = false
@@ -478,7 +496,7 @@ Text.TextTransparency = 1.000
 
 -- Scripts:
 
-local function VVLWHSP_fake_script() -- LOLK.LocalScript 
+local function HJGEM_fake_script() -- LOLK.LocalScript 
 	local script = Instance.new('LocalScript', LOLK)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -667,7 +685,8 @@ local function VVLWHSP_fake_script() -- LOLK.LocalScript
 		end
 	end)
 	
-	script.Parent.Seeker.LimbSelect.Changed:Connect(function()
+	
+	script.Parent.Seeker.LimbSubmit.MouseButton1Click:Connect(function()
 		local ltext = script.Parent.Seeker.LimbSelect
 		if ltext.Text == "Torso" or ltext.Text == "Head" or ltext.Text == "Left Arm" or ltext.Text == "Right Arm" or  ltext.Text == "Left Leg" or ltext.Text == "Right Leg" then
 		else
@@ -677,4 +696,4 @@ local function VVLWHSP_fake_script() -- LOLK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VVLWHSP_fake_script)()
+coroutine.wrap(HJGEM_fake_script)()
