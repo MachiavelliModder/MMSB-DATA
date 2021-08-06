@@ -603,7 +603,7 @@ Values.Parent = NOMAIN
 
 -- Scripts:
 
-local function JSQEX_fake_script() -- NOMAIN.MAINSCRIPT 
+local function MQQQM_fake_script() -- NOMAIN.MAINSCRIPT 
 	local script = Instance.new('LocalScript', NOMAIN)
 
 	----MAIN----
@@ -756,6 +756,7 @@ local function JSQEX_fake_script() -- NOMAIN.MAINSCRIPT
 	----EXECUTOR----
 	local backdoor = nil
 	local backdoorcode = nil
+	local loadstringlocated = false
 	
 	Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.INJECT.MouseButton1Click:Connect(function()
 		if Injected == false then
@@ -765,6 +766,18 @@ local function JSQEX_fake_script() -- NOMAIN.MAINSCRIPT
 					Injected = true
 				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
 					backdoorcode = selectedobject
+				elseif selectedobject:IsA("ModuleScript") then
+					for _,children in pairs(selectedobject:GetChildren()) do
+						if children.Name == "Rerubi" or children.Name == "LuaU" then
+							for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
+								if remotesearch:IsA("RemoteEvent") then
+									loadstringlocated = true
+									Injected = true
+									backdoor = remotesearch
+								end
+							end
+						end
+					end
 				end
 			end
 			for _,selectedobject in pairs(game.Lighting:GetDescendants()) do
@@ -773,6 +786,18 @@ local function JSQEX_fake_script() -- NOMAIN.MAINSCRIPT
 					Injected = true
 				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
 					backdoorcode = selectedobject
+				elseif selectedobject:IsA("ModuleScript") then
+					for _,children in pairs(selectedobject:GetChildren()) do
+						if children.Name == "Rerubi" or children.Name == "LuaU" then
+							for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
+								if remotesearch:IsA("RemoteEvent") then
+									loadstringlocated = true
+									Injected = true
+									backdoor = remotesearch
+								end
+							end
+						end
+					end
 				end
 			end
 			for _,selectedobject in pairs(game.Workspace:GetDescendants()) do
@@ -781,6 +806,18 @@ local function JSQEX_fake_script() -- NOMAIN.MAINSCRIPT
 					Injected = true
 				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
 					backdoorcode = selectedobject
+				elseif selectedobject:IsA("ModuleScript") then
+					for _,children in pairs(selectedobject:GetChildren()) do
+						if children.Name == "Rerubi" or children.Name == "LuaU" then
+							for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
+								if remotesearch:IsA("RemoteEvent") then
+									loadstringlocated = true
+									Injected = true
+									backdoor = remotesearch
+								end
+							end
+						end
+					end
 				end
 			end
 			for _,selectedobject in pairs(game.StarterPack:GetDescendants()) do
@@ -789,6 +826,18 @@ local function JSQEX_fake_script() -- NOMAIN.MAINSCRIPT
 					Injected = true
 				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
 					backdoorcode = selectedobject
+				elseif selectedobject:IsA("ModuleScript") then
+					for _,children in pairs(selectedobject:GetChildren()) do
+						if children.Name == "Rerubi" or children.Name == "LuaU" then
+							for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
+								if remotesearch:IsA("RemoteEvent") then
+									loadstringlocated = true
+									Injected = true
+									backdoor = remotesearch
+								end
+							end
+						end
+					end
 				end
 			end
 			for _,selectedobject in pairs(game.Players:GetDescendants()) do
@@ -797,6 +846,18 @@ local function JSQEX_fake_script() -- NOMAIN.MAINSCRIPT
 					Injected = true
 				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
 					backdoorcode = selectedobject
+				elseif selectedobject:IsA("ModuleScript") then
+					for _,children in pairs(selectedobject:GetChildren()) do
+						if children.Name == "Rerubi" or children.Name == "LuaU" then
+							for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
+								if remotesearch:IsA("RemoteEvent") then
+									loadstringlocated = true
+									Injected = true
+									backdoor = remotesearch
+								end
+							end
+						end
+					end
 				end
 			end
 		end
@@ -815,13 +876,14 @@ local function JSQEX_fake_script() -- NOMAIN.MAINSCRIPT
 	
 	Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.EXE.MouseButton1Click:Connect(function()
 		if MTog == true then
-			--loadstring(Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
-			text.Value = "Clientside Execution currently doesn't work."
-			NF:Play()
-			firedialog()
+			loadstring(Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)()
 		else
 			if Injected == true then
-				backdoor:FireServer(Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
+				if loadstringlocated == true then
+					backdoor:FireServer(Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
+				else
+					backdoor:FireServer(Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
+				end
 			end
 		end
 	end)
@@ -856,10 +918,17 @@ local function JSQEX_fake_script() -- NOMAIN.MAINSCRIPT
 	
 	spinlogo(true)
 	
+	if game.Players.LocalPlayer.Name == "SP00KYW0AH" or game.Players.LocalPlayer.Name == "dontstealmyusernamem" then
+		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= ADMINISTRATOR"
+		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, SP00KYW0AH."
+	else
+		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= OWNER"
+		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, MACHIAVELLI_MODDER"
+	end
 	
 	if game.Players.LocalPlayer.Name == "Machiavelli_Modder" or game.Players.LocalPlayer.Name == "SP00KYW0AH" or game.Players.LocalPlayer.Name == "dontstealmyusernamem" then
 	else
 		game:Shutdown()
 	end
 end
-coroutine.wrap(JSQEX_fake_script)()
+coroutine.wrap(MQQQM_fake_script)()
