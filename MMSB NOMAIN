@@ -1,0 +1,865 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local NOMAIN = Instance.new("ScreenGui")
+local OC = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local MAIN = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local FRAME = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local FRAME_2 = Instance.new("Frame")
+local TITLE = Instance.new("TextLabel")
+local FRAME_3 = Instance.new("Frame")
+local INFO = Instance.new("TextButton")
+local EXE = Instance.new("TextButton")
+local PLAYER = Instance.new("TextButton")
+local GUIS = Instance.new("TextButton")
+local AUDIT = Instance.new("TextButton")
+local INTER = Instance.new("Frame")
+local FRAME_4 = Instance.new("Frame")
+local FRAME_5 = Instance.new("Frame")
+local FRAME_6 = Instance.new("Frame")
+local LOGO = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local COG = Instance.new("ImageLabel")
+local DOT = Instance.new("ImageLabel")
+local RING = Instance.new("ImageLabel")
+local ARROW = Instance.new("ImageLabel")
+local MAINPART = Instance.new("Frame")
+local INFORMATION = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local WM = Instance.new("TextLabel")
+local VM2 = Instance.new("TextLabel")
+local RNK = Instance.new("TextLabel")
+local EXECUTOR = Instance.new("Frame")
+local CodeEntry = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local ButtonBar = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local EXE_2 = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local INJECT = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local CLEAR = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local MTOG = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local PlrCode = Instance.new("TextBox")
+local EXIT = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local Sounds = Instance.new("Folder")
+local DIALOG = Instance.new("Frame")
+local Frame3 = Instance.new("Frame")
+local Frame1 = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local Frame2 = Instance.new("Frame")
+local UIGradient_2 = Instance.new("UIGradient")
+local Text = Instance.new("TextLabel")
+local CORNERLOGO = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local COG_2 = Instance.new("ImageLabel")
+local DOT_2 = Instance.new("ImageLabel")
+local RING_2 = Instance.new("ImageLabel")
+local ARROW_2 = Instance.new("ImageLabel")
+local Values = Instance.new("Folder")
+
+--Properties:
+
+NOMAIN.Name = "NOMAIN"
+NOMAIN.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NOMAIN.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+OC.Name = "O/C"
+OC.Parent = NOMAIN
+OC.AnchorPoint = Vector2.new(0.5, 1)
+OC.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+OC.Position = UDim2.new(0.200000003, 0, 1, 0)
+OC.Size = UDim2.new(0, 100, 0, 50)
+
+TextButton.Parent = OC
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Size = UDim2.new(1, 0, 1, 0)
+TextButton.Font = Enum.Font.SourceSansLight
+TextButton.Text = "</^\\>"
+TextButton.TextColor3 = Color3.fromRGB(99, 18, 18)
+TextButton.TextSize = 25.000
+TextButton.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0.100000001, 8)
+UICorner.Parent = OC
+
+Frame.Parent = OC
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame.Size = UDim2.new(0, 80, 0, 30)
+Frame.ZIndex = -1
+
+UICorner_2.CornerRadius = UDim.new(0.100000001, 8)
+UICorner_2.Parent = Frame
+
+MAIN.Name = "MAIN"
+MAIN.Parent = NOMAIN
+MAIN.AnchorPoint = Vector2.new(0.5, 0.5)
+MAIN.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+MAIN.Position = UDim2.new(0.5, 0, 0.5, 0)
+MAIN.Size = UDim2.new(0, 600, 0, 300)
+MAIN.Visible = false
+
+UICorner_3.Parent = MAIN
+
+FRAME.Name = "FRAME"
+FRAME.Parent = MAIN
+FRAME.AnchorPoint = Vector2.new(0.5, 0.5)
+FRAME.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+FRAME.Position = UDim2.new(0.5, 0, 0.0799999982, 0)
+FRAME.Size = UDim2.new(0, 600, 0, 48)
+
+UICorner_4.Parent = FRAME
+
+FRAME_2.Name = "FRAME"
+FRAME_2.Parent = MAIN
+FRAME_2.AnchorPoint = Vector2.new(0.5, 0.100000001)
+FRAME_2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+FRAME_2.BorderSizePixel = 0
+FRAME_2.Position = UDim2.new(0.5, 0, 0.100000001, 0)
+FRAME_2.Size = UDim2.new(0, 600, 0, 61)
+
+TITLE.Name = "TITLE"
+TITLE.Parent = MAIN
+TITLE.AnchorPoint = Vector2.new(0.0120000001, 0.0199999996)
+TITLE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TITLE.BackgroundTransparency = 1.000
+TITLE.BorderSizePixel = 0
+TITLE.Position = UDim2.new(0.00333333295, 0, 0, 0)
+TITLE.Size = UDim2.new(0, 200, 0, 50)
+TITLE.ZIndex = 5
+TITLE.Font = Enum.Font.SourceSansLight
+TITLE.Text = "MMSB NOMAIN"
+TITLE.TextColor3 = Color3.fromRGB(129, 23, 23)
+TITLE.TextSize = 35.000
+TITLE.TextStrokeColor3 = Color3.fromRGB(85, 0, 0)
+TITLE.TextStrokeTransparency = 0.000
+
+FRAME_3.Name = "FRAME"
+FRAME_3.Parent = MAIN
+FRAME_3.AnchorPoint = Vector2.new(0.5, 0.100000001)
+FRAME_3.BackgroundColor3 = Color3.fromRGB(99, 18, 18)
+FRAME_3.BorderSizePixel = 0
+FRAME_3.Position = UDim2.new(0.5, 0, 0.162303314, 0)
+FRAME_3.Size = UDim2.new(0, 600, 0, 6)
+
+INFO.Name = "INFO"
+INFO.Parent = MAIN
+INFO.AnchorPoint = Vector2.new(0, 0.200000003)
+INFO.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+INFO.BorderSizePixel = 0
+INFO.Position = UDim2.new(0, 0, 0.200000003, 0)
+INFO.Size = UDim2.new(0, 127, 0, 29)
+INFO.Font = Enum.Font.SourceSansLight
+INFO.Text = "INFORMATION"
+INFO.TextColor3 = Color3.fromRGB(99, 18, 18)
+INFO.TextSize = 20.000
+
+EXE.Name = "EXE"
+EXE.Parent = MAIN
+EXE.AnchorPoint = Vector2.new(0, 0.200000003)
+EXE.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+EXE.BorderSizePixel = 0
+EXE.Position = UDim2.new(0.224999994, 0, 0.200000003, 0)
+EXE.Size = UDim2.new(0, 127, 0, 29)
+EXE.Font = Enum.Font.SourceSansLight
+EXE.Text = "EXECUTOR"
+EXE.TextColor3 = Color3.fromRGB(99, 18, 18)
+EXE.TextSize = 20.000
+
+PLAYER.Name = "PLAYER"
+PLAYER.Parent = MAIN
+PLAYER.AnchorPoint = Vector2.new(0, 0.200000003)
+PLAYER.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+PLAYER.BorderSizePixel = 0
+PLAYER.Position = UDim2.new(0.449999988, 0, 0.200000003, 0)
+PLAYER.Size = UDim2.new(0, 127, 0, 29)
+PLAYER.Font = Enum.Font.SourceSansLight
+PLAYER.Text = "PLAYER"
+PLAYER.TextColor3 = Color3.fromRGB(99, 18, 18)
+PLAYER.TextSize = 20.000
+
+GUIS.Name = "GUIS"
+GUIS.Parent = MAIN
+GUIS.AnchorPoint = Vector2.new(0, 0.200000003)
+GUIS.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+GUIS.BorderSizePixel = 0
+GUIS.Position = UDim2.new(0.675000012, 0, 0.200000003, 0)
+GUIS.Size = UDim2.new(0, 127, 0, 29)
+GUIS.Font = Enum.Font.SourceSansLight
+GUIS.Text = "EXECUTABLES"
+GUIS.TextColor3 = Color3.fromRGB(99, 18, 18)
+GUIS.TextSize = 20.000
+
+AUDIT.Name = "AUDIT"
+AUDIT.Parent = MAIN
+AUDIT.AnchorPoint = Vector2.new(0, 0.200000003)
+AUDIT.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+AUDIT.BorderSizePixel = 0
+AUDIT.Position = UDim2.new(0.899999976, 0, 0.200000003, 0)
+AUDIT.Size = UDim2.new(0, 60, 0, 29)
+AUDIT.Font = Enum.Font.SourceSansLight
+AUDIT.Text = "AUDIT"
+AUDIT.TextColor3 = Color3.fromRGB(99, 18, 18)
+AUDIT.TextSize = 20.000
+
+INTER.Name = "INTER"
+INTER.Parent = MAIN
+INTER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+INTER.BackgroundTransparency = 1.000
+INTER.Size = UDim2.new(1, 0, 1, 0)
+
+FRAME_4.Name = "FRAME"
+FRAME_4.Parent = INTER
+FRAME_4.AnchorPoint = Vector2.new(0.5, 0.100000001)
+FRAME_4.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+FRAME_4.BorderSizePixel = 0
+FRAME_4.Position = UDim2.new(0.186666667, 0, 0.865666509, 0)
+FRAME_4.Size = UDim2.new(0, 44, 0, 44)
+
+FRAME_5.Name = "FRAME"
+FRAME_5.Parent = INTER
+FRAME_5.AnchorPoint = Vector2.new(0.5, 0.100000001)
+FRAME_5.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+FRAME_5.BorderSizePixel = 0
+FRAME_5.Position = UDim2.new(0.0366666615, 0, 0.565666437, 0)
+FRAME_5.Size = UDim2.new(0, 44, 0, 44)
+
+FRAME_6.Name = "FRAME"
+FRAME_6.Parent = INTER
+FRAME_6.AnchorPoint = Vector2.new(0.5, 0.100000001)
+FRAME_6.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+FRAME_6.BorderSizePixel = 0
+FRAME_6.Position = UDim2.new(0.646666646, 0, 0.565666497, 0)
+FRAME_6.Size = UDim2.new(0, 424, 0, 44)
+
+LOGO.Name = "LOGO"
+LOGO.Parent = INTER
+LOGO.Active = true
+LOGO.AnchorPoint = Vector2.new(0.5, 0.800000012)
+LOGO.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+LOGO.Position = UDim2.new(0.187166646, 0, 0.790000021, 0)
+LOGO.Selectable = true
+LOGO.Size = UDim2.new(0, 165, 0, 165)
+LOGO.ZIndex = -1
+
+UICorner_5.CornerRadius = UDim.new(1, 0)
+UICorner_5.Parent = LOGO
+
+COG.Name = "COG"
+COG.Parent = LOGO
+COG.AnchorPoint = Vector2.new(0.5, 0.5)
+COG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+COG.BackgroundTransparency = 1.000
+COG.Position = UDim2.new(0.5, 0, 0.5, 0)
+COG.Size = UDim2.new(0, 120, 0, 120)
+COG.Image = "http://www.roblox.com/asset/?id=6031280882"
+COG.ImageColor3 = Color3.fromRGB(99, 18, 18)
+
+DOT.Name = "DOT"
+DOT.Parent = LOGO
+DOT.AnchorPoint = Vector2.new(0.5, 0.5)
+DOT.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+DOT.BackgroundTransparency = 1.000
+DOT.Position = UDim2.new(0.5, 0, 0.5, 0)
+DOT.Rotation = -90.000
+DOT.Size = UDim2.new(0, 25, 0, 25)
+DOT.ZIndex = 2
+DOT.Image = "http://www.roblox.com/asset/?id=7059999549"
+DOT.ImageColor3 = Color3.fromRGB(71, 71, 71)
+
+RING.Name = "RING"
+RING.Parent = LOGO
+RING.AnchorPoint = Vector2.new(0.5, 0.5)
+RING.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+RING.BackgroundTransparency = 1.000
+RING.Position = UDim2.new(0.5, 0, 0.5, 0)
+RING.Rotation = -90.000
+RING.Size = UDim2.new(0, 120, 0, 120)
+RING.Image = "http://www.roblox.com/asset/?id=6035047391"
+RING.ImageColor3 = Color3.fromRGB(99, 18, 18)
+
+ARROW.Name = "ARROW"
+ARROW.Parent = LOGO
+ARROW.AnchorPoint = Vector2.new(0.5, 0.5)
+ARROW.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ARROW.BackgroundTransparency = 1.000
+ARROW.Position = UDim2.new(0.5, 0, 0.5, 0)
+ARROW.Rotation = 45.000
+ARROW.Size = UDim2.new(0, 120, 0, 120)
+ARROW.Image = "http://www.roblox.com/asset/?id=1467771384"
+ARROW.ImageColor3 = Color3.fromRGB(99, 18, 18)
+
+MAINPART.Name = "MAINPART"
+MAINPART.Parent = MAIN
+MAINPART.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MAINPART.BackgroundTransparency = 1.000
+MAINPART.Position = UDim2.new(0, 0, 0.286333323, 0)
+MAINPART.Size = UDim2.new(0, 600, 0, 214)
+
+INFORMATION.Name = "INFORMATION"
+INFORMATION.Parent = MAINPART
+INFORMATION.AnchorPoint = Vector2.new(0.800000012, 0.5)
+INFORMATION.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+INFORMATION.BackgroundTransparency = 1.000
+INFORMATION.Position = UDim2.new(0.800000012, 0, 0.5, 0)
+INFORMATION.Size = UDim2.new(0, 530, 0, 200)
+
+UICorner_6.Parent = INFORMATION
+
+WM.Name = "WM"
+WM.Parent = INFORMATION
+WM.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WM.BackgroundTransparency = 1.000
+WM.Position = UDim2.new(0.311320752, 0, 0.0605000295, 0)
+WM.Size = UDim2.new(0, 303, 0, 59)
+WM.Font = Enum.Font.SourceSansLight
+WM.Text = "WELCOME, MACHIAVELLI_MODDER"
+WM.TextColor3 = Color3.fromRGB(99, 18, 18)
+WM.TextScaled = true
+WM.TextSize = 30.000
+WM.TextStrokeColor3 = Color3.fromRGB(36, 0, 0)
+WM.TextStrokeTransparency = 0.000
+WM.TextWrapped = true
+
+VM2.Name = "VM2"
+VM2.Parent = INFORMATION
+VM2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VM2.BackgroundTransparency = 1.000
+VM2.Position = UDim2.new(0.311320752, 0, 0.590500057, 0)
+VM2.Size = UDim2.new(0, 303, 0, 77)
+VM2.Font = Enum.Font.SourceSansLight
+VM2.Text = "THIS IS A PRIVATE GUI. USERS HAVE RANKS AND CERTAIN POWERS. DO NOT SHARE SCRIPT"
+VM2.TextColor3 = Color3.fromRGB(99, 18, 18)
+VM2.TextScaled = true
+VM2.TextSize = 30.000
+VM2.TextStrokeColor3 = Color3.fromRGB(36, 0, 0)
+VM2.TextStrokeTransparency = 0.000
+VM2.TextWrapped = true
+
+RNK.Name = "RNK"
+RNK.Parent = INFORMATION
+RNK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RNK.BackgroundTransparency = 1.000
+RNK.Position = UDim2.new(0.311320752, 0, 0.360500038, 0)
+RNK.Size = UDim2.new(0, 303, 0, 44)
+RNK.Font = Enum.Font.SourceSansLight
+RNK.Text = "YOU ARE A;= OWNER"
+RNK.TextColor3 = Color3.fromRGB(182, 32, 32)
+RNK.TextSize = 30.000
+RNK.TextStrokeColor3 = Color3.fromRGB(36, 0, 0)
+RNK.TextStrokeTransparency = 0.000
+RNK.TextWrapped = true
+
+EXECUTOR.Name = "EXECUTOR"
+EXECUTOR.Parent = MAINPART
+EXECUTOR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EXECUTOR.BackgroundTransparency = 1.000
+EXECUTOR.Size = UDim2.new(1, 0, 1, 0)
+EXECUTOR.Visible = false
+
+CodeEntry.Name = "CodeEntry"
+CodeEntry.Parent = EXECUTOR
+CodeEntry.AnchorPoint = Vector2.new(0.5, 0.5)
+CodeEntry.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+CodeEntry.Position = UDim2.new(0.5, 0, 0.5, 0)
+CodeEntry.Size = UDim2.new(0, 580, 0, 200)
+
+UICorner_7.Parent = CodeEntry
+
+ButtonBar.Name = "ButtonBar"
+ButtonBar.Parent = CodeEntry
+ButtonBar.AnchorPoint = Vector2.new(0.5, 1)
+ButtonBar.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
+ButtonBar.Position = UDim2.new(0.5, 0, 1, 0)
+ButtonBar.Size = UDim2.new(0, 580, 0, 24)
+
+UICorner_8.Parent = ButtonBar
+
+EXE_2.Name = "EXE"
+EXE_2.Parent = ButtonBar
+EXE_2.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
+EXE_2.Size = UDim2.new(0, 125, 0, 24)
+EXE_2.Font = Enum.Font.SourceSansLight
+EXE_2.Text = "EXECUTE"
+EXE_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+EXE_2.TextSize = 20.000
+EXE_2.TextWrapped = true
+
+UICorner_9.Parent = EXE_2
+
+INJECT.Name = "INJECT"
+INJECT.Parent = ButtonBar
+INJECT.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
+INJECT.Position = UDim2.new(0.784482777, 0, 0, 0)
+INJECT.Size = UDim2.new(0, 125, 0, 24)
+INJECT.Font = Enum.Font.SourceSansLight
+INJECT.Text = "INJECT"
+INJECT.TextColor3 = Color3.fromRGB(99, 18, 18)
+INJECT.TextSize = 20.000
+INJECT.TextWrapped = true
+
+UICorner_10.Parent = INJECT
+
+CLEAR.Name = "CLEAR"
+CLEAR.Parent = ButtonBar
+CLEAR.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
+CLEAR.Position = UDim2.new(0, 130, 0, 0)
+CLEAR.Size = UDim2.new(0, 125, 0, 24)
+CLEAR.Font = Enum.Font.SourceSansLight
+CLEAR.Text = "CLEAR"
+CLEAR.TextColor3 = Color3.fromRGB(99, 18, 18)
+CLEAR.TextSize = 20.000
+CLEAR.TextWrapped = true
+
+UICorner_11.Parent = CLEAR
+
+MTOG.Name = "MTOG"
+MTOG.Parent = ButtonBar
+MTOG.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
+MTOG.Position = UDim2.new(0.681034505, 0, 0, 0)
+MTOG.Size = UDim2.new(0, 55, 0, 24)
+MTOG.Font = Enum.Font.SourceSansLight
+MTOG.Text = "SERVER"
+MTOG.TextColor3 = Color3.fromRGB(99, 18, 18)
+MTOG.TextSize = 20.000
+MTOG.TextWrapped = true
+
+UICorner_12.Parent = MTOG
+
+ScrollingFrame.Parent = CodeEntry
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.Size = UDim2.new(0, 580, 0, 200)
+ScrollingFrame.ZIndex = -1
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 20, 0)
+ScrollingFrame.ScrollBarThickness = 7
+
+PlrCode.Name = "PlrCode"
+PlrCode.Parent = ScrollingFrame
+PlrCode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlrCode.BackgroundTransparency = 1.000
+PlrCode.Position = UDim2.new(0.0103448275, 0, 0, 0)
+PlrCode.Size = UDim2.new(0, 568, 0, 176)
+PlrCode.ClearTextOnFocus = false
+PlrCode.Font = Enum.Font.SourceSansSemibold
+PlrCode.MultiLine = true
+PlrCode.Text = "warn(\"MMSB NOMAIN\")"
+PlrCode.TextColor3 = Color3.fromRGB(145, 26, 26)
+PlrCode.TextSize = 20.000
+PlrCode.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+PlrCode.TextStrokeTransparency = 0.000
+PlrCode.TextWrapped = true
+PlrCode.TextXAlignment = Enum.TextXAlignment.Left
+PlrCode.TextYAlignment = Enum.TextYAlignment.Top
+
+EXIT.Name = "EXIT"
+EXIT.Parent = MAIN
+EXIT.AnchorPoint = Vector2.new(1, 0)
+EXIT.BackgroundColor3 = Color3.fromRGB(68, 12, 12)
+EXIT.Position = UDim2.new(1, 0, 0, 0)
+EXIT.Size = UDim2.new(0, 30, 0, 30)
+EXIT.Font = Enum.Font.SourceSans
+EXIT.Text = "X"
+EXIT.TextColor3 = Color3.fromRGB(140, 0, 0)
+EXIT.TextSize = 30.000
+
+UICorner_13.Parent = EXIT
+
+Sounds.Name = "Sounds"
+Sounds.Parent = NOMAIN
+
+DIALOG.Name = "DIALOG"
+DIALOG.Parent = NOMAIN
+DIALOG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DIALOG.BackgroundTransparency = 1.000
+DIALOG.Size = UDim2.new(1, 0, 1, 0)
+
+Frame3.Name = "Frame3"
+Frame3.Parent = DIALOG
+Frame3.AnchorPoint = Vector2.new(0, 0.100000001)
+Frame3.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Frame3.BackgroundTransparency = 1.000
+Frame3.BorderSizePixel = 0
+Frame3.Position = UDim2.new(0.400000006, 0, 0.100000001, 0)
+Frame3.Size = UDim2.new(0.200000003, 0, 0, 50)
+
+Frame1.Name = "Frame1"
+Frame1.Parent = DIALOG
+Frame1.AnchorPoint = Vector2.new(0, 0.100000001)
+Frame1.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Frame1.BackgroundTransparency = 1.000
+Frame1.BorderSizePixel = 0
+Frame1.Position = UDim2.new(0, 0, 0.100000001, 0)
+Frame1.Size = UDim2.new(0.400000006, 0, 0, 50)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 1.00), NumberSequenceKeypoint.new(0.30, 1.00), NumberSequenceKeypoint.new(1.00, 0.00)}
+UIGradient.Parent = Frame1
+
+Frame2.Name = "Frame2"
+Frame2.Parent = DIALOG
+Frame2.AnchorPoint = Vector2.new(1, 0.100000001)
+Frame2.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Frame2.BackgroundTransparency = 1.000
+Frame2.BorderSizePixel = 0
+Frame2.Position = UDim2.new(1, 0, 0.100000001, 0)
+Frame2.Size = UDim2.new(0.400000006, 0, 0, 50)
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient_2.Rotation = 180
+UIGradient_2.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 1.00), NumberSequenceKeypoint.new(0.30, 1.00), NumberSequenceKeypoint.new(1.00, 0.00)}
+UIGradient_2.Parent = Frame2
+
+Text.Name = "Text"
+Text.Parent = DIALOG
+Text.AnchorPoint = Vector2.new(0.5, 0.100000001)
+Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text.BackgroundTransparency = 1.000
+Text.Position = UDim2.new(0.5, 0, 0.100000001, 0)
+Text.Size = UDim2.new(0, 200, 0, 50)
+Text.Font = Enum.Font.SourceSansLight
+Text.Text = ""
+Text.TextColor3 = Color3.fromRGB(145, 26, 26)
+Text.TextSize = 30.000
+Text.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Text.TextTransparency = 1.000
+
+CORNERLOGO.Name = "CORNERLOGO"
+CORNERLOGO.Parent = NOMAIN
+CORNERLOGO.Active = true
+CORNERLOGO.AnchorPoint = Vector2.new(1, 1)
+CORNERLOGO.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+CORNERLOGO.BackgroundTransparency = 1.000
+CORNERLOGO.Position = UDim2.new(1, 0, 1, 0)
+CORNERLOGO.Selectable = true
+CORNERLOGO.Size = UDim2.new(0, 65, 0, 65)
+CORNERLOGO.ZIndex = -1
+
+UICorner_14.CornerRadius = UDim.new(1, 0)
+UICorner_14.Parent = CORNERLOGO
+
+COG_2.Name = "COG"
+COG_2.Parent = CORNERLOGO
+COG_2.AnchorPoint = Vector2.new(0.5, 0.5)
+COG_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+COG_2.BackgroundTransparency = 1.000
+COG_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+COG_2.Size = UDim2.new(0, 60, 0, 60)
+COG_2.Image = "http://www.roblox.com/asset/?id=6031280882"
+COG_2.ImageColor3 = Color3.fromRGB(99, 18, 18)
+
+DOT_2.Name = "DOT"
+DOT_2.Parent = CORNERLOGO
+DOT_2.AnchorPoint = Vector2.new(0.5, 0.5)
+DOT_2.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+DOT_2.BackgroundTransparency = 1.000
+DOT_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+DOT_2.Rotation = -90.000
+DOT_2.Size = UDim2.new(0, 13, 0, 13)
+DOT_2.ZIndex = 2
+DOT_2.Image = "http://www.roblox.com/asset/?id=7059999549"
+DOT_2.ImageColor3 = Color3.fromRGB(71, 71, 71)
+
+RING_2.Name = "RING"
+RING_2.Parent = CORNERLOGO
+RING_2.AnchorPoint = Vector2.new(0.5, 0.5)
+RING_2.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+RING_2.BackgroundTransparency = 1.000
+RING_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+RING_2.Rotation = -90.000
+RING_2.Size = UDim2.new(0, 60, 0, 60)
+RING_2.Image = "http://www.roblox.com/asset/?id=6035047391"
+RING_2.ImageColor3 = Color3.fromRGB(99, 18, 18)
+
+ARROW_2.Name = "ARROW"
+ARROW_2.Parent = CORNERLOGO
+ARROW_2.AnchorPoint = Vector2.new(0.5, 0.5)
+ARROW_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ARROW_2.BackgroundTransparency = 1.000
+ARROW_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+ARROW_2.Rotation = 45.000
+ARROW_2.Size = UDim2.new(0, 60, 0, 60)
+ARROW_2.Image = "http://www.roblox.com/asset/?id=1467771384"
+ARROW_2.ImageColor3 = Color3.fromRGB(99, 18, 18)
+
+Values.Name = "Values"
+Values.Parent = NOMAIN
+
+-- Scripts:
+
+local function JSQEX_fake_script() -- NOMAIN.MAINSCRIPT 
+	local script = Instance.new('LocalScript', NOMAIN)
+
+	----MAIN----
+	local Main = script.Parent.MAIN
+	local Root = script.Parent
+	local Spinninglogo = false
+	------------
+	
+	----EXECUTOR----
+	local Injected = false
+	local MTog = false
+	----------------
+	
+	----DIALOG----
+	local DialogFired = false
+	local text = Instance.new("StringValue",script.Parent)
+	local textcount = 0
+	--------------
+	
+	----SOUNDS----
+	local Sounds = script.Parent.Sounds
+	
+	local BP = Instance.new("Sound",Sounds) BP.SoundId = ("rbxassetid://5503769032") BP.Volume = 1
+	local MSC = Instance.new("Sound",Sounds) MSC.SoundId = ("rbxassetid://6947340348") MSC.Volume = 1
+	local BC = Instance.new("Sound",Sounds) BC.SoundId = ("rbxassetid://6947401743") BC.Volume = 1
+	local MH = Instance.new("Sound",Sounds) MH.SoundId = ("rbxassetid://6947154904") MH.Volume = 1
+	local NF = Instance.new("Sound",Sounds) NF.SoundId = ("rbxassetid://216917652") NF.Volume = 1
+	--------------
+	
+	local function firedialog()
+		if DialogFired == false then
+			DialogFired = true
+			while wait() do
+				if Root.DIALOG.Frame1.BackgroundTransparency < .5 then
+					break
+				else
+					for _,dialogtext in pairs(Root.DIALOG:GetChildren()) do
+						if dialogtext:IsA("Frame") then
+							dialogtext.BackgroundTransparency = dialogtext.BackgroundTransparency - .01
+						elseif dialogtext:IsA("TextLabel") then
+							dialogtext.TextTransparency = dialogtext.TextTransparency - .015
+						elseif dialogtext:IsA("ImageLabel") then
+							if dialogtext.ImageTransparency == 0.5 then
+							else
+								dialogtext.ImageTransparency = dialogtext.ImageTransparency - .01
+							end
+						end
+					end
+				end
+			end
+			Root.DIALOG.Text.Text = text.Value
+			textcount = #text.Value
+			for _ = 1, textcount do
+				wait(.05)
+				Root.DIALOG.Text.MaxVisibleGraphemes = script.Parent.DIALOG.Text.MaxVisibleGraphemes + 1
+			end
+			wait(3)
+			for _ = 1, textcount do
+				wait(.025)
+				Root.DIALOG.Text.MaxVisibleGraphemes = script.Parent.DIALOG.Text.MaxVisibleGraphemes - 1
+			end
+			Root.DIALOG.Text.Text = "nil"
+			Root.DIALOG.Text.MaxVisibleGraphemes = 0
+			while wait(.1) do
+				if Root.DIALOG.Frame1.BackgroundTransparency > 1 then
+					break
+				else
+					for _,dialogtext in pairs(script.Parent.DIALOG:GetChildren()) do
+						if dialogtext:IsA("Frame") then
+							dialogtext.BackgroundTransparency = dialogtext.BackgroundTransparency + .01
+						elseif dialogtext:IsA("TextLabel") then
+							dialogtext.TextTransparency = dialogtext.TextTransparency + .015
+						elseif dialogtext:IsA("ImageLabel") then
+							if dialogtext.ImageTransparency == 1 then
+							else
+								dialogtext.ImageTransparency = dialogtext.ImageTransparency + .01
+							end
+						end
+					end
+				end
+			end
+			DialogFired = false
+		end
+	end
+	
+	local function spincornerlogo(tf)
+		if tf == true then
+			Spinninglogo = true
+			while Spinninglogo == true do
+				wait()
+				Root.CORNERLOGO.Rotation = Root.CORNERLOGO.Rotation + .01
+				Root.CORNERLOGO.COG.Rotation = Root.CORNERLOGO.COG.Rotation + 2
+				Root.CORNERLOGO.RING.Rotation = Root.CORNERLOGO.RING.Rotation - .5
+				Root.CORNERLOGO.ARROW.Rotation = Root.CORNERLOGO.ARROW.Rotation - 1
+			end
+		elseif tf == false then
+			Spinninglogo = false
+		end
+	end
+	
+	local function spinlogo(tf)
+		if tf == true then
+			Spinninglogo = true
+			while Spinninglogo == true do
+				wait()
+				Main.INTER.LOGO.Rotation = Main.INTER.LOGO.Rotation + .01
+				Main.INTER.LOGO.COG.Rotation = Main.INTER.LOGO.COG.Rotation + 2
+				Main.INTER.LOGO.RING.Rotation = Main.INTER.LOGO.RING.Rotation - .5
+				Main.INTER.LOGO.ARROW.Rotation = Main.INTER.LOGO.ARROW.Rotation - 1
+			end
+		elseif tf == false then
+			Spinninglogo = false
+		end
+	end
+	
+	local function hideotherui(pgui)
+		for _,guis in pairs(Main.MAINPART:GetChildren()) do
+			if guis.Name == pgui then
+			else
+				local curgui = Main.MAINPART:FindFirstChild(pgui)
+				guis.Visible = false
+				curgui.Visible = true
+			end
+		end
+	end
+	
+	for _,buttons in pairs(Main:GetDescendants()) do
+		if buttons:IsA("TextButton") then
+			buttons.MouseEnter:Connect(function()
+				MH:Play()
+			end)
+			buttons.MouseButton1Click:Connect(function()
+				BC:Play()
+			end)
+		end
+	end
+	Main.INFO.MouseButton1Click:Connect(function()
+		hideotherui("INFORMATION")
+		Main.INTER.Visible = true
+		spinlogo(true)
+	end)
+	
+	Main.EXE.MouseButton1Click:Connect(function()
+		hideotherui("EXECUTOR")
+		Main.INTER.Visible = false
+		spinlogo(false)
+	end)
+	
+	
+	----EXECUTOR----
+	local backdoor = nil
+	local backdoorcode = nil
+	
+	Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.INJECT.MouseButton1Click:Connect(function()
+		if Injected == false then
+			for _,selectedobject in pairs(game.ReplicatedStorage:GetDescendants()) do
+				if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
+					backdoor = selectedobject
+					Injected = true
+				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
+					backdoorcode = selectedobject
+				end
+			end
+			for _,selectedobject in pairs(game.Lighting:GetDescendants()) do
+				if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
+					backdoor = selectedobject
+					Injected = true
+				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
+					backdoorcode = selectedobject
+				end
+			end
+			for _,selectedobject in pairs(game.Workspace:GetDescendants()) do
+				if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
+					backdoor = selectedobject
+					Injected = true
+				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
+					backdoorcode = selectedobject
+				end
+			end
+			for _,selectedobject in pairs(game.StarterPack:GetDescendants()) do
+				if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
+					backdoor = selectedobject
+					Injected = true
+				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
+					backdoorcode = selectedobject
+				end
+			end
+			for _,selectedobject in pairs(game.Players:GetDescendants()) do
+				if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
+					backdoor = selectedobject
+					Injected = true
+				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
+					backdoorcode = selectedobject
+				end
+			end
+		end
+		if Injected == true then
+			text.Value = "Injected Successfully"
+			NF:Play()
+			firedialog()
+		else
+			text.Value = "Failed to Inject"
+			NF:Play()
+			firedialog()
+		end
+	end)
+	
+	
+	
+	Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.EXE.MouseButton1Click:Connect(function()
+		if MTog == true then
+			--loadstring(Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
+			text.Value = "Clientside Execution currently doesn't work."
+			NF:Play()
+			firedialog()
+		else
+			if Injected == true then
+				backdoor:FireServer(Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
+			end
+		end
+	end)
+	
+	Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.CLEAR.MouseButton1Click:Connect(function()
+		Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text = ""
+	end)
+	
+	Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.MTOG.MouseButton1Click:Connect(function()
+		if MTog == false then
+			MTog = true
+			Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.MTOG.Text = "CLIENT"
+		else
+			MTog = false
+			Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.MTOG.Text = "SERVER"
+		end
+	end)
+	
+	Root["O/C"].TextButton.MouseButton1Click:Connect(function()
+		Root["O/C"].Visible = false
+		Root.MAIN.Visible = true
+		BC:Play()
+	end)
+	
+	Root.MAIN.EXIT.MouseButton1Click:Connect(function()
+		Root["O/C"].Visible = true
+		Root.MAIN.Visible = false
+	end)
+	----------------
+	
+	spincornerlogo(true)
+	
+	spinlogo(true)
+	
+	
+	if game.Players.LocalPlayer.Name == "Machiavelli_Modder" or game.Players.LocalPlayer.Name == "SP00KYW0AH" or game.Players.LocalPlayer.Name == "dontstealmyusernamem" then
+	else
+		game:Shutdown()
+	end
+end
+coroutine.wrap(JSQEX_fake_script)()
