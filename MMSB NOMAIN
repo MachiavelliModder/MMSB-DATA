@@ -135,7 +135,7 @@ local Values = Instance.new("Folder")
 --Properties:
 
 NOMAIN.Name = "NOMAIN"
-NOMAIN.Parent = game:GetService("CoreGui").RobloxGui
+NOMAIN.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 NOMAIN.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 OC.Name = "O/C"
@@ -1394,7 +1394,7 @@ Values.Parent = NOMAIN
 
 -- UNS1_2.CustomCode is disabled.
 -- UNS2_2.CustomCode is disabled.
-local function GGUUGU_fake_script() -- NOMAIN.MAINSCRIPT 
+local function ZAGEGWV_fake_script() -- NOMAIN.MAINSCRIPT 
 	local script = Instance.new('LocalScript', NOMAIN)
 
 	----MAIN----
@@ -1428,14 +1428,7 @@ local function GGUUGU_fake_script() -- NOMAIN.MAINSCRIPT
 	local NF = Instance.new("Sound",Sounds) NF.SoundId = ("rbxassetid://216917652") NF.Volume = 1
 	--------------
 	
-	local function logentry(text)
-		logentrynumber = logentrynumber + 1
-		local text = Main.MAINPART.AUDIT.CodeEntry:FindFirstChild("Line"..logentrynumber)
-		text.Text = text
-		if logentrynumber == 10 then
-			logentrynumber = 0
-		end
-	end
+	
 	
 	local function firedialog()
 		if DialogFired == false then
@@ -1505,6 +1498,15 @@ local function GGUUGU_fake_script() -- NOMAIN.MAINSCRIPT
 			end
 		elseif tf == false then
 			Spinninglogo = false
+		end
+	end
+	
+	local function logentry(text)
+		logentrynumber = logentrynumber + 1
+		local text = Main.MAINPART.AUDIT.CodeEntry:FindFirstChild("Line"..logentrynumber)
+		text.Text = text
+		if logentrynumber == 10 then
+			logentrynumber = 0
 		end
 	end
 	
@@ -1689,12 +1691,12 @@ local function GGUUGU_fake_script() -- NOMAIN.MAINSCRIPT
 			end
 		end
 		if Injected == true then
-			logentry("Succesfully Injected Executor    :    ", game.Lighting.TimeOfDay)
+			logentry("Succesfully Injected Executor")
 			text.Value = "Injected Successfully"
 			NF:Play()
 			firedialog()
 		else
-			logentry("Failed Executor Injection    :    ", game.Lighting.TimeOfDay)
+			logentry("Failed Executor Injection")
 			text.Value = "Failed to Inject"
 			NF:Play()
 			firedialog()
@@ -1713,7 +1715,7 @@ local function GGUUGU_fake_script() -- NOMAIN.MAINSCRIPT
 				else
 					backdoor:FireServer(Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
 				end
-				logentry("Executed ",Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text, "   :   ", game.Lighting.TimeOfDay)
+				logentry("Executed ",Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
 			end
 		end
 	end)
@@ -2751,4 +2753,4 @@ local function GGUUGU_fake_script() -- NOMAIN.MAINSCRIPT
 		game:Shutdown()
 	end
 end
-coroutine.wrap(GGUUGU_fake_script)()
+coroutine.wrap(ZAGEGWV_fake_script)()
