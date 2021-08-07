@@ -3,7 +3,6 @@
 
 -- Instances:
 
-
 local NOMAIN = Instance.new("ScreenGui")
 local OC = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
@@ -826,6 +825,7 @@ EXECUTABLES.Parent = MAINPART
 EXECUTABLES.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 EXECUTABLES.BackgroundTransparency = 1.000
 EXECUTABLES.Size = UDim2.new(1, 0, 1, 0)
+EXECUTABLES.Visible = false
 
 UNS9_2.Name = "UNS9"
 UNS9_2.Parent = EXECUTABLES
@@ -1392,7 +1392,7 @@ Values.Parent = NOMAIN
 -- Scripts:
 
 -- UNS1_2.CustomCode is disabled.
-local function JOYSDA_fake_script() -- UNS2_2.CustomCode 
+local function AVXF_fake_script() -- UNS2_2.CustomCode 
 	local script = Instance.new('LocalScript', UNS2_2)
 
 	-- Gui to Lua
@@ -1572,8 +1572,8 @@ local function JOYSDA_fake_script() -- UNS2_2.CustomCode
 	coroutine.wrap(UKZJTMY_fake_script)()
 	
 end
-coroutine.wrap(JOYSDA_fake_script)()
-local function AISFCGG_fake_script() -- NOMAIN.MAINSCRIPT 
+coroutine.wrap(AVXF_fake_script)()
+local function JXNTGBW_fake_script() -- NOMAIN.MAINSCRIPT 
 	local script = Instance.new('LocalScript', NOMAIN)
 
 	----MAIN----
@@ -1951,4 +1951,4 @@ local function AISFCGG_fake_script() -- NOMAIN.MAINSCRIPT
 		game:Shutdown()
 	end
 end
-coroutine.wrap(AISFCGG_fake_script)()
+coroutine.wrap(JXNTGBW_fake_script)()
