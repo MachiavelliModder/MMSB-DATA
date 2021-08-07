@@ -603,7 +603,7 @@ Values.Parent = NOMAIN
 
 -- Scripts:
 
-local function MQQQM_fake_script() -- NOMAIN.MAINSCRIPT 
+local function PXCQ_fake_script() -- NOMAIN.MAINSCRIPT 
 	local script = Instance.new('LocalScript', NOMAIN)
 
 	----MAIN----
@@ -931,4 +931,4 @@ local function MQQQM_fake_script() -- NOMAIN.MAINSCRIPT
 		game:Shutdown()
 	end
 end
-coroutine.wrap(MQQQM_fake_script)()
+coroutine.wrap(PXCQ_fake_script)()
