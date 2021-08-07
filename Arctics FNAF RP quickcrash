@@ -220,6 +220,7 @@ else
     startloop()
     PR.Text = "You have free range. Whitelists arent enabled, lol this is what you get in return when you falsely ban. dumb game creator"
 end
+end
 --[[
 else
 PR.Text = [[You're not allowed to have this script.
