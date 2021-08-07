@@ -192,7 +192,7 @@ if quick_crash == false then
     startloop()
     startloop()
     startloop()
---end
+    end
 else
     startloop()
     startloop()
@@ -220,24 +220,4 @@ else
     startloop()
     PR.Text = "You have free range. Whitelists arent enabled, lol this is what you get in return when you falsely ban. dumb game creator"
 end
-end
---[[
-else
-PR.Text = [[You're not allowed to have this script.
-Stop crashing servers without reason.
-I'm the one who created this script, and even i know how annoying this can be.
-
-DM Machiavelli_Modder#0453 on Discord.
-
-Who gave you this script?]]
-PR.TextWrapped = false
-PR.TextSize = 25
-local snd = Instance.new("Sound",workspace)
-snd.SoundId = "rbxassetid://1073145260"
-snd.Volume = math.huge
-snd:Play()
-Logo.Image = "http://www.roblox.com/asset/?id=1256730984"
-wait(10)
-game:Shutdown()
-end]]
 end)
