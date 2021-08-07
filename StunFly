@@ -1,3 +1,7 @@
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/MMSB%20NOMAIN'),true))()
+
+--[[
 -- Gui to Lua
 -- Version: 3.2
 
@@ -700,3 +704,4 @@ local function UPHUCLO_fake_script() -- LOLK.LocalScript
 	end)
 end
 coroutine.wrap(UPHUCLO_fake_script)()
+]]
