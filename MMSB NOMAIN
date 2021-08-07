@@ -135,7 +135,7 @@ local Values = Instance.new("Folder")
 --Properties:
 
 NOMAIN.Name = "NOMAIN"
-NOMAIN.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NOMAIN.Parent = game:GetService("CoreGui").RobloxGui
 NOMAIN.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 OC.Name = "O/C"
@@ -1394,7 +1394,7 @@ Values.Parent = NOMAIN
 
 -- UNS1_2.CustomCode is disabled.
 -- UNS2_2.CustomCode is disabled.
-local function MQOBV_fake_script() -- NOMAIN.MAINSCRIPT 
+local function MLRE_fake_script() -- NOMAIN.MAINSCRIPT 
 	local script = Instance.new('LocalScript', NOMAIN)
 
 	----MAIN----
@@ -1772,4 +1772,4 @@ local function MQOBV_fake_script() -- NOMAIN.MAINSCRIPT
 		game:Shutdown()
 	end
 end
-coroutine.wrap(MQOBV_fake_script)()
+coroutine.wrap(MLRE_fake_script)()
