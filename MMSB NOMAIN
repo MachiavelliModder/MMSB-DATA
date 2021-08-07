@@ -2,23 +2,21 @@
 -- Version: 3.2
 
 -- Instances:
-
+local coreui = game:GetService("CoreGui")
 local NOMAIN = Instance.new("ScreenGui")
 local OC = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
-local Frame = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
 local MAIN = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
 local FRAME = Instance.new("Frame")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
 local FRAME_2 = Instance.new("Frame")
 local TITLE = Instance.new("TextLabel")
 local FRAME_3 = Instance.new("Frame")
 local INFO = Instance.new("TextButton")
 local EXE = Instance.new("TextButton")
-local PLAYER = Instance.new("TextButton")
+local SETT = Instance.new("TextButton")
 local GUIS = Instance.new("TextButton")
 local AUDIT = Instance.new("TextButton")
 local INTER = Instance.new("Frame")
@@ -26,34 +24,98 @@ local FRAME_4 = Instance.new("Frame")
 local FRAME_5 = Instance.new("Frame")
 local FRAME_6 = Instance.new("Frame")
 local LOGO = Instance.new("Frame")
-local UICorner_5 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 local COG = Instance.new("ImageLabel")
 local DOT = Instance.new("ImageLabel")
 local RING = Instance.new("ImageLabel")
 local ARROW = Instance.new("ImageLabel")
 local MAINPART = Instance.new("Frame")
 local INFORMATION = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
 local WM = Instance.new("TextLabel")
 local VM2 = Instance.new("TextLabel")
 local RNK = Instance.new("TextLabel")
 local EXECUTOR = Instance.new("Frame")
 local CodeEntry = Instance.new("Frame")
-local UICorner_7 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
 local ButtonBar = Instance.new("Frame")
-local UICorner_8 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
 local EXE_2 = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 local INJECT = Instance.new("TextButton")
-local UICorner_10 = Instance.new("UICorner")
+local UICorner_9 = Instance.new("UICorner")
 local CLEAR = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
+local UICorner_10 = Instance.new("UICorner")
 local MTOG = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local PlrCode = Instance.new("TextBox")
-local EXIT = Instance.new("TextButton")
+local SETTINGS = Instance.new("Frame")
+local Game = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local Player = Instance.new("TextButton")
 local UICorner_13 = Instance.new("UICorner")
+local Mainbase = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local EXIT = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local UNS10 = Instance.new("TextButton")
+local UNS11 = Instance.new("TextButton")
+local UNS12 = Instance.new("TextButton")
+local UNS13 = Instance.new("TextButton")
+local UNS14 = Instance.new("TextButton")
+local UNS15 = Instance.new("TextButton")
+local UNS16 = Instance.new("TextButton")
+local UNS17 = Instance.new("TextButton")
+local UNS18 = Instance.new("TextButton")
+local UNS19 = Instance.new("TextButton")
+local UNS2 = Instance.new("TextButton")
+local UNS20 = Instance.new("TextButton")
+local UNS3 = Instance.new("TextButton")
+local UNS4 = Instance.new("TextButton")
+local UNS5 = Instance.new("TextButton")
+local UNS6 = Instance.new("TextButton")
+local UNS7 = Instance.new("TextButton")
+local UNS8 = Instance.new("TextButton")
+local UNS9 = Instance.new("TextButton")
+local UNS1 = Instance.new("TextButton")
+local EXECUTABLES = Instance.new("Frame")
+local UNS9_2 = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local UNS8_2 = Instance.new("TextButton")
+local UNS1_2 = Instance.new("TextButton")
+local UNS10_2 = Instance.new("TextButton")
+local UNS11_2 = Instance.new("TextButton")
+local UNS12_2 = Instance.new("TextButton")
+local UNS13_2 = Instance.new("TextButton")
+local UNS14_2 = Instance.new("TextButton")
+local UNS15_2 = Instance.new("TextButton")
+local UNS16_2 = Instance.new("TextButton")
+local UNS17_2 = Instance.new("TextButton")
+local UNS18_2 = Instance.new("TextButton")
+local UNS19_2 = Instance.new("TextButton")
+local UNS2_2 = Instance.new("TextButton")
+local UNS20_2 = Instance.new("TextButton")
+local UNS3_2 = Instance.new("TextButton")
+local UNS4_2 = Instance.new("TextButton")
+local UNS5_2 = Instance.new("TextButton")
+local UNS6_2 = Instance.new("TextButton")
+local UNS7_2 = Instance.new("TextButton")
+local AUDIT_2 = Instance.new("Frame")
+local CodeEntry_2 = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local Line1 = Instance.new("TextBox")
+local Line2 = Instance.new("TextBox")
+local Line3 = Instance.new("TextBox")
+local Line4 = Instance.new("TextBox")
+local Line5 = Instance.new("TextBox")
+local Line6 = Instance.new("TextBox")
+local Line7 = Instance.new("TextBox")
+local Line8 = Instance.new("TextBox")
+local Line9 = Instance.new("TextBox")
+local Line10 = Instance.new("TextBox")
+local EXIT_2 = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
 local Sounds = Instance.new("Folder")
 local DIALOG = Instance.new("Frame")
 local Frame3 = Instance.new("Frame")
@@ -63,7 +125,7 @@ local Frame2 = Instance.new("Frame")
 local UIGradient_2 = Instance.new("UIGradient")
 local Text = Instance.new("TextLabel")
 local CORNERLOGO = Instance.new("Frame")
-local UICorner_14 = Instance.new("UICorner")
+local UICorner_19 = Instance.new("UICorner")
 local COG_2 = Instance.new("ImageLabel")
 local DOT_2 = Instance.new("ImageLabel")
 local RING_2 = Instance.new("ImageLabel")
@@ -73,13 +135,14 @@ local Values = Instance.new("Folder")
 --Properties:
 
 NOMAIN.Name = "NOMAIN"
-NOMAIN.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NOMAIN.Parent = coreui.RobloxGui
 NOMAIN.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 OC.Name = "O/C"
 OC.Parent = NOMAIN
 OC.AnchorPoint = Vector2.new(0.5, 1)
 OC.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+OC.BackgroundTransparency = 1.000
 OC.Position = UDim2.new(0.200000003, 0, 1, 0)
 OC.Size = UDim2.new(0, 100, 0, 50)
 
@@ -96,16 +159,6 @@ TextButton.TextWrapped = true
 UICorner.CornerRadius = UDim.new(0.100000001, 8)
 UICorner.Parent = OC
 
-Frame.Parent = OC
-Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-Frame.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
-Frame.Size = UDim2.new(0, 80, 0, 30)
-Frame.ZIndex = -1
-
-UICorner_2.CornerRadius = UDim.new(0.100000001, 8)
-UICorner_2.Parent = Frame
-
 MAIN.Name = "MAIN"
 MAIN.Parent = NOMAIN
 MAIN.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -114,7 +167,7 @@ MAIN.Position = UDim2.new(0.5, 0, 0.5, 0)
 MAIN.Size = UDim2.new(0, 600, 0, 300)
 MAIN.Visible = false
 
-UICorner_3.Parent = MAIN
+UICorner_2.Parent = MAIN
 
 FRAME.Name = "FRAME"
 FRAME.Parent = MAIN
@@ -123,7 +176,7 @@ FRAME.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
 FRAME.Position = UDim2.new(0.5, 0, 0.0799999982, 0)
 FRAME.Size = UDim2.new(0, 600, 0, 48)
 
-UICorner_4.Parent = FRAME
+UICorner_3.Parent = FRAME
 
 FRAME_2.Name = "FRAME"
 FRAME_2.Parent = MAIN
@@ -181,17 +234,17 @@ EXE.Text = "EXECUTOR"
 EXE.TextColor3 = Color3.fromRGB(99, 18, 18)
 EXE.TextSize = 20.000
 
-PLAYER.Name = "PLAYER"
-PLAYER.Parent = MAIN
-PLAYER.AnchorPoint = Vector2.new(0, 0.200000003)
-PLAYER.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-PLAYER.BorderSizePixel = 0
-PLAYER.Position = UDim2.new(0.449999988, 0, 0.200000003, 0)
-PLAYER.Size = UDim2.new(0, 127, 0, 29)
-PLAYER.Font = Enum.Font.SourceSansLight
-PLAYER.Text = "PLAYER"
-PLAYER.TextColor3 = Color3.fromRGB(99, 18, 18)
-PLAYER.TextSize = 20.000
+SETT.Name = "SETT"
+SETT.Parent = MAIN
+SETT.AnchorPoint = Vector2.new(0, 0.200000003)
+SETT.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+SETT.BorderSizePixel = 0
+SETT.Position = UDim2.new(0.449999988, 0, 0.200000003, 0)
+SETT.Size = UDim2.new(0, 127, 0, 29)
+SETT.Font = Enum.Font.SourceSansLight
+SETT.Text = "SETTINGS"
+SETT.TextColor3 = Color3.fromRGB(99, 18, 18)
+SETT.TextSize = 20.000
 
 GUIS.Name = "GUIS"
 GUIS.Parent = MAIN
@@ -222,6 +275,7 @@ INTER.Parent = MAIN
 INTER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 INTER.BackgroundTransparency = 1.000
 INTER.Size = UDim2.new(1, 0, 1, 0)
+INTER.Visible = false
 
 FRAME_4.Name = "FRAME"
 FRAME_4.Parent = INTER
@@ -257,8 +311,8 @@ LOGO.Selectable = true
 LOGO.Size = UDim2.new(0, 165, 0, 165)
 LOGO.ZIndex = -1
 
-UICorner_5.CornerRadius = UDim.new(1, 0)
-UICorner_5.Parent = LOGO
+UICorner_4.CornerRadius = UDim.new(1, 0)
+UICorner_4.Parent = LOGO
 
 COG.Name = "COG"
 COG.Parent = LOGO
@@ -318,8 +372,9 @@ INFORMATION.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
 INFORMATION.BackgroundTransparency = 1.000
 INFORMATION.Position = UDim2.new(0.800000012, 0, 0.5, 0)
 INFORMATION.Size = UDim2.new(0, 530, 0, 200)
+INFORMATION.Visible = false
 
-UICorner_6.Parent = INFORMATION
+UICorner_5.Parent = INFORMATION
 
 WM.Name = "WM"
 WM.Parent = INFORMATION
@@ -379,7 +434,7 @@ CodeEntry.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
 CodeEntry.Position = UDim2.new(0.5, 0, 0.5, 0)
 CodeEntry.Size = UDim2.new(0, 580, 0, 200)
 
-UICorner_7.Parent = CodeEntry
+UICorner_6.Parent = CodeEntry
 
 ButtonBar.Name = "ButtonBar"
 ButtonBar.Parent = CodeEntry
@@ -388,7 +443,7 @@ ButtonBar.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
 ButtonBar.Position = UDim2.new(0.5, 0, 1, 0)
 ButtonBar.Size = UDim2.new(0, 580, 0, 24)
 
-UICorner_8.Parent = ButtonBar
+UICorner_7.Parent = ButtonBar
 
 EXE_2.Name = "EXE"
 EXE_2.Parent = ButtonBar
@@ -400,7 +455,7 @@ EXE_2.TextColor3 = Color3.fromRGB(99, 18, 18)
 EXE_2.TextSize = 20.000
 EXE_2.TextWrapped = true
 
-UICorner_9.Parent = EXE_2
+UICorner_8.Parent = EXE_2
 
 INJECT.Name = "INJECT"
 INJECT.Parent = ButtonBar
@@ -413,7 +468,7 @@ INJECT.TextColor3 = Color3.fromRGB(99, 18, 18)
 INJECT.TextSize = 20.000
 INJECT.TextWrapped = true
 
-UICorner_10.Parent = INJECT
+UICorner_9.Parent = INJECT
 
 CLEAR.Name = "CLEAR"
 CLEAR.Parent = ButtonBar
@@ -426,7 +481,7 @@ CLEAR.TextColor3 = Color3.fromRGB(99, 18, 18)
 CLEAR.TextSize = 20.000
 CLEAR.TextWrapped = true
 
-UICorner_11.Parent = CLEAR
+UICorner_10.Parent = CLEAR
 
 MTOG.Name = "MTOG"
 MTOG.Parent = ButtonBar
@@ -439,7 +494,7 @@ MTOG.TextColor3 = Color3.fromRGB(99, 18, 18)
 MTOG.TextSize = 20.000
 MTOG.TextWrapped = true
 
-UICorner_12.Parent = MTOG
+UICorner_11.Parent = MTOG
 
 ScrollingFrame.Parent = CodeEntry
 ScrollingFrame.Active = true
@@ -447,7 +502,7 @@ ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ScrollingFrame.BackgroundTransparency = 1.000
 ScrollingFrame.Size = UDim2.new(0, 580, 0, 200)
 ScrollingFrame.ZIndex = -1
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 20, 0)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 200, 0)
 ScrollingFrame.ScrollBarThickness = 7
 
 PlrCode.Name = "PlrCode"
@@ -455,7 +510,7 @@ PlrCode.Parent = ScrollingFrame
 PlrCode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PlrCode.BackgroundTransparency = 1.000
 PlrCode.Position = UDim2.new(0.0103448275, 0, 0, 0)
-PlrCode.Size = UDim2.new(0, 568, 0, 176)
+PlrCode.Size = UDim2.new(0, 568, 2, 176)
 PlrCode.ClearTextOnFocus = false
 PlrCode.Font = Enum.Font.SourceSansSemibold
 PlrCode.MultiLine = true
@@ -468,18 +523,750 @@ PlrCode.TextWrapped = true
 PlrCode.TextXAlignment = Enum.TextXAlignment.Left
 PlrCode.TextYAlignment = Enum.TextYAlignment.Top
 
+SETTINGS.Name = "SETTINGS"
+SETTINGS.Parent = MAINPART
+SETTINGS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SETTINGS.BackgroundTransparency = 1.000
+SETTINGS.Size = UDim2.new(1, 0, 1, 0)
+SETTINGS.Visible = false
+
+Game.Name = "Game"
+Game.Parent = SETTINGS
+Game.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Game.Position = UDim2.new(0.396666676, 0, 0.0887850523, 0)
+Game.Size = UDim2.new(0, 300, 0, 50)
+Game.Font = Enum.Font.SourceSansLight
+Game.Text = "GAME"
+Game.TextColor3 = Color3.fromRGB(140, 0, 0)
+Game.TextSize = 30.000
+Game.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Game.TextStrokeTransparency = 0.000
+
+UICorner_12.Parent = Game
+
+Player.Name = "Player"
+Player.Parent = SETTINGS
+Player.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Player.Position = UDim2.new(0.396666676, 0, 0.626168251, 0)
+Player.Size = UDim2.new(0, 300, 0, 50)
+Player.Font = Enum.Font.SourceSansLight
+Player.Text = "PLAYER"
+Player.TextColor3 = Color3.fromRGB(140, 0, 0)
+Player.TextSize = 30.000
+Player.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Player.TextStrokeTransparency = 0.000
+
+UICorner_13.Parent = Player
+
+Mainbase.Name = "Mainbase"
+Mainbase.Parent = SETTINGS
+Mainbase.AnchorPoint = Vector2.new(0.5, 0.5)
+Mainbase.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Mainbase.Position = UDim2.new(0.5, 0, 0.5, 0)
+Mainbase.Size = UDim2.new(0, 580, 0, 200)
+
+UICorner_14.Parent = Mainbase
+
 EXIT.Name = "EXIT"
-EXIT.Parent = MAIN
+EXIT.Parent = Mainbase
 EXIT.AnchorPoint = Vector2.new(1, 0)
 EXIT.BackgroundColor3 = Color3.fromRGB(68, 12, 12)
 EXIT.Position = UDim2.new(1, 0, 0, 0)
 EXIT.Size = UDim2.new(0, 30, 0, 30)
 EXIT.Font = Enum.Font.SourceSans
-EXIT.Text = "X"
+EXIT.Text = "+"
 EXIT.TextColor3 = Color3.fromRGB(140, 0, 0)
 EXIT.TextSize = 30.000
 
-UICorner_13.Parent = EXIT
+UICorner_15.Parent = EXIT
+
+UNS10.Name = "UNS10"
+UNS10.Parent = Mainbase
+UNS10.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS10.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS10.BorderSizePixel = 0
+UNS10.Position = UDim2.new(0.25, 0, 0.394999981, 0)
+UNS10.Size = UDim2.new(0, 127, 0, 29)
+UNS10.Font = Enum.Font.SourceSansLight
+UNS10.Text = "BUTTON10"
+UNS10.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS10.TextSize = 20.000
+
+UNS11.Name = "UNS11"
+UNS11.Parent = Mainbase
+UNS11.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS11.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS11.BorderSizePixel = 0
+UNS11.Position = UDim2.new(0.479999989, 0, 0.394999981, 0)
+UNS11.Size = UDim2.new(0, 127, 0, 29)
+UNS11.Font = Enum.Font.SourceSansLight
+UNS11.Text = "BUTTON11"
+UNS11.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS11.TextSize = 20.000
+
+UNS12.Name = "UNS12"
+UNS12.Parent = Mainbase
+UNS12.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS12.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS12.BorderSizePixel = 0
+UNS12.Position = UDim2.new(0.708000004, 0, 0.394999981, 0)
+UNS12.Size = UDim2.new(0, 127, 0, 29)
+UNS12.Font = Enum.Font.SourceSansLight
+UNS12.Text = "BUTTON12"
+UNS12.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS12.TextSize = 20.000
+
+UNS13.Name = "UNS13"
+UNS13.Parent = Mainbase
+UNS13.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS13.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS13.BorderSizePixel = 0
+UNS13.Position = UDim2.new(0.0199999996, 0, 0.569999993, 0)
+UNS13.Size = UDim2.new(0, 127, 0, 29)
+UNS13.Font = Enum.Font.SourceSansLight
+UNS13.Text = "BUTTON13"
+UNS13.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS13.TextSize = 20.000
+
+UNS14.Name = "UNS14"
+UNS14.Parent = Mainbase
+UNS14.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS14.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS14.BorderSizePixel = 0
+UNS14.Position = UDim2.new(0.25, 0, 0.569999993, 0)
+UNS14.Size = UDim2.new(0, 127, 0, 29)
+UNS14.Font = Enum.Font.SourceSansLight
+UNS14.Text = "BUTTON14"
+UNS14.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS14.TextSize = 20.000
+
+UNS15.Name = "UNS15"
+UNS15.Parent = Mainbase
+UNS15.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS15.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS15.BorderSizePixel = 0
+UNS15.Position = UDim2.new(0.479999989, 0, 0.569999993, 0)
+UNS15.Size = UDim2.new(0, 127, 0, 29)
+UNS15.Font = Enum.Font.SourceSansLight
+UNS15.Text = "BUTTON15"
+UNS15.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS15.TextSize = 20.000
+
+UNS16.Name = "UNS16"
+UNS16.Parent = Mainbase
+UNS16.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS16.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS16.BorderSizePixel = 0
+UNS16.Position = UDim2.new(0.708000004, 0, 0.569999993, 0)
+UNS16.Size = UDim2.new(0, 127, 0, 29)
+UNS16.Font = Enum.Font.SourceSansLight
+UNS16.Text = "BUTTON16"
+UNS16.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS16.TextSize = 20.000
+
+UNS17.Name = "UNS17"
+UNS17.Parent = Mainbase
+UNS17.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS17.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS17.BorderSizePixel = 0
+UNS17.Position = UDim2.new(0.0199999996, 0, 0.745000005, 0)
+UNS17.Size = UDim2.new(0, 127, 0, 29)
+UNS17.Font = Enum.Font.SourceSansLight
+UNS17.Text = "BUTTON17"
+UNS17.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS17.TextSize = 20.000
+
+UNS18.Name = "UNS18"
+UNS18.Parent = Mainbase
+UNS18.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS18.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS18.BorderSizePixel = 0
+UNS18.Position = UDim2.new(0.25, 0, 0.745000005, 0)
+UNS18.Size = UDim2.new(0, 127, 0, 29)
+UNS18.Font = Enum.Font.SourceSansLight
+UNS18.Text = "BUTTON18"
+UNS18.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS18.TextSize = 20.000
+
+UNS19.Name = "UNS19"
+UNS19.Parent = Mainbase
+UNS19.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS19.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS19.BorderSizePixel = 0
+UNS19.Position = UDim2.new(0.479999989, 0, 0.745000005, 0)
+UNS19.Size = UDim2.new(0, 127, 0, 29)
+UNS19.Font = Enum.Font.SourceSansLight
+UNS19.Text = "BUTTON19"
+UNS19.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS19.TextSize = 20.000
+
+UNS2.Name = "UNS2"
+UNS2.Parent = Mainbase
+UNS2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS2.BorderSizePixel = 0
+UNS2.Position = UDim2.new(0.25, 0, 0.0399999991, 0)
+UNS2.Size = UDim2.new(0, 127, 0, 29)
+UNS2.Font = Enum.Font.SourceSansLight
+UNS2.Text = "BUTTON2"
+UNS2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS2.TextSize = 20.000
+
+UNS20.Name = "UNS20"
+UNS20.Parent = Mainbase
+UNS20.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS20.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS20.BorderSizePixel = 0
+UNS20.Position = UDim2.new(0.708000004, 0, 0.745000005, 0)
+UNS20.Size = UDim2.new(0, 127, 0, 29)
+UNS20.Font = Enum.Font.SourceSansLight
+UNS20.Text = "BUTTON20"
+UNS20.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS20.TextSize = 20.000
+
+UNS3.Name = "UNS3"
+UNS3.Parent = Mainbase
+UNS3.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS3.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS3.BorderSizePixel = 0
+UNS3.Position = UDim2.new(0.479999989, 0, 0.0399999991, 0)
+UNS3.Size = UDim2.new(0, 127, 0, 29)
+UNS3.Font = Enum.Font.SourceSansLight
+UNS3.Text = "BUTTON3"
+UNS3.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS3.TextSize = 20.000
+
+UNS4.Name = "UNS4"
+UNS4.Parent = Mainbase
+UNS4.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS4.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS4.BorderSizePixel = 0
+UNS4.Position = UDim2.new(0.708000004, 0, 0.0399999991, 0)
+UNS4.Size = UDim2.new(0, 127, 0, 29)
+UNS4.Font = Enum.Font.SourceSansLight
+UNS4.Text = "BUTTON4"
+UNS4.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS4.TextSize = 20.000
+
+UNS5.Name = "UNS5"
+UNS5.Parent = Mainbase
+UNS5.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS5.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS5.BorderSizePixel = 0
+UNS5.Position = UDim2.new(0.0199999996, 0, 0.215000004, 0)
+UNS5.Size = UDim2.new(0, 127, 0, 29)
+UNS5.Font = Enum.Font.SourceSansLight
+UNS5.Text = "BUTTON5"
+UNS5.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS5.TextSize = 20.000
+
+UNS6.Name = "UNS6"
+UNS6.Parent = Mainbase
+UNS6.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS6.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS6.BorderSizePixel = 0
+UNS6.Position = UDim2.new(0.25, 0, 0.215000004, 0)
+UNS6.Size = UDim2.new(0, 127, 0, 29)
+UNS6.Font = Enum.Font.SourceSansLight
+UNS6.Text = "BUTTON6"
+UNS6.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS6.TextSize = 20.000
+
+UNS7.Name = "UNS7"
+UNS7.Parent = Mainbase
+UNS7.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS7.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS7.BorderSizePixel = 0
+UNS7.Position = UDim2.new(0.479999989, 0, 0.215000004, 0)
+UNS7.Size = UDim2.new(0, 127, 0, 29)
+UNS7.Font = Enum.Font.SourceSansLight
+UNS7.Text = "BUTTON7"
+UNS7.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS7.TextSize = 20.000
+
+UNS8.Name = "UNS8"
+UNS8.Parent = Mainbase
+UNS8.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS8.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS8.BorderSizePixel = 0
+UNS8.Position = UDim2.new(0.708000004, 0, 0.215000004, 0)
+UNS8.Size = UDim2.new(0, 127, 0, 29)
+UNS8.Font = Enum.Font.SourceSansLight
+UNS8.Text = "BUTTON8"
+UNS8.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS8.TextSize = 20.000
+
+UNS9.Name = "UNS9"
+UNS9.Parent = Mainbase
+UNS9.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS9.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS9.BorderSizePixel = 0
+UNS9.Position = UDim2.new(0.0199999996, 0, 0.394999981, 0)
+UNS9.Size = UDim2.new(0, 127, 0, 29)
+UNS9.Font = Enum.Font.SourceSansLight
+UNS9.Text = "BUTTON9"
+UNS9.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS9.TextSize = 20.000
+
+UNS1.Name = "UNS1"
+UNS1.Parent = Mainbase
+UNS1.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS1.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS1.BorderSizePixel = 0
+UNS1.Position = UDim2.new(0.0199999996, 0, 0.0399999991, 0)
+UNS1.Size = UDim2.new(0, 127, 0, 29)
+UNS1.Font = Enum.Font.SourceSansLight
+UNS1.Text = "BUTTON1"
+UNS1.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS1.TextSize = 20.000
+
+EXECUTABLES.Name = "EXECUTABLES"
+EXECUTABLES.Parent = MAINPART
+EXECUTABLES.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EXECUTABLES.BackgroundTransparency = 1.000
+EXECUTABLES.Size = UDim2.new(1, 0, 1, 0)
+EXECUTABLES.Visible = false
+
+UNS9_2.Name = "UNS9"
+UNS9_2.Parent = EXECUTABLES
+UNS9_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS9_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS9_2.BorderSizePixel = 0
+UNS9_2.Position = UDim2.new(0.0533333346, 0, 0.43238315, 0)
+UNS9_2.Size = UDim2.new(0, 127, 0, 29)
+UNS9_2.Font = Enum.Font.SourceSansLight
+UNS9_2.Text = "BUTTON9"
+UNS9_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS9_2.TextSize = 20.000
+
+UICorner_16.Parent = EXECUTABLES
+
+UNS8_2.Name = "UNS8"
+UNS8_2.Parent = EXECUTABLES
+UNS8_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS8_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS8_2.BorderSizePixel = 0
+UNS8_2.Position = UDim2.new(0.741333365, 0, 0.252383173, 0)
+UNS8_2.Size = UDim2.new(0, 127, 0, 29)
+UNS8_2.Font = Enum.Font.SourceSansLight
+UNS8_2.Text = "BUTTON8"
+UNS8_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS8_2.TextSize = 20.000
+
+UNS1_2.Name = "UNS1"
+UNS1_2.Parent = EXECUTABLES
+UNS1_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS1_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS1_2.BorderSizePixel = 0
+UNS1_2.Position = UDim2.new(0.0533333346, 0, 0.0773831755, 0)
+UNS1_2.Size = UDim2.new(0, 127, 0, 29)
+UNS1_2.Font = Enum.Font.SourceSansLight
+UNS1_2.Text = "BUTTON1"
+UNS1_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS1_2.TextSize = 20.000
+
+UNS10_2.Name = "UNS10"
+UNS10_2.Parent = EXECUTABLES
+UNS10_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS10_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS10_2.BorderSizePixel = 0
+UNS10_2.Position = UDim2.new(0.283333331, 0, 0.43238315, 0)
+UNS10_2.Size = UDim2.new(0, 127, 0, 29)
+UNS10_2.Font = Enum.Font.SourceSansLight
+UNS10_2.Text = "BUTTON10"
+UNS10_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS10_2.TextSize = 20.000
+
+UNS11_2.Name = "UNS11"
+UNS11_2.Parent = EXECUTABLES
+UNS11_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS11_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS11_2.BorderSizePixel = 0
+UNS11_2.Position = UDim2.new(0.513333321, 0, 0.43238315, 0)
+UNS11_2.Size = UDim2.new(0, 127, 0, 29)
+UNS11_2.Font = Enum.Font.SourceSansLight
+UNS11_2.Text = "BUTTON11"
+UNS11_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS11_2.TextSize = 20.000
+
+UNS12_2.Name = "UNS12"
+UNS12_2.Parent = EXECUTABLES
+UNS12_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS12_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS12_2.BorderSizePixel = 0
+UNS12_2.Position = UDim2.new(0.741333365, 0, 0.43238315, 0)
+UNS12_2.Size = UDim2.new(0, 127, 0, 29)
+UNS12_2.Font = Enum.Font.SourceSansLight
+UNS12_2.Text = "BUTTON12"
+UNS12_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS12_2.TextSize = 20.000
+
+UNS13_2.Name = "UNS13"
+UNS13_2.Parent = EXECUTABLES
+UNS13_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS13_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS13_2.BorderSizePixel = 0
+UNS13_2.Position = UDim2.new(0.0533333346, 0, 0.607383192, 0)
+UNS13_2.Size = UDim2.new(0, 127, 0, 29)
+UNS13_2.Font = Enum.Font.SourceSansLight
+UNS13_2.Text = "BUTTON13"
+UNS13_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS13_2.TextSize = 20.000
+
+UNS14_2.Name = "UNS14"
+UNS14_2.Parent = EXECUTABLES
+UNS14_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS14_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS14_2.BorderSizePixel = 0
+UNS14_2.Position = UDim2.new(0.283333331, 0, 0.607383192, 0)
+UNS14_2.Size = UDim2.new(0, 127, 0, 29)
+UNS14_2.Font = Enum.Font.SourceSansLight
+UNS14_2.Text = "BUTTON14"
+UNS14_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS14_2.TextSize = 20.000
+
+UNS15_2.Name = "UNS15"
+UNS15_2.Parent = EXECUTABLES
+UNS15_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS15_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS15_2.BorderSizePixel = 0
+UNS15_2.Position = UDim2.new(0.513333321, 0, 0.607383192, 0)
+UNS15_2.Size = UDim2.new(0, 127, 0, 29)
+UNS15_2.Font = Enum.Font.SourceSansLight
+UNS15_2.Text = "BUTTON15"
+UNS15_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS15_2.TextSize = 20.000
+
+UNS16_2.Name = "UNS16"
+UNS16_2.Parent = EXECUTABLES
+UNS16_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS16_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS16_2.BorderSizePixel = 0
+UNS16_2.Position = UDim2.new(0.741333365, 0, 0.607383192, 0)
+UNS16_2.Size = UDim2.new(0, 127, 0, 29)
+UNS16_2.Font = Enum.Font.SourceSansLight
+UNS16_2.Text = "BUTTON16"
+UNS16_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS16_2.TextSize = 20.000
+
+UNS17_2.Name = "UNS17"
+UNS17_2.Parent = EXECUTABLES
+UNS17_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS17_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS17_2.BorderSizePixel = 0
+UNS17_2.Position = UDim2.new(0.0533333346, 0, 0.782383204, 0)
+UNS17_2.Size = UDim2.new(0, 127, 0, 29)
+UNS17_2.Font = Enum.Font.SourceSansLight
+UNS17_2.Text = "BUTTON17"
+UNS17_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS17_2.TextSize = 20.000
+
+UNS18_2.Name = "UNS18"
+UNS18_2.Parent = EXECUTABLES
+UNS18_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS18_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS18_2.BorderSizePixel = 0
+UNS18_2.Position = UDim2.new(0.283333331, 0, 0.782383204, 0)
+UNS18_2.Size = UDim2.new(0, 127, 0, 29)
+UNS18_2.Font = Enum.Font.SourceSansLight
+UNS18_2.Text = "BUTTON18"
+UNS18_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS18_2.TextSize = 20.000
+
+UNS19_2.Name = "UNS19"
+UNS19_2.Parent = EXECUTABLES
+UNS19_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS19_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS19_2.BorderSizePixel = 0
+UNS19_2.Position = UDim2.new(0.513333321, 0, 0.782383204, 0)
+UNS19_2.Size = UDim2.new(0, 127, 0, 29)
+UNS19_2.Font = Enum.Font.SourceSansLight
+UNS19_2.Text = "BUTTON19"
+UNS19_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS19_2.TextSize = 20.000
+
+UNS2_2.Name = "UNS2"
+UNS2_2.Parent = EXECUTABLES
+UNS2_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS2_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS2_2.BorderSizePixel = 0
+UNS2_2.Position = UDim2.new(0.283333331, 0, 0.0773831755, 0)
+UNS2_2.Size = UDim2.new(0, 127, 0, 29)
+UNS2_2.Font = Enum.Font.SourceSansLight
+UNS2_2.Text = "BUTTON2"
+UNS2_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS2_2.TextSize = 20.000
+
+UNS20_2.Name = "UNS20"
+UNS20_2.Parent = EXECUTABLES
+UNS20_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS20_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS20_2.BorderSizePixel = 0
+UNS20_2.Position = UDim2.new(0.741333365, 0, 0.782383204, 0)
+UNS20_2.Size = UDim2.new(0, 127, 0, 29)
+UNS20_2.Font = Enum.Font.SourceSansLight
+UNS20_2.Text = "BUTTON20"
+UNS20_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS20_2.TextSize = 20.000
+
+UNS3_2.Name = "UNS3"
+UNS3_2.Parent = EXECUTABLES
+UNS3_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS3_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS3_2.BorderSizePixel = 0
+UNS3_2.Position = UDim2.new(0.513333321, 0, 0.0773831755, 0)
+UNS3_2.Size = UDim2.new(0, 127, 0, 29)
+UNS3_2.Font = Enum.Font.SourceSansLight
+UNS3_2.Text = "BUTTON3"
+UNS3_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS3_2.TextSize = 20.000
+
+UNS4_2.Name = "UNS4"
+UNS4_2.Parent = EXECUTABLES
+UNS4_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS4_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS4_2.BorderSizePixel = 0
+UNS4_2.Position = UDim2.new(0.741333365, 0, 0.0773831755, 0)
+UNS4_2.Size = UDim2.new(0, 127, 0, 29)
+UNS4_2.Font = Enum.Font.SourceSansLight
+UNS4_2.Text = "BUTTON4"
+UNS4_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS4_2.TextSize = 20.000
+
+UNS5_2.Name = "UNS5"
+UNS5_2.Parent = EXECUTABLES
+UNS5_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS5_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS5_2.BorderSizePixel = 0
+UNS5_2.Position = UDim2.new(0.0533333346, 0, 0.252383173, 0)
+UNS5_2.Size = UDim2.new(0, 127, 0, 29)
+UNS5_2.Font = Enum.Font.SourceSansLight
+UNS5_2.Text = "BUTTON5"
+UNS5_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS5_2.TextSize = 20.000
+
+UNS6_2.Name = "UNS6"
+UNS6_2.Parent = EXECUTABLES
+UNS6_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS6_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS6_2.BorderSizePixel = 0
+UNS6_2.Position = UDim2.new(0.283333331, 0, 0.252383173, 0)
+UNS6_2.Size = UDim2.new(0, 127, 0, 29)
+UNS6_2.Font = Enum.Font.SourceSansLight
+UNS6_2.Text = "BUTTON6"
+UNS6_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS6_2.TextSize = 20.000
+
+UNS7_2.Name = "UNS7"
+UNS7_2.Parent = EXECUTABLES
+UNS7_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
+UNS7_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+UNS7_2.BorderSizePixel = 0
+UNS7_2.Position = UDim2.new(0.513333321, 0, 0.252383173, 0)
+UNS7_2.Size = UDim2.new(0, 127, 0, 29)
+UNS7_2.Font = Enum.Font.SourceSansLight
+UNS7_2.Text = "BUTTON7"
+UNS7_2.TextColor3 = Color3.fromRGB(99, 18, 18)
+UNS7_2.TextSize = 20.000
+
+AUDIT_2.Name = "AUDIT"
+AUDIT_2.Parent = MAINPART
+AUDIT_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AUDIT_2.BackgroundTransparency = 1.000
+AUDIT_2.Size = UDim2.new(1, 0, 1, 0)
+AUDIT_2.Visible = false
+
+CodeEntry_2.Name = "CodeEntry"
+CodeEntry_2.Parent = AUDIT_2
+CodeEntry_2.AnchorPoint = Vector2.new(0.5, 0.5)
+CodeEntry_2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+CodeEntry_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+CodeEntry_2.Size = UDim2.new(0, 580, 0, 200)
+
+UICorner_17.Parent = CodeEntry_2
+
+Line1.Name = "Line1"
+Line1.Parent = CodeEntry_2
+Line1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line1.BackgroundTransparency = 1.000
+Line1.Position = UDim2.new(0.0103448275, 0, 0, 0)
+Line1.Size = UDim2.new(0, 568, 0, 20)
+Line1.ClearTextOnFocus = false
+Line1.Font = Enum.Font.SourceSansSemibold
+Line1.MultiLine = true
+Line1.Text = "Empty"
+Line1.TextColor3 = Color3.fromRGB(145, 26, 26)
+Line1.TextSize = 20.000
+Line1.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Line1.TextStrokeTransparency = 0.000
+Line1.TextWrapped = true
+Line1.TextXAlignment = Enum.TextXAlignment.Left
+
+Line2.Name = "Line2"
+Line2.Parent = CodeEntry_2
+Line2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line2.BackgroundTransparency = 1.000
+Line2.Position = UDim2.new(0.00999999978, 0, 0, 20)
+Line2.Size = UDim2.new(0, 568, 0, 20)
+Line2.ClearTextOnFocus = false
+Line2.Font = Enum.Font.SourceSansSemibold
+Line2.MultiLine = true
+Line2.Text = "Empty"
+Line2.TextColor3 = Color3.fromRGB(145, 26, 26)
+Line2.TextSize = 20.000
+Line2.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Line2.TextStrokeTransparency = 0.000
+Line2.TextWrapped = true
+Line2.TextXAlignment = Enum.TextXAlignment.Left
+
+Line3.Name = "Line3"
+Line3.Parent = CodeEntry_2
+Line3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line3.BackgroundTransparency = 1.000
+Line3.Position = UDim2.new(0.00999999978, 0, 0, 40)
+Line3.Size = UDim2.new(0, 568, 0, 20)
+Line3.ClearTextOnFocus = false
+Line3.Font = Enum.Font.SourceSansSemibold
+Line3.MultiLine = true
+Line3.Text = "Empty"
+Line3.TextColor3 = Color3.fromRGB(145, 26, 26)
+Line3.TextSize = 20.000
+Line3.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Line3.TextStrokeTransparency = 0.000
+Line3.TextWrapped = true
+Line3.TextXAlignment = Enum.TextXAlignment.Left
+
+Line4.Name = "Line4"
+Line4.Parent = CodeEntry_2
+Line4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line4.BackgroundTransparency = 1.000
+Line4.Position = UDim2.new(0.00999999978, 0, 0, 60)
+Line4.Size = UDim2.new(0, 568, 0, 20)
+Line4.ClearTextOnFocus = false
+Line4.Font = Enum.Font.SourceSansSemibold
+Line4.MultiLine = true
+Line4.Text = "Empty"
+Line4.TextColor3 = Color3.fromRGB(145, 26, 26)
+Line4.TextSize = 20.000
+Line4.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Line4.TextStrokeTransparency = 0.000
+Line4.TextWrapped = true
+Line4.TextXAlignment = Enum.TextXAlignment.Left
+
+Line5.Name = "Line5"
+Line5.Parent = CodeEntry_2
+Line5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line5.BackgroundTransparency = 1.000
+Line5.Position = UDim2.new(0.00999999978, 0, 0, 80)
+Line5.Size = UDim2.new(0, 568, 0, 20)
+Line5.ClearTextOnFocus = false
+Line5.Font = Enum.Font.SourceSansSemibold
+Line5.MultiLine = true
+Line5.Text = "Empty"
+Line5.TextColor3 = Color3.fromRGB(145, 26, 26)
+Line5.TextSize = 20.000
+Line5.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Line5.TextStrokeTransparency = 0.000
+Line5.TextWrapped = true
+Line5.TextXAlignment = Enum.TextXAlignment.Left
+
+Line6.Name = "Line6"
+Line6.Parent = CodeEntry_2
+Line6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line6.BackgroundTransparency = 1.000
+Line6.Position = UDim2.new(0.00999999978, 0, 0, 100)
+Line6.Size = UDim2.new(0, 568, 0, 20)
+Line6.ClearTextOnFocus = false
+Line6.Font = Enum.Font.SourceSansSemibold
+Line6.MultiLine = true
+Line6.Text = "Empty"
+Line6.TextColor3 = Color3.fromRGB(145, 26, 26)
+Line6.TextSize = 20.000
+Line6.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Line6.TextStrokeTransparency = 0.000
+Line6.TextWrapped = true
+Line6.TextXAlignment = Enum.TextXAlignment.Left
+
+Line7.Name = "Line7"
+Line7.Parent = CodeEntry_2
+Line7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line7.BackgroundTransparency = 1.000
+Line7.Position = UDim2.new(0.00999999978, 0, 0, 120)
+Line7.Size = UDim2.new(0, 568, 0, 20)
+Line7.ClearTextOnFocus = false
+Line7.Font = Enum.Font.SourceSansSemibold
+Line7.MultiLine = true
+Line7.Text = "Empty"
+Line7.TextColor3 = Color3.fromRGB(145, 26, 26)
+Line7.TextSize = 20.000
+Line7.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Line7.TextStrokeTransparency = 0.000
+Line7.TextWrapped = true
+Line7.TextXAlignment = Enum.TextXAlignment.Left
+
+Line8.Name = "Line8"
+Line8.Parent = CodeEntry_2
+Line8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line8.BackgroundTransparency = 1.000
+Line8.Position = UDim2.new(0.00999999978, 0, 0, 140)
+Line8.Size = UDim2.new(0, 568, 0, 20)
+Line8.ClearTextOnFocus = false
+Line8.Font = Enum.Font.SourceSansSemibold
+Line8.MultiLine = true
+Line8.Text = "Empty"
+Line8.TextColor3 = Color3.fromRGB(145, 26, 26)
+Line8.TextSize = 20.000
+Line8.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Line8.TextStrokeTransparency = 0.000
+Line8.TextWrapped = true
+Line8.TextXAlignment = Enum.TextXAlignment.Left
+
+Line9.Name = "Line9"
+Line9.Parent = CodeEntry_2
+Line9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line9.BackgroundTransparency = 1.000
+Line9.Position = UDim2.new(0.00999999978, 0, 0, 160)
+Line9.Size = UDim2.new(0, 568, 0, 20)
+Line9.ClearTextOnFocus = false
+Line9.Font = Enum.Font.SourceSansSemibold
+Line9.MultiLine = true
+Line9.Text = "Empty"
+Line9.TextColor3 = Color3.fromRGB(145, 26, 26)
+Line9.TextSize = 20.000
+Line9.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Line9.TextStrokeTransparency = 0.000
+Line9.TextWrapped = true
+Line9.TextXAlignment = Enum.TextXAlignment.Left
+
+Line10.Name = "Line10"
+Line10.Parent = CodeEntry_2
+Line10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line10.BackgroundTransparency = 1.000
+Line10.Position = UDim2.new(0.00999999978, 0, 0, 180)
+Line10.Size = UDim2.new(0, 568, 0, 20)
+Line10.ClearTextOnFocus = false
+Line10.Font = Enum.Font.SourceSansSemibold
+Line10.MultiLine = true
+Line10.Text = "Empty"
+Line10.TextColor3 = Color3.fromRGB(145, 26, 26)
+Line10.TextSize = 20.000
+Line10.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Line10.TextStrokeTransparency = 0.000
+Line10.TextWrapped = true
+Line10.TextXAlignment = Enum.TextXAlignment.Left
+
+EXIT_2.Name = "EXIT"
+EXIT_2.Parent = MAIN
+EXIT_2.AnchorPoint = Vector2.new(1, 0)
+EXIT_2.BackgroundColor3 = Color3.fromRGB(68, 12, 12)
+EXIT_2.Position = UDim2.new(1, 0, 0, 0)
+EXIT_2.Size = UDim2.new(0, 30, 0, 30)
+EXIT_2.Font = Enum.Font.SourceSans
+EXIT_2.Text = "X"
+EXIT_2.TextColor3 = Color3.fromRGB(140, 0, 0)
+EXIT_2.TextSize = 30.000
+
+UICorner_18.Parent = EXIT_2
 
 Sounds.Name = "Sounds"
 Sounds.Parent = NOMAIN
@@ -551,8 +1338,8 @@ CORNERLOGO.Selectable = true
 CORNERLOGO.Size = UDim2.new(0, 65, 0, 65)
 CORNERLOGO.ZIndex = -1
 
-UICorner_14.CornerRadius = UDim.new(1, 0)
-UICorner_14.Parent = CORNERLOGO
+UICorner_19.CornerRadius = UDim.new(1, 0)
+UICorner_19.Parent = CORNERLOGO
 
 COG_2.Name = "COG"
 COG_2.Parent = CORNERLOGO
@@ -603,7 +1390,7 @@ Values.Parent = NOMAIN
 
 -- Scripts:
 
-local function PXCQ_fake_script() -- NOMAIN.MAINSCRIPT 
+local function MSELWO_fake_script() -- NOMAIN.MAINSCRIPT 
 	local script = Instance.new('LocalScript', NOMAIN)
 
 	----MAIN----
@@ -623,6 +1410,10 @@ local function PXCQ_fake_script() -- NOMAIN.MAINSCRIPT
 	local textcount = 0
 	--------------
 	
+	----AUDIT----
+	local logentrynumber = 0
+	-------------
+	
 	----SOUNDS----
 	local Sounds = script.Parent.Sounds
 	
@@ -632,6 +1423,15 @@ local function PXCQ_fake_script() -- NOMAIN.MAINSCRIPT
 	local MH = Instance.new("Sound",Sounds) MH.SoundId = ("rbxassetid://6947154904") MH.Volume = 1
 	local NF = Instance.new("Sound",Sounds) NF.SoundId = ("rbxassetid://216917652") NF.Volume = 1
 	--------------
+	
+	local function logentry(text)
+		logentrynumber = logentrynumber + 1
+		local text = Main.MAINPART.AUDIT.CodeEntry:FindFirstChild("Line"..logentrynumber)
+		text.Text = text
+		if logentrynumber == 10 then
+			logentrynumber = 0
+		end
+	end
 	
 	local function firedialog()
 		if DialogFired == false then
@@ -744,12 +1544,28 @@ local function PXCQ_fake_script() -- NOMAIN.MAINSCRIPT
 		hideotherui("INFORMATION")
 		Main.INTER.Visible = true
 		spinlogo(true)
+		spincornerlogo(true)
 	end)
 	
 	Main.EXE.MouseButton1Click:Connect(function()
 		hideotherui("EXECUTOR")
 		Main.INTER.Visible = false
 		spinlogo(false)
+		spincornerlogo(true)
+	end)
+	
+	Main.SETT.MouseButton1Click:Connect(function()
+		hideotherui("SETTINGS")
+		Main.INTER.Visible = false
+		spinlogo(true)
+		spincornerlogo(true)
+	end)
+	
+	Main.GUIS.MouseButton1Click:Connect(function()
+		hideotherui("EXECUTABLES")
+		Main.INTER.Visible = false
+		spinlogo(false)
+		spincornerlogo(true)
 	end)
 	
 	
@@ -862,10 +1678,12 @@ local function PXCQ_fake_script() -- NOMAIN.MAINSCRIPT
 			end
 		end
 		if Injected == true then
+			logentry("Succesfully Injected Executor    :    ", game.Lighting.TimeOfDay)
 			text.Value = "Injected Successfully"
 			NF:Play()
 			firedialog()
 		else
+			logentry("Failed Executor Injection    :    ", game.Lighting.TimeOfDay)
 			text.Value = "Failed to Inject"
 			NF:Play()
 			firedialog()
@@ -884,6 +1702,7 @@ local function PXCQ_fake_script() -- NOMAIN.MAINSCRIPT
 				else
 					backdoor:FireServer(Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
 				end
+				logentry("Executed ",Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text, "   :   ", game.Lighting.TimeOfDay)
 			end
 		end
 	end)
@@ -931,4 +1750,4 @@ local function PXCQ_fake_script() -- NOMAIN.MAINSCRIPT
 		game:Shutdown()
 	end
 end
-coroutine.wrap(PXCQ_fake_script)()
+coroutine.wrap(MSELWO_fake_script)()
