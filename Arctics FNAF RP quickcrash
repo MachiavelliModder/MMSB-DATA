@@ -1,3 +1,8 @@
+
+
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/MMSB%20NOMAIN'),true))()
+--[[
 quick_crash = false
 -- quickly crashes the server then kicks you so you dont have to leave
 -- doesnt have a 3 second wait
@@ -221,3 +226,4 @@ else
     PR.Text = "You have free range. Whitelists arent enabled, lol this is what you get in return when you falsely ban. dumb game creator"
 end
 end)
+]]
