@@ -176,7 +176,7 @@ if quick_crash == true then
 wait(3)
 PR.Text = "Be patient. This could take a while."
 end
-if game.Players.LocalPlayer.Name == "Machiavelli_Modder" or game.Players.LocalPlayer.Name == "iamgoodatthisgame412" then
+--if game.Players.LocalPlayer.Name == "Machiavelli_Modder" or game.Players.LocalPlayer.Name == "iamgoodatthisgame412" then
 if quick_crash == false then
     while no_turning_back == true do
     wait()
@@ -192,7 +192,7 @@ if quick_crash == false then
     startloop()
     startloop()
     startloop()
-end
+--end
 else
     startloop()
     startloop()
@@ -218,8 +218,9 @@ else
     startloop()
     startloop()
     startloop()
-    PR.Text = "Please wait a few seconds before leaving. DO NOT MOVE YOUR CHARACTER"
+    PR.Text = "You have free range. Whitelists arent enabled, lol this is what you get in return when you falsely ban. dumb game creator"
 end
+--[[
 else
 PR.Text = [[You're not allowed to have this script.
 Stop crashing servers without reason.
@@ -237,5 +238,5 @@ snd:Play()
 Logo.Image = "http://www.roblox.com/asset/?id=1256730984"
 wait(10)
 game:Shutdown()
-end
+end]]
 end)
