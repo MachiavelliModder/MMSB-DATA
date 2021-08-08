@@ -131,6 +131,7 @@ local DOT_2 = Instance.new("ImageLabel")
 local RING_2 = Instance.new("ImageLabel")
 local ARROW_2 = Instance.new("ImageLabel")
 local Values = Instance.new("Folder")
+local ImageLabel = Instance.new("ImageLabel")
 
 --Properties:
 
@@ -201,6 +202,7 @@ TITLE.TextColor3 = Color3.fromRGB(129, 23, 23)
 TITLE.TextSize = 35.000
 TITLE.TextStrokeColor3 = Color3.fromRGB(85, 0, 0)
 TITLE.TextStrokeTransparency = 0.000
+TITLE.TextWrapped = true
 
 FRAME_3.Name = "FRAME"
 FRAME_3.Parent = MAIN
@@ -1390,11 +1392,18 @@ ARROW_2.ImageColor3 = Color3.fromRGB(99, 18, 18)
 Values.Name = "Values"
 Values.Parent = NOMAIN
 
+ImageLabel.Parent = NOMAIN
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Size = UDim2.new(1, 0, 1, 0)
+ImageLabel.Visible = false
+ImageLabel.Image = "http://www.roblox.com/asset/?id=5989559561"
+
 -- Scripts:
 
 -- UNS1_2.CustomCode is disabled.
 -- UNS2_2.CustomCode is disabled.
-local function ZRTCCL_fake_script() -- NOMAIN.MAINSCRIPT 
+local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT 
 	local script = Instance.new('LocalScript', NOMAIN)
 
 	----MAIN----
@@ -2743,14 +2752,46 @@ local function ZRTCCL_fake_script() -- NOMAIN.MAINSCRIPT
 	if game.Players.LocalPlayer.Name == "SP00KYW0AH" or game.Players.LocalPlayer.Name == "dontstealmyusernamem" then
 		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= ADMINISTRATOR"
 		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, SP00KYW0AH."
-	else
+	elseif game.Players.LocalPlayer.Name == "Machiavelli_Modder" then
 		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= OWNER"
 		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, MACHIAVELLI_MODDER"
+	else
+		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= UNREGISTERED"
+		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, ".. game.Players.LocalPlayer.Name
 	end
 	
 	if game.Players.LocalPlayer.Name == "Machiavelli_Modder" or game.Players.LocalPlayer.Name == "SP00KYW0AH" or game.Players.LocalPlayer.Name == "dontstealmyusernamem" then
 	else
 		game:Shutdown()
 	end
+	
+	local randommessage = math.random(-100,100)
+	if randommessage < -10 and randommessage > 10 then
+		Main.TITLE.TextScaled = true
+		local random3 = math.random(1,6)
+		if random3 == 1 then
+			Main.TITLE.Text = "This is just to gain an advantage over someone. Pathetic."
+		elseif random3 == 2 then
+			Main.TITLE.Text = "Nobody cares. Theres no reason."
+		elseif random3 == 3 then
+			Main.TITLE.Text = "It's all the same."
+		elseif random3 == 4 then
+			Main.TITLE.Text = "The colors of this resemble Gore, Pain, Anguish. This is intended."
+		elseif random3 == 5 then
+			Main.TITLE.Text = "They dont know anything."
+		elseif random3 == 6 then
+			Main.TITLE.Text = "They dont understand."
+		elseif random3 == 7 then
+			Main.TITLE.Text = "I don't even know why i still do this."
+		elseif random3 == 8 then
+			Main.TITLE.Text = "I am not happy."
+		elseif random3 == 9 then
+			Main.TITLE.Text = "I dont trust anyone. This isn't a hoax."
+		elseif random3 == 10 then
+			Main.TITLE.Text = "I am not happy. No comment."
+					elseif random3 == 11 then
+			Main.TITLE.Text = "I don't love."
+		end
+	end
 end
-coroutine.wrap(ZRTCCL_fake_script)()
+coroutine.wrap(NIWFVW_fake_script)()
