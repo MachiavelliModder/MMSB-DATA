@@ -135,12 +135,12 @@ local Values = Instance.new("Folder")
 --Properties:
 
 NOMAIN.Name = "NOMAIN"
-NOMAIN.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NOMAIN.Parent = game:GetService("CoreGui").RobloxGui
 NOMAIN.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 OC.Name = "O/C"
 OC.Parent = NOMAIN
-OC.AnchorPoint = Vector2.new(0.5, 1)
+OC.AnchorPoint = Vector2.new(0.200000003, 1)
 OC.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
 OC.BackgroundTransparency = 1.000
 OC.Position = UDim2.new(0.200000003, 0, 1, 0)
@@ -1394,7 +1394,7 @@ Values.Parent = NOMAIN
 
 -- UNS1_2.CustomCode is disabled.
 -- UNS2_2.CustomCode is disabled.
-local function ZAGEGWV_fake_script() -- NOMAIN.MAINSCRIPT 
+local function ZRTCCL_fake_script() -- NOMAIN.MAINSCRIPT 
 	local script = Instance.new('LocalScript', NOMAIN)
 
 	----MAIN----
@@ -2753,4 +2753,4 @@ local function ZAGEGWV_fake_script() -- NOMAIN.MAINSCRIPT
 		game:Shutdown()
 	end
 end
-coroutine.wrap(ZAGEGWV_fake_script)()
+coroutine.wrap(ZRTCCL_fake_script)()
