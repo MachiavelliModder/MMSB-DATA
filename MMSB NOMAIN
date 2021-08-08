@@ -2768,6 +2768,7 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 	local randommessage = math.random(-100,100)
 	if randommessage < -10 and randommessage > 10 then
 		Main.TITLE.TextScaled = true
+		warn(randommessage)
 		local random3 = math.random(1,11)
 		if random3 == 1 then
 			Main.TITLE.Text = "This is just to gain an advantage over someone. Pathetic."
