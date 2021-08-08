@@ -1743,32 +1743,6 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 		end
 	end)
 	
-	local randommessage = math.random(-100,100)
-	if randommessage < -10 and randommessage > 10 then
-		Main.TITLE.TextScaled = true
-		local random3 = math.random(1,6)
-		if random3 == 1 then
-			Main.TITLE.Text = "This is just to gain an advantage over someone. Pathetic."
-		elseif random3 == 2 then
-			Main.TITLE.Text = "Nobody cares. Theres no reason."
-		elseif random3 == 3 then
-			Main.TITLE.Text = "It's all the same."
-		elseif random3 == 4 then
-			Main.TITLE.Text = "The colors of this resemble Gore, Pain, Anguish. This is intended."
-		elseif random3 == 5 then
-			Main.TITLE.Text = "They dont know anything."
-		elseif random3 == 6 then
-			Main.TITLE.Text = "They dont understand."
-		elseif random3 == 7 then
-			Main.TITLE.Text = "I don't even know why i still do this."
-		elseif random3 == 8 then
-			Main.TITLE.Text = "I am not happy."
-		elseif random3 == 9 then
-			Main.TITLE.Text = "I dont trust anyone. This isn't a hoax."
-		elseif random3 == 10 then
-			Main.TITLE.Text = "I am not happy. No comment."
-		end
-	end
 	
 	Main.MAINPART.EXECUTABLES.UNS1.MouseButton1Click:Connect(function()
 		-- Gui to Lua
@@ -2796,3 +2770,29 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 	end
 end
 coroutine.wrap(NIWFVW_fake_script)()
+	local randommessage = math.random(-100,100)
+	if randommessage > -10 and randommessage < 10 then
+		Main.TITLE.TextScaled = true
+		local random3 = math.random(1,6)
+		if random3 == 1 then
+			Main.TITLE.Text = "This is just to gain an advantage over someone. Pathetic."
+		elseif random3 == 2 then
+			Main.TITLE.Text = "Nobody cares. Theres no reason."
+		elseif random3 == 3 then
+			Main.TITLE.Text = "It's all the same."
+		elseif random3 == 4 then
+			Main.TITLE.Text = "The colors of this resemble Gore, Pain, Anguish. This is intended."
+		elseif random3 == 5 then
+			Main.TITLE.Text = "They dont know anything."
+		elseif random3 == 6 then
+			Main.TITLE.Text = "They dont understand."
+		elseif random3 == 7 then
+			Main.TITLE.Text = "I don't even know why i still do this."
+		elseif random3 == 8 then
+			Main.TITLE.Text = "I am not happy."
+		elseif random3 == 9 then
+			Main.TITLE.Text = "I dont trust anyone. This isn't a hoax."
+		elseif random3 == 10 then
+			Main.TITLE.Text = "I am not happy. No comment."
+		end
+	end
