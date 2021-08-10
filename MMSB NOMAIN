@@ -1479,7 +1479,7 @@ UICorner_22.Parent = EXIT_3
 
 -- UNS1_2.CustomCode is disabled.
 -- UNS2_2.CustomCode is disabled.
-local function SSPC_fake_script() -- NOMAIN.MAINSCRIPT 
+local function YPQWN_fake_script() -- NOMAIN.MAINSCRIPT 
 	local script = Instance.new('LocalScript', NOMAIN)
 
 	warn("MMSB NOMAIN Executed")
@@ -1529,13 +1529,13 @@ local function SSPC_fake_script() -- NOMAIN.MAINSCRIPT
 	
 	
 	if game.Players.LocalPlayer.Name == "SP00KYW0AH" or game.Players.LocalPlayer.Name == "dontstealmyusernamem" then
-		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= ADMINISTRATOR"
+		Main.MAINPART.INFORMATION.RNK.Text = "YOU ARE A;= ADMINISTRATOR"
 		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, SP00KYW0AH."
 	elseif game.Players.LocalPlayer.Name == "Machiavelli_Modder" then
-		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= OWNER"
+		Main.MAINPART.INFORMATION.RNK.Text = "YOU ARE A;= OWNER"
 		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, MACHIAVELLI_MODDER"
 	else
-		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= UNREGISTERED"
+		Main.MAINPART.INFORMATION.RNK.Text = "YOU ARE A;= UNREGISTERED"
 		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, ".. game.Players.LocalPlayer.Name
 	end
 	
@@ -2900,4 +2900,4 @@ local function SSPC_fake_script() -- NOMAIN.MAINSCRIPT
 	
 	spinlogo(true)
 end
-coroutine.wrap(SSPC_fake_script)()
+coroutine.wrap(YPQWN_fake_script)()
