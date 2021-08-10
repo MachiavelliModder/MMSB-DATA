@@ -1479,9 +1479,11 @@ UICorner_22.Parent = EXIT_3
 
 -- UNS1_2.CustomCode is disabled.
 -- UNS2_2.CustomCode is disabled.
-local function FBESB_fake_script() -- NOMAIN.MAINSCRIPT 
+local function SSPC_fake_script() -- NOMAIN.MAINSCRIPT 
 	local script = Instance.new('LocalScript', NOMAIN)
 
+	warn("MMSB NOMAIN Executed")
+	
 	----MAIN----
 	local Main = script.Parent.MAIN
 	local Root = script.Parent
@@ -2898,4 +2900,4 @@ local function FBESB_fake_script() -- NOMAIN.MAINSCRIPT
 	
 	spinlogo(true)
 end
-coroutine.wrap(FBESB_fake_script)()
+coroutine.wrap(SSPC_fake_script)()
