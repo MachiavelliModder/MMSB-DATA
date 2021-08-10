@@ -132,6 +132,15 @@ local RING_2 = Instance.new("ImageLabel")
 local ARROW_2 = Instance.new("ImageLabel")
 local Values = Instance.new("Folder")
 local ImageLabel = Instance.new("ImageLabel")
+local CODEENTRY = Instance.new("Frame")
+local UICorner_20 = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local UICorner_21 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local CFIRM = Instance.new("ImageButton")
+local TextBox = Instance.new("TextBox")
+local EXIT_3 = Instance.new("TextButton")
+local UICorner_22 = Instance.new("UICorner")
 
 --Properties:
 
@@ -1283,20 +1292,20 @@ DIALOG.Size = UDim2.new(1, 0, 1, 0)
 
 Frame3.Name = "Frame3"
 Frame3.Parent = DIALOG
-Frame3.AnchorPoint = Vector2.new(0, 0.100000001)
+Frame3.AnchorPoint = Vector2.new(0, 0.800000012)
 Frame3.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 Frame3.BackgroundTransparency = 1.000
 Frame3.BorderSizePixel = 0
-Frame3.Position = UDim2.new(0.400000006, 0, 0.100000001, 0)
+Frame3.Position = UDim2.new(0.400000006, 0, 0.800000012, 0)
 Frame3.Size = UDim2.new(0.200000003, 0, 0, 50)
 
 Frame1.Name = "Frame1"
 Frame1.Parent = DIALOG
-Frame1.AnchorPoint = Vector2.new(0, 0.100000001)
+Frame1.AnchorPoint = Vector2.new(0, 0.800000012)
 Frame1.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 Frame1.BackgroundTransparency = 1.000
 Frame1.BorderSizePixel = 0
-Frame1.Position = UDim2.new(0, 0, 0.100000001, 0)
+Frame1.Position = UDim2.new(0, 0, 0.800000012, 0)
 Frame1.Size = UDim2.new(0.400000006, 0, 0, 50)
 
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
@@ -1305,11 +1314,11 @@ UIGradient.Parent = Frame1
 
 Frame2.Name = "Frame2"
 Frame2.Parent = DIALOG
-Frame2.AnchorPoint = Vector2.new(1, 0.100000001)
+Frame2.AnchorPoint = Vector2.new(1, 0.800000012)
 Frame2.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 Frame2.BackgroundTransparency = 1.000
 Frame2.BorderSizePixel = 0
-Frame2.Position = UDim2.new(1, 0, 0.100000001, 0)
+Frame2.Position = UDim2.new(1, 0, 0.800000012, 0)
 Frame2.Size = UDim2.new(0.400000006, 0, 0, 50)
 
 UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
@@ -1319,10 +1328,10 @@ UIGradient_2.Parent = Frame2
 
 Text.Name = "Text"
 Text.Parent = DIALOG
-Text.AnchorPoint = Vector2.new(0.5, 0.100000001)
+Text.AnchorPoint = Vector2.new(0.5, 0.800000012)
 Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Text.BackgroundTransparency = 1.000
-Text.Position = UDim2.new(0.5, 0, 0.100000001, 0)
+Text.Position = UDim2.new(0.5, 0, 0.800000012, 0)
 Text.Size = UDim2.new(0, 200, 0, 50)
 Text.Font = Enum.Font.SourceSansLight
 Text.Text = ""
@@ -1399,17 +1408,86 @@ ImageLabel.Size = UDim2.new(1, 0, 1, 0)
 ImageLabel.Visible = false
 ImageLabel.Image = "http://www.roblox.com/asset/?id=5989559561"
 
+CODEENTRY.Name = "CODEENTRY"
+CODEENTRY.Parent = NOMAIN
+CODEENTRY.AnchorPoint = Vector2.new(0.5, 0.100000001)
+CODEENTRY.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+CODEENTRY.Position = UDim2.new(0.5, 0, 0.100000001, 0)
+CODEENTRY.Size = UDim2.new(0, 200, 0, 50)
+CODEENTRY.Visible = false
+CODEENTRY.ZIndex = 2
+
+UICorner_20.Parent = CODEENTRY
+
+Frame.Parent = CODEENTRY
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame.Size = UDim2.new(0, 100, 0, 100)
+Frame.ZIndex = -1000
+
+UICorner_21.CornerRadius = UDim.new(1, 0)
+UICorner_21.Parent = Frame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.Font = Enum.Font.Garamond
+TextLabel.Text = "Ω"
+TextLabel.TextColor3 = Color3.fromRGB(127, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+CFIRM.Name = "CFIRM"
+CFIRM.Parent = Frame
+CFIRM.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CFIRM.BackgroundTransparency = 1.000
+CFIRM.Size = UDim2.new(1, 0, 1, 0)
+CFIRM.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+CFIRM.ImageTransparency = 1.000
+
+TextBox.Parent = CODEENTRY
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.Size = UDim2.new(0, 200, 0, 50)
+TextBox.Font = Enum.Font.SourceSansLight
+TextBox.PlaceholderColor3 = Color3.fromRGB(85, 0, 0)
+TextBox.PlaceholderText = "1337-1337-1337"
+TextBox.Text = "1337-1337-1337"
+TextBox.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextBox.TextSize = 30.000
+TextBox.TextStrokeColor3 = Color3.fromRGB(85, 0, 0)
+TextBox.TextStrokeTransparency = 0.000
+TextBox.TextWrapped = true
+
+EXIT_3.Name = "EXIT"
+EXIT_3.Parent = CODEENTRY
+EXIT_3.AnchorPoint = Vector2.new(1, 0)
+EXIT_3.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
+EXIT_3.Position = UDim2.new(1, 0, 0, 0)
+EXIT_3.Size = UDim2.new(0, 20, 0, 20)
+EXIT_3.Font = Enum.Font.SourceSans
+EXIT_3.Text = "X"
+EXIT_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+EXIT_3.TextSize = 14.000
+
+UICorner_22.Parent = EXIT_3
+
 -- Scripts:
 
 -- UNS1_2.CustomCode is disabled.
 -- UNS2_2.CustomCode is disabled.
-local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT 
+local function WOCKWAM_fake_script() -- NOMAIN.MAINSCRIPT 
 	local script = Instance.new('LocalScript', NOMAIN)
 
 	----MAIN----
 	local Main = script.Parent.MAIN
 	local Root = script.Parent
 	local Spinninglogo = false
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local UserInput = game:GetService("UserInputService")
 	------------
 	
 	----EXECUTOR----
@@ -1423,6 +1501,10 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 	local textcount = 0
 	--------------
 	
+	----NOCOM----
+	local CANOPEN = false
+	-------------
+	
 	----AUDIT----
 	local logentrynumber = 0
 	-------------
@@ -1435,6 +1517,8 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 	local BC = Instance.new("Sound",Sounds) BC.SoundId = ("rbxassetid://6947401743") BC.Volume = 1
 	local MH = Instance.new("Sound",Sounds) MH.SoundId = ("rbxassetid://6947154904") MH.Volume = 1
 	local NF = Instance.new("Sound",Sounds) NF.SoundId = ("rbxassetid://216917652") NF.Volume = 1
+	local BELL = Instance.new("Sound",Sounds) BELL.SoundId = ("rbxassetid://596589000") BELL.Volume = 3 local DIS = Instance.new("DistortionSoundEffect",BELL) local ECHO = Instance.new("EchoSoundEffect",BELL) ECHO.WetLevel = 2
+	local MH1 = Instance.new("Sound",Sounds) MH1.SoundId = ("rbxassetid://1842491475") MH1.Volume = 3 local DIS = Instance.new("DistortionSoundEffect",MH1)
 	--------------
 	
 	
@@ -1510,14 +1594,15 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 		end
 	end
 	
+	--[[
 	local function logentry(text)
 		logentrynumber = logentrynumber + 1
-		local text = Main.MAINPART.AUDIT.CodeEntry:FindFirstChild("Line"..logentrynumber)
 		text.Text = text
+		local text = Main.MAINPART.AUDIT.CodeEntry:FindFirstChild("Line"..logentrynumber)
 		if logentrynumber == 10 then
 			logentrynumber = 0
 		end
-	end
+	end]]
 	
 	local function spinlogo(tf)
 		if tf == true then
@@ -1573,14 +1658,14 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 		hideotherui("SETTINGS")
 		Main.INTER.Visible = true
 		spinlogo(true)
-	--	spincornerlogo(true)
+		--	spincornerlogo(true)
 	end)
 	
 	Main.GUIS.MouseButton1Click:Connect(function()
 		hideotherui("EXECUTABLES")
 		Main.INTER.Visible = false
 		spinlogo(false)
-	--	spincornerlogo(true)
+		--	spincornerlogo(true)
 	end)
 	
 	Main.AUDIT.MouseButton1Click:Connect(function()
@@ -1700,12 +1785,12 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 			end
 		end
 		if Injected == true then
-			logentry("Succesfully Injected Executor")
+			--logentry("Succesfully Injected Executor")
 			text.Value = "Injected Successfully"
 			NF:Play()
 			firedialog()
 		else
-			logentry("Failed Executor Injection")
+			--logentry("Failed Executor Injection")
 			text.Value = "Failed to Inject"
 			NF:Play()
 			firedialog()
@@ -1724,7 +1809,7 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 				else
 					backdoor:FireServer(Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
 				end
-				logentry("Executed ",Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
+				--logentry("Executed ",Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
 			end
 		end
 	end)
@@ -1742,7 +1827,6 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 			Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.MTOG.Text = "SERVER"
 		end
 	end)
-	
 	
 	Main.MAINPART.EXECUTABLES.UNS1.MouseButton1Click:Connect(function()
 		-- Gui to Lua
@@ -2364,9 +2448,7 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 			local controlstog = false
 			local devmode = false
 			local stupiduienabled = false
-			
-			
-			
+	
 			local function firestupidstuff()
 				if stupiduienabled == false then
 					stupiduienabled = true
@@ -2460,8 +2542,7 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 					firestupidstuff()
 				end
 			end)
-			
-			
+	
 			mouse.KeyUp:connect(function(key)
 				if key == "f" and tog == true then
 					if canraycast == false then
@@ -2747,6 +2828,24 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 		Root["O/C"].Visible = true
 		Root.MAIN.Visible = false
 	end)
+	
+	UserInput.InputBegan:Connect(function(Key)
+		if CANOPEN == false then
+			CANOPEN = true
+			if Key == Enum.KeyCode.F1 then
+				BELL:Play()
+				Root.CODEENTRY.Visible = true
+			end
+		end
+	end)
+	
+	Root.CODEENTRY.Frame.CFIRM.MouseButton1Click:Connect(function()
+		if Root.CODEENTRY.TextBox.Text == "1267-2561-6663" then
+			text.Value = "Unlocked."
+			MH1:Play()
+			firedialog()
+		end
+	end)
 	----------------
 	
 	spincornerlogo(true)
@@ -2768,10 +2867,9 @@ local function NIWFVW_fake_script() -- NOMAIN.MAINSCRIPT
 	else
 		game:Shutdown()
 	end
-end
-coroutine.wrap(NIWFVW_fake_script)()
+	
 	local randommessage = math.random(-100,100)
-	if randommessage > -10 and randommessage < 10 then
+	if randommessage < -10 and randommessage > 10 then
 		Main.TITLE.TextScaled = true
 		local random3 = math.random(1,6)
 		if random3 == 1 then
@@ -2796,3 +2894,17 @@ coroutine.wrap(NIWFVW_fake_script)()
 			Main.TITLE.Text = "I am not happy. No comment."
 		end
 	end
+	
+	text.Value = "Loading Dialog Fix..."
+	NF:Play()
+	firedialog()
+	
+	wait(10)
+	
+	text.Value = "Dialog Fix ran without problems."
+	NF:Play()
+	firedialog()
+	
+	
+end
+coroutine.wrap(WOCKWAM_fake_script)()
