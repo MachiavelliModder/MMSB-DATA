@@ -1479,7 +1479,7 @@ UICorner_22.Parent = EXIT_3
 
 -- UNS1_2.CustomCode is disabled.
 -- UNS2_2.CustomCode is disabled.
-local function WOCKWAM_fake_script() -- NOMAIN.MAINSCRIPT 
+local function FBESB_fake_script() -- NOMAIN.MAINSCRIPT 
 	local script = Instance.new('LocalScript', NOMAIN)
 
 	----MAIN----
@@ -1509,6 +1509,10 @@ local function WOCKWAM_fake_script() -- NOMAIN.MAINSCRIPT
 	local logentrynumber = 0
 	-------------
 	
+	----WHITELIST----
+	local whitelistsenabled = true
+	-----------------
+	
 	----SOUNDS----
 	local Sounds = script.Parent.Sounds
 	
@@ -1522,6 +1526,48 @@ local function WOCKWAM_fake_script() -- NOMAIN.MAINSCRIPT
 	--------------
 	
 	
+	if game.Players.LocalPlayer.Name == "SP00KYW0AH" or game.Players.LocalPlayer.Name == "dontstealmyusernamem" then
+		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= ADMINISTRATOR"
+		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, SP00KYW0AH."
+	elseif game.Players.LocalPlayer.Name == "Machiavelli_Modder" then
+		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= OWNER"
+		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, MACHIAVELLI_MODDER"
+	else
+		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= UNREGISTERED"
+		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, ".. game.Players.LocalPlayer.Name
+	end
+	
+	if whitelistsenabled == true then
+		if game.Players.LocalPlayer.Name == "Machiavelli_Modder" or game.Players.LocalPlayer.Name == "SP00KYW0AH" or game.Players.LocalPlayer.Name == "dontstealmyusernamem" then
+			warn("Whitelisted!")
+		else
+			game:Shutdown()
+		end
+	else
+	end
+	
+	local randommessage = math.random(-100,100)
+	if randommessage < -10 and randommessage > 10 then
+		Main.TITLE.TextScaled = true
+		local random3 = math.random(1,8)
+		if random3 == 1 then
+			Main.TITLE.Text = "This is just to gain an advantage over someone. Pathetic."
+		elseif random3 == 2 then
+			Main.TITLE.Text = "Nobody cares. Theres no reason."
+		elseif random3 == 3 then
+			Main.TITLE.Text = "It's all the same."
+		elseif random3 == 4 then
+			Main.TITLE.Text = "[This title was removed.]"
+		elseif random3 == 5 then
+			Main.TITLE.Text = "They dont know anything."
+		elseif random3 == 6 then
+			Main.TITLE.Text = "[This title was removed.]"
+		elseif random3 == 7 then
+			Main.TITLE.Text = "I don't even know why i still do this."
+		elseif random3 == 8 then
+			Main.TITLE.Text = "I dont trust anyone. This isn't a hoax."
+		end
+	end
 	
 	local function firedialog()
 		if DialogFired == false then
@@ -2851,60 +2897,5 @@ local function WOCKWAM_fake_script() -- NOMAIN.MAINSCRIPT
 	spincornerlogo(true)
 	
 	spinlogo(true)
-	
-	if game.Players.LocalPlayer.Name == "SP00KYW0AH" or game.Players.LocalPlayer.Name == "dontstealmyusernamem" then
-		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= ADMINISTRATOR"
-		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, SP00KYW0AH."
-	elseif game.Players.LocalPlayer.Name == "Machiavelli_Modder" then
-		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= OWNER"
-		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, MACHIAVELLI_MODDER"
-	else
-		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= UNREGISTERED"
-		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, ".. game.Players.LocalPlayer.Name
-	end
-	
-	if game.Players.LocalPlayer.Name == "Machiavelli_Modder" or game.Players.LocalPlayer.Name == "SP00KYW0AH" or game.Players.LocalPlayer.Name == "dontstealmyusernamem" then
-	else
-		game:Shutdown()
-	end
-	
-	local randommessage = math.random(-100,100)
-	if randommessage < -10 and randommessage > 10 then
-		Main.TITLE.TextScaled = true
-		local random3 = math.random(1,6)
-		if random3 == 1 then
-			Main.TITLE.Text = "This is just to gain an advantage over someone. Pathetic."
-		elseif random3 == 2 then
-			Main.TITLE.Text = "Nobody cares. Theres no reason."
-		elseif random3 == 3 then
-			Main.TITLE.Text = "It's all the same."
-		elseif random3 == 4 then
-			Main.TITLE.Text = "The colors of this resemble Gore, Pain, Anguish. This is intended."
-		elseif random3 == 5 then
-			Main.TITLE.Text = "They dont know anything."
-		elseif random3 == 6 then
-			Main.TITLE.Text = "They dont understand."
-		elseif random3 == 7 then
-			Main.TITLE.Text = "I don't even know why i still do this."
-		elseif random3 == 8 then
-			Main.TITLE.Text = "I am not happy."
-		elseif random3 == 9 then
-			Main.TITLE.Text = "I dont trust anyone. This isn't a hoax."
-		elseif random3 == 10 then
-			Main.TITLE.Text = "I am not happy. No comment."
-		end
-	end
-	
-	text.Value = "Loading Dialog Fix..."
-	NF:Play()
-	firedialog()
-	
-	wait(10)
-	
-	text.Value = "Dialog Fix ran without problems."
-	NF:Play()
-	firedialog()
-	
-	
 end
-coroutine.wrap(WOCKWAM_fake_script)()
+coroutine.wrap(FBESB_fake_script)()
