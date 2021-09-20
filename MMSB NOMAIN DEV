@@ -123,6 +123,70 @@ game.CoreGui.NOMAINDEV.Frame.TextButton.MouseButton1Click:Connect(function()
 			local ftable = insulttable[math.random(1,#insulttable)]
 			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
 			bruh()
+		elseif response == "MoreOptions" then
+		wait(.1)
+	StarterGui:SetCore("SendNotification", {
+		Title = "Code Execution",
+		Text = "4th Option",
+		Duration = aduration,
+		Callback = bindable,
+		Button1 = "Anti-ToolKill",
+		Button2 = "NameDist",
+	})
+		StarterGui:SetCore("SendNotification", {
+		Title = "Code Execution",
+		Text = "5th Option",
+		Duration = aduration,
+		Callback = bindable,
+		Button1 = "Anti-Fling",
+		Button2 = "RandomMath",
+	})
+		elseif response == "Anti-Fling" then
+    local maxspeed = 40
+local sensitivity = 3 -- reverse outcome, sensitivity is a multiplier.
+local xyztable = {Vector3.new(maxspeed,0,0),Vector3.new(0,maxspeed,0),Vector3.new(0,0,maxspeed)}
+local plr = game.Players.LocalPlayer
+local savedpos = CFrame.new(0,0,0,0,0,0)
+local savedvel = 0
+while wait() do
+	if table.find(xyztable) then
+		local t = table.find(xyztable)
+		for _,ti in pairs(t) do
+			if plr.Character.HumanoidRootPart.Velocity <= t then
+				savedpos = plr.Character.HumanoidRootPart.CFrame
+				savedvel = Vector3.new(plr.Character.HumanoidRootPart.Velocity.X * 2,plr.Character.HumanoidRootPart.Velocity.Y * 2,plr.Character.HumanoidRootPart.Velocity.Z * 2)
+			end
+		end
+	end
+end
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.Changed:Connect(function()
+	if table.find(xyztable) then
+		local t = table.find(xyztable)
+		for _,ti in pairs(t) do
+			if plr.Character.HumanoidRootPart.Velocity <= savedvel then
+				wait(1)
+				if plr.Character.HumanoidRootPart.Velocity >= savedvel * sensitivity then
+					plr.Character.HumanoidRootPart.CFrame = savedpos
+				end
+			end
+		end
+	end	
+end)
+		elseif response == "NameDist" then
+    for _,v in ipairs(game.Players:GetChildren()) do
+    if v:IsA("Player") then
+        v.Character.Humanoid.NameDisplayDistance = math.huge
+    end
+end
+		elseif response == "Anti-ToolKill" then
+    game.Players.LocalPlayer.Character.ChildAdded:Connect(function(child)
+    if child:IsA("Tool") then
+     --   if child.Name ~= "M9" and child.Name ~= "Taser"and child.Name ~= "Handcuffs" and child.Name ~= "Remington 870" then
+            child:Destroy()
+     --   end
+    end
+end)
 		end
 	end
 
@@ -150,8 +214,9 @@ game.CoreGui.NOMAINDEV.Frame.TextButton.MouseButton1Click:Connect(function()
 		Duration = aduration,
 		Callback = bindable,
 		Button1 = "MakeARemark",
-		Button2 = "RandomMath",
+		Button2 = "MoreOptions",
 	})
+	
 end)
 
 
