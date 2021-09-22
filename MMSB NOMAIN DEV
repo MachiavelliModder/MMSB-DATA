@@ -168,7 +168,8 @@ game.CoreGui.NOMAINDEV.Frame.TextButton.MouseButton1Click:Connect(function()
 				Callback = bindable
 })
 game["Run Service"].RenderStepped:Connect(function()
-	if game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Z >= maxspeed then
+	if game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Z >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.Z >= maxspeed then
+	    if game.Players.LocalPlayer.Character.Humanoid.Sit ~= true then
 	    velocityoverlimit = true
 	    if tracebackactive ~= true then
 	        game.Players.LocalPlayer.Character:MoveTo(savedpos)
@@ -177,6 +178,7 @@ game["Run Service"].RenderStepped:Connect(function()
 	        repeatstand()
 	        velocityoverlimit = false
 	        tracebackactive = false
+	    end
 	    end
 	else
 	    velocityoverlimit = false
