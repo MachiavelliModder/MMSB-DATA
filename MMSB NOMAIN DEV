@@ -169,6 +169,7 @@ game["Run Service"].RenderStepped:Connect(function()
 	        game.Players.LocalPlayer.Character:MoveTo(savedpos)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)  game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0) 
 	        game.Players.LocalPlayer.Character.Torso.Velocity = Vector3.new(0,0,0) game.Players.LocalPlayer.Character.Torso.RotVelocity = Vector3.new(0,0,0)
+	        game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
 	        velocityoverlimit = false
 	        tracebackactive = false
 	    end
