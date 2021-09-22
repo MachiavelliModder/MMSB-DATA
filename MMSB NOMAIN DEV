@@ -4,6 +4,11 @@ velocityoverlimit = false
 savedpos = Vector3.new(0,0,0)
 tracebackactive = false
 
+function repeatstand()
+    wait(.01)
+    game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+end
+
 local NOMAINDEV = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
@@ -169,7 +174,7 @@ game["Run Service"].RenderStepped:Connect(function()
 	        game.Players.LocalPlayer.Character:MoveTo(savedpos)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)  game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0) 
 	        game.Players.LocalPlayer.Character.Torso.Velocity = Vector3.new(0,0,0) game.Players.LocalPlayer.Character.Torso.RotVelocity = Vector3.new(0,0,0)
-	        game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+	        repeatstand()
 	        velocityoverlimit = false
 	        tracebackactive = false
 	    end
