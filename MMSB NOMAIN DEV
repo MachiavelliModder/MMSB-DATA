@@ -1,4 +1,9 @@
 
+maxspeed = 60
+velocityoverlimit = false
+savedpos = Vector3.new(0,0,0)
+tracebackactive = false
+
 local NOMAINDEV = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
@@ -7,6 +12,8 @@ local TextBox = Instance.new("TextBox")
 local UICorner_2 = Instance.new("UICorner")
 local DEVVER = Instance.new("TextLabel")
 
+--game.CoreGui.NotificationFrame.Position = UDim2.new(1,-400,0,500)
+--game.CoreGui.NotificationFrame.Size = UDim2.new(0,400,0,400)
 
 NOMAINDEV.Name = "NOMAINDEV"
 NOMAINDEV.Parent = game.CoreGui
@@ -60,8 +67,15 @@ DEVVER.Text = "MMSB NOMAIN DEVELOPER VERSION"
 DEVVER.TextColor3 = Color3.fromRGB(0, 0, 0)
 DEVVER.TextSize = 30.000
 DEVVER.TextTransparency = 0.900
-
-
+--[[
+for _,v in ipairs(game.CoreGui.RobloxGui:GetDescendants()) do
+    if v:IsA("Frame") or v:IsA("ImageLabel") or v:IsA("ImageButton") or v:IsA("TextLabel") then
+        v.BackgroundColor3 = Color3.fromRGB(134,0,0)
+    elseif v:IsA("TextBox") or v:IsA("TextButton") then
+        v.BackgroundColor3 = Color3.fromRGB(234,0,0)
+    end
+end
+]]
 game.CoreGui.NOMAINDEV.Frame.TextButton.MouseButton1Click:Connect(function()
 	local StarterGui = game:GetService("StarterGui")
 	local bindable = Instance.new("BindableFunction")
@@ -144,10 +158,23 @@ game.CoreGui.NOMAINDEV.Frame.TextButton.MouseButton1Click:Connect(function()
 		elseif response == "Anti-Fling" then
 		    	StarterGui:SetCore("SendNotification", {
 				Title = "MMSB NOMAIN",
-				Text = "This feature isnt functioning yet.",
+				Text = "Anti-Fling Enabled",
 				Duration = 5,
 				Callback = bindable
-			})
+})
+game["Run Service"].RenderStepped:Connect(function()
+	if game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Z >= maxspeed then
+	    velocityoverlimit = true
+	    if tracebackactive ~= true then
+	        game.Players.LocalPlayer.Character:MoveTo(savedpos)
+	        velocityoverlimit = false
+	        tracebackactive = false
+	    end
+	else
+	    velocityoverlimit = false
+	end
+end)
+
         	bruh()
 		elseif response == "NameDist" then
     for _,v in ipairs(game.Players:GetChildren()) do
@@ -157,6 +184,12 @@ game.CoreGui.NOMAINDEV.Frame.TextButton.MouseButton1Click:Connect(function()
 end
 	bruh()
 		elseif response == "Anti-ToolKill" then
+		    	StarterGui:SetCore("SendNotification", {
+				Title = "MMSB NOMAIN",
+				Text = "Anti-ToolKill Enabled",
+				Duration = 5,
+				Callback = bindable
+})
     game.Players.LocalPlayer.Character.ChildAdded:Connect(function(child)
     if child:IsA("Tool") then
      --   if child.Name ~= "M9" and child.Name ~= "Taser"and child.Name ~= "Handcuffs" and child.Name ~= "Remington 870" then
@@ -256,3 +289,11 @@ StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
 local chatFrame = player.PlayerGui.Chat.Frame
 chatFrame.ChatChannelParentFrame.Visible = true
 chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+
+
+
+while wait(1) do
+    if velocityoverlimit == false then
+        savedpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    end
+end
