@@ -1,8 +1,15 @@
 
 maxspeed = 60
+maxposition = 20
 velocityoverlimit = false
 savedpos = Vector3.new(0,0,0)
 tracebackactive = false
+donotlog = false
+
+function brug(char)
+    local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
+	return rootPart
+end
 
 function repeatstand()
     wait(.01)
@@ -142,7 +149,7 @@ game.CoreGui.NOMAINDEV.Frame.TextButton.MouseButton1Click:Connect(function()
 			local ftable = insulttable[math.random(1,#insulttable)]
 			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
 			bruh()
-		elseif response == "MoreOptions" then
+		elseif response == "Page2" then
 		wait(.1)
 	StarterGui:SetCore("SendNotification", {
 		Title = "Code Execution",
@@ -160,6 +167,14 @@ game.CoreGui.NOMAINDEV.Frame.TextButton.MouseButton1Click:Connect(function()
 		Button1 = "Anti-Fling",
 		Button2 = "RandomMath",
 	})
+		StarterGui:SetCore("SendNotification", {
+		Title = "Code Execution",
+		Text = "6th Option",
+		Duration = aduration,
+		Callback = bindable,
+		Button1 = "WIP",
+		Button2 = "Page3",
+	})
 		elseif response == "Anti-Fling" then
 		    	StarterGui:SetCore("SendNotification", {
 				Title = "MMSB NOMAIN",
@@ -172,9 +187,10 @@ game["Run Service"].RenderStepped:Connect(function()
 	    if game.Players.LocalPlayer.Character.Humanoid.Sit ~= true then
 	    velocityoverlimit = true
 	    if tracebackactive ~= true then
-	        game.Players.LocalPlayer.Character:MoveTo(savedpos)
+	        brug(Players.LocalPlayer.Character).CFrame = savedpos
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)  game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0) 
 	        game.Players.LocalPlayer.Character.Torso.Velocity = Vector3.new(0,0,0) game.Players.LocalPlayer.Character.Torso.RotVelocity = Vector3.new(0,0,0)
+	        local a = Instance.new("BodyGyro",game.Players.LocalPlayer.Character.HumanoidRootPart) game.Debris:AddItem(a,5)
 	        repeatstand()
 	        velocityoverlimit = false
 	        tracebackactive = false
@@ -182,6 +198,13 @@ game["Run Service"].RenderStepped:Connect(function()
 	    end
 	else
 	    velocityoverlimit = false
+	end
+	if game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation <= 15 and game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation >= -15 then
+	   brug(Players.LocalPlayer.Character).CFrame = savedpos
+	   game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)  game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0) 
+	   game.Players.LocalPlayer.Character.Torso.Velocity = Vector3.new(0,0,0) game.Players.LocalPlayer.Character.Torso.RotVelocity = Vector3.new(0,0,0)
+	   local a = Instance.new("BodyGyro",game.Players.LocalPlayer.Character.HumanoidRootPart) game.Debris:AddItem(a,5)
+	   repeatstand()
 	end
 end)
 
@@ -192,7 +215,7 @@ end)
         v.Character.Humanoid.NameDisplayDistance = math.huge
     end
 end
-	bruh()
+
 		elseif response == "Anti-ToolKill" then
 		    	StarterGui:SetCore("SendNotification", {
 				Title = "MMSB NOMAIN",
@@ -235,7 +258,7 @@ end)
 		Duration = aduration,
 		Callback = bindable,
 		Button1 = "MakeARemark",
-		Button2 = "MoreOptions",
+		Button2 = "Page2",
 	})
 	
 end)
@@ -300,10 +323,19 @@ local chatFrame = player.PlayerGui.Chat.Frame
 chatFrame.ChatChannelParentFrame.Visible = true
 chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
 
+game.Players.LocalPlayer.Character.Humanoid.FreeFalling:Connect(function(active)
+    if active == true then
+        donotlog = true
+    else
+        donotlog = false
+    end
+end)
 
 
-while wait(1) do
+while wait(.1) do
     if velocityoverlimit == false then
-        savedpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+        if donotlog == false then
+            savedpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+        end
     end
 end
