@@ -1,7 +1,21 @@
 maxspeed = 60
 velocityoverlimit = false
 savedpos = Vector3.new(0,0,0)
+savedori = Vector3.new(0,0,0)
 tracebackactive = false
+savedtools = {}
+
+for _,tool in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+       table.insert(savedtools,tool) 
+    end
+end
+for _,tool in ipairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if tool:IsA("Tool") then
+       table.insert(savedtools,tool) 
+    end
+end
+
 
 function repeatstand()
     wait(.01)
@@ -179,7 +193,7 @@ game["Run Service"].RenderStepped:Connect(function()
 	    if game.Players.LocalPlayer.Character.Humanoid.Sit ~= true then
 	    velocityoverlimit = true
 	    if tracebackactive ~= true then
-	        game.Players.LocalPlayer.Character:MoveTo(savedpos)
+	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(savedpos,savedori)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)  game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0) 
 	        game.Players.LocalPlayer.Character.Torso.Velocity = Vector3.new(0,0,0) game.Players.LocalPlayer.Character.Torso.RotVelocity = Vector3.new(0,0,0)
 	        repeatstand()
@@ -207,11 +221,12 @@ end
 				Duration = 5,
 				Callback = bindable
 })
-    game.Players.LocalPlayer.Character.ChildAdded:Connect(function(child)
+game.Players.LocalPlayer.Character.ChildAdded:Connect(function(child)
     if child:IsA("Tool") then
-     --   if child.Name ~= "M9" and child.Name ~= "Taser"and child.Name ~= "Handcuffs" and child.Name ~= "Remington 870" then
-            child:Destroy()
-     --   end
+        if table.find(savedtools,child) then
+            else
+            child:Remove()
+        end
     end
 end)
 		end
@@ -309,8 +324,14 @@ chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Positio
 
 
 
-while wait(1) do
+while wait(.1) do
     if velocityoverlimit == false then
         savedpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+        savedori = game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation
+        a = Instance.new("Part",workspace) a.CanCollide = false a.Transparency = 1 a.Anchored = true a.Size = Vector3.new(0.1,0.1,0.1)
+        a.CFrame = game.Players.LocalPlayer.Character.Head.CFrame game.Debris:AddItem(a,20) 
+--    workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Head
+        else
+   -- workspace.Camera.CameraSubject = a
     end
 end
