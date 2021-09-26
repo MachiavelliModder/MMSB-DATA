@@ -5,17 +5,11 @@ savedori = Vector3.new(0,0,0)
 tracebackactive = false
 savedtools = {}
 
-for _,tool in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-    if tool:IsA("Tool") then
-       table.insert(savedtools,tool) 
+game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
+    for index,tableval in ipairs(savedtools) do
+      table.remove(savedtools,tableval)
     end
-end
-for _,tool in ipairs(game.Players.LocalPlayer.Character:GetChildren()) do
-    if tool:IsA("Tool") then
-       table.insert(savedtools,tool) 
-    end
-end
-
+end)
 
 function repeatstand()
     wait(.01)
@@ -221,10 +215,23 @@ end
 				Duration = 5,
 				Callback = bindable
 })
+
+
+for _,tool in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+       table.insert(savedtools,tool) 
+    end
+end
+for _,tool in ipairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if tool:IsA("Tool") then
+       table.insert(savedtools,tool) 
+    end
+end
+
 game.Players.LocalPlayer.Character.ChildAdded:Connect(function(child)
     if child:IsA("Tool") then
         if table.find(savedtools,child) then
-            else
+        else
             child:Remove()
         end
     end
@@ -330,8 +337,7 @@ while wait(.1) do
         savedori = game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation
         a = Instance.new("Part",workspace) a.CanCollide = false a.Transparency = 1 a.Anchored = true a.Size = Vector3.new(0.1,0.1,0.1)
         a.CFrame = game.Players.LocalPlayer.Character.Head.CFrame game.Debris:AddItem(a,20) 
---    workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Head
-        else
-   -- workspace.Camera.CameraSubject = a
+    else
+            
     end
 end
