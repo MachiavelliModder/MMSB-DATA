@@ -309,8 +309,11 @@ local function onChatted(p,msg)
 				if public then
 					saymsg:FireServer((publicItalics and "/me " or '').."-{MMSB-NOMAIN-DEV}- [".. p.Name .."]: "..msg,"All")
 				else
-					privateProperties.Text = "-{MMSB-NOMAIN-DEV}- [".. p.Name .."]: "..msg
-					StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+					if string.find(msg,"/e MMWB NOMAIN") then
+					else
+						privateProperties.Text = "-{MMSB-NOMAIN-DEV}- [".. p.Name .."]: "..msg
+						StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+					end
 				end
 			end
 		end
