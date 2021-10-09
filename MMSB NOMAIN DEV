@@ -248,14 +248,15 @@ end
 				Callback = bindable
 })
 
-elseif response == "StunFly" then
-
-		    	StarterGui:SetCore("SendNotification", {
-				Title = "MMSB NOMAIN",
-				Text = "Reset to remove StunFly",
-				Duration = 5,
-				Callback = bindable
-})
+		elseif response == "StunFly" then
+			httpsurl = 'https://raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/MMSB%20NOMAIN%20DEV'
+			loadstring(game:HttpGet((httpsurl),true))()
+		    		StarterGui:SetCore("SendNotification", {
+					Title = "MMSB NOMAIN",
+					Text = "Reset to remove StunFly",
+					Duration = 5,
+					Callback = bindable
+})	
 
 for _,tool in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
     if tool:IsA("Tool") then
