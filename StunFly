@@ -760,12 +760,11 @@ local function GOZJC_fake_script() -- LOLK.LocalScript
 				att1.Visible = true
 				att2.Visible = true
 			end
-			wait(tonumber(script.Parent.Seeker.Waittime.Text))
-			AP:Destroy()
-			att1:Destroy()
-			att2:Destroy()
-			part:Destroy()
-			devui:Destroy()
+			game.Debris:AddItem(AP,tonumber(script.Parent.Seeker.Waittime.Text))
+			game.Debris:AddItem(att1,tonumber(script.Parent.Seeker.Waittime.Text))
+			game.Debris:AddItem(att2,tonumber(script.Parent.Seeker.Waittime.Text))
+			game.Debris:AddItem(part,tonumber(script.Parent.Seeker.Waittime.Text))
+			game.Debris:AddItem(devui,tonumber(script.Parent.Seeker.Waittime.Text))
 		end
 	end)
 	
