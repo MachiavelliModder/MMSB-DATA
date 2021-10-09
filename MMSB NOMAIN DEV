@@ -185,7 +185,7 @@ game.CoreGui.NOMAINDEV.Frame.TextButton.MouseButton1Click:Connect(function()
 		wait(.1)
 	StarterGui:SetCore("SendNotification", {
 		Title = "Code Execution",
-		Text = "4th Option",
+		Text = "7th Option",
 		Duration = aduration,
 		Callback = bindable,
 		Button1 = "StunFly",
@@ -193,7 +193,7 @@ game.CoreGui.NOMAINDEV.Frame.TextButton.MouseButton1Click:Connect(function()
 	})
 		StarterGui:SetCore("SendNotification", {
 		Title = "Code Execution",
-		Text = "5th Option",
+		Text = "8th Option",
 		Duration = aduration,
 		Callback = bindable,
 		Button1 = "Empty",
@@ -201,7 +201,7 @@ game.CoreGui.NOMAINDEV.Frame.TextButton.MouseButton1Click:Connect(function()
 	})
 			StarterGui:SetCore("SendNotification", {
 		Title = "Code Execution",
-		Text = "6th Option",
+		Text = "9th Option",
 		Duration = aduration,
 		Callback = bindable,
 		Button1 = "Empty",
