@@ -3,1284 +3,557 @@
 
 -- Instances:
 
-local NOMAIN = Instance.new("ScreenGui")
-local OC = Instance.new("Frame")
-local TextButton = Instance.new("TextButton")
+local LOLK = Instance.new("ScreenGui")
+local Load = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
-local MAIN = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local RunScript = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
-local FRAME = Instance.new("Frame")
+local Logo = Instance.new("Frame")
 local UICorner_3 = Instance.new("UICorner")
-local FRAME_2 = Instance.new("Frame")
-local TITLE = Instance.new("TextLabel")
-local FRAME_3 = Instance.new("Frame")
-local INFO = Instance.new("TextButton")
-local EXE = Instance.new("TextButton")
-local SETT = Instance.new("TextButton")
-local GUIS = Instance.new("TextButton")
-local AUDIT = Instance.new("TextButton")
-local INTER = Instance.new("Frame")
-local FRAME_4 = Instance.new("Frame")
-local FRAME_5 = Instance.new("Frame")
-local FRAME_6 = Instance.new("Frame")
-local LOGO = Instance.new("Frame")
-local UICorner_4 = Instance.new("UICorner")
 local COG = Instance.new("ImageLabel")
 local DOT = Instance.new("ImageLabel")
 local RING = Instance.new("ImageLabel")
 local ARROW = Instance.new("ImageLabel")
-local MAINPART = Instance.new("Frame")
-local INFORMATION = Instance.new("Frame")
+local Seeker = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local Keybind = Instance.new("TextLabel")
 local UICorner_5 = Instance.new("UICorner")
-local WM = Instance.new("TextLabel")
-local VM2 = Instance.new("TextLabel")
-local RNK = Instance.new("TextLabel")
-local EXECUTOR = Instance.new("Frame")
-local CodeEntry = Instance.new("Frame")
+local TOTOGGLE = Instance.new("TextLabel")
+local CloseFrame = Instance.new("Frame")
 local UICorner_6 = Instance.new("UICorner")
-local ButtonBar = Instance.new("Frame")
+local bar = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local Waittime = Instance.new("TextBox")
 local UICorner_7 = Instance.new("UICorner")
-local EXE_2 = Instance.new("TextButton")
+local Speed = Instance.new("TextBox")
 local UICorner_8 = Instance.new("UICorner")
-local INJECT = Instance.new("TextButton")
+local bar2 = Instance.new("Frame")
 local UICorner_9 = Instance.new("UICorner")
-local CLEAR = Instance.new("TextButton")
+local MaxVelocity = Instance.new("TextBox")
 local UICorner_10 = Instance.new("UICorner")
-local MTOG = Instance.new("TextButton")
+local controls = Instance.new("Frame")
 local UICorner_11 = Instance.new("UICorner")
-local ScrollingFrame = Instance.new("ScrollingFrame")
-local PlrCode = Instance.new("TextBox")
-local SETTINGS = Instance.new("Frame")
-local Game = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local controlsbutton = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
-local Player = Instance.new("TextButton")
+local Dev = Instance.new("TextButton")
+local LimbSelect = Instance.new("TextBox")
+local LimbSubmit = Instance.new("TextButton")
+local Logo_2 = Instance.new("Frame")
 local UICorner_13 = Instance.new("UICorner")
-local Mainbase = Instance.new("Frame")
+local COG_2 = Instance.new("ImageLabel")
+local DOT_2 = Instance.new("ImageLabel")
+local RING_2 = Instance.new("ImageLabel")
+local ARROW_2 = Instance.new("ImageLabel")
+local DevUI = Instance.new("BillboardGui")
+local Frame = Instance.new("Frame")
+local speed = Instance.new("TextLabel")
 local UICorner_14 = Instance.new("UICorner")
-local EXIT = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
-local UNS10 = Instance.new("TextButton")
-local UNS11 = Instance.new("TextButton")
-local UNS12 = Instance.new("TextButton")
-local UNS13 = Instance.new("TextButton")
-local UNS14 = Instance.new("TextButton")
-local UNS15 = Instance.new("TextButton")
-local UNS16 = Instance.new("TextButton")
-local UNS17 = Instance.new("TextButton")
-local UNS18 = Instance.new("TextButton")
-local UNS19 = Instance.new("TextButton")
-local UNS2 = Instance.new("TextButton")
-local UNS20 = Instance.new("TextButton")
-local UNS3 = Instance.new("TextButton")
-local UNS4 = Instance.new("TextButton")
-local UNS5 = Instance.new("TextButton")
-local UNS6 = Instance.new("TextButton")
-local UNS7 = Instance.new("TextButton")
-local UNS8 = Instance.new("TextButton")
-local UNS9 = Instance.new("TextButton")
-local UNS1 = Instance.new("TextButton")
-local EXECUTABLES = Instance.new("Frame")
-local UNS9_2 = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
-local UNS8_2 = Instance.new("TextButton")
-local UNS1_2 = Instance.new("TextButton")
-local UNS10_2 = Instance.new("TextButton")
-local UNS11_2 = Instance.new("TextButton")
-local UNS12_2 = Instance.new("TextButton")
-local UNS13_2 = Instance.new("TextButton")
-local UNS14_2 = Instance.new("TextButton")
-local UNS15_2 = Instance.new("TextButton")
-local UNS16_2 = Instance.new("TextButton")
-local UNS17_2 = Instance.new("TextButton")
-local UNS18_2 = Instance.new("TextButton")
-local UNS19_2 = Instance.new("TextButton")
-local UNS2_2 = Instance.new("TextButton")
-local UNS20_2 = Instance.new("TextButton")
-local UNS3_2 = Instance.new("TextButton")
-local UNS4_2 = Instance.new("TextButton")
-local UNS5_2 = Instance.new("TextButton")
-local UNS6_2 = Instance.new("TextButton")
-local UNS7_2 = Instance.new("TextButton")
-local AUDIT_2 = Instance.new("Frame")
-local CodeEntry_2 = Instance.new("Frame")
-local UICorner_17 = Instance.new("UICorner")
-local Line1 = Instance.new("TextBox")
-local Line2 = Instance.new("TextBox")
-local Line3 = Instance.new("TextBox")
-local Line4 = Instance.new("TextBox")
-local Line5 = Instance.new("TextBox")
-local Line6 = Instance.new("TextBox")
-local Line7 = Instance.new("TextBox")
-local Line8 = Instance.new("TextBox")
-local Line9 = Instance.new("TextBox")
-local Line10 = Instance.new("TextBox")
-local EXIT_2 = Instance.new("TextButton")
-local UICorner_18 = Instance.new("UICorner")
-local Sounds = Instance.new("Folder")
-local DIALOG = Instance.new("Frame")
+local maxforce = Instance.new("TextLabel")
+local Dialog = Instance.new("Frame")
 local Frame3 = Instance.new("Frame")
 local Frame1 = Instance.new("Frame")
 local UIGradient = Instance.new("UIGradient")
 local Frame2 = Instance.new("Frame")
 local UIGradient_2 = Instance.new("UIGradient")
 local Text = Instance.new("TextLabel")
-local CORNERLOGO = Instance.new("Frame")
-local UICorner_19 = Instance.new("UICorner")
-local COG_2 = Instance.new("ImageLabel")
-local DOT_2 = Instance.new("ImageLabel")
-local RING_2 = Instance.new("ImageLabel")
-local ARROW_2 = Instance.new("ImageLabel")
-local Values = Instance.new("Folder")
 
 --Properties:
 
-NOMAIN.Name = "NOMAIN"
-NOMAIN.Parent = game:GetService("CoreGui").RobloxGui
-NOMAIN.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LOLK.Name = "LOLK"
+LOLK.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+LOLK.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-OC.Name = "O/C"
-OC.Parent = NOMAIN
-OC.AnchorPoint = Vector2.new(0.200000003, 1)
-OC.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-OC.BackgroundTransparency = 1.000
-OC.Position = UDim2.new(0.200000003, 0, 1, 0)
-OC.Size = UDim2.new(0, 100, 0, 50)
+Load.Name = "Load"
+Load.Parent = LOLK
+Load.AnchorPoint = Vector2.new(0.5, 0.899999976)
+Load.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Load.Position = UDim2.new(0.5, 0, 0.899999976, 0)
+Load.Size = UDim2.new(0, 500, 0, 100)
 
-TextButton.Parent = OC
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.BackgroundTransparency = 1.000
-TextButton.Size = UDim2.new(1, 0, 1, 0)
-TextButton.Font = Enum.Font.SourceSansLight
-TextButton.Text = "</^\\>"
-TextButton.TextColor3 = Color3.fromRGB(99, 18, 18)
-TextButton.TextSize = 25.000
-TextButton.TextWrapped = true
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = Load
 
-UICorner.CornerRadius = UDim.new(0.100000001, 8)
-UICorner.Parent = OC
+Title.Name = "Title"
+Title.Parent = Load
+Title.AnchorPoint = Vector2.new(0.699999988, 0)
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.699999988, 0, 0, 0)
+Title.Size = UDim2.new(0, 300, 0, 50)
+Title.Font = Enum.Font.SourceSansSemibold
+Title.Text = "StunFly"
+Title.TextColor3 = Color3.fromRGB(152, 27, 27)
+Title.TextSize = 40.000
+Title.TextStrokeColor3 = Color3.fromRGB(85, 0, 0)
+Title.TextStrokeTransparency = 0.000
+Title.TextWrapped = true
 
-MAIN.Name = "MAIN"
-MAIN.Parent = NOMAIN
-MAIN.AnchorPoint = Vector2.new(0.5, 0.5)
-MAIN.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-MAIN.Position = UDim2.new(0.5, 0, 0.5, 0)
-MAIN.Size = UDim2.new(0, 600, 0, 300)
-MAIN.Visible = false
+RunScript.Name = "RunScript"
+RunScript.Parent = Load
+RunScript.AnchorPoint = Vector2.new(0.699999988, 0.899999976)
+RunScript.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+RunScript.Position = UDim2.new(0.699999988, 0, 0.899999976, 0)
+RunScript.Size = UDim2.new(0, 300, 0, 40)
+RunScript.Font = Enum.Font.ArialBold
+RunScript.Text = "Run Script"
+RunScript.TextColor3 = Color3.fromRGB(85, 0, 0)
+RunScript.TextSize = 40.000
+RunScript.TextWrapped = true
 
-UICorner_2.Parent = MAIN
+UICorner_2.CornerRadius = UDim.new(0, 10)
+UICorner_2.Parent = RunScript
 
-FRAME.Name = "FRAME"
-FRAME.Parent = MAIN
-FRAME.AnchorPoint = Vector2.new(0.5, 0.5)
-FRAME.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-FRAME.Position = UDim2.new(0.5, 0, 0.0799999982, 0)
-FRAME.Size = UDim2.new(0, 600, 0, 48)
+Logo.Name = "Logo"
+Logo.Parent = Load
+Logo.Active = true
+Logo.AnchorPoint = Vector2.new(0.0500000007, 0)
+Logo.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Logo.Position = UDim2.new(0.0500000007, 0, 0, 0)
+Logo.Selectable = true
+Logo.Size = UDim2.new(0, 100, 0, 100)
+Logo.ZIndex = -1
 
-UICorner_3.Parent = FRAME
-
-FRAME_2.Name = "FRAME"
-FRAME_2.Parent = MAIN
-FRAME_2.AnchorPoint = Vector2.new(0.5, 0.100000001)
-FRAME_2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-FRAME_2.BorderSizePixel = 0
-FRAME_2.Position = UDim2.new(0.5, 0, 0.100000001, 0)
-FRAME_2.Size = UDim2.new(0, 600, 0, 61)
-
-TITLE.Name = "TITLE"
-TITLE.Parent = MAIN
-TITLE.AnchorPoint = Vector2.new(0.0120000001, 0.0199999996)
-TITLE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TITLE.BackgroundTransparency = 1.000
-TITLE.BorderSizePixel = 0
-TITLE.Position = UDim2.new(0.00333333295, 0, 0, 0)
-TITLE.Size = UDim2.new(0, 200, 0, 50)
-TITLE.ZIndex = 5
-TITLE.Font = Enum.Font.SourceSansLight
-TITLE.Text = "MMSB NOMAIN"
-TITLE.TextColor3 = Color3.fromRGB(129, 23, 23)
-TITLE.TextSize = 35.000
-TITLE.TextStrokeColor3 = Color3.fromRGB(85, 0, 0)
-TITLE.TextStrokeTransparency = 0.000
-
-FRAME_3.Name = "FRAME"
-FRAME_3.Parent = MAIN
-FRAME_3.AnchorPoint = Vector2.new(0.5, 0.100000001)
-FRAME_3.BackgroundColor3 = Color3.fromRGB(99, 18, 18)
-FRAME_3.BorderSizePixel = 0
-FRAME_3.Position = UDim2.new(0.5, 0, 0.162303314, 0)
-FRAME_3.Size = UDim2.new(0, 600, 0, 6)
-
-INFO.Name = "INFO"
-INFO.Parent = MAIN
-INFO.AnchorPoint = Vector2.new(0, 0.200000003)
-INFO.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-INFO.BorderSizePixel = 0
-INFO.Position = UDim2.new(0, 0, 0.200000003, 0)
-INFO.Size = UDim2.new(0, 127, 0, 29)
-INFO.Font = Enum.Font.SourceSansLight
-INFO.Text = "INFORMATION"
-INFO.TextColor3 = Color3.fromRGB(99, 18, 18)
-INFO.TextSize = 20.000
-
-EXE.Name = "EXE"
-EXE.Parent = MAIN
-EXE.AnchorPoint = Vector2.new(0, 0.200000003)
-EXE.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-EXE.BorderSizePixel = 0
-EXE.Position = UDim2.new(0.224999994, 0, 0.200000003, 0)
-EXE.Size = UDim2.new(0, 127, 0, 29)
-EXE.Font = Enum.Font.SourceSansLight
-EXE.Text = "EXECUTOR"
-EXE.TextColor3 = Color3.fromRGB(99, 18, 18)
-EXE.TextSize = 20.000
-
-SETT.Name = "SETT"
-SETT.Parent = MAIN
-SETT.AnchorPoint = Vector2.new(0, 0.200000003)
-SETT.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-SETT.BorderSizePixel = 0
-SETT.Position = UDim2.new(0.449999988, 0, 0.200000003, 0)
-SETT.Size = UDim2.new(0, 127, 0, 29)
-SETT.Font = Enum.Font.SourceSansLight
-SETT.Text = "SETTINGS"
-SETT.TextColor3 = Color3.fromRGB(99, 18, 18)
-SETT.TextSize = 20.000
-
-GUIS.Name = "GUIS"
-GUIS.Parent = MAIN
-GUIS.AnchorPoint = Vector2.new(0, 0.200000003)
-GUIS.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-GUIS.BorderSizePixel = 0
-GUIS.Position = UDim2.new(0.675000012, 0, 0.200000003, 0)
-GUIS.Size = UDim2.new(0, 127, 0, 29)
-GUIS.Font = Enum.Font.SourceSansLight
-GUIS.Text = "EXECUTABLES"
-GUIS.TextColor3 = Color3.fromRGB(99, 18, 18)
-GUIS.TextSize = 20.000
-
-AUDIT.Name = "AUDIT"
-AUDIT.Parent = MAIN
-AUDIT.AnchorPoint = Vector2.new(0, 0.200000003)
-AUDIT.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-AUDIT.BorderSizePixel = 0
-AUDIT.Position = UDim2.new(0.899999976, 0, 0.200000003, 0)
-AUDIT.Size = UDim2.new(0, 60, 0, 29)
-AUDIT.Font = Enum.Font.SourceSansLight
-AUDIT.Text = "AUDIT"
-AUDIT.TextColor3 = Color3.fromRGB(99, 18, 18)
-AUDIT.TextSize = 20.000
-
-INTER.Name = "INTER"
-INTER.Parent = MAIN
-INTER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-INTER.BackgroundTransparency = 1.000
-INTER.Size = UDim2.new(1, 0, 1, 0)
-INTER.Visible = false
-
-FRAME_4.Name = "FRAME"
-FRAME_4.Parent = INTER
-FRAME_4.AnchorPoint = Vector2.new(0.5, 0.100000001)
-FRAME_4.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-FRAME_4.BorderSizePixel = 0
-FRAME_4.Position = UDim2.new(0.186666667, 0, 0.865666509, 0)
-FRAME_4.Size = UDim2.new(0, 44, 0, 44)
-
-FRAME_5.Name = "FRAME"
-FRAME_5.Parent = INTER
-FRAME_5.AnchorPoint = Vector2.new(0.5, 0.100000001)
-FRAME_5.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-FRAME_5.BorderSizePixel = 0
-FRAME_5.Position = UDim2.new(0.0366666615, 0, 0.565666437, 0)
-FRAME_5.Size = UDim2.new(0, 44, 0, 44)
-
-FRAME_6.Name = "FRAME"
-FRAME_6.Parent = INTER
-FRAME_6.AnchorPoint = Vector2.new(0.5, 0.100000001)
-FRAME_6.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-FRAME_6.BorderSizePixel = 0
-FRAME_6.Position = UDim2.new(0.646666646, 0, 0.565666497, 0)
-FRAME_6.Size = UDim2.new(0, 424, 0, 44)
-
-LOGO.Name = "LOGO"
-LOGO.Parent = INTER
-LOGO.Active = true
-LOGO.AnchorPoint = Vector2.new(0.5, 0.800000012)
-LOGO.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-LOGO.Position = UDim2.new(0.187166646, 0, 0.790000021, 0)
-LOGO.Selectable = true
-LOGO.Size = UDim2.new(0, 165, 0, 165)
-LOGO.ZIndex = -1
-
-UICorner_4.CornerRadius = UDim.new(1, 0)
-UICorner_4.Parent = LOGO
+UICorner_3.CornerRadius = UDim.new(1, 0)
+UICorner_3.Parent = Logo
 
 COG.Name = "COG"
-COG.Parent = LOGO
+COG.Parent = Logo
 COG.AnchorPoint = Vector2.new(0.5, 0.5)
 COG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 COG.BackgroundTransparency = 1.000
 COG.Position = UDim2.new(0.5, 0, 0.5, 0)
-COG.Size = UDim2.new(0, 120, 0, 120)
+COG.Size = UDim2.new(0, 90, 0, 90)
 COG.Image = "http://www.roblox.com/asset/?id=6031280882"
 COG.ImageColor3 = Color3.fromRGB(99, 18, 18)
 
 DOT.Name = "DOT"
-DOT.Parent = LOGO
+DOT.Parent = Logo
 DOT.AnchorPoint = Vector2.new(0.5, 0.5)
 DOT.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
 DOT.BackgroundTransparency = 1.000
 DOT.Position = UDim2.new(0.5, 0, 0.5, 0)
 DOT.Rotation = -90.000
-DOT.Size = UDim2.new(0, 25, 0, 25)
+DOT.Size = UDim2.new(0, 15, 0, 15)
 DOT.ZIndex = 2
 DOT.Image = "http://www.roblox.com/asset/?id=7059999549"
 DOT.ImageColor3 = Color3.fromRGB(71, 71, 71)
 
 RING.Name = "RING"
-RING.Parent = LOGO
+RING.Parent = Logo
 RING.AnchorPoint = Vector2.new(0.5, 0.5)
 RING.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
 RING.BackgroundTransparency = 1.000
 RING.Position = UDim2.new(0.5, 0, 0.5, 0)
 RING.Rotation = -90.000
-RING.Size = UDim2.new(0, 120, 0, 120)
+RING.Size = UDim2.new(0, 90, 0, 90)
 RING.Image = "http://www.roblox.com/asset/?id=6035047391"
 RING.ImageColor3 = Color3.fromRGB(99, 18, 18)
 
 ARROW.Name = "ARROW"
-ARROW.Parent = LOGO
+ARROW.Parent = Logo
 ARROW.AnchorPoint = Vector2.new(0.5, 0.5)
 ARROW.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ARROW.BackgroundTransparency = 1.000
 ARROW.Position = UDim2.new(0.5, 0, 0.5, 0)
 ARROW.Rotation = 45.000
-ARROW.Size = UDim2.new(0, 120, 0, 120)
+ARROW.Size = UDim2.new(0, 90, 0, 90)
 ARROW.Image = "http://www.roblox.com/asset/?id=1467771384"
 ARROW.ImageColor3 = Color3.fromRGB(99, 18, 18)
 
-MAINPART.Name = "MAINPART"
-MAINPART.Parent = MAIN
-MAINPART.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MAINPART.BackgroundTransparency = 1.000
-MAINPART.Position = UDim2.new(0, 0, 0.286333323, 0)
-MAINPART.Size = UDim2.new(0, 600, 0, 214)
-
-INFORMATION.Name = "INFORMATION"
-INFORMATION.Parent = MAINPART
-INFORMATION.AnchorPoint = Vector2.new(0.800000012, 0.5)
-INFORMATION.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-INFORMATION.BackgroundTransparency = 1.000
-INFORMATION.Position = UDim2.new(0.800000012, 0, 0.5, 0)
-INFORMATION.Size = UDim2.new(0, 530, 0, 200)
-INFORMATION.Visible = false
-
-UICorner_5.Parent = INFORMATION
-
-WM.Name = "WM"
-WM.Parent = INFORMATION
-WM.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-WM.BackgroundTransparency = 1.000
-WM.Position = UDim2.new(0.311320752, 0, 0.0605000295, 0)
-WM.Size = UDim2.new(0, 303, 0, 59)
-WM.Font = Enum.Font.SourceSansLight
-WM.Text = "WELCOME, MACHIAVELLI_MODDER"
-WM.TextColor3 = Color3.fromRGB(99, 18, 18)
-WM.TextScaled = true
-WM.TextSize = 30.000
-WM.TextStrokeColor3 = Color3.fromRGB(36, 0, 0)
-WM.TextStrokeTransparency = 0.000
-WM.TextWrapped = true
-
-VM2.Name = "VM2"
-VM2.Parent = INFORMATION
-VM2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-VM2.BackgroundTransparency = 1.000
-VM2.Position = UDim2.new(0.311320752, 0, 0.590500057, 0)
-VM2.Size = UDim2.new(0, 303, 0, 77)
-VM2.Font = Enum.Font.SourceSansLight
-VM2.Text = "THIS IS A PRIVATE GUI. USERS HAVE RANKS AND CERTAIN POWERS. DO NOT SHARE SCRIPT"
-VM2.TextColor3 = Color3.fromRGB(99, 18, 18)
-VM2.TextScaled = true
-VM2.TextSize = 30.000
-VM2.TextStrokeColor3 = Color3.fromRGB(36, 0, 0)
-VM2.TextStrokeTransparency = 0.000
-VM2.TextWrapped = true
-
-RNK.Name = "RNK"
-RNK.Parent = INFORMATION
-RNK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RNK.BackgroundTransparency = 1.000
-RNK.Position = UDim2.new(0.311320752, 0, 0.360500038, 0)
-RNK.Size = UDim2.new(0, 303, 0, 44)
-RNK.Font = Enum.Font.SourceSansLight
-RNK.Text = "YOU ARE A;= OWNER"
-RNK.TextColor3 = Color3.fromRGB(182, 32, 32)
-RNK.TextSize = 30.000
-RNK.TextStrokeColor3 = Color3.fromRGB(36, 0, 0)
-RNK.TextStrokeTransparency = 0.000
-RNK.TextWrapped = true
-
-EXECUTOR.Name = "EXECUTOR"
-EXECUTOR.Parent = MAINPART
-EXECUTOR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EXECUTOR.BackgroundTransparency = 1.000
-EXECUTOR.Size = UDim2.new(1, 0, 1, 0)
-EXECUTOR.Visible = false
-
-CodeEntry.Name = "CodeEntry"
-CodeEntry.Parent = EXECUTOR
-CodeEntry.AnchorPoint = Vector2.new(0.5, 0.5)
-CodeEntry.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-CodeEntry.Position = UDim2.new(0.5, 0, 0.5, 0)
-CodeEntry.Size = UDim2.new(0, 580, 0, 200)
-
-UICorner_6.Parent = CodeEntry
-
-ButtonBar.Name = "ButtonBar"
-ButtonBar.Parent = CodeEntry
-ButtonBar.AnchorPoint = Vector2.new(0.5, 1)
-ButtonBar.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
-ButtonBar.Position = UDim2.new(0.5, 0, 1, 0)
-ButtonBar.Size = UDim2.new(0, 580, 0, 24)
-
-UICorner_7.Parent = ButtonBar
-
-EXE_2.Name = "EXE"
-EXE_2.Parent = ButtonBar
-EXE_2.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
-EXE_2.Size = UDim2.new(0, 125, 0, 24)
-EXE_2.Font = Enum.Font.SourceSansLight
-EXE_2.Text = "EXECUTE"
-EXE_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-EXE_2.TextSize = 20.000
-EXE_2.TextWrapped = true
-
-UICorner_8.Parent = EXE_2
-
-INJECT.Name = "INJECT"
-INJECT.Parent = ButtonBar
-INJECT.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
-INJECT.Position = UDim2.new(0.784482777, 0, 0, 0)
-INJECT.Size = UDim2.new(0, 125, 0, 24)
-INJECT.Font = Enum.Font.SourceSansLight
-INJECT.Text = "INJECT"
-INJECT.TextColor3 = Color3.fromRGB(99, 18, 18)
-INJECT.TextSize = 20.000
-INJECT.TextWrapped = true
-
-UICorner_9.Parent = INJECT
-
-CLEAR.Name = "CLEAR"
-CLEAR.Parent = ButtonBar
-CLEAR.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
-CLEAR.Position = UDim2.new(0, 130, 0, 0)
-CLEAR.Size = UDim2.new(0, 125, 0, 24)
-CLEAR.Font = Enum.Font.SourceSansLight
-CLEAR.Text = "CLEAR"
-CLEAR.TextColor3 = Color3.fromRGB(99, 18, 18)
-CLEAR.TextSize = 20.000
-CLEAR.TextWrapped = true
-
-UICorner_10.Parent = CLEAR
-
-MTOG.Name = "MTOG"
-MTOG.Parent = ButtonBar
-MTOG.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
-MTOG.Position = UDim2.new(0.681034505, 0, 0, 0)
-MTOG.Size = UDim2.new(0, 55, 0, 24)
-MTOG.Font = Enum.Font.SourceSansLight
-MTOG.Text = "SERVER"
-MTOG.TextColor3 = Color3.fromRGB(99, 18, 18)
-MTOG.TextSize = 20.000
-MTOG.TextWrapped = true
-
-UICorner_11.Parent = MTOG
-
-ScrollingFrame.Parent = CodeEntry
-ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ScrollingFrame.BackgroundTransparency = 1.000
-ScrollingFrame.Size = UDim2.new(0, 580, 0, 200)
-ScrollingFrame.ZIndex = -1
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 200, 0)
-ScrollingFrame.ScrollBarThickness = 7
-
-PlrCode.Name = "PlrCode"
-PlrCode.Parent = ScrollingFrame
-PlrCode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PlrCode.BackgroundTransparency = 1.000
-PlrCode.Position = UDim2.new(0.0103448275, 0, 0, 0)
-PlrCode.Size = UDim2.new(0, 568, 2, 176)
-PlrCode.ClearTextOnFocus = false
-PlrCode.Font = Enum.Font.SourceSansSemibold
-PlrCode.MultiLine = true
-PlrCode.Text = "warn(\"MMSB NOMAIN\")"
-PlrCode.TextColor3 = Color3.fromRGB(145, 26, 26)
-PlrCode.TextSize = 20.000
-PlrCode.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
-PlrCode.TextStrokeTransparency = 0.000
-PlrCode.TextWrapped = true
-PlrCode.TextXAlignment = Enum.TextXAlignment.Left
-PlrCode.TextYAlignment = Enum.TextYAlignment.Top
-
-SETTINGS.Name = "SETTINGS"
-SETTINGS.Parent = MAINPART
-SETTINGS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SETTINGS.BackgroundTransparency = 1.000
-SETTINGS.Size = UDim2.new(1, 0, 1, 0)
-SETTINGS.Visible = false
-
-Game.Name = "Game"
-Game.Parent = SETTINGS
-Game.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-Game.Position = UDim2.new(0.396666676, 0, 0.0887850523, 0)
-Game.Size = UDim2.new(0, 300, 0, 50)
-Game.Font = Enum.Font.SourceSansLight
-Game.Text = "GAME"
-Game.TextColor3 = Color3.fromRGB(140, 0, 0)
-Game.TextSize = 30.000
-Game.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
-Game.TextStrokeTransparency = 0.000
-
-UICorner_12.Parent = Game
-
-Player.Name = "Player"
-Player.Parent = SETTINGS
-Player.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-Player.Position = UDim2.new(0.396666676, 0, 0.626168251, 0)
-Player.Size = UDim2.new(0, 300, 0, 50)
-Player.Font = Enum.Font.SourceSansLight
-Player.Text = "PLAYER"
-Player.TextColor3 = Color3.fromRGB(140, 0, 0)
-Player.TextSize = 30.000
-Player.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
-Player.TextStrokeTransparency = 0.000
-
-UICorner_13.Parent = Player
-
-Mainbase.Name = "Mainbase"
-Mainbase.Parent = SETTINGS
-Mainbase.AnchorPoint = Vector2.new(0.5, 0.5)
-Mainbase.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-Mainbase.Position = UDim2.new(0.5, 0, 0.5, 0)
-Mainbase.Size = UDim2.new(0, 580, 0, 200)
-Mainbase.Visible = false
-
-UICorner_14.Parent = Mainbase
-
-EXIT.Name = "EXIT"
-EXIT.Parent = Mainbase
-EXIT.AnchorPoint = Vector2.new(1, 0)
-EXIT.BackgroundColor3 = Color3.fromRGB(68, 12, 12)
-EXIT.Position = UDim2.new(1, 0, 0, 0)
-EXIT.Size = UDim2.new(0, 30, 0, 30)
-EXIT.Font = Enum.Font.SourceSans
-EXIT.Text = "+"
-EXIT.TextColor3 = Color3.fromRGB(140, 0, 0)
-EXIT.TextSize = 30.000
-
-UICorner_15.Parent = EXIT
-
-UNS10.Name = "UNS10"
-UNS10.Parent = Mainbase
-UNS10.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS10.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS10.BorderSizePixel = 0
-UNS10.Position = UDim2.new(0.25, 0, 0.394999981, 0)
-UNS10.Size = UDim2.new(0, 127, 0, 29)
-UNS10.Font = Enum.Font.SourceSansLight
-UNS10.Text = "BUTTON10"
-UNS10.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS10.TextSize = 20.000
-
-UNS11.Name = "UNS11"
-UNS11.Parent = Mainbase
-UNS11.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS11.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS11.BorderSizePixel = 0
-UNS11.Position = UDim2.new(0.479999989, 0, 0.394999981, 0)
-UNS11.Size = UDim2.new(0, 127, 0, 29)
-UNS11.Font = Enum.Font.SourceSansLight
-UNS11.Text = "BUTTON11"
-UNS11.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS11.TextSize = 20.000
-
-UNS12.Name = "UNS12"
-UNS12.Parent = Mainbase
-UNS12.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS12.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS12.BorderSizePixel = 0
-UNS12.Position = UDim2.new(0.708000004, 0, 0.394999981, 0)
-UNS12.Size = UDim2.new(0, 127, 0, 29)
-UNS12.Font = Enum.Font.SourceSansLight
-UNS12.Text = "BUTTON12"
-UNS12.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS12.TextSize = 20.000
-
-UNS13.Name = "UNS13"
-UNS13.Parent = Mainbase
-UNS13.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS13.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS13.BorderSizePixel = 0
-UNS13.Position = UDim2.new(0.0199999996, 0, 0.569999993, 0)
-UNS13.Size = UDim2.new(0, 127, 0, 29)
-UNS13.Font = Enum.Font.SourceSansLight
-UNS13.Text = "BUTTON13"
-UNS13.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS13.TextSize = 20.000
-
-UNS14.Name = "UNS14"
-UNS14.Parent = Mainbase
-UNS14.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS14.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS14.BorderSizePixel = 0
-UNS14.Position = UDim2.new(0.25, 0, 0.569999993, 0)
-UNS14.Size = UDim2.new(0, 127, 0, 29)
-UNS14.Font = Enum.Font.SourceSansLight
-UNS14.Text = "BUTTON14"
-UNS14.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS14.TextSize = 20.000
-
-UNS15.Name = "UNS15"
-UNS15.Parent = Mainbase
-UNS15.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS15.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS15.BorderSizePixel = 0
-UNS15.Position = UDim2.new(0.479999989, 0, 0.569999993, 0)
-UNS15.Size = UDim2.new(0, 127, 0, 29)
-UNS15.Font = Enum.Font.SourceSansLight
-UNS15.Text = "BUTTON15"
-UNS15.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS15.TextSize = 20.000
-
-UNS16.Name = "UNS16"
-UNS16.Parent = Mainbase
-UNS16.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS16.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS16.BorderSizePixel = 0
-UNS16.Position = UDim2.new(0.708000004, 0, 0.569999993, 0)
-UNS16.Size = UDim2.new(0, 127, 0, 29)
-UNS16.Font = Enum.Font.SourceSansLight
-UNS16.Text = "BUTTON16"
-UNS16.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS16.TextSize = 20.000
-
-UNS17.Name = "UNS17"
-UNS17.Parent = Mainbase
-UNS17.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS17.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS17.BorderSizePixel = 0
-UNS17.Position = UDim2.new(0.0199999996, 0, 0.745000005, 0)
-UNS17.Size = UDim2.new(0, 127, 0, 29)
-UNS17.Font = Enum.Font.SourceSansLight
-UNS17.Text = "BUTTON17"
-UNS17.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS17.TextSize = 20.000
-
-UNS18.Name = "UNS18"
-UNS18.Parent = Mainbase
-UNS18.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS18.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS18.BorderSizePixel = 0
-UNS18.Position = UDim2.new(0.25, 0, 0.745000005, 0)
-UNS18.Size = UDim2.new(0, 127, 0, 29)
-UNS18.Font = Enum.Font.SourceSansLight
-UNS18.Text = "BUTTON18"
-UNS18.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS18.TextSize = 20.000
-
-UNS19.Name = "UNS19"
-UNS19.Parent = Mainbase
-UNS19.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS19.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS19.BorderSizePixel = 0
-UNS19.Position = UDim2.new(0.479999989, 0, 0.745000005, 0)
-UNS19.Size = UDim2.new(0, 127, 0, 29)
-UNS19.Font = Enum.Font.SourceSansLight
-UNS19.Text = "BUTTON19"
-UNS19.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS19.TextSize = 20.000
-
-UNS2.Name = "UNS2"
-UNS2.Parent = Mainbase
-UNS2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS2.BorderSizePixel = 0
-UNS2.Position = UDim2.new(0.25, 0, 0.0399999991, 0)
-UNS2.Size = UDim2.new(0, 127, 0, 29)
-UNS2.Font = Enum.Font.SourceSansLight
-UNS2.Text = "BUTTON2"
-UNS2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS2.TextSize = 20.000
-
-UNS20.Name = "UNS20"
-UNS20.Parent = Mainbase
-UNS20.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS20.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS20.BorderSizePixel = 0
-UNS20.Position = UDim2.new(0.708000004, 0, 0.745000005, 0)
-UNS20.Size = UDim2.new(0, 127, 0, 29)
-UNS20.Font = Enum.Font.SourceSansLight
-UNS20.Text = "BUTTON20"
-UNS20.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS20.TextSize = 20.000
-
-UNS3.Name = "UNS3"
-UNS3.Parent = Mainbase
-UNS3.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS3.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS3.BorderSizePixel = 0
-UNS3.Position = UDim2.new(0.479999989, 0, 0.0399999991, 0)
-UNS3.Size = UDim2.new(0, 127, 0, 29)
-UNS3.Font = Enum.Font.SourceSansLight
-UNS3.Text = "BUTTON3"
-UNS3.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS3.TextSize = 20.000
-
-UNS4.Name = "UNS4"
-UNS4.Parent = Mainbase
-UNS4.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS4.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS4.BorderSizePixel = 0
-UNS4.Position = UDim2.new(0.708000004, 0, 0.0399999991, 0)
-UNS4.Size = UDim2.new(0, 127, 0, 29)
-UNS4.Font = Enum.Font.SourceSansLight
-UNS4.Text = "BUTTON4"
-UNS4.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS4.TextSize = 20.000
-
-UNS5.Name = "UNS5"
-UNS5.Parent = Mainbase
-UNS5.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS5.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS5.BorderSizePixel = 0
-UNS5.Position = UDim2.new(0.0199999996, 0, 0.215000004, 0)
-UNS5.Size = UDim2.new(0, 127, 0, 29)
-UNS5.Font = Enum.Font.SourceSansLight
-UNS5.Text = "BUTTON5"
-UNS5.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS5.TextSize = 20.000
-
-UNS6.Name = "UNS6"
-UNS6.Parent = Mainbase
-UNS6.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS6.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS6.BorderSizePixel = 0
-UNS6.Position = UDim2.new(0.25, 0, 0.215000004, 0)
-UNS6.Size = UDim2.new(0, 127, 0, 29)
-UNS6.Font = Enum.Font.SourceSansLight
-UNS6.Text = "BUTTON6"
-UNS6.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS6.TextSize = 20.000
-
-UNS7.Name = "UNS7"
-UNS7.Parent = Mainbase
-UNS7.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS7.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS7.BorderSizePixel = 0
-UNS7.Position = UDim2.new(0.479999989, 0, 0.215000004, 0)
-UNS7.Size = UDim2.new(0, 127, 0, 29)
-UNS7.Font = Enum.Font.SourceSansLight
-UNS7.Text = "BUTTON7"
-UNS7.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS7.TextSize = 20.000
-
-UNS8.Name = "UNS8"
-UNS8.Parent = Mainbase
-UNS8.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS8.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS8.BorderSizePixel = 0
-UNS8.Position = UDim2.new(0.708000004, 0, 0.215000004, 0)
-UNS8.Size = UDim2.new(0, 127, 0, 29)
-UNS8.Font = Enum.Font.SourceSansLight
-UNS8.Text = "BUTTON8"
-UNS8.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS8.TextSize = 20.000
-
-UNS9.Name = "UNS9"
-UNS9.Parent = Mainbase
-UNS9.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS9.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS9.BorderSizePixel = 0
-UNS9.Position = UDim2.new(0.0199999996, 0, 0.394999981, 0)
-UNS9.Size = UDim2.new(0, 127, 0, 29)
-UNS9.Font = Enum.Font.SourceSansLight
-UNS9.Text = "BUTTON9"
-UNS9.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS9.TextSize = 20.000
-
-UNS1.Name = "UNS1"
-UNS1.Parent = Mainbase
-UNS1.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS1.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS1.BorderSizePixel = 0
-UNS1.Position = UDim2.new(0.0199999996, 0, 0.0399999991, 0)
-UNS1.Size = UDim2.new(0, 127, 0, 29)
-UNS1.Font = Enum.Font.SourceSansLight
-UNS1.Text = "BUTTON1"
-UNS1.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS1.TextSize = 20.000
-
-EXECUTABLES.Name = "EXECUTABLES"
-EXECUTABLES.Parent = MAINPART
-EXECUTABLES.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EXECUTABLES.BackgroundTransparency = 1.000
-EXECUTABLES.Size = UDim2.new(1, 0, 1, 0)
-EXECUTABLES.Visible = false
-
-UNS9_2.Name = "UNS9"
-UNS9_2.Parent = EXECUTABLES
-UNS9_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS9_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS9_2.BorderSizePixel = 0
-UNS9_2.Position = UDim2.new(0.0533333346, 0, 0.43238315, 0)
-UNS9_2.Size = UDim2.new(0, 127, 0, 29)
-UNS9_2.Font = Enum.Font.SourceSansLight
-UNS9_2.Text = "BUTTON9"
-UNS9_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS9_2.TextSize = 20.000
-
-UICorner_16.Parent = EXECUTABLES
-
-UNS8_2.Name = "UNS8"
-UNS8_2.Parent = EXECUTABLES
-UNS8_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS8_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS8_2.BorderSizePixel = 0
-UNS8_2.Position = UDim2.new(0.741333365, 0, 0.252383173, 0)
-UNS8_2.Size = UDim2.new(0, 127, 0, 29)
-UNS8_2.Font = Enum.Font.SourceSansLight
-UNS8_2.Text = "BUTTON8"
-UNS8_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS8_2.TextSize = 20.000
-
-UNS1_2.Name = "UNS1"
-UNS1_2.Parent = EXECUTABLES
-UNS1_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS1_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS1_2.BorderSizePixel = 0
-UNS1_2.Position = UDim2.new(0.0533333346, 0, 0.0773831755, 0)
-UNS1_2.Size = UDim2.new(0, 127, 0, 29)
-UNS1_2.Font = Enum.Font.SourceSansLight
-UNS1_2.Text = "StunFly"
-UNS1_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS1_2.TextSize = 20.000
-
-UNS10_2.Name = "UNS10"
-UNS10_2.Parent = EXECUTABLES
-UNS10_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS10_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS10_2.BorderSizePixel = 0
-UNS10_2.Position = UDim2.new(0.283333331, 0, 0.43238315, 0)
-UNS10_2.Size = UDim2.new(0, 127, 0, 29)
-UNS10_2.Font = Enum.Font.SourceSansLight
-UNS10_2.Text = "BUTTON10"
-UNS10_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS10_2.TextSize = 20.000
-
-UNS11_2.Name = "UNS11"
-UNS11_2.Parent = EXECUTABLES
-UNS11_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS11_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS11_2.BorderSizePixel = 0
-UNS11_2.Position = UDim2.new(0.513333321, 0, 0.43238315, 0)
-UNS11_2.Size = UDim2.new(0, 127, 0, 29)
-UNS11_2.Font = Enum.Font.SourceSansLight
-UNS11_2.Text = "BUTTON11"
-UNS11_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS11_2.TextSize = 20.000
-
-UNS12_2.Name = "UNS12"
-UNS12_2.Parent = EXECUTABLES
-UNS12_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS12_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS12_2.BorderSizePixel = 0
-UNS12_2.Position = UDim2.new(0.741333365, 0, 0.43238315, 0)
-UNS12_2.Size = UDim2.new(0, 127, 0, 29)
-UNS12_2.Font = Enum.Font.SourceSansLight
-UNS12_2.Text = "BUTTON12"
-UNS12_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS12_2.TextSize = 20.000
-
-UNS13_2.Name = "UNS13"
-UNS13_2.Parent = EXECUTABLES
-UNS13_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS13_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS13_2.BorderSizePixel = 0
-UNS13_2.Position = UDim2.new(0.0533333346, 0, 0.607383192, 0)
-UNS13_2.Size = UDim2.new(0, 127, 0, 29)
-UNS13_2.Font = Enum.Font.SourceSansLight
-UNS13_2.Text = "BUTTON13"
-UNS13_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS13_2.TextSize = 20.000
-
-UNS14_2.Name = "UNS14"
-UNS14_2.Parent = EXECUTABLES
-UNS14_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS14_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS14_2.BorderSizePixel = 0
-UNS14_2.Position = UDim2.new(0.283333331, 0, 0.607383192, 0)
-UNS14_2.Size = UDim2.new(0, 127, 0, 29)
-UNS14_2.Font = Enum.Font.SourceSansLight
-UNS14_2.Text = "BUTTON14"
-UNS14_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS14_2.TextSize = 20.000
-
-UNS15_2.Name = "UNS15"
-UNS15_2.Parent = EXECUTABLES
-UNS15_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS15_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS15_2.BorderSizePixel = 0
-UNS15_2.Position = UDim2.new(0.513333321, 0, 0.607383192, 0)
-UNS15_2.Size = UDim2.new(0, 127, 0, 29)
-UNS15_2.Font = Enum.Font.SourceSansLight
-UNS15_2.Text = "BUTTON15"
-UNS15_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS15_2.TextSize = 20.000
-
-UNS16_2.Name = "UNS16"
-UNS16_2.Parent = EXECUTABLES
-UNS16_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS16_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS16_2.BorderSizePixel = 0
-UNS16_2.Position = UDim2.new(0.741333365, 0, 0.607383192, 0)
-UNS16_2.Size = UDim2.new(0, 127, 0, 29)
-UNS16_2.Font = Enum.Font.SourceSansLight
-UNS16_2.Text = "BUTTON16"
-UNS16_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS16_2.TextSize = 20.000
-
-UNS17_2.Name = "UNS17"
-UNS17_2.Parent = EXECUTABLES
-UNS17_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS17_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS17_2.BorderSizePixel = 0
-UNS17_2.Position = UDim2.new(0.0533333346, 0, 0.782383204, 0)
-UNS17_2.Size = UDim2.new(0, 127, 0, 29)
-UNS17_2.Font = Enum.Font.SourceSansLight
-UNS17_2.Text = "BUTTON17"
-UNS17_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS17_2.TextSize = 20.000
-
-UNS18_2.Name = "UNS18"
-UNS18_2.Parent = EXECUTABLES
-UNS18_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS18_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS18_2.BorderSizePixel = 0
-UNS18_2.Position = UDim2.new(0.283333331, 0, 0.782383204, 0)
-UNS18_2.Size = UDim2.new(0, 127, 0, 29)
-UNS18_2.Font = Enum.Font.SourceSansLight
-UNS18_2.Text = "BUTTON18"
-UNS18_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS18_2.TextSize = 20.000
-
-UNS19_2.Name = "UNS19"
-UNS19_2.Parent = EXECUTABLES
-UNS19_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS19_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS19_2.BorderSizePixel = 0
-UNS19_2.Position = UDim2.new(0.513333321, 0, 0.782383204, 0)
-UNS19_2.Size = UDim2.new(0, 127, 0, 29)
-UNS19_2.Font = Enum.Font.SourceSansLight
-UNS19_2.Text = "BUTTON19"
-UNS19_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS19_2.TextSize = 20.000
-
-UNS2_2.Name = "UNS2"
-UNS2_2.Parent = EXECUTABLES
-UNS2_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS2_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS2_2.BorderSizePixel = 0
-UNS2_2.Position = UDim2.new(0.283333331, 0, 0.0773831755, 0)
-UNS2_2.Size = UDim2.new(0, 127, 0, 29)
-UNS2_2.Font = Enum.Font.SourceSansLight
-UNS2_2.Text = "Arctics Crasher"
-UNS2_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS2_2.TextSize = 20.000
-UNS2_2.TextWrapped = true
-
-UNS20_2.Name = "UNS20"
-UNS20_2.Parent = EXECUTABLES
-UNS20_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS20_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS20_2.BorderSizePixel = 0
-UNS20_2.Position = UDim2.new(0.741333365, 0, 0.782383204, 0)
-UNS20_2.Size = UDim2.new(0, 127, 0, 29)
-UNS20_2.Font = Enum.Font.SourceSansLight
-UNS20_2.Text = "BUTTON20"
-UNS20_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS20_2.TextSize = 20.000
-
-UNS3_2.Name = "UNS3"
-UNS3_2.Parent = EXECUTABLES
-UNS3_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS3_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS3_2.BorderSizePixel = 0
-UNS3_2.Position = UDim2.new(0.513333321, 0, 0.0773831755, 0)
-UNS3_2.Size = UDim2.new(0, 127, 0, 29)
-UNS3_2.Font = Enum.Font.SourceSansLight
-UNS3_2.Text = "BUTTON3"
-UNS3_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS3_2.TextSize = 20.000
-
-UNS4_2.Name = "UNS4"
-UNS4_2.Parent = EXECUTABLES
-UNS4_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS4_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS4_2.BorderSizePixel = 0
-UNS4_2.Position = UDim2.new(0.741333365, 0, 0.0773831755, 0)
-UNS4_2.Size = UDim2.new(0, 127, 0, 29)
-UNS4_2.Font = Enum.Font.SourceSansLight
-UNS4_2.Text = "BUTTON4"
-UNS4_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS4_2.TextSize = 20.000
-
-UNS5_2.Name = "UNS5"
-UNS5_2.Parent = EXECUTABLES
-UNS5_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS5_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS5_2.BorderSizePixel = 0
-UNS5_2.Position = UDim2.new(0.0533333346, 0, 0.252383173, 0)
-UNS5_2.Size = UDim2.new(0, 127, 0, 29)
-UNS5_2.Font = Enum.Font.SourceSansLight
-UNS5_2.Text = "BUTTON5"
-UNS5_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS5_2.TextSize = 20.000
-
-UNS6_2.Name = "UNS6"
-UNS6_2.Parent = EXECUTABLES
-UNS6_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS6_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS6_2.BorderSizePixel = 0
-UNS6_2.Position = UDim2.new(0.283333331, 0, 0.252383173, 0)
-UNS6_2.Size = UDim2.new(0, 127, 0, 29)
-UNS6_2.Font = Enum.Font.SourceSansLight
-UNS6_2.Text = "BUTTON6"
-UNS6_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS6_2.TextSize = 20.000
-
-UNS7_2.Name = "UNS7"
-UNS7_2.Parent = EXECUTABLES
-UNS7_2.AnchorPoint = Vector2.new(0.0199999996, 0.0399999991)
-UNS7_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-UNS7_2.BorderSizePixel = 0
-UNS7_2.Position = UDim2.new(0.513333321, 0, 0.252383173, 0)
-UNS7_2.Size = UDim2.new(0, 127, 0, 29)
-UNS7_2.Font = Enum.Font.SourceSansLight
-UNS7_2.Text = "BUTTON7"
-UNS7_2.TextColor3 = Color3.fromRGB(99, 18, 18)
-UNS7_2.TextSize = 20.000
-
-AUDIT_2.Name = "AUDIT"
-AUDIT_2.Parent = MAINPART
-AUDIT_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AUDIT_2.BackgroundTransparency = 1.000
-AUDIT_2.Size = UDim2.new(1, 0, 1, 0)
-AUDIT_2.Visible = false
-
-CodeEntry_2.Name = "CodeEntry"
-CodeEntry_2.Parent = AUDIT_2
-CodeEntry_2.AnchorPoint = Vector2.new(0.5, 0.5)
-CodeEntry_2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-CodeEntry_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-CodeEntry_2.Size = UDim2.new(0, 580, 0, 200)
-
-UICorner_17.Parent = CodeEntry_2
-
-Line1.Name = "Line1"
-Line1.Parent = CodeEntry_2
-Line1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Line1.BackgroundTransparency = 1.000
-Line1.Position = UDim2.new(0.0103448275, 0, 0, 0)
-Line1.Size = UDim2.new(0, 568, 0, 20)
-Line1.ClearTextOnFocus = false
-Line1.Font = Enum.Font.SourceSansSemibold
-Line1.MultiLine = true
-Line1.Text = "Empty"
-Line1.TextColor3 = Color3.fromRGB(145, 26, 26)
-Line1.TextSize = 20.000
-Line1.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
-Line1.TextStrokeTransparency = 0.000
-Line1.TextWrapped = true
-Line1.TextXAlignment = Enum.TextXAlignment.Left
-
-Line2.Name = "Line2"
-Line2.Parent = CodeEntry_2
-Line2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Line2.BackgroundTransparency = 1.000
-Line2.Position = UDim2.new(0.00999999978, 0, 0, 20)
-Line2.Size = UDim2.new(0, 568, 0, 20)
-Line2.ClearTextOnFocus = false
-Line2.Font = Enum.Font.SourceSansSemibold
-Line2.MultiLine = true
-Line2.Text = "Empty"
-Line2.TextColor3 = Color3.fromRGB(145, 26, 26)
-Line2.TextSize = 20.000
-Line2.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
-Line2.TextStrokeTransparency = 0.000
-Line2.TextWrapped = true
-Line2.TextXAlignment = Enum.TextXAlignment.Left
-
-Line3.Name = "Line3"
-Line3.Parent = CodeEntry_2
-Line3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Line3.BackgroundTransparency = 1.000
-Line3.Position = UDim2.new(0.00999999978, 0, 0, 40)
-Line3.Size = UDim2.new(0, 568, 0, 20)
-Line3.ClearTextOnFocus = false
-Line3.Font = Enum.Font.SourceSansSemibold
-Line3.MultiLine = true
-Line3.Text = "Empty"
-Line3.TextColor3 = Color3.fromRGB(145, 26, 26)
-Line3.TextSize = 20.000
-Line3.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
-Line3.TextStrokeTransparency = 0.000
-Line3.TextWrapped = true
-Line3.TextXAlignment = Enum.TextXAlignment.Left
-
-Line4.Name = "Line4"
-Line4.Parent = CodeEntry_2
-Line4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Line4.BackgroundTransparency = 1.000
-Line4.Position = UDim2.new(0.00999999978, 0, 0, 60)
-Line4.Size = UDim2.new(0, 568, 0, 20)
-Line4.ClearTextOnFocus = false
-Line4.Font = Enum.Font.SourceSansSemibold
-Line4.MultiLine = true
-Line4.Text = "Empty"
-Line4.TextColor3 = Color3.fromRGB(145, 26, 26)
-Line4.TextSize = 20.000
-Line4.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
-Line4.TextStrokeTransparency = 0.000
-Line4.TextWrapped = true
-Line4.TextXAlignment = Enum.TextXAlignment.Left
-
-Line5.Name = "Line5"
-Line5.Parent = CodeEntry_2
-Line5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Line5.BackgroundTransparency = 1.000
-Line5.Position = UDim2.new(0.00999999978, 0, 0, 80)
-Line5.Size = UDim2.new(0, 568, 0, 20)
-Line5.ClearTextOnFocus = false
-Line5.Font = Enum.Font.SourceSansSemibold
-Line5.MultiLine = true
-Line5.Text = "Empty"
-Line5.TextColor3 = Color3.fromRGB(145, 26, 26)
-Line5.TextSize = 20.000
-Line5.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
-Line5.TextStrokeTransparency = 0.000
-Line5.TextWrapped = true
-Line5.TextXAlignment = Enum.TextXAlignment.Left
-
-Line6.Name = "Line6"
-Line6.Parent = CodeEntry_2
-Line6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Line6.BackgroundTransparency = 1.000
-Line6.Position = UDim2.new(0.00999999978, 0, 0, 100)
-Line6.Size = UDim2.new(0, 568, 0, 20)
-Line6.ClearTextOnFocus = false
-Line6.Font = Enum.Font.SourceSansSemibold
-Line6.MultiLine = true
-Line6.Text = "Empty"
-Line6.TextColor3 = Color3.fromRGB(145, 26, 26)
-Line6.TextSize = 20.000
-Line6.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
-Line6.TextStrokeTransparency = 0.000
-Line6.TextWrapped = true
-Line6.TextXAlignment = Enum.TextXAlignment.Left
-
-Line7.Name = "Line7"
-Line7.Parent = CodeEntry_2
-Line7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Line7.BackgroundTransparency = 1.000
-Line7.Position = UDim2.new(0.00999999978, 0, 0, 120)
-Line7.Size = UDim2.new(0, 568, 0, 20)
-Line7.ClearTextOnFocus = false
-Line7.Font = Enum.Font.SourceSansSemibold
-Line7.MultiLine = true
-Line7.Text = "Empty"
-Line7.TextColor3 = Color3.fromRGB(145, 26, 26)
-Line7.TextSize = 20.000
-Line7.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
-Line7.TextStrokeTransparency = 0.000
-Line7.TextWrapped = true
-Line7.TextXAlignment = Enum.TextXAlignment.Left
-
-Line8.Name = "Line8"
-Line8.Parent = CodeEntry_2
-Line8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Line8.BackgroundTransparency = 1.000
-Line8.Position = UDim2.new(0.00999999978, 0, 0, 140)
-Line8.Size = UDim2.new(0, 568, 0, 20)
-Line8.ClearTextOnFocus = false
-Line8.Font = Enum.Font.SourceSansSemibold
-Line8.MultiLine = true
-Line8.Text = "Empty"
-Line8.TextColor3 = Color3.fromRGB(145, 26, 26)
-Line8.TextSize = 20.000
-Line8.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
-Line8.TextStrokeTransparency = 0.000
-Line8.TextWrapped = true
-Line8.TextXAlignment = Enum.TextXAlignment.Left
-
-Line9.Name = "Line9"
-Line9.Parent = CodeEntry_2
-Line9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Line9.BackgroundTransparency = 1.000
-Line9.Position = UDim2.new(0.00999999978, 0, 0, 160)
-Line9.Size = UDim2.new(0, 568, 0, 20)
-Line9.ClearTextOnFocus = false
-Line9.Font = Enum.Font.SourceSansSemibold
-Line9.MultiLine = true
-Line9.Text = "Empty"
-Line9.TextColor3 = Color3.fromRGB(145, 26, 26)
-Line9.TextSize = 20.000
-Line9.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
-Line9.TextStrokeTransparency = 0.000
-Line9.TextWrapped = true
-Line9.TextXAlignment = Enum.TextXAlignment.Left
-
-Line10.Name = "Line10"
-Line10.Parent = CodeEntry_2
-Line10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Line10.BackgroundTransparency = 1.000
-Line10.Position = UDim2.new(0.00999999978, 0, 0, 180)
-Line10.Size = UDim2.new(0, 568, 0, 20)
-Line10.ClearTextOnFocus = false
-Line10.Font = Enum.Font.SourceSansSemibold
-Line10.MultiLine = true
-Line10.Text = "Empty"
-Line10.TextColor3 = Color3.fromRGB(145, 26, 26)
-Line10.TextSize = 20.000
-Line10.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
-Line10.TextStrokeTransparency = 0.000
-Line10.TextWrapped = true
-Line10.TextXAlignment = Enum.TextXAlignment.Left
-
-EXIT_2.Name = "EXIT"
-EXIT_2.Parent = MAIN
-EXIT_2.AnchorPoint = Vector2.new(1, 0)
-EXIT_2.BackgroundColor3 = Color3.fromRGB(68, 12, 12)
-EXIT_2.Position = UDim2.new(1, 0, 0, 0)
-EXIT_2.Size = UDim2.new(0, 30, 0, 30)
-EXIT_2.Font = Enum.Font.SourceSans
-EXIT_2.Text = "X"
-EXIT_2.TextColor3 = Color3.fromRGB(140, 0, 0)
-EXIT_2.TextSize = 30.000
-
-UICorner_18.Parent = EXIT_2
-
-Sounds.Name = "Sounds"
-Sounds.Parent = NOMAIN
-
-DIALOG.Name = "DIALOG"
-DIALOG.Parent = NOMAIN
-DIALOG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-DIALOG.BackgroundTransparency = 1.000
-DIALOG.Size = UDim2.new(1, 0, 1, 0)
+Seeker.Name = "Seeker"
+Seeker.Parent = LOLK
+Seeker.AnchorPoint = Vector2.new(1, 0.5)
+Seeker.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Seeker.Position = UDim2.new(1, 0, 0.5, 0)
+Seeker.Size = UDim2.new(0, 100, 0, 300)
+Seeker.Visible = false
+
+UICorner_4.CornerRadius = UDim.new(0, 10)
+UICorner_4.Parent = Seeker
+
+Keybind.Name = "Keybind"
+Keybind.Parent = Seeker
+Keybind.AnchorPoint = Vector2.new(0.5, 0.400000006)
+Keybind.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Keybind.Position = UDim2.new(0.5, 0, 0.400000006, 0)
+Keybind.Size = UDim2.new(0, 80, 0, 80)
+Keybind.Font = Enum.Font.ArialBold
+Keybind.Text = "F"
+Keybind.TextColor3 = Color3.fromRGB(85, 0, 0)
+Keybind.TextScaled = true
+Keybind.TextSize = 14.000
+Keybind.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+Keybind.TextStrokeTransparency = 0.000
+Keybind.TextWrapped = true
+
+UICorner_5.CornerRadius = UDim.new(0, 10)
+UICorner_5.Parent = Keybind
+
+TOTOGGLE.Name = "TOTOGGLE"
+TOTOGGLE.Parent = Seeker
+TOTOGGLE.AnchorPoint = Vector2.new(0.5, 0.699999988)
+TOTOGGLE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TOTOGGLE.BackgroundTransparency = 1.000
+TOTOGGLE.Position = UDim2.new(0.5, 0, 0.699999988, 0)
+TOTOGGLE.Size = UDim2.new(0, 100, 0, 50)
+TOTOGGLE.Font = Enum.Font.ArialBold
+TOTOGGLE.Text = "to toggle"
+TOTOGGLE.TextColor3 = Color3.fromRGB(85, 0, 0)
+TOTOGGLE.TextSize = 20.000
+TOTOGGLE.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+TOTOGGLE.TextStrokeTransparency = 0.000
+TOTOGGLE.TextWrapped = true
+TOTOGGLE.TextYAlignment = Enum.TextYAlignment.Top
+
+CloseFrame.Name = "CloseFrame"
+CloseFrame.Parent = Seeker
+CloseFrame.AnchorPoint = Vector2.new(1, 1)
+CloseFrame.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+CloseFrame.Position = UDim2.new(1, 0, 1, 0)
+CloseFrame.Size = UDim2.new(0, 40, 0, 38)
+
+UICorner_6.CornerRadius = UDim.new(0, 10)
+UICorner_6.Parent = CloseFrame
+
+bar.Name = "bar"
+bar.Parent = Seeker
+bar.AnchorPoint = Vector2.new(0.5, 0.824999988)
+bar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+bar.BorderSizePixel = 0
+bar.Position = UDim2.new(0.5, 0, 0.824999988, 0)
+bar.Size = UDim2.new(0, 100, 0, 50)
+
+Close.Name = "Close"
+Close.Parent = Seeker
+Close.AnchorPoint = Vector2.new(1, 1)
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(1, 0, 1, 0)
+Close.Size = UDim2.new(0, 40, 0, 38)
+Close.ZIndex = 10
+Close.Font = Enum.Font.JosefinSans
+Close.Text = "|>|"
+Close.TextColor3 = Color3.fromRGB(255, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+Waittime.Name = "Waittime"
+Waittime.Parent = Seeker
+Waittime.AnchorPoint = Vector2.new(0, 1)
+Waittime.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Waittime.Position = UDim2.new(0, 0, 1, 0)
+Waittime.Size = UDim2.new(0, 30, 0, 38)
+Waittime.Font = Enum.Font.ArialBold
+Waittime.PlaceholderText = "1"
+Waittime.Text = "1"
+Waittime.TextColor3 = Color3.fromRGB(255, 255, 0)
+Waittime.TextScaled = true
+Waittime.TextSize = 30.000
+Waittime.TextStrokeColor3 = Color3.fromRGB(255, 129, 3)
+Waittime.TextStrokeTransparency = 0.000
+Waittime.TextWrapped = true
+
+UICorner_7.CornerRadius = UDim.new(0, 10)
+UICorner_7.Parent = Waittime
+
+Speed.Name = "Speed"
+Speed.Parent = Seeker
+Speed.AnchorPoint = Vector2.new(0, 1)
+Speed.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Speed.BorderSizePixel = 0
+Speed.Position = UDim2.new(0, 30, 1, 0)
+Speed.Size = UDim2.new(0, 30, 0, 38)
+Speed.Font = Enum.Font.ArialBold
+Speed.PlaceholderText = "1"
+Speed.Text = "1"
+Speed.TextColor3 = Color3.fromRGB(0, 170, 255)
+Speed.TextScaled = true
+Speed.TextSize = 30.000
+Speed.TextStrokeColor3 = Color3.fromRGB(0, 255, 255)
+Speed.TextStrokeTransparency = 0.000
+Speed.TextWrapped = true
+
+UICorner_8.CornerRadius = UDim.new(0, 10)
+UICorner_8.Parent = Speed
+
+bar2.Name = "bar2"
+bar2.Parent = Seeker
+bar2.AnchorPoint = Vector2.new(0.5, 0.824999988)
+bar2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+bar2.BorderSizePixel = 0
+bar2.Position = UDim2.new(0.5, 0, 1.19881892, 0)
+bar2.Size = UDim2.new(0, 100, 0, 119)
+bar2.ZIndex = -1
+
+UICorner_9.CornerRadius = UDim.new(0, 10)
+UICorner_9.Parent = bar2
+
+MaxVelocity.Name = "MaxVelocity"
+MaxVelocity.Parent = Seeker
+MaxVelocity.AnchorPoint = Vector2.new(0, 1)
+MaxVelocity.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+MaxVelocity.BorderSizePixel = 0
+MaxVelocity.Position = UDim2.new(0, 0, 1, 40)
+MaxVelocity.Size = UDim2.new(0, 50, 0, 40)
+MaxVelocity.Font = Enum.Font.ArialBold
+MaxVelocity.PlaceholderText = "1"
+MaxVelocity.Text = "1"
+MaxVelocity.TextColor3 = Color3.fromRGB(255, 177, 19)
+MaxVelocity.TextScaled = true
+MaxVelocity.TextSize = 30.000
+MaxVelocity.TextStrokeColor3 = Color3.fromRGB(255, 255, 0)
+MaxVelocity.TextStrokeTransparency = 0.000
+MaxVelocity.TextWrapped = true
+
+UICorner_10.CornerRadius = UDim.new(0, 10)
+UICorner_10.Parent = MaxVelocity
+
+controls.Name = "controls"
+controls.Parent = Seeker
+controls.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+controls.Position = UDim2.new(-1.29000008, 0, 0, 0)
+controls.Size = UDim2.new(0, 100, 0, 206)
+controls.Visible = false
+
+UICorner_11.CornerRadius = UDim.new(0, 10)
+UICorner_11.Parent = controls
+
+TextLabel.Parent = controls
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 100, 0, 50)
+TextLabel.Font = Enum.Font.ArialBold
+TextLabel.Text = "CONTROLS"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = controls
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0, 0, 0.242718443, 0)
+TextLabel_2.Size = UDim2.new(0, 100, 0, 31)
+TextLabel_2.Font = Enum.Font.ArialBold
+TextLabel_2.Text = "yellow = waittime"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_2.TextYAlignment = Enum.TextYAlignment.Top
+
+TextLabel_3.Parent = controls
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0, 0, 0.427184463, 0)
+TextLabel_3.Size = UDim2.new(0, 100, 0, 31)
+TextLabel_3.Font = Enum.Font.ArialBold
+TextLabel_3.Text = "blue = max force"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 170, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_3.TextYAlignment = Enum.TextYAlignment.Top
+
+TextLabel_4.Parent = controls
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0, 0, 0.577669919, 0)
+TextLabel_4.Size = UDim2.new(0, 100, 0, 31)
+TextLabel_4.Font = Enum.Font.ArialBold
+TextLabel_4.Text = "orange = speed"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 170, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_4.TextYAlignment = Enum.TextYAlignment.Top
+
+controlsbutton.Name = "controlsbutton"
+controlsbutton.Parent = Seeker
+controlsbutton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+controlsbutton.BackgroundTransparency = 0.500
+controlsbutton.Position = UDim2.new(-0.50999999, 0, 0.396666676, 0)
+controlsbutton.Rotation = 90.000
+controlsbutton.Size = UDim2.new(0, 90, 0, 18)
+controlsbutton.Font = Enum.Font.ArialBold
+controlsbutton.Text = "CONTROLS"
+controlsbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+controlsbutton.TextScaled = true
+controlsbutton.TextSize = 14.000
+controlsbutton.TextWrapped = true
+
+UICorner_12.CornerRadius = UDim.new(0, 10)
+UICorner_12.Parent = controlsbutton
+
+Dev.Name = "Dev"
+Dev.Parent = Seeker
+Dev.AnchorPoint = Vector2.new(1, 1)
+Dev.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Dev.BackgroundTransparency = 1.000
+Dev.BorderSizePixel = 0
+Dev.Position = UDim2.new(1, 0, 1.14666665, 0)
+Dev.Size = UDim2.new(0, 40, 0, 40)
+Dev.ZIndex = 10
+Dev.Font = Enum.Font.ArialBold
+Dev.Text = "Dev"
+Dev.TextColor3 = Color3.fromRGB(255, 0, 0)
+Dev.TextScaled = true
+Dev.TextSize = 14.000
+Dev.TextTransparency = 0.500
+Dev.TextWrapped = true
+
+LimbSelect.Name = "LimbSelect"
+LimbSelect.Parent = Seeker
+LimbSelect.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
+LimbSelect.BackgroundTransparency = 1.000
+LimbSelect.Position = UDim2.new(0, 0, 1.13333333, 0)
+LimbSelect.Size = UDim2.new(0, 100, 0, 40)
+LimbSelect.Font = Enum.Font.ArialBold
+LimbSelect.PlaceholderColor3 = Color3.fromRGB(116, 116, 116)
+LimbSelect.PlaceholderText = "Torso"
+LimbSelect.Text = "Torso"
+LimbSelect.TextColor3 = Color3.fromRGB(85, 0, 0)
+LimbSelect.TextScaled = true
+LimbSelect.TextSize = 30.000
+LimbSelect.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+LimbSelect.TextStrokeTransparency = 0.000
+LimbSelect.TextWrapped = true
+
+LimbSubmit.Name = "LimbSubmit"
+LimbSubmit.Parent = Seeker
+LimbSubmit.AnchorPoint = Vector2.new(1, 1)
+LimbSubmit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LimbSubmit.BackgroundTransparency = 1.000
+LimbSubmit.BorderSizePixel = 0
+LimbSubmit.Position = UDim2.new(0.970000029, 0, 1.33533323, 0)
+LimbSubmit.Size = UDim2.new(0, 94, 0, 21)
+LimbSubmit.ZIndex = 10
+LimbSubmit.Font = Enum.Font.ArialBold
+LimbSubmit.Text = "Submit"
+LimbSubmit.TextColor3 = Color3.fromRGB(255, 255, 127)
+LimbSubmit.TextScaled = true
+LimbSubmit.TextSize = 14.000
+LimbSubmit.TextTransparency = 0.500
+LimbSubmit.TextWrapped = true
+
+Logo_2.Name = "Logo"
+Logo_2.Parent = Seeker
+Logo_2.Active = true
+Logo_2.AnchorPoint = Vector2.new(0.5, 0.0199999996)
+Logo_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Logo_2.Position = UDim2.new(0.5, 0, 0.0199999996, 0)
+Logo_2.Selectable = true
+Logo_2.Size = UDim2.new(0, 80, 0, 80)
+Logo_2.ZIndex = -1
+
+UICorner_13.CornerRadius = UDim.new(1, 0)
+UICorner_13.Parent = Logo_2
+
+COG_2.Name = "COG"
+COG_2.Parent = Logo_2
+COG_2.AnchorPoint = Vector2.new(0.5, 0.5)
+COG_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+COG_2.BackgroundTransparency = 1.000
+COG_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+COG_2.Size = UDim2.new(0, 90, 0, 90)
+COG_2.Image = "http://www.roblox.com/asset/?id=6031280882"
+COG_2.ImageColor3 = Color3.fromRGB(99, 18, 18)
+
+DOT_2.Name = "DOT"
+DOT_2.Parent = Logo_2
+DOT_2.AnchorPoint = Vector2.new(0.5, 0.5)
+DOT_2.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+DOT_2.BackgroundTransparency = 1.000
+DOT_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+DOT_2.Rotation = -90.000
+DOT_2.Size = UDim2.new(0, 15, 0, 15)
+DOT_2.ZIndex = 2
+DOT_2.Image = "http://www.roblox.com/asset/?id=7059999549"
+DOT_2.ImageColor3 = Color3.fromRGB(71, 71, 71)
+
+RING_2.Name = "RING"
+RING_2.Parent = Logo_2
+RING_2.AnchorPoint = Vector2.new(0.5, 0.5)
+RING_2.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+RING_2.BackgroundTransparency = 1.000
+RING_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+RING_2.Rotation = -90.000
+RING_2.Size = UDim2.new(0, 90, 0, 90)
+RING_2.Image = "http://www.roblox.com/asset/?id=6035047391"
+RING_2.ImageColor3 = Color3.fromRGB(99, 18, 18)
+
+ARROW_2.Name = "ARROW"
+ARROW_2.Parent = Logo_2
+ARROW_2.AnchorPoint = Vector2.new(0.5, 0.5)
+ARROW_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ARROW_2.BackgroundTransparency = 1.000
+ARROW_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+ARROW_2.Rotation = 45.000
+ARROW_2.Size = UDim2.new(0, 90, 0, 90)
+ARROW_2.Image = "http://www.roblox.com/asset/?id=1467771384"
+ARROW_2.ImageColor3 = Color3.fromRGB(99, 18, 18)
+
+DevUI.Name = "DevUI"
+DevUI.Parent = LOLK
+DevUI.Enabled = false
+DevUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+DevUI.Active = true
+DevUI.MaxDistance = 100.000
+DevUI.Size = UDim2.new(0, 50, 0, 50)
+DevUI.StudsOffset = Vector3.new(0, 1, 0)
+
+Frame.Parent = DevUI
+Frame.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Frame.BackgroundTransparency = 1.000
+Frame.Size = UDim2.new(1, 0, 1, 0)
+
+speed.Name = "speed"
+speed.Parent = Frame
+speed.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+speed.BackgroundTransparency = 1.000
+speed.Size = UDim2.new(0, 50, 0, 20)
+speed.Font = Enum.Font.ArialBold
+speed.Text = "0"
+speed.TextColor3 = Color3.fromRGB(255, 170, 0)
+speed.TextScaled = true
+speed.TextSize = 14.000
+speed.TextWrapped = true
+
+UICorner_14.CornerRadius = UDim.new(0, 10)
+UICorner_14.Parent = Frame
+
+maxforce.Name = "maxforce"
+maxforce.Parent = Frame
+maxforce.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+maxforce.BackgroundTransparency = 1.000
+maxforce.Position = UDim2.new(0, 0, 0, 30)
+maxforce.Size = UDim2.new(0, 50, 0, 20)
+maxforce.Font = Enum.Font.ArialBold
+maxforce.Text = "0"
+maxforce.TextColor3 = Color3.fromRGB(0, 170, 255)
+maxforce.TextScaled = true
+maxforce.TextSize = 14.000
+maxforce.TextWrapped = true
+maxforce.TextYAlignment = Enum.TextYAlignment.Bottom
+
+Dialog.Name = "Dialog"
+Dialog.Parent = LOLK
+Dialog.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Dialog.BackgroundTransparency = 1.000
+Dialog.Size = UDim2.new(1, 0, 1, 0)
 
 Frame3.Name = "Frame3"
-Frame3.Parent = DIALOG
+Frame3.Parent = Dialog
 Frame3.AnchorPoint = Vector2.new(0, 0.100000001)
 Frame3.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 Frame3.BackgroundTransparency = 1.000
@@ -1289,7 +562,7 @@ Frame3.Position = UDim2.new(0.400000006, 0, 0.100000001, 0)
 Frame3.Size = UDim2.new(0.200000003, 0, 0, 50)
 
 Frame1.Name = "Frame1"
-Frame1.Parent = DIALOG
+Frame1.Parent = Dialog
 Frame1.AnchorPoint = Vector2.new(0, 0.100000001)
 Frame1.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 Frame1.BackgroundTransparency = 1.000
@@ -1302,7 +575,7 @@ UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 1.
 UIGradient.Parent = Frame1
 
 Frame2.Name = "Frame2"
-Frame2.Parent = DIALOG
+Frame2.Parent = Dialog
 Frame2.AnchorPoint = Vector2.new(1, 0.100000001)
 Frame2.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 Frame2.BackgroundTransparency = 1.000
@@ -1316,128 +589,43 @@ UIGradient_2.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 
 UIGradient_2.Parent = Frame2
 
 Text.Name = "Text"
-Text.Parent = DIALOG
+Text.Parent = Dialog
 Text.AnchorPoint = Vector2.new(0.5, 0.100000001)
 Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Text.BackgroundTransparency = 1.000
 Text.Position = UDim2.new(0.5, 0, 0.100000001, 0)
 Text.Size = UDim2.new(0, 200, 0, 50)
 Text.Font = Enum.Font.SourceSansLight
-Text.Text = ""
-Text.TextColor3 = Color3.fromRGB(145, 26, 26)
+Text.Text = "Script Loaded without any issues."
+Text.TextColor3 = Color3.fromRGB(85, 0, 0)
 Text.TextSize = 30.000
-Text.TextStrokeColor3 = Color3.fromRGB(99, 18, 18)
+Text.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+Text.TextStrokeTransparency = 0.000
 Text.TextTransparency = 1.000
-
-CORNERLOGO.Name = "CORNERLOGO"
-CORNERLOGO.Parent = NOMAIN
-CORNERLOGO.Active = true
-CORNERLOGO.AnchorPoint = Vector2.new(1, 1)
-CORNERLOGO.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-CORNERLOGO.BackgroundTransparency = 1.000
-CORNERLOGO.Position = UDim2.new(1, 0, 1, 0)
-CORNERLOGO.Selectable = true
-CORNERLOGO.Size = UDim2.new(0, 65, 0, 65)
-CORNERLOGO.ZIndex = -1
-
-UICorner_19.CornerRadius = UDim.new(1, 0)
-UICorner_19.Parent = CORNERLOGO
-
-COG_2.Name = "COG"
-COG_2.Parent = CORNERLOGO
-COG_2.AnchorPoint = Vector2.new(0.5, 0.5)
-COG_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-COG_2.BackgroundTransparency = 1.000
-COG_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-COG_2.Size = UDim2.new(0, 60, 0, 60)
-COG_2.Image = "http://www.roblox.com/asset/?id=6031280882"
-COG_2.ImageColor3 = Color3.fromRGB(99, 18, 18)
-
-DOT_2.Name = "DOT"
-DOT_2.Parent = CORNERLOGO
-DOT_2.AnchorPoint = Vector2.new(0.5, 0.5)
-DOT_2.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
-DOT_2.BackgroundTransparency = 1.000
-DOT_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-DOT_2.Rotation = -90.000
-DOT_2.Size = UDim2.new(0, 13, 0, 13)
-DOT_2.ZIndex = 2
-DOT_2.Image = "http://www.roblox.com/asset/?id=7059999549"
-DOT_2.ImageColor3 = Color3.fromRGB(71, 71, 71)
-
-RING_2.Name = "RING"
-RING_2.Parent = CORNERLOGO
-RING_2.AnchorPoint = Vector2.new(0.5, 0.5)
-RING_2.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
-RING_2.BackgroundTransparency = 1.000
-RING_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-RING_2.Rotation = -90.000
-RING_2.Size = UDim2.new(0, 60, 0, 60)
-RING_2.Image = "http://www.roblox.com/asset/?id=6035047391"
-RING_2.ImageColor3 = Color3.fromRGB(99, 18, 18)
-
-ARROW_2.Name = "ARROW"
-ARROW_2.Parent = CORNERLOGO
-ARROW_2.AnchorPoint = Vector2.new(0.5, 0.5)
-ARROW_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ARROW_2.BackgroundTransparency = 1.000
-ARROW_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-ARROW_2.Rotation = 45.000
-ARROW_2.Size = UDim2.new(0, 60, 0, 60)
-ARROW_2.Image = "http://www.roblox.com/asset/?id=1467771384"
-ARROW_2.ImageColor3 = Color3.fromRGB(99, 18, 18)
-
-Values.Name = "Values"
-Values.Parent = NOMAIN
 
 -- Scripts:
 
--- UNS1_2.CustomCode is disabled.
--- UNS2_2.CustomCode is disabled.
-local function ZRTCCL_fake_script() -- NOMAIN.MAINSCRIPT 
-	local script = Instance.new('LocalScript', NOMAIN)
+local function GOZJC_fake_script() -- LOLK.LocalScript 
+	local script = Instance.new('LocalScript', LOLK)
 
-	----MAIN----
-	local Main = script.Parent.MAIN
-	local Root = script.Parent
-	local Spinninglogo = false
-	------------
-	
-	----EXECUTOR----
-	local Injected = false
-	local MTog = false
-	----------------
-	
-	----DIALOG----
-	local DialogFired = false
+	local mouse = game.Players.LocalPlayer:GetMouse()
 	local text = Instance.new("StringValue",script.Parent)
 	local textcount = 0
-	--------------
+	local tog = false
+	local canraycast = false
+	local closetog = false
+	local controlstog = false
+	local devmode = false
+	local stupiduienabled = false
 	
-	----AUDIT----
-	local logentrynumber = 0
-	-------------
-	
-	----SOUNDS----
-	local Sounds = script.Parent.Sounds
-	
-	local BP = Instance.new("Sound",Sounds) BP.SoundId = ("rbxassetid://5503769032") BP.Volume = 1
-	local MSC = Instance.new("Sound",Sounds) MSC.SoundId = ("rbxassetid://6947340348") MSC.Volume = 1
-	local BC = Instance.new("Sound",Sounds) BC.SoundId = ("rbxassetid://6947401743") BC.Volume = 1
-	local MH = Instance.new("Sound",Sounds) MH.SoundId = ("rbxassetid://6947154904") MH.Volume = 1
-	local NF = Instance.new("Sound",Sounds) NF.SoundId = ("rbxassetid://216917652") NF.Volume = 1
-	--------------
-	
-	
-	
-	local function firedialog()
-		if DialogFired == false then
-			DialogFired = true
+	local function firestupidstuff()
+		if stupiduienabled == false then
+			stupiduienabled = true
 			while wait() do
-				if Root.DIALOG.Frame1.BackgroundTransparency < .5 then
+				if script.Parent.Dialog.Frame1.BackgroundTransparency < .5 then
 					break
 				else
-					for _,dialogtext in pairs(Root.DIALOG:GetChildren()) do
+					for _,dialogtext in pairs(script.Parent.Dialog:GetChildren()) do
 						if dialogtext:IsA("Frame") then
 							dialogtext.BackgroundTransparency = dialogtext.BackgroundTransparency - .01
 						elseif dialogtext:IsA("TextLabel") then
@@ -1451,24 +639,24 @@ local function ZRTCCL_fake_script() -- NOMAIN.MAINSCRIPT
 					end
 				end
 			end
-			Root.DIALOG.Text.Text = text.Value
+			script.Parent.Dialog.Text.Text = text.Value
 			textcount = #text.Value
 			for _ = 1, textcount do
 				wait(.05)
-				Root.DIALOG.Text.MaxVisibleGraphemes = script.Parent.DIALOG.Text.MaxVisibleGraphemes + 1
+				script.Parent.Dialog.Text.MaxVisibleGraphemes = script.Parent.Dialog.Text.MaxVisibleGraphemes + 1
 			end
 			wait(3)
 			for _ = 1, textcount do
 				wait(.025)
-				Root.DIALOG.Text.MaxVisibleGraphemes = script.Parent.DIALOG.Text.MaxVisibleGraphemes - 1
+				script.Parent.Dialog.Text.MaxVisibleGraphemes = script.Parent.Dialog.Text.MaxVisibleGraphemes - 1
 			end
-			Root.DIALOG.Text.Text = "nil"
-			Root.DIALOG.Text.MaxVisibleGraphemes = 0
+			script.Parent.Dialog.Text.Text = "nil"
+			script.Parent.Dialog.Text.MaxVisibleGraphemes = 0
 			while wait(.1) do
-				if Root.DIALOG.Frame1.BackgroundTransparency > 1 then
+				if script.Parent.Dialog.Frame1.BackgroundTransparency > 1 then
 					break
 				else
-					for _,dialogtext in pairs(script.Parent.DIALOG:GetChildren()) do
+					for _,dialogtext in pairs(script.Parent.Dialog:GetChildren()) do
 						if dialogtext:IsA("Frame") then
 							dialogtext.BackgroundTransparency = dialogtext.BackgroundTransparency + .01
 						elseif dialogtext:IsA("TextLabel") then
@@ -1482,1275 +670,139 @@ local function ZRTCCL_fake_script() -- NOMAIN.MAINSCRIPT
 					end
 				end
 			end
-			DialogFired = false
+			stupiduienabled = false
 		end
 	end
 	
-	local function spincornerlogo(tf)
-		if tf == true then
-			Spinninglogo = true
-			while Spinninglogo == true do
-				wait()
-				Root.CORNERLOGO.Rotation = Root.CORNERLOGO.Rotation + .01
-				Root.CORNERLOGO.COG.Rotation = Root.CORNERLOGO.COG.Rotation + 2
-				Root.CORNERLOGO.RING.Rotation = Root.CORNERLOGO.RING.Rotation - .5
-				Root.CORNERLOGO.ARROW.Rotation = Root.CORNERLOGO.ARROW.Rotation - 1
-			end
-		elseif tf == false then
-			Spinninglogo = false
+	script.Parent.Load.RunScript.MouseButton1Click:Connect(function()
+		if tog == false then
+			tog = true
+			script.Parent.Load.Visible = false
+			script.Parent.Seeker.Visible = true
+			text.Value = "Script loaded without any issues."
+			firestupidstuff()
 		end
-	end
+	end)
 	
-	local function logentry(text)
-		logentrynumber = logentrynumber + 1
-		local text = Main.MAINPART.AUDIT.CodeEntry:FindFirstChild("Line"..logentrynumber)
-		text.Text = text
-		if logentrynumber == 10 then
-			logentrynumber = 0
+	script.Parent.Seeker.Close.MouseButton1Click:Connect(function()
+		if closetog == false then
+			closetog = true
+			controlstog = false
+			script.Parent.Seeker.controls.Visible = false
+			script.Parent.Seeker.controlsbutton.Visible = false
+			script.Parent.Seeker.Close.Text = "|<|"
+			script.Parent.Seeker.bar.Visible = false
+			script.Parent.Seeker.Keybind.Visible = false
+			script.Parent.Seeker.TOTOGGLE.Visible = false
+			script.Parent.Seeker.Logo.Visible = false
+			script.Parent.Seeker.BackgroundTransparency = 1
+			text.Value = "Closed MainMenu"
+			firestupidstuff()
+		else
+			closetog = false
+			script.Parent.Seeker.controlsbutton.Visible = true
+			script.Parent.Seeker.Close.Text = "|>|"
+			script.Parent.Seeker.bar.Visible = true
+			script.Parent.Seeker.Keybind.Visible = true
+			script.Parent.Seeker.TOTOGGLE.Visible = true
+			script.Parent.Seeker.Logo.Visible = true
+			script.Parent.Seeker.BackgroundTransparency = 0
+			text.Value = "Opened MainMenu"
+			firestupidstuff()
 		end
-	end
+	end)
 	
-	local function spinlogo(tf)
-		if tf == true then
-			Spinninglogo = true
-			while Spinninglogo == true do
-				wait()
-				Main.INTER.LOGO.Rotation = Main.INTER.LOGO.Rotation + .01
-				Main.INTER.LOGO.COG.Rotation = Main.INTER.LOGO.COG.Rotation + 2
-				Main.INTER.LOGO.RING.Rotation = Main.INTER.LOGO.RING.Rotation - .5
-				Main.INTER.LOGO.ARROW.Rotation = Main.INTER.LOGO.ARROW.Rotation - 1
-			end
-		elseif tf == false then
-			Spinninglogo = false
-		end
-	end
-	
-	local function hideotherui(pgui)
-		for _,guis in pairs(Main.MAINPART:GetChildren()) do
-			if guis.Name == pgui then
+	mouse.KeyUp:connect(function(key)
+		if key == "f" and tog == true then
+			if canraycast == false then
+				canraycast = true
+				script.Parent.Seeker.bar.BackgroundColor3 = Color3.new(0,255,0)
+				script.Parent.Seeker.Close.TextColor3 = Color3.new(0,255,0)
 			else
-				local curgui = Main.MAINPART:FindFirstChild(pgui)
-				guis.Visible = false
-				curgui.Visible = true
+				canraycast = false
+				script.Parent.Seeker.bar.BackgroundColor3 = Color3.new(255,0,0)
+				script.Parent.Seeker.Close.TextColor3 = Color3.new(255,0,0)
 			end
 		end
-	end
+	end)
 	
-	for _,buttons in pairs(Main:GetDescendants()) do
-		if buttons:IsA("TextButton") then
-			buttons.MouseEnter:Connect(function()
-				MH:Play()
-			end)
-			buttons.MouseButton1Click:Connect(function()
-				BC:Play()
-			end)
+	local user
+	
+	user = game.Players.LocalPlayer.Character
+	
+	
+	mouse.Button1Down:connect(function() 
+		if canraycast == true then
+			local part = Instance.new("Part",workspace)
+			local AP = Instance.new("AlignPosition",user.Torso)
+			local att1 = Instance.new("Attachment",user:FindFirstChild(script.Parent.Seeker.LimbSelect.Text))
+			local att2 = Instance.new("Attachment",part)
+			local devui = script.Parent.DevUI:Clone()
+			AP.Enabled = false
+			part.Anchored = true
+			part.CanCollide = false
+			part.Transparency = 1
+			local ray = Ray.new(user.Torso.CFrame.p, (mouse.Hit.p - user.Torso.CFrame.p).unit*300)
+			local hit, position = game.Workspace:FindPartOnRay(ray, user)
+			part.CFrame = CFrame.new(position, user.Torso.CFrame.p)
+			AP.ReactionForceEnabled = false
+			AP.Responsiveness = tonumber(script.Parent.Seeker.MaxVelocity.Text)
+			AP.MaxForce = tonumber(script.Parent.Seeker.Speed.Text) * 10000
+			AP.Attachment0 = att1
+			AP.Attachment1 = att2
+			AP.Enabled = true
+			devui.Parent = att2
+			devui.Frame.speed.Text = tostring(AP.Responsiveness)
+			devui.Frame.maxforce.Text = tostring(AP.MaxForce)
+			if devmode == true then
+				devui.Enabled = true
+				AP.Visible = true
+				att1.Visible = true
+				att2.Visible = true
+			end
+			wait(tonumber(script.Parent.Seeker.Waittime.Text))
+			AP:Destroy()
+			att1:Destroy()
+			att2:Destroy()
+			part:Destroy()
+			devui:Destroy()
 		end
-	end
-	Main.INFO.MouseButton1Click:Connect(function()
-		hideotherui("INFORMATION")
-		Main.INTER.Visible = true
-		spinlogo(true)
-		--spincornerlogo(true)
-	end)
-	
-	Main.EXE.MouseButton1Click:Connect(function()
-		hideotherui("EXECUTOR")
-		Main.INTER.Visible = false
-		spinlogo(false)
-		--spincornerlogo(true)
-	end)
-	
-	Main.SETT.MouseButton1Click:Connect(function()
-		hideotherui("SETTINGS")
-		Main.INTER.Visible = true
-		spinlogo(true)
-	--	spincornerlogo(true)
-	end)
-	
-	Main.GUIS.MouseButton1Click:Connect(function()
-		hideotherui("EXECUTABLES")
-		Main.INTER.Visible = false
-		spinlogo(false)
-	--	spincornerlogo(true)
-	end)
-	
-	Main.AUDIT.MouseButton1Click:Connect(function()
-		hideotherui("AUDIT")
-		Main.INTER.Visible = false
-		spinlogo(false)
-		--	spincornerlogo(true)
 	end)
 	
 	
-	----EXECUTOR----
-	local backdoor = nil
-	local backdoorcode = nil
-	local loadstringlocated = false
-	
-	Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.INJECT.MouseButton1Click:Connect(function()
-		if Injected == false then
-			for _,selectedobject in pairs(game.ReplicatedStorage:GetDescendants()) do
-				if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
-					backdoor = selectedobject
-					Injected = true
-				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
-					backdoorcode = selectedobject
-				elseif selectedobject:IsA("ModuleScript") then
-					for _,children in pairs(selectedobject:GetChildren()) do
-						if children.Name == "Rerubi" or children.Name == "LuaU" then
-							for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
-								if remotesearch:IsA("RemoteEvent") then
-									loadstringlocated = true
-									Injected = true
-									backdoor = remotesearch
-								end
-							end
-						end
-					end
-				end
-			end
-			for _,selectedobject in pairs(game.Lighting:GetDescendants()) do
-				if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
-					backdoor = selectedobject
-					Injected = true
-				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
-					backdoorcode = selectedobject
-				elseif selectedobject:IsA("ModuleScript") then
-					for _,children in pairs(selectedobject:GetChildren()) do
-						if children.Name == "Rerubi" or children.Name == "LuaU" then
-							for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
-								if remotesearch:IsA("RemoteEvent") then
-									loadstringlocated = true
-									Injected = true
-									backdoor = remotesearch
-								end
-							end
-						end
-					end
-				end
-			end
-			for _,selectedobject in pairs(game.Workspace:GetDescendants()) do
-				if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
-					backdoor = selectedobject
-					Injected = true
-				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
-					backdoorcode = selectedobject
-				elseif selectedobject:IsA("ModuleScript") then
-					for _,children in pairs(selectedobject:GetChildren()) do
-						if children.Name == "Rerubi" or children.Name == "LuaU" then
-							for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
-								if remotesearch:IsA("RemoteEvent") then
-									loadstringlocated = true
-									Injected = true
-									backdoor = remotesearch
-								end
-							end
-						end
-					end
-				end
-			end
-			for _,selectedobject in pairs(game.StarterPack:GetDescendants()) do
-				if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
-					backdoor = selectedobject
-					Injected = true
-				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
-					backdoorcode = selectedobject
-				elseif selectedobject:IsA("ModuleScript") then
-					for _,children in pairs(selectedobject:GetChildren()) do
-						if children.Name == "Rerubi" or children.Name == "LuaU" then
-							for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
-								if remotesearch:IsA("RemoteEvent") then
-									loadstringlocated = true
-									Injected = true
-									backdoor = remotesearch
-								end
-							end
-						end
-					end
-				end
-			end
-			for _,selectedobject in pairs(game.Players:GetDescendants()) do
-				if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
-					backdoor = selectedobject
-					Injected = true
-				elseif selectedobject:IsA("RemoteFunction") and selectedobject.Name == "MMSBCode" then
-					backdoorcode = selectedobject
-				elseif selectedobject:IsA("ModuleScript") then
-					for _,children in pairs(selectedobject:GetChildren()) do
-						if children.Name == "Rerubi" or children.Name == "LuaU" then
-							for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
-								if remotesearch:IsA("RemoteEvent") then
-									loadstringlocated = true
-									Injected = true
-									backdoor = remotesearch
-								end
-							end
-						end
-					end
-				end
-			end
-		end
-		if Injected == true then
-			logentry("Succesfully Injected Executor")
-			text.Value = "Injected Successfully"
-			NF:Play()
-			firedialog()
+	script.Parent.Seeker.controlsbutton.MouseButton1Click:Connect(function()
+		if controlstog == false then
+			controlstog = true
+			script.Parent.Seeker.controls.Visible = true
 		else
-			logentry("Failed Executor Injection")
-			text.Value = "Failed to Inject"
-			NF:Play()
-			firedialog()
+			controlstog = false
+			script.Parent.Seeker.controls.Visible = false
 		end
 	end)
 	
-	
-	
-	Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.EXE.MouseButton1Click:Connect(function()
-		if MTog == true then
-			loadstring(Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)()
+	script.Parent.Seeker.Dev.MouseButton1Click:Connect(function()
+		if devmode == false then
+			devmode = true
+			script.Parent.Seeker.Dev.TextTransparency = 0
+			text.Value = "DevMode Enabled"
+			firestupidstuff()
 		else
-			if Injected == true then
-				if loadstringlocated == true then
-					backdoor:FireServer(Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
-				else
-					backdoor:FireServer(Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
-				end
-				logentry("Executed ",Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text)
-			end
+			devmode = false
+			script.Parent.Seeker.Dev.TextTransparency = 0.5
+			text.Value = "DevMode Disabled"
+			firestupidstuff()
 		end
 	end)
 	
-	Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.CLEAR.MouseButton1Click:Connect(function()
-		Main.MAINPART.EXECUTOR.CodeEntry.ScrollingFrame.PlrCode.Text = ""
-	end)
 	
-	Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.MTOG.MouseButton1Click:Connect(function()
-		if MTog == false then
-			MTog = true
-			Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.MTOG.Text = "CLIENT"
+	script.Parent.Seeker.LimbSubmit.MouseButton1Click:Connect(function()
+		local ltext = script.Parent.Seeker.LimbSelect
+		if ltext.Text == "Torso" or ltext.Text == "Head" or ltext.Text == "Left Arm" or ltext.Text == "Right Arm" or  ltext.Text == "Left Leg" or ltext.Text == "Right Leg" then
 		else
-			MTog = false
-			Main.MAINPART.EXECUTOR.CodeEntry.ButtonBar.MTOG.Text = "SERVER"
+			text.Value = ltext.Text.." Is not a valid member of your Character!"
+			firestupidstuff()
+			ltext.Text = "Torso"
 		end
 	end)
-	
-	Main.MAINPART.EXECUTABLES.UNS1.MouseButton1Click:Connect(function()
-		-- Gui to Lua
-		-- Version: 3.2
-	
-		-- Instances:
-	
-		local LOLK = Instance.new("ScreenGui")
-		local Load = Instance.new("Frame")
-		local UICorner = Instance.new("UICorner")
-		local Title = Instance.new("TextLabel")
-		local RunScript = Instance.new("TextButton")
-		local UICorner_2 = Instance.new("UICorner")
-		local Logo = Instance.new("Frame")
-		local UICorner_3 = Instance.new("UICorner")
-		local COG = Instance.new("ImageLabel")
-		local DOT = Instance.new("ImageLabel")
-		local RING = Instance.new("ImageLabel")
-		local ARROW = Instance.new("ImageLabel")
-		local Seeker = Instance.new("Frame")
-		local UICorner_4 = Instance.new("UICorner")
-		local Keybind = Instance.new("TextLabel")
-		local UICorner_5 = Instance.new("UICorner")
-		local TOTOGGLE = Instance.new("TextLabel")
-		local CloseFrame = Instance.new("Frame")
-		local UICorner_6 = Instance.new("UICorner")
-		local bar = Instance.new("Frame")
-		local Close = Instance.new("TextButton")
-		local Waittime = Instance.new("TextBox")
-		local UICorner_7 = Instance.new("UICorner")
-		local Speed = Instance.new("TextBox")
-		local UICorner_8 = Instance.new("UICorner")
-		local bar2 = Instance.new("Frame")
-		local UICorner_9 = Instance.new("UICorner")
-		local MaxVelocity = Instance.new("TextBox")
-		local UICorner_10 = Instance.new("UICorner")
-		local controls = Instance.new("Frame")
-		local UICorner_11 = Instance.new("UICorner")
-		local TextLabel = Instance.new("TextLabel")
-		local TextLabel_2 = Instance.new("TextLabel")
-		local TextLabel_3 = Instance.new("TextLabel")
-		local TextLabel_4 = Instance.new("TextLabel")
-		local controlsbutton = Instance.new("TextButton")
-		local UICorner_12 = Instance.new("UICorner")
-		local Dev = Instance.new("TextButton")
-		local LimbSelect = Instance.new("TextBox")
-		local LimbSubmit = Instance.new("TextButton")
-		local Logo_2 = Instance.new("Frame")
-		local UICorner_13 = Instance.new("UICorner")
-		local COG_2 = Instance.new("ImageLabel")
-		local DOT_2 = Instance.new("ImageLabel")
-		local RING_2 = Instance.new("ImageLabel")
-		local ARROW_2 = Instance.new("ImageLabel")
-		local DevUI = Instance.new("BillboardGui")
-		local Frame = Instance.new("Frame")
-		local speed = Instance.new("TextLabel")
-		local UICorner_14 = Instance.new("UICorner")
-		local maxforce = Instance.new("TextLabel")
-		local Dialog = Instance.new("Frame")
-		local Frame3 = Instance.new("Frame")
-		local Frame1 = Instance.new("Frame")
-		local UIGradient = Instance.new("UIGradient")
-		local Frame2 = Instance.new("Frame")
-		local UIGradient_2 = Instance.new("UIGradient")
-		local Text = Instance.new("TextLabel")
-	
-		--Properties:
-	
-		LOLK.Name = "LOLK"
-		LOLK.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-		LOLK.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	
-		Load.Name = "Load"
-		Load.Parent = LOLK
-		Load.AnchorPoint = Vector2.new(0.5, 0.899999976)
-		Load.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-		Load.Position = UDim2.new(0.5, 0, 0.899999976, 0)
-		Load.Size = UDim2.new(0, 500, 0, 100)
-	
-		UICorner.CornerRadius = UDim.new(0, 10)
-		UICorner.Parent = Load
-	
-		Title.Name = "Title"
-		Title.Parent = Load
-		Title.AnchorPoint = Vector2.new(0.699999988, 0)
-		Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Title.BackgroundTransparency = 1.000
-		Title.Position = UDim2.new(0.699999988, 0, 0, 0)
-		Title.Size = UDim2.new(0, 300, 0, 50)
-		Title.Font = Enum.Font.SourceSansSemibold
-		Title.Text = "StunFly"
-		Title.TextColor3 = Color3.fromRGB(152, 27, 27)
-		Title.TextSize = 40.000
-		Title.TextStrokeColor3 = Color3.fromRGB(85, 0, 0)
-		Title.TextStrokeTransparency = 0.000
-		Title.TextWrapped = true
-	
-		RunScript.Name = "RunScript"
-		RunScript.Parent = Load
-		RunScript.AnchorPoint = Vector2.new(0.699999988, 0.899999976)
-		RunScript.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-		RunScript.Position = UDim2.new(0.699999988, 0, 0.899999976, 0)
-		RunScript.Size = UDim2.new(0, 300, 0, 40)
-		RunScript.Font = Enum.Font.ArialBold
-		RunScript.Text = "Run Script"
-		RunScript.TextColor3 = Color3.fromRGB(85, 0, 0)
-		RunScript.TextSize = 40.000
-		RunScript.TextWrapped = true
-	
-		UICorner_2.CornerRadius = UDim.new(0, 10)
-		UICorner_2.Parent = RunScript
-	
-		Logo.Name = "Logo"
-		Logo.Parent = Load
-		Logo.Active = true
-		Logo.AnchorPoint = Vector2.new(0.0500000007, 0)
-		Logo.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-		Logo.Position = UDim2.new(0.0500000007, 0, 0, 0)
-		Logo.Selectable = true
-		Logo.Size = UDim2.new(0, 100, 0, 100)
-		Logo.ZIndex = -1
-	
-		UICorner_3.CornerRadius = UDim.new(1, 0)
-		UICorner_3.Parent = Logo
-	
-		COG.Name = "COG"
-		COG.Parent = Logo
-		COG.AnchorPoint = Vector2.new(0.5, 0.5)
-		COG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		COG.BackgroundTransparency = 1.000
-		COG.Position = UDim2.new(0.5, 0, 0.5, 0)
-		COG.Size = UDim2.new(0, 90, 0, 90)
-		COG.Image = "http://www.roblox.com/asset/?id=6031280882"
-		COG.ImageColor3 = Color3.fromRGB(99, 18, 18)
-	
-		DOT.Name = "DOT"
-		DOT.Parent = Logo
-		DOT.AnchorPoint = Vector2.new(0.5, 0.5)
-		DOT.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
-		DOT.BackgroundTransparency = 1.000
-		DOT.Position = UDim2.new(0.5, 0, 0.5, 0)
-		DOT.Rotation = -90.000
-		DOT.Size = UDim2.new(0, 15, 0, 15)
-		DOT.ZIndex = 2
-		DOT.Image = "http://www.roblox.com/asset/?id=7059999549"
-		DOT.ImageColor3 = Color3.fromRGB(71, 71, 71)
-	
-		RING.Name = "RING"
-		RING.Parent = Logo
-		RING.AnchorPoint = Vector2.new(0.5, 0.5)
-		RING.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
-		RING.BackgroundTransparency = 1.000
-		RING.Position = UDim2.new(0.5, 0, 0.5, 0)
-		RING.Rotation = -90.000
-		RING.Size = UDim2.new(0, 90, 0, 90)
-		RING.Image = "http://www.roblox.com/asset/?id=6035047391"
-		RING.ImageColor3 = Color3.fromRGB(99, 18, 18)
-	
-		ARROW.Name = "ARROW"
-		ARROW.Parent = Logo
-		ARROW.AnchorPoint = Vector2.new(0.5, 0.5)
-		ARROW.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		ARROW.BackgroundTransparency = 1.000
-		ARROW.Position = UDim2.new(0.5, 0, 0.5, 0)
-		ARROW.Rotation = 45.000
-		ARROW.Size = UDim2.new(0, 90, 0, 90)
-		ARROW.Image = "http://www.roblox.com/asset/?id=1467771384"
-		ARROW.ImageColor3 = Color3.fromRGB(99, 18, 18)
-	
-		Seeker.Name = "Seeker"
-		Seeker.Parent = LOLK
-		Seeker.AnchorPoint = Vector2.new(1, 0.5)
-		Seeker.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-		Seeker.Position = UDim2.new(1, 0, 0.5, 0)
-		Seeker.Size = UDim2.new(0, 100, 0, 300)
-		Seeker.Visible = false
-	
-		UICorner_4.CornerRadius = UDim.new(0, 10)
-		UICorner_4.Parent = Seeker
-	
-		Keybind.Name = "Keybind"
-		Keybind.Parent = Seeker
-		Keybind.AnchorPoint = Vector2.new(0.5, 0.400000006)
-		Keybind.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-		Keybind.Position = UDim2.new(0.5, 0, 0.400000006, 0)
-		Keybind.Size = UDim2.new(0, 80, 0, 80)
-		Keybind.Font = Enum.Font.ArialBold
-		Keybind.Text = "F"
-		Keybind.TextColor3 = Color3.fromRGB(85, 0, 0)
-		Keybind.TextScaled = true
-		Keybind.TextSize = 14.000
-		Keybind.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-		Keybind.TextStrokeTransparency = 0.000
-		Keybind.TextWrapped = true
-	
-		UICorner_5.CornerRadius = UDim.new(0, 10)
-		UICorner_5.Parent = Keybind
-	
-		TOTOGGLE.Name = "TOTOGGLE"
-		TOTOGGLE.Parent = Seeker
-		TOTOGGLE.AnchorPoint = Vector2.new(0.5, 0.699999988)
-		TOTOGGLE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		TOTOGGLE.BackgroundTransparency = 1.000
-		TOTOGGLE.Position = UDim2.new(0.5, 0, 0.699999988, 0)
-		TOTOGGLE.Size = UDim2.new(0, 100, 0, 50)
-		TOTOGGLE.Font = Enum.Font.ArialBold
-		TOTOGGLE.Text = "to toggle"
-		TOTOGGLE.TextColor3 = Color3.fromRGB(85, 0, 0)
-		TOTOGGLE.TextSize = 20.000
-		TOTOGGLE.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-		TOTOGGLE.TextStrokeTransparency = 0.000
-		TOTOGGLE.TextWrapped = true
-		TOTOGGLE.TextYAlignment = Enum.TextYAlignment.Top
-	
-		CloseFrame.Name = "CloseFrame"
-		CloseFrame.Parent = Seeker
-		CloseFrame.AnchorPoint = Vector2.new(1, 1)
-		CloseFrame.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-		CloseFrame.Position = UDim2.new(1, 0, 1, 0)
-		CloseFrame.Size = UDim2.new(0, 40, 0, 38)
-	
-		UICorner_6.CornerRadius = UDim.new(0, 10)
-		UICorner_6.Parent = CloseFrame
-	
-		bar.Name = "bar"
-		bar.Parent = Seeker
-		bar.AnchorPoint = Vector2.new(0.5, 0.824999988)
-		bar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-		bar.BorderSizePixel = 0
-		bar.Position = UDim2.new(0.5, 0, 0.824999988, 0)
-		bar.Size = UDim2.new(0, 100, 0, 50)
-	
-		Close.Name = "Close"
-		Close.Parent = Seeker
-		Close.AnchorPoint = Vector2.new(1, 1)
-		Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Close.BackgroundTransparency = 1.000
-		Close.BorderSizePixel = 0
-		Close.Position = UDim2.new(1, 0, 1, 0)
-		Close.Size = UDim2.new(0, 40, 0, 38)
-		Close.ZIndex = 10
-		Close.Font = Enum.Font.JosefinSans
-		Close.Text = "|>|"
-		Close.TextColor3 = Color3.fromRGB(255, 0, 0)
-		Close.TextScaled = true
-		Close.TextSize = 14.000
-		Close.TextWrapped = true
-	
-		Waittime.Name = "Waittime"
-		Waittime.Parent = Seeker
-		Waittime.AnchorPoint = Vector2.new(0, 1)
-		Waittime.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-		Waittime.Position = UDim2.new(0, 0, 1, 0)
-		Waittime.Size = UDim2.new(0, 30, 0, 38)
-		Waittime.Font = Enum.Font.ArialBold
-		Waittime.PlaceholderText = "1"
-		Waittime.Text = "1"
-		Waittime.TextColor3 = Color3.fromRGB(255, 255, 0)
-		Waittime.TextScaled = true
-		Waittime.TextSize = 30.000
-		Waittime.TextStrokeColor3 = Color3.fromRGB(255, 129, 3)
-		Waittime.TextStrokeTransparency = 0.000
-		Waittime.TextWrapped = true
-	
-		UICorner_7.CornerRadius = UDim.new(0, 10)
-		UICorner_7.Parent = Waittime
-	
-		Speed.Name = "Speed"
-		Speed.Parent = Seeker
-		Speed.AnchorPoint = Vector2.new(0, 1)
-		Speed.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-		Speed.BorderSizePixel = 0
-		Speed.Position = UDim2.new(0, 30, 1, 0)
-		Speed.Size = UDim2.new(0, 30, 0, 38)
-		Speed.Font = Enum.Font.ArialBold
-		Speed.PlaceholderText = "1"
-		Speed.Text = "1"
-		Speed.TextColor3 = Color3.fromRGB(0, 170, 255)
-		Speed.TextScaled = true
-		Speed.TextSize = 30.000
-		Speed.TextStrokeColor3 = Color3.fromRGB(0, 255, 255)
-		Speed.TextStrokeTransparency = 0.000
-		Speed.TextWrapped = true
-	
-		UICorner_8.CornerRadius = UDim.new(0, 10)
-		UICorner_8.Parent = Speed
-	
-		bar2.Name = "bar2"
-		bar2.Parent = Seeker
-		bar2.AnchorPoint = Vector2.new(0.5, 0.824999988)
-		bar2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-		bar2.BorderSizePixel = 0
-		bar2.Position = UDim2.new(0.5, 0, 1.19881892, 0)
-		bar2.Size = UDim2.new(0, 100, 0, 119)
-		bar2.ZIndex = -1
-	
-		UICorner_9.CornerRadius = UDim.new(0, 10)
-		UICorner_9.Parent = bar2
-	
-		MaxVelocity.Name = "MaxVelocity"
-		MaxVelocity.Parent = Seeker
-		MaxVelocity.AnchorPoint = Vector2.new(0, 1)
-		MaxVelocity.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-		MaxVelocity.BorderSizePixel = 0
-		MaxVelocity.Position = UDim2.new(0, 0, 1, 40)
-		MaxVelocity.Size = UDim2.new(0, 50, 0, 40)
-		MaxVelocity.Font = Enum.Font.ArialBold
-		MaxVelocity.PlaceholderText = "1"
-		MaxVelocity.Text = "1"
-		MaxVelocity.TextColor3 = Color3.fromRGB(255, 177, 19)
-		MaxVelocity.TextScaled = true
-		MaxVelocity.TextSize = 30.000
-		MaxVelocity.TextStrokeColor3 = Color3.fromRGB(255, 255, 0)
-		MaxVelocity.TextStrokeTransparency = 0.000
-		MaxVelocity.TextWrapped = true
-	
-		UICorner_10.CornerRadius = UDim.new(0, 10)
-		UICorner_10.Parent = MaxVelocity
-	
-		controls.Name = "controls"
-		controls.Parent = Seeker
-		controls.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-		controls.Position = UDim2.new(-1.29000008, 0, 0, 0)
-		controls.Size = UDim2.new(0, 100, 0, 206)
-		controls.Visible = false
-	
-		UICorner_11.CornerRadius = UDim.new(0, 10)
-		UICorner_11.Parent = controls
-	
-		TextLabel.Parent = controls
-		TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		TextLabel.BackgroundTransparency = 1.000
-		TextLabel.Size = UDim2.new(0, 100, 0, 50)
-		TextLabel.Font = Enum.Font.ArialBold
-		TextLabel.Text = "CONTROLS"
-		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-		TextLabel.TextScaled = true
-		TextLabel.TextSize = 14.000
-		TextLabel.TextWrapped = true
-	
-		TextLabel_2.Parent = controls
-		TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		TextLabel_2.BackgroundTransparency = 1.000
-		TextLabel_2.Position = UDim2.new(0, 0, 0.242718443, 0)
-		TextLabel_2.Size = UDim2.new(0, 100, 0, 31)
-		TextLabel_2.Font = Enum.Font.ArialBold
-		TextLabel_2.Text = "yellow = waittime"
-		TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 0)
-		TextLabel_2.TextScaled = true
-		TextLabel_2.TextSize = 14.000
-		TextLabel_2.TextWrapped = true
-		TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
-		TextLabel_2.TextYAlignment = Enum.TextYAlignment.Top
-	
-		TextLabel_3.Parent = controls
-		TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		TextLabel_3.BackgroundTransparency = 1.000
-		TextLabel_3.Position = UDim2.new(0, 0, 0.427184463, 0)
-		TextLabel_3.Size = UDim2.new(0, 100, 0, 31)
-		TextLabel_3.Font = Enum.Font.ArialBold
-		TextLabel_3.Text = "blue = max force"
-		TextLabel_3.TextColor3 = Color3.fromRGB(0, 170, 255)
-		TextLabel_3.TextScaled = true
-		TextLabel_3.TextSize = 14.000
-		TextLabel_3.TextWrapped = true
-		TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
-		TextLabel_3.TextYAlignment = Enum.TextYAlignment.Top
-	
-		TextLabel_4.Parent = controls
-		TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		TextLabel_4.BackgroundTransparency = 1.000
-		TextLabel_4.Position = UDim2.new(0, 0, 0.577669919, 0)
-		TextLabel_4.Size = UDim2.new(0, 100, 0, 31)
-		TextLabel_4.Font = Enum.Font.ArialBold
-		TextLabel_4.Text = "orange = speed"
-		TextLabel_4.TextColor3 = Color3.fromRGB(255, 170, 0)
-		TextLabel_4.TextScaled = true
-		TextLabel_4.TextSize = 14.000
-		TextLabel_4.TextWrapped = true
-		TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
-		TextLabel_4.TextYAlignment = Enum.TextYAlignment.Top
-	
-		controlsbutton.Name = "controlsbutton"
-		controlsbutton.Parent = Seeker
-		controlsbutton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-		controlsbutton.BackgroundTransparency = 0.500
-		controlsbutton.Position = UDim2.new(-0.50999999, 0, 0.396666676, 0)
-		controlsbutton.Rotation = 90.000
-		controlsbutton.Size = UDim2.new(0, 90, 0, 18)
-		controlsbutton.Font = Enum.Font.ArialBold
-		controlsbutton.Text = "CONTROLS"
-		controlsbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
-		controlsbutton.TextScaled = true
-		controlsbutton.TextSize = 14.000
-		controlsbutton.TextWrapped = true
-	
-		UICorner_12.CornerRadius = UDim.new(0, 10)
-		UICorner_12.Parent = controlsbutton
-	
-		Dev.Name = "Dev"
-		Dev.Parent = Seeker
-		Dev.AnchorPoint = Vector2.new(1, 1)
-		Dev.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Dev.BackgroundTransparency = 1.000
-		Dev.BorderSizePixel = 0
-		Dev.Position = UDim2.new(1, 0, 1.14666665, 0)
-		Dev.Size = UDim2.new(0, 40, 0, 40)
-		Dev.ZIndex = 10
-		Dev.Font = Enum.Font.ArialBold
-		Dev.Text = "Dev"
-		Dev.TextColor3 = Color3.fromRGB(255, 0, 0)
-		Dev.TextScaled = true
-		Dev.TextSize = 14.000
-		Dev.TextTransparency = 0.500
-		Dev.TextWrapped = true
-	
-		LimbSelect.Name = "LimbSelect"
-		LimbSelect.Parent = Seeker
-		LimbSelect.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
-		LimbSelect.BackgroundTransparency = 1.000
-		LimbSelect.Position = UDim2.new(0, 0, 1.13333333, 0)
-		LimbSelect.Size = UDim2.new(0, 100, 0, 40)
-		LimbSelect.Font = Enum.Font.ArialBold
-		LimbSelect.PlaceholderColor3 = Color3.fromRGB(116, 116, 116)
-		LimbSelect.PlaceholderText = "Torso"
-		LimbSelect.Text = "Torso"
-		LimbSelect.TextColor3 = Color3.fromRGB(85, 0, 0)
-		LimbSelect.TextScaled = true
-		LimbSelect.TextSize = 30.000
-		LimbSelect.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-		LimbSelect.TextStrokeTransparency = 0.000
-		LimbSelect.TextWrapped = true
-	
-		LimbSubmit.Name = "LimbSubmit"
-		LimbSubmit.Parent = Seeker
-		LimbSubmit.AnchorPoint = Vector2.new(1, 1)
-		LimbSubmit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		LimbSubmit.BackgroundTransparency = 1.000
-		LimbSubmit.BorderSizePixel = 0
-		LimbSubmit.Position = UDim2.new(0.970000029, 0, 1.33533323, 0)
-		LimbSubmit.Size = UDim2.new(0, 94, 0, 21)
-		LimbSubmit.ZIndex = 10
-		LimbSubmit.Font = Enum.Font.ArialBold
-		LimbSubmit.Text = "Submit"
-		LimbSubmit.TextColor3 = Color3.fromRGB(255, 255, 127)
-		LimbSubmit.TextScaled = true
-		LimbSubmit.TextSize = 14.000
-		LimbSubmit.TextTransparency = 0.500
-		LimbSubmit.TextWrapped = true
-	
-		Logo_2.Name = "Logo"
-		Logo_2.Parent = Seeker
-		Logo_2.Active = true
-		Logo_2.AnchorPoint = Vector2.new(0.5, 0.0199999996)
-		Logo_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-		Logo_2.Position = UDim2.new(0.5, 0, 0.0199999996, 0)
-		Logo_2.Selectable = true
-		Logo_2.Size = UDim2.new(0, 80, 0, 80)
-		Logo_2.ZIndex = -1
-	
-		UICorner_13.CornerRadius = UDim.new(1, 0)
-		UICorner_13.Parent = Logo_2
-	
-		COG_2.Name = "COG"
-		COG_2.Parent = Logo_2
-		COG_2.AnchorPoint = Vector2.new(0.5, 0.5)
-		COG_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		COG_2.BackgroundTransparency = 1.000
-		COG_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-		COG_2.Size = UDim2.new(0, 90, 0, 90)
-		COG_2.Image = "http://www.roblox.com/asset/?id=6031280882"
-		COG_2.ImageColor3 = Color3.fromRGB(99, 18, 18)
-	
-		DOT_2.Name = "DOT"
-		DOT_2.Parent = Logo_2
-		DOT_2.AnchorPoint = Vector2.new(0.5, 0.5)
-		DOT_2.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
-		DOT_2.BackgroundTransparency = 1.000
-		DOT_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-		DOT_2.Rotation = -90.000
-		DOT_2.Size = UDim2.new(0, 15, 0, 15)
-		DOT_2.ZIndex = 2
-		DOT_2.Image = "http://www.roblox.com/asset/?id=7059999549"
-		DOT_2.ImageColor3 = Color3.fromRGB(71, 71, 71)
-	
-		RING_2.Name = "RING"
-		RING_2.Parent = Logo_2
-		RING_2.AnchorPoint = Vector2.new(0.5, 0.5)
-		RING_2.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
-		RING_2.BackgroundTransparency = 1.000
-		RING_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-		RING_2.Rotation = -90.000
-		RING_2.Size = UDim2.new(0, 90, 0, 90)
-		RING_2.Image = "http://www.roblox.com/asset/?id=6035047391"
-		RING_2.ImageColor3 = Color3.fromRGB(99, 18, 18)
-	
-		ARROW_2.Name = "ARROW"
-		ARROW_2.Parent = Logo_2
-		ARROW_2.AnchorPoint = Vector2.new(0.5, 0.5)
-		ARROW_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		ARROW_2.BackgroundTransparency = 1.000
-		ARROW_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-		ARROW_2.Rotation = 45.000
-		ARROW_2.Size = UDim2.new(0, 90, 0, 90)
-		ARROW_2.Image = "http://www.roblox.com/asset/?id=1467771384"
-		ARROW_2.ImageColor3 = Color3.fromRGB(99, 18, 18)
-	
-		DevUI.Name = "DevUI"
-		DevUI.Parent = LOLK
-		DevUI.Enabled = false
-		DevUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-		DevUI.Active = true
-		DevUI.MaxDistance = 100.000
-		DevUI.Size = UDim2.new(0, 50, 0, 50)
-		DevUI.StudsOffset = Vector3.new(0, 1, 0)
-	
-		Frame.Parent = DevUI
-		Frame.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-		Frame.BackgroundTransparency = 1.000
-		Frame.Size = UDim2.new(1, 0, 1, 0)
-	
-		speed.Name = "speed"
-		speed.Parent = Frame
-		speed.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-		speed.BackgroundTransparency = 1.000
-		speed.Size = UDim2.new(0, 50, 0, 20)
-		speed.Font = Enum.Font.ArialBold
-		speed.Text = "0"
-		speed.TextColor3 = Color3.fromRGB(255, 170, 0)
-		speed.TextScaled = true
-		speed.TextSize = 14.000
-		speed.TextWrapped = true
-	
-		UICorner_14.CornerRadius = UDim.new(0, 10)
-		UICorner_14.Parent = Frame
-	
-		maxforce.Name = "maxforce"
-		maxforce.Parent = Frame
-		maxforce.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-		maxforce.BackgroundTransparency = 1.000
-		maxforce.Position = UDim2.new(0, 0, 0, 30)
-		maxforce.Size = UDim2.new(0, 50, 0, 20)
-		maxforce.Font = Enum.Font.ArialBold
-		maxforce.Text = "0"
-		maxforce.TextColor3 = Color3.fromRGB(0, 170, 255)
-		maxforce.TextScaled = true
-		maxforce.TextSize = 14.000
-		maxforce.TextWrapped = true
-		maxforce.TextYAlignment = Enum.TextYAlignment.Bottom
-	
-		Dialog.Name = "Dialog"
-		Dialog.Parent = LOLK
-		Dialog.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Dialog.BackgroundTransparency = 1.000
-		Dialog.Size = UDim2.new(1, 0, 1, 0)
-	
-		Frame3.Name = "Frame3"
-		Frame3.Parent = Dialog
-		Frame3.AnchorPoint = Vector2.new(0, 0.100000001)
-		Frame3.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-		Frame3.BackgroundTransparency = 1.000
-		Frame3.BorderSizePixel = 0
-		Frame3.Position = UDim2.new(0.400000006, 0, 0.100000001, 0)
-		Frame3.Size = UDim2.new(0.200000003, 0, 0, 50)
-	
-		Frame1.Name = "Frame1"
-		Frame1.Parent = Dialog
-		Frame1.AnchorPoint = Vector2.new(0, 0.100000001)
-		Frame1.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-		Frame1.BackgroundTransparency = 1.000
-		Frame1.BorderSizePixel = 0
-		Frame1.Position = UDim2.new(0, 0, 0.100000001, 0)
-		Frame1.Size = UDim2.new(0.400000006, 0, 0, 50)
-	
-		UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-		UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 1.00), NumberSequenceKeypoint.new(0.30, 1.00), NumberSequenceKeypoint.new(1.00, 0.00)}
-		UIGradient.Parent = Frame1
-	
-		Frame2.Name = "Frame2"
-		Frame2.Parent = Dialog
-		Frame2.AnchorPoint = Vector2.new(1, 0.100000001)
-		Frame2.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-		Frame2.BackgroundTransparency = 1.000
-		Frame2.BorderSizePixel = 0
-		Frame2.Position = UDim2.new(1, 0, 0.100000001, 0)
-		Frame2.Size = UDim2.new(0.400000006, 0, 0, 50)
-	
-		UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-		UIGradient_2.Rotation = 180
-		UIGradient_2.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 1.00), NumberSequenceKeypoint.new(0.30, 1.00), NumberSequenceKeypoint.new(1.00, 0.00)}
-		UIGradient_2.Parent = Frame2
-	
-		Text.Name = "Text"
-		Text.Parent = Dialog
-		Text.AnchorPoint = Vector2.new(0.5, 0.100000001)
-		Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Text.BackgroundTransparency = 1.000
-		Text.Position = UDim2.new(0.5, 0, 0.100000001, 0)
-		Text.Size = UDim2.new(0, 200, 0, 50)
-		Text.Font = Enum.Font.SourceSansLight
-		Text.Text = "Script Loaded without any issues."
-		Text.TextColor3 = Color3.fromRGB(85, 0, 0)
-		Text.TextSize = 30.000
-		Text.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-		Text.TextStrokeTransparency = 0.000
-		Text.TextTransparency = 1.000
-	
-		-- Scripts:
-	
-		local function WGRMTW_fake_script() -- LOLK.LocalScript 
-			local script = Instance.new('LocalScript', LOLK)
-	
-			local mouse = game.Players.LocalPlayer:GetMouse()
-			local text = Instance.new("StringValue",script.Parent)
-			local textcount = 0
-			local tog = false
-			local canraycast = false
-			local closetog = false
-			local controlstog = false
-			local devmode = false
-			local stupiduienabled = false
-	
-			local function firestupidstuff()
-				if stupiduienabled == false then
-					stupiduienabled = true
-					while wait() do
-						if script.Parent.Dialog.Frame1.BackgroundTransparency < .5 then
-							break
-						else
-							for _,dialogtext in pairs(script.Parent.Dialog:GetChildren()) do
-								if dialogtext:IsA("Frame") then
-									dialogtext.BackgroundTransparency = dialogtext.BackgroundTransparency - .01
-								elseif dialogtext:IsA("TextLabel") then
-									dialogtext.TextTransparency = dialogtext.TextTransparency - .015
-								elseif dialogtext:IsA("ImageLabel") then
-									if dialogtext.ImageTransparency == 0.5 then
-									else
-										dialogtext.ImageTransparency = dialogtext.ImageTransparency - .01
-									end
-								end
-							end
-						end
-					end
-					script.Parent.Dialog.Text.Text = text.Value
-					textcount = #text.Value
-					for _ = 1, textcount do
-						wait(.05)
-						script.Parent.Dialog.Text.MaxVisibleGraphemes = script.Parent.Dialog.Text.MaxVisibleGraphemes + 1
-					end
-					wait(3)
-					for _ = 1, textcount do
-						wait(.025)
-						script.Parent.Dialog.Text.MaxVisibleGraphemes = script.Parent.Dialog.Text.MaxVisibleGraphemes - 1
-					end
-					script.Parent.Dialog.Text.Text = "nil"
-					script.Parent.Dialog.Text.MaxVisibleGraphemes = 0
-					while wait(.1) do
-						if script.Parent.Dialog.Frame1.BackgroundTransparency > 1 then
-							break
-						else
-							for _,dialogtext in pairs(script.Parent.Dialog:GetChildren()) do
-								if dialogtext:IsA("Frame") then
-									dialogtext.BackgroundTransparency = dialogtext.BackgroundTransparency + .01
-								elseif dialogtext:IsA("TextLabel") then
-									dialogtext.TextTransparency = dialogtext.TextTransparency + .015
-								elseif dialogtext:IsA("ImageLabel") then
-									if dialogtext.ImageTransparency == 1 then
-									else
-										dialogtext.ImageTransparency = dialogtext.ImageTransparency + .01
-									end
-								end
-							end
-						end
-					end
-					stupiduienabled = false
-				end
-			end
-	
-			script.Parent.Load.RunScript.MouseButton1Click:Connect(function()
-				if tog == false then
-					tog = true
-					script.Parent.Load.Visible = false
-					script.Parent.Seeker.Visible = true
-					text.Value = "Script loaded without any issues."
-					firestupidstuff()
-				end
-			end)
-	
-			script.Parent.Seeker.Close.MouseButton1Click:Connect(function()
-				if closetog == false then
-					closetog = true
-					controlstog = false
-					script.Parent.Seeker.controls.Visible = false
-					script.Parent.Seeker.controlsbutton.Visible = false
-					script.Parent.Seeker.Close.Text = "|<|"
-					script.Parent.Seeker.bar.Visible = false
-					script.Parent.Seeker.Keybind.Visible = false
-					script.Parent.Seeker.TOTOGGLE.Visible = false
-					script.Parent.Seeker.Logo.Visible = false
-					script.Parent.Seeker.BackgroundTransparency = 1
-					text.Value = "Closed MainMenu"
-					firestupidstuff()
-				else
-					closetog = false
-					script.Parent.Seeker.controlsbutton.Visible = true
-					script.Parent.Seeker.Close.Text = "|>|"
-					script.Parent.Seeker.bar.Visible = true
-					script.Parent.Seeker.Keybind.Visible = true
-					script.Parent.Seeker.TOTOGGLE.Visible = true
-					script.Parent.Seeker.Logo.Visible = true
-					script.Parent.Seeker.BackgroundTransparency = 0
-					text.Value = "Opened MainMenu"
-					firestupidstuff()
-				end
-			end)
-	
-			mouse.KeyUp:connect(function(key)
-				if key == "f" and tog == true then
-					if canraycast == false then
-						canraycast = true
-						script.Parent.Seeker.bar.BackgroundColor3 = Color3.new(0,255,0)
-						script.Parent.Seeker.Close.TextColor3 = Color3.new(0,255,0)
-					else
-						canraycast = false
-						script.Parent.Seeker.bar.BackgroundColor3 = Color3.new(255,0,0)
-						script.Parent.Seeker.Close.TextColor3 = Color3.new(255,0,0)
-					end
-				end
-			end)
-	
-			local user
-	
-			user = game.Players.LocalPlayer.Character
-	
-	
-			mouse.Button1Down:connect(function() 
-				if canraycast == true then
-					local part = Instance.new("Part",workspace)
-					local AP = Instance.new("AlignPosition",user.Torso)
-					local att1 = Instance.new("Attachment",user:FindFirstChild(script.Parent.Seeker.LimbSelect.Text))
-					local att2 = Instance.new("Attachment",part)
-					local devui = script.Parent.DevUI:Clone()
-					AP.Enabled = false
-					part.Anchored = true
-					part.CanCollide = false
-					part.Transparency = 1
-					local ray = Ray.new(user.Torso.CFrame.p, (mouse.Hit.p - user.Torso.CFrame.p).unit*300)
-					local hit, position = game.Workspace:FindPartOnRay(ray, user)
-					part.CFrame = CFrame.new(position, user.Torso.CFrame.p)
-					AP.ReactionForceEnabled = false
-					AP.Responsiveness = tonumber(script.Parent.Seeker.MaxVelocity.Text)
-					AP.MaxForce = tonumber(script.Parent.Seeker.Speed.Text) * 10000
-					AP.Attachment0 = att1
-					AP.Attachment1 = att2
-					AP.Enabled = true
-					devui.Parent = att2
-					devui.Frame.speed.Text = tostring(AP.Responsiveness)
-					devui.Frame.maxforce.Text = tostring(AP.MaxForce)
-					if devmode == true then
-						devui.Enabled = true
-						AP.Visible = true
-						att1.Visible = true
-						att2.Visible = true
-					end
-					wait(tonumber(script.Parent.Seeker.Waittime.Text))
-					AP:Destroy()
-					att1:Destroy()
-					att2:Destroy()
-					part:Destroy()
-					devui:Destroy()
-				end
-			end)
-	
-	
-			script.Parent.Seeker.controlsbutton.MouseButton1Click:Connect(function()
-				if controlstog == false then
-					controlstog = true
-					script.Parent.Seeker.controls.Visible = true
-				else
-					controlstog = false
-					script.Parent.Seeker.controls.Visible = false
-				end
-			end)
-	
-			script.Parent.Seeker.Dev.MouseButton1Click:Connect(function()
-				if devmode == false then
-					devmode = true
-					script.Parent.Seeker.Dev.TextTransparency = 0
-					text.Value = "DevMode Enabled"
-					firestupidstuff()
-				else
-					devmode = false
-					script.Parent.Seeker.Dev.TextTransparency = 0.5
-					text.Value = "DevMode Disabled"
-					firestupidstuff()
-				end
-			end)
-	
-	
-			script.Parent.Seeker.LimbSubmit.MouseButton1Click:Connect(function()
-				local ltext = script.Parent.Seeker.LimbSelect
-				if ltext.Text == "Torso" or ltext.Text == "Head" or ltext.Text == "Left Arm" or ltext.Text == "Right Arm" or  ltext.Text == "Left Leg" or ltext.Text == "Right Leg" then
-				else
-					text.Value = ltext.Text.." Is not a valid member of your Character!"
-					firestupidstuff()
-					ltext.Text = "Torso"
-				end
-			end)
-		end
-		coroutine.wrap(WGRMTW_fake_script)()
-	
-	end)
-	Main.MAINPART.EXECUTABLES.UNS2.MouseButton1Click:Connect(function()
-		-- Gui to Lua
-		-- Version: 3.2
-	
-		-- Instances:
-	
-		local wowcrash = Instance.new("ScreenGui")
-		local Frame = Instance.new("Frame")
-		local qc = Instance.new("TextButton")
-		local UICorner = Instance.new("UICorner")
-		local sc = Instance.new("TextButton")
-		local UICorner_2 = Instance.new("UICorner")
-		local TextLabel = Instance.new("TextLabel")
-		local UICorner_3 = Instance.new("UICorner")
-		local hideui = Instance.new("Frame")
-	
-		--Properties:
-	
-		wowcrash.Name = "wowcrash"
-		wowcrash.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-		wowcrash.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	
-		Frame.Parent = wowcrash
-		Frame.AnchorPoint = Vector2.new(0.5, 0.800000012)
-		Frame.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
-		Frame.Position = UDim2.new(0.5, 0, 0.800000012, 0)
-		Frame.Size = UDim2.new(0, 400, 0, 200)
-	
-		qc.Name = "qc"
-		qc.Parent = Frame
-		qc.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
-		qc.Size = UDim2.new(1, 0, 0, 50)
-		qc.Font = Enum.Font.SourceSans
-		qc.Text = "Quick close"
-		qc.TextColor3 = Color3.fromRGB(0, 0, 0)
-		qc.TextScaled = true
-		qc.TextSize = 14.000
-		qc.TextWrapped = true
-	
-		UICorner.Parent = qc
-	
-		sc.Name = "sc"
-		sc.Parent = Frame
-		sc.AnchorPoint = Vector2.new(0, 1)
-		sc.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
-		sc.Position = UDim2.new(0, 0, 1, 0)
-		sc.Size = UDim2.new(1, 0, 0, 50)
-		sc.Font = Enum.Font.SourceSans
-		sc.Text = "Slow close"
-		sc.TextColor3 = Color3.fromRGB(0, 0, 0)
-		sc.TextScaled = true
-		sc.TextSize = 14.000
-		sc.TextWrapped = true
-	
-		UICorner_2.Parent = sc
-	
-		TextLabel.Parent = Frame
-		TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-		TextLabel.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
-		TextLabel.BorderSizePixel = 0
-		TextLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
-		TextLabel.Size = UDim2.new(1, 0, 0, 50)
-		TextLabel.Font = Enum.Font.SourceSans
-		TextLabel.Text = "This is a temporary GUI. I'm currently switching this over to NOMAIN."
-		TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-		TextLabel.TextScaled = true
-		TextLabel.TextSize = 14.000
-		TextLabel.TextWrapped = true
-	
-		UICorner_3.Parent = Frame
-	
-		hideui.Name = "hideui"
-		hideui.Parent = wowcrash
-		hideui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-		hideui.Size = UDim2.new(1, 0, 1, 0)
-		hideui.Visible = false
-	
-		-- Scripts:
-	
-		local function EQRNNR_fake_script() -- wowcrash.LocalScript 
-			local script = Instance.new('LocalScript', wowcrash)
-	
-			function lagow()
-				for _,v in pairs(workspace:GetDescendants()) do
-					if v:IsA("ClickDetector") then
-						fireclickdetector(v)
-					end
-				end
-			end
-	
-	
-			script.Parent.Frame.qc.MouseButton1Click:Connect(function()
-				local part = Instance.new("Part",workspace)
-				part.Anchored = true
-				part.Size = Vector3.new(10,0,10)
-				part.Position = Vector3.new(0,-20,0)
-				game.Players.LocalPlayer.Character:MoveTo(part.Position)
-				script.Parent.hideui.Visible = true
-				wait(2)
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-				lagow()
-			end)
-	
-			script.Parent.Frame.sc.MouseButton1Click:Connect(function()
-	
-			end)
-		end
-		coroutine.wrap(EQRNNR_fake_script)()
-	
-	end)
-	
-	Root["O/C"].TextButton.MouseButton1Click:Connect(function()
-		Root["O/C"].Visible = false
-		Root.MAIN.Visible = true
-		BC:Play()
-	end)
-	
-	Root.MAIN.EXIT.MouseButton1Click:Connect(function()
-		Root["O/C"].Visible = true
-		Root.MAIN.Visible = false
-	end)
-	----------------
-	
-	spincornerlogo(true)
-	
-	spinlogo(true)
-	
-	if game.Players.LocalPlayer.Name == "SP00KYW0AH" or game.Players.LocalPlayer.Name == "dontstealmyusernamem" then
-		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= ADMINISTRATOR"
-		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, SP00KYW0AH."
-	else
-		Main.MAINPART.INFORMATION.RNK = "YOU ARE A;= OWNER"
-		Main.MAINPART.INFORMATION.WM.Text = "WELCOME, MACHIAVELLI_MODDER"
-	end
-	
-	if game.Players.LocalPlayer.Name == "Machiavelli_Modder" or game.Players.LocalPlayer.Name == "SP00KYW0AH" or game.Players.LocalPlayer.Name == "dontstealmyusernamem" then
-	else
-		game:Shutdown()
-	end
 end
-coroutine.wrap(ZRTCCL_fake_script)()
+coroutine.wrap(GOZJC_fake_script)()
