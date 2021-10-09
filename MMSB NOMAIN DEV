@@ -149,6 +149,12 @@ game.CoreGui.NOMAINDEV.Frame.TextButton.MouseButton1Click:Connect(function()
 			local ftable = insulttable[math.random(1,#insulttable)]
 			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
 			bruh()
+			
+		elseif response == "SexualRemark" then
+			local insulttable = {"you lookin MIGHTY fine.","im gonna DEVOUR you tonight","DAMNNNNN","get on the bed","im finna make a model of you and put it in a jar capable of holding liquids for a long period of time","you'd look better with my liquids on you","im finna get sloppy with you","penor","what dat mouth do","im widen a hole for you","you lookin extra breedable today, DAMN","if i was a whistle you'd be blowing on plastic right about now","im finna make u wetter","gimme them slobbery lips","damn those are some thick thighs","you make me wanna whack my penor","give me them legs","im boutta start spreading ur legs","after im done with you, you wont be able to sit without making a puddle in the chair","them melons boutta be boing boing bouncing up and down"}
+			local ftable = insulttable[math.random(1,#insulttable)]
+			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
+			bruh()
 		elseif response == "Page2" then
 		wait(.1)
 	StarterGui:SetCore("SendNotification", {
@@ -164,15 +170,15 @@ game.CoreGui.NOMAINDEV.Frame.TextButton.MouseButton1Click:Connect(function()
 		Text = "5th Option",
 		Duration = aduration,
 		Callback = bindable,
-		Button1 = "Anti-Fling",
-		Button2 = "RandomMath",
+		Button1 = "MakeARemark",
+		Button2 = "SexualRemark",
 	})
 			StarterGui:SetCore("SendNotification", {
 		Title = "Code Execution",
 		Text = "6th Option",
 		Duration = aduration,
 		Callback = bindable,
-		Button1 = "WIP",
+		Button1 = "RandomMath",
 		Button2 = "Page3",
 	})
 		elseif response == "Anti-Fling" then
@@ -263,7 +269,7 @@ end)
 		Text = "3rd Option",
 		Duration = aduration,
 		Callback = bindable,
-		Button1 = "MakeARemark",
+		Button1 = "Anti-Fling",
 		Button2 = "Page2",
 	})
 	
