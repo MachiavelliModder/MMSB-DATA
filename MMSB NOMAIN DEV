@@ -249,8 +249,8 @@ end
 })
 
 		elseif response == "StunFly" then
-			httpsurl = 'https://raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/MMSB%20NOMAIN%20DEV'
-			loadstring(game:HttpGet((httpsurl),true))()
+		bruh()
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/StunFly'),true))()
 		    		StarterGui:SetCore("SendNotification", {
 					Title = "MMSB NOMAIN",
 					Text = "Reset to remove StunFly",
