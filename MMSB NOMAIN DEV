@@ -9,7 +9,7 @@ bindable = Instance.new("BindableFunction")
 aduration = 30
 
 
-SInsults = {"you lookin MIGHTY fine.","im gonna DEVOUR you tonight","DAMNNNNN","get on the bed","im finna make a model of you and put it in a jar capable of holding liquids for a long period of time","you'd look better with my liquids on you","im finna get sloppy with you","penor","what dat mouth do","im widen a hole for you","you lookin extra breedable today, DAMN","if i was a whistle you'd be blowing on plastic right about now","im finna make u wetter","gimme them slobbery lips","damn those are some thick thighs","you make me wanna whack my penor","give me them legs","im boutta start spreading ur legs","after im done with you, you wont be able to sit without making a puddle in the chair","them melons boutta be boing boing bouncing up and down","if you were a transformer, you'd be optimus fine"}
+SInsults = {"you lookin MIGHTY fine.","im gonna DEVOUR you tonight","DAMNNNNN","get on the bed","im finna make a model of you and put it in a jar capable of holding liquids for a long period of time","you'd look better with my liquids on you","penor","what dat mouth do","im widen a hole for you","you lookin extra breedable today, DAMN","if i was a whistle you'd be blowing on plastic right about now","gimme them slobbery lips","damn those are some thick thighs","you make me wanna whack my penor","give me them legs","im boutta start spreading ur legs","after im done with you, you wont be able to sit without making a puddle in the chair","them melons boutta be boing boing bouncing up and down","if you were a transformer, you'd be optimus fine","you lookin EXTRA crispy TODAY"}
 TInsults = {"ur a noob","ur a furry","what a poo poo head you are","child","ur dogwater","low intellect","absolute baboon","you are a toilet issue person","you're a school threat","ez","mad cuz bad","you probably a frog","you use freemodels","why are you such a loser","you are so funny omg im dying","ur sister is a witch","you probably dont even have 1TB","Dunkin' Donuts employee accused of killing customer with one punch after he was called a racial slur","suck a golfball","welcome to san adreas im cj from grove street","homicide is an optional choice","i am armed and dangerous","u converted to domestic terrorism","im gonna DEVOUR you.","gimme them legs","Geese is its own plural, stupid.","you're a joke at this point","yo mamma on my bed sheets and you're under 14","big failure","not even a belt can keep my jeans from sagging","how else could you afford all the soap that you drop?","my reputation leaves room for speculation","writin poems on tombstones","closest you ever came to a punchline was waitin for refreshments in the prom in 89'","you a punk","you probably cant even throw a football correctly","stay losing","cope harder","absolute baboon mentality","take a shower","gn kid","im staying winning and you're staying losing","what has the dog done","bye","he eatin soap","clam activity","bruh nawhhh nah bruhh nah no way bruhhh fr? Bruhhh","get real","can we ban this guy","cope on deez","this will drastically affect fishing season","diagnosis: skill issue","didnt cry about it","ok and?"}
 
 LastInsult = nil
@@ -89,6 +89,58 @@ DEVVER.TextColor3 = Color3.fromRGB(0, 0, 0)
 DEVVER.TextSize = 30.000
 DEVVER.TextTransparency = 0.900
 
+AttentionColor = Color3.fromRGB(255,0,0)
+WarningColor = Color3.fromRGB(255,255,0)
+InformationColor = Color3.fromRGB(85,170,0)
+
+game.CoreGui.RobloxGui.NotificationFrame.ChildAdded:Connect(function()
+	local a = coroutine.create(function()
+		for _,v in ipairs(game.CoreGui.RobloxGui.NotificationFrame:GetDescendants()) do
+			if v.Name == ("NotificationTitle") then
+				if string.find(v.Text,"WARNING") or string.find(v.Text,"Warning") then
+					v.Parent.BackgroundColor3 = WarningColor
+					for _,b in ipairs(v.Parent:GetChildren()) do
+						if b:IsA("TextButton") then
+							b.BackgroundColor3 = WarningColor
+						end
+					end
+				elseif string.find(v.Text,"ATTENTION") or string.find(v.Text,"Attention") then
+					v.Parent.BackgroundColor3 = AttentionColor
+					for _,b in ipairs(v.Parent:GetChildren()) do
+						if b:IsA("TextButton") then
+							b.BackgroundColor3 = AttentionColor
+						end
+					end
+				elseif string.find(v.Text,"INFORMATION") or string.find(v.Text,"Information") then
+					v.Parent.BackgroundColor3 = InformationColor
+					for _,b in ipairs(v.Parent:GetChildren()) do
+						if b:IsA("TextButton") then
+							b.BackgroundColor3 = InformationColor
+						end
+					end
+				end
+			end
+		end
+	end)
+	coroutine.resume(a)
+end)
+
+function colornotification(text,colortype)
+	for _,v in ipairs(game.CoreGui.RobloxGui.NotificationFrame:GetDescendants()) do
+		if v.Name == ("NotificationTitle") then
+			if v.Text == text then
+				v.Parent.BackgroundColor3 = Color3.fromRGB(colortype)
+				for _,b in ipairs(v.Parent:GetChildren()) do
+					if b:IsA("TextButton") then
+						b.BackgroundColor3 = Color3.fromRGB(colortype)
+					end
+				end
+			end
+		end
+	end
+end
+
+
 function bruh()
 	for _,v in pairs(game.CoreGui.RobloxGui.NotificationFrame:GetChildren()) do
 		if v.Name == "Notification" and v.NotificationTitle.Text == "Code Execution" then
@@ -119,152 +171,188 @@ function fireresponse(name)
 			local ftable = insulttable[math.random(1,#insulttable)]
 			if ftable == LastInsult then 
 				StarterGui:SetCore("SendNotification", {
-					Title = "MMSB NOMAIN",
+					Title = "SEXUAL REMARK",
 					Text = "Canceled Remark, Repeated Text x2.",
 					Duration = 5,
 					Callback = bindable
 				})
+				colornotification("SEXUAL REMARK",WarningColor)
 			else
-				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
-				LastInsult = ftable
+				if string.find(ftable,"#") then
+					StarterGui:SetCore("SendNotification", {
+						Title = "SEXUAL REMARK ERROR",
+						Text = "Message Contained Hashtags. Check Console for message",
+						Duration = 5,
+						Callback = bindable
+					})
+					warn(ftable)
+					colornotification("SEXUAL REMARK",AttentionColor)
+				else
+					game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
+					LastInsult = ftable
+				end
 			end
-		else
-			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
-			LastInsult = ftable
-		end
 
-	elseif name == "MakeARemark" then
-		local insulttable = TInsults
-		local ftable = insulttable[math.random(1,#insulttable)]
-		if ftable == LastInsult then 
+		elseif name == "MakeARemark" then
+			local insulttable = TInsults
 			local ftable = insulttable[math.random(1,#insulttable)]
 			if ftable == LastInsult then 
-				StarterGui:SetCore("SendNotification", {
-					Title = "MMSB NOMAIN",
-					Text = "Canceled Remark, Repeated Text x2.",
-					Duration = 5,
-					Callback = bindable
-				})
-			else
-				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
-				LastInsult = ftable
-			end
-		else
-			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
-			LastInsult = ftable
-		end
-	end
-
-	if name == "RandomMath" then
-		local val  = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame local r1 = math.random(-math.pi,math.pi) local r = math.random(1,2) local t = nil
-		local tg = nil
-		if r == 1 then
-			t="*"
-		else
-			t="/"
-		end
-		local m = r1 * math.random(10,28462) / r * math.floor(math.pi)
-		local args = {
-			[1] =  "you have ".. tostring(m).. " ¤™",
-			[2] = "All"
-		}
-		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-		if m <= 0 then
-			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("you are in debt.", "All")
-		else
-			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("you are rich", "All")
-		end
-	end
-
-	if name == "Anti-Fling" then
-		StarterGui:SetCore("SendNotification", {
-			Title = "MMSB NOMAIN",
-			Text = "Anti-Fling Enabled",
-			Duration = 5,
-			Callback = bindable
-		})
-
-		game["Run Service"].RenderStepped:Connect(function()
-			if game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Z >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.Z >= maxspeed then
-				if game.Players.LocalPlayer.Character.Humanoid.Sit ~= true then
-					velocityoverlimit = true
-					if tracebackactive ~= true then
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(savedpos) * CFrame.Angles(math.rad(savedori.X),math.rad(savedori.Y),math.rad(savedori.Z))
-						game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)  game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0) 
-						game.Players.LocalPlayer.Character.Torso.Velocity = Vector3.new(0,0,0) game.Players.LocalPlayer.Character.Torso.RotVelocity = Vector3.new(0,0,0)
-						repeatstand()
-						velocityoverlimit = false
-						tracebackactive = false
+				local ftable = insulttable[math.random(1,#insulttable)]
+				if ftable == LastInsult then 
+					StarterGui:SetCore("SendNotification", {
+						Title = "REMARK",
+						Text = "Canceled Remark, Repeated Text x2.",
+						Duration = 5,
+						Callback = bindable
+					})
+					colornotification("REMARK",WarningColor)
+				else
+					if string.find(ftable,"#") then
+						StarterGui:SetCore("SendNotification", {
+							Title = "REMARK ERROR",
+							Text = "Message Contained Hashtags. Check Console for message.",
+							Duration = 5,
+							Callback = bindable
+						})
+						warn(ftable)
+						colornotification("REMARK",AttentionColor)
+					else
+						game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
+						LastInsult = ftable
 					end
 				end
 			else
-				velocityoverlimit = false
+				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
+				LastInsult = ftable
 			end
-		end)
-		local ap = coroutine.create(function()
-			while wait() do
-				if velocityoverlimit == false then
-					savedpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-					savedori = game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation
-				--	a = Instance.new("Part",workspace) a.CanCollide = false a.Transparency = 1 a.Anchored = true a.Size = Vector3.new(0.1,0.1,0.1)
-			--		a.CFrame = game.Players.LocalPlayer.Character.Head.CFrame game.Debris:AddItem(a,20) 
-				else
+		end
+		end
 
+		if name == "RandomMath" then
+			local val  = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame local r1 = math.random(-math.pi,math.pi) local r = math.random(1,2) local t = nil
+			local tg = nil
+			if r == 1 then
+				t="*"
+			else
+				t="/"
+			end
+			local m = r1 * math.random(10,28462) / r * math.floor(math.pi)
+			local args = {
+				[1] =  "you have ".. tostring(m).. " ¤™",
+				[2] = "All"
+			}
+			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+			if m <= 0 then
+				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("you are in debt.", "All")
+			else
+				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("you are rich", "All")
+			end
+		end
+
+		if name == "Anti-Fling" then
+			StarterGui:SetCore("SendNotification", {
+				Title = "MMSB NOMAIN INFORMATION",
+				Text = "Anti-Fling Enabled",
+				Duration = 5,
+				Callback = bindable
+			})
+
+			game["Run Service"].RenderStepped:Connect(function()
+				if game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Z >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.Z >= maxspeed then
+					if game.Players.LocalPlayer.Character.Humanoid.Sit ~= true then
+						velocityoverlimit = true
+						if tracebackactive ~= true then
+						    if game.Players.LocalPlayer.Character.Humanoid.FloorMaterial == Enum.Material.Air then
+    							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(savedpos) * CFrame.Angles(math.rad(savedori.X),math.rad(savedori.Y),math.rad(savedori.Z))
+    							game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)  game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0) 
+    							game.Players.LocalPlayer.Character.Torso.Velocity = Vector3.new(0,0,0) game.Players.LocalPlayer.Character.Torso.RotVelocity = Vector3.new(0,0,0)
+    							repeatstand()
+    							velocityoverlimit = false
+    							tracebackactive = false
+    							StarterGui:SetCore("SendNotification", {
+    				            Title = "ANTI-FLING ATTENTION",
+    				            Text = "Someone tried to fling you",
+    			            	Duration = 5,
+    				            Callback = bindable
+    			                })
+			                end
+						end
+					end
+				else
+					velocityoverlimit = false
+				end
+			end)
+			local ap = coroutine.create(function()
+				while wait() do
+					if velocityoverlimit == false then
+						savedpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+						savedori = game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation
+						--	a = Instance.new("Part",workspace) a.CanCollide = false a.Transparency = 1 a.Anchored = true a.Size = Vector3.new(0.1,0.1,0.1)
+						--		a.CFrame = game.Players.LocalPlayer.Character.Head.CFrame game.Debris:AddItem(a,20) 
+					else
+
+					end
+				end
+			end)
+			coroutine.resume(ap)
+		elseif name == "Anti-ToolKill" then
+			StarterGui:SetCore("SendNotification", {
+				Title = "MMSB NOMAIN INFORMATION",
+				Text = "Anti-ToolKill Enabled",
+				Duration = 5,
+				Callback = bindable
+			})
+
+			for _,tool in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+				if tool:IsA("Tool") then
+					table.insert(savedtools,tool) 
 				end
 			end
-		end)
-		coroutine.resume(ap)
-	elseif name == "Anti-ToolKill" then
-		StarterGui:SetCore("SendNotification", {
-			Title = "MMSB NOMAIN",
-			Text = "Anti-ToolKill Enabled",
-			Duration = 5,
-			Callback = bindable
-		})
-
-		for _,tool in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-			if tool:IsA("Tool") then
-				table.insert(savedtools,tool) 
-			end
-		end
-		for _,tool in ipairs(game.Players.LocalPlayer.Character:GetChildren()) do
-			if tool:IsA("Tool") then
-				table.insert(savedtools,tool) 
-			end
-		end
-
-		game.Players.LocalPlayer.Character.ChildAdded:Connect(function(child)
-			if child:IsA("Tool") then
-				if table.find(savedtools,child) then
-				else
-					child:Remove()
+			for _,tool in ipairs(game.Players.LocalPlayer.Character:GetChildren()) do
+				if tool:IsA("Tool") then
+					table.insert(savedtools,tool) 
 				end
 			end
-		end)
-	end
 
-	if name == "NameDist" then
-		for _,v in ipairs(game.Players:GetChildren()) do
-			if v:IsA("Player") then
-				v.Character.Humanoid.NameDisplayDistance = math.huge
+			game.Players.LocalPlayer.Character.ChildAdded:Connect(function(child)
+				if child:IsA("Tool") then
+					if table.find(savedtools,child) then
+					else
+						StarterGui:SetCore("SendNotification", {
+							Title = "ANTI-TOOKILL WARNING",
+							Text = child.Name.." was removed from your inventory.",
+							Duration = 5,
+							Callback = bindable
+						})
+
+						game.Debris:AddItem(child,0)
+					end
+				end
+			end)
+		end
+
+		if name == "NameDist" then
+			for _,v in ipairs(game.Players:GetChildren()) do
+				if v:IsA("Player") then
+					v.Character.Humanoid.NameDisplayDistance = math.huge
+				end
 			end
 		end
-	end
 
-	if name == "StunFly" then
-		loadstring(game:HttpGet(('https://raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/StunFly'),true))()
-		StarterGui:SetCore("SendNotification", {
-			Title = "MMSB NOMAIN",
-			Text = "Reset to remove StunFly",
-			Duration = 5,
-			Callback = bindable
-		})
-	end
+		if name == "StunFly" then
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/StunFly'),true))()
+			StarterGui:SetCore("SendNotification", {
+				Title = "MMSB NOMAIN",
+				Text = "Reset to remove StunFly",
+				Duration = 5,
+				Callback = bindable
+			})
+		end
 
-	if name == "Empty" or name == "WIP" then
-		bruh()
+		if name == "Empty" or name == "WIP" then
+			bruh()
+		end
 	end
-end
 
 
 --[[
