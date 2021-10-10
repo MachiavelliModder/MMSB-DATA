@@ -192,7 +192,10 @@ function fireresponse(name)
 					LastInsult = ftable
 				end
 			end
-
+		else
+		    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
+			LastInsult = ftable
+		end
 		elseif name == "MakeARemark" then
 			local insulttable = TInsults
 			local ftable = insulttable[math.random(1,#insulttable)]
@@ -225,7 +228,6 @@ function fireresponse(name)
 				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
 				LastInsult = ftable
 			end
-		end
 		end
 
 		if name == "RandomMath" then
@@ -262,7 +264,7 @@ function fireresponse(name)
 					if game.Players.LocalPlayer.Character.Humanoid.Sit ~= true then
 						velocityoverlimit = true
 						if tracebackactive ~= true then
-						    if game.Players.LocalPlayer.Character.Humanoid.FloorMaterial == Enum.Material.Air then
+						  --  if game.Players.LocalPlayer.Character.Humanoid.FloorMaterial == Enum.Material.Air then
     							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(savedpos) * CFrame.Angles(math.rad(savedori.X),math.rad(savedori.Y),math.rad(savedori.Z))
     							game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)  game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0) 
     							game.Players.LocalPlayer.Character.Torso.Velocity = Vector3.new(0,0,0) game.Players.LocalPlayer.Character.Torso.RotVelocity = Vector3.new(0,0,0)
@@ -276,7 +278,7 @@ function fireresponse(name)
     				            Callback = bindable
     			                })
 			                end
-						end
+					--	end
 					end
 				else
 					velocityoverlimit = false
@@ -352,7 +354,7 @@ function fireresponse(name)
 		if name == "Empty" or name == "WIP" then
 			bruh()
 		end
-	end
+		end
 
 
 --[[
