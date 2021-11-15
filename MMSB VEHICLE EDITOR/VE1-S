@@ -1,0 +1,642 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local Title_2 = Instance.new("TextLabel")
+local Title_3 = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local FIND = Instance.new("TextButton")
+local Buttons = Instance.new("Frame")
+local Wheels = Instance.new("Frame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local AW = Instance.new("TextButton")
+local SW = Instance.new("TextLabel")
+local LowerButtons = Instance.new("Frame")
+local UIGridLayout_2 = Instance.new("UIGridLayout")
+local MinLength = Instance.new("TextBox")
+local TextLabel = Instance.new("TextLabel")
+local MaxLength = Instance.new("TextBox")
+local TextLabel_2 = Instance.new("TextLabel")
+local Stiffness = Instance.new("TextBox")
+local TextLabel_3 = Instance.new("TextLabel")
+local Damping = Instance.new("TextBox")
+local TextLabel_4 = Instance.new("TextLabel")
+local FreeLength = Instance.new("TextBox")
+local TextLabel_5 = Instance.new("TextLabel")
+local MaxForce = Instance.new("TextBox")
+local TextLabel_6 = Instance.new("TextLabel")
+local Apply = Instance.new("TextButton")
+local FV = Instance.new("TextLabel")
+local FV2 = Instance.new("TextLabel")
+local Instances = Instance.new("Folder")
+local Wheel = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Parent = ScreenGui
+Frame.AnchorPoint = Vector2.new(0.800000012, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Frame.Position = UDim2.new(0.800000012, 0, 0.5, 0)
+Frame.Size = UDim2.new(0, 300, 0, 500)
+
+UICorner.Parent = Frame
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.AnchorPoint = Vector2.new(0.5, 0)
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.5, 0, 0, 0)
+Title.Size = UDim2.new(1, 0, 0, 50)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "MMSB Vehicle Editor"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Title_2.Name = "Title"
+Title_2.Parent = Frame
+Title_2.AnchorPoint = Vector2.new(0.5, 0.100000001)
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Position = UDim2.new(0.5, 0, 0.100000001, 0)
+Title_2.Size = UDim2.new(1, 0, 0, 50)
+Title_2.Font = Enum.Font.SourceSansItalic
+Title_2.Text = "By using this, We are not liable if you get banned while using this exploit."
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 0)
+Title_2.TextSize = 15.000
+Title_2.TextWrapped = true
+
+Title_3.Name = "Title"
+Title_3.Parent = Frame
+Title_3.AnchorPoint = Vector2.new(0.5, 0.200000003)
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1.000
+Title_3.Position = UDim2.new(0.5, 0, 0.200000003, 0)
+Title_3.Size = UDim2.new(1, 0, 0, 50)
+Title_3.Font = Enum.Font.SourceSansBold
+Title_3.Text = "USE AT YOUR OWN RISK"
+Title_3.TextColor3 = Color3.fromRGB(255, 0, 0)
+Title_3.TextSize = 30.000
+Title_3.TextWrapped = true
+
+Frame_2.Parent = Frame
+Frame_2.AnchorPoint = Vector2.new(0, 0.300000012)
+Frame_2.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 0, 0.300000012, 0)
+Frame_2.Size = UDim2.new(1, 0, 0, 10)
+
+FIND.Name = "FIND"
+FIND.Parent = Frame
+FIND.AnchorPoint = Vector2.new(0.5, 0.349999994)
+FIND.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+FIND.BorderSizePixel = 0
+FIND.Position = UDim2.new(0.5, 0, 0.349999994, 0)
+FIND.Size = UDim2.new(1, 0, 0, 20)
+FIND.Font = Enum.Font.SourceSansBold
+FIND.Text = "Find Vehicle"
+FIND.TextColor3 = Color3.fromRGB(255, 255, 255)
+FIND.TextScaled = true
+FIND.TextSize = 14.000
+FIND.TextWrapped = true
+
+Buttons.Name = "Buttons"
+Buttons.Parent = Frame
+Buttons.AnchorPoint = Vector2.new(0.5, 1)
+Buttons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Buttons.BackgroundTransparency = 1.000
+Buttons.Position = UDim2.new(0.5, 0, 1, 0)
+Buttons.Size = UDim2.new(1, 0, 0, 242)
+Buttons.Visible = false
+
+Wheels.Name = "Wheels"
+Wheels.Parent = Buttons
+Wheels.AnchorPoint = Vector2.new(0.5, 0)
+Wheels.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Wheels.BackgroundTransparency = 1.000
+Wheels.Position = UDim2.new(0.5, 0, -0.260330588, 0)
+Wheels.Size = UDim2.new(1, -30, 0.260330588, 50)
+
+UIGridLayout.Parent = Wheels
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellSize = UDim2.new(0, 50, 0, 50)
+
+AW.Name = "AW"
+AW.Parent = Buttons
+AW.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+AW.BackgroundTransparency = 0.200
+AW.BorderSizePixel = 0
+AW.Position = UDim2.new(0, 0, 0.23140496, 0)
+AW.Size = UDim2.new(0, 300, 0, 25)
+AW.Font = Enum.Font.SourceSansBold
+AW.Text = "All Wheels"
+AW.TextColor3 = Color3.fromRGB(255, 255, 255)
+AW.TextScaled = true
+AW.TextSize = 14.000
+AW.TextWrapped = true
+
+SW.Name = "SW"
+SW.Parent = Buttons
+SW.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SW.BackgroundTransparency = 1.000
+SW.Position = UDim2.new(0.303333342, 0, 0.334710747, 0)
+SW.Size = UDim2.new(0, 118, 0, 32)
+SW.Font = Enum.Font.SourceSansBold
+SW.Text = "Selected Wheel"
+SW.TextColor3 = Color3.fromRGB(255, 255, 255)
+SW.TextSize = 14.000
+
+LowerButtons.Name = "LowerButtons"
+LowerButtons.Parent = Buttons
+LowerButtons.AnchorPoint = Vector2.new(0.5, 1)
+LowerButtons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LowerButtons.BackgroundTransparency = 1.000
+LowerButtons.Position = UDim2.new(0.5, 0, 1, 0)
+LowerButtons.Size = UDim2.new(1, -30, 0, 130)
+
+UIGridLayout_2.Parent = LowerButtons
+UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_2.CellSize = UDim2.new(0, 50, 0, 50)
+
+MinLength.Name = "MinLength"
+MinLength.Parent = LowerButtons
+MinLength.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+MinLength.BorderSizePixel = 0
+MinLength.Size = UDim2.new(0, 200, 0, 50)
+MinLength.ClearTextOnFocus = false
+MinLength.Font = Enum.Font.SourceSansBold
+MinLength.Text = "0"
+MinLength.TextColor3 = Color3.fromRGB(255, 255, 255)
+MinLength.TextScaled = true
+MinLength.TextSize = 14.000
+MinLength.TextWrapped = true
+
+TextLabel.Parent = MinLength
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Suspension Max Length"
+TextLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextTransparency = 0.700
+TextLabel.TextWrapped = true
+
+MaxLength.Name = "MaxLength"
+MaxLength.Parent = LowerButtons
+MaxLength.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+MaxLength.BorderSizePixel = 0
+MaxLength.Size = UDim2.new(0, 200, 0, 50)
+MaxLength.ClearTextOnFocus = false
+MaxLength.Font = Enum.Font.SourceSansBold
+MaxLength.Text = "0"
+MaxLength.TextColor3 = Color3.fromRGB(255, 255, 255)
+MaxLength.TextScaled = true
+MaxLength.TextSize = 14.000
+MaxLength.TextWrapped = true
+
+TextLabel_2.Parent = MaxLength
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "Suspension Min Length"
+TextLabel_2.TextColor3 = Color3.fromRGB(180, 180, 180)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextTransparency = 0.700
+TextLabel_2.TextWrapped = true
+
+Stiffness.Name = "Stiffness"
+Stiffness.Parent = LowerButtons
+Stiffness.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+Stiffness.BorderSizePixel = 0
+Stiffness.Size = UDim2.new(0, 200, 0, 50)
+Stiffness.ClearTextOnFocus = false
+Stiffness.Font = Enum.Font.SourceSansBold
+Stiffness.Text = "0"
+Stiffness.TextColor3 = Color3.fromRGB(255, 255, 255)
+Stiffness.TextScaled = true
+Stiffness.TextSize = 14.000
+Stiffness.TextWrapped = true
+
+TextLabel_3.Parent = Stiffness
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_3.Font = Enum.Font.SourceSansBold
+TextLabel_3.Text = "Suspension Stiffness"
+TextLabel_3.TextColor3 = Color3.fromRGB(180, 180, 180)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextTransparency = 0.700
+TextLabel_3.TextWrapped = true
+
+Damping.Name = "Damping"
+Damping.Parent = LowerButtons
+Damping.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+Damping.BorderSizePixel = 0
+Damping.Size = UDim2.new(0, 200, 0, 50)
+Damping.ClearTextOnFocus = false
+Damping.Font = Enum.Font.SourceSansBold
+Damping.Text = "0"
+Damping.TextColor3 = Color3.fromRGB(255, 255, 255)
+Damping.TextScaled = true
+Damping.TextSize = 14.000
+Damping.TextWrapped = true
+
+TextLabel_4.Parent = Damping
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_4.Font = Enum.Font.SourceSansBold
+TextLabel_4.Text = "Suspension Damping"
+TextLabel_4.TextColor3 = Color3.fromRGB(180, 180, 180)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextTransparency = 0.700
+TextLabel_4.TextWrapped = true
+
+FreeLength.Name = "FreeLength"
+FreeLength.Parent = LowerButtons
+FreeLength.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+FreeLength.BorderSizePixel = 0
+FreeLength.Size = UDim2.new(0, 200, 0, 50)
+FreeLength.ClearTextOnFocus = false
+FreeLength.Font = Enum.Font.SourceSansBold
+FreeLength.Text = "0"
+FreeLength.TextColor3 = Color3.fromRGB(255, 255, 255)
+FreeLength.TextScaled = true
+FreeLength.TextSize = 14.000
+FreeLength.TextWrapped = true
+
+TextLabel_5.Parent = FreeLength
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_5.Font = Enum.Font.SourceSansBold
+TextLabel_5.Text = "Suspension FreeLength"
+TextLabel_5.TextColor3 = Color3.fromRGB(180, 180, 180)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextTransparency = 0.700
+TextLabel_5.TextWrapped = true
+
+MaxForce.Name = "MaxForce"
+MaxForce.Parent = LowerButtons
+MaxForce.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+MaxForce.BorderSizePixel = 0
+MaxForce.Size = UDim2.new(0, 200, 0, 50)
+MaxForce.ClearTextOnFocus = false
+MaxForce.Font = Enum.Font.SourceSansBold
+MaxForce.Text = "0"
+MaxForce.TextColor3 = Color3.fromRGB(255, 255, 255)
+MaxForce.TextScaled = true
+MaxForce.TextSize = 14.000
+MaxForce.TextWrapped = true
+
+TextLabel_6.Parent = MaxForce
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_6.Font = Enum.Font.SourceSansBold
+TextLabel_6.Text = "Suspension MaxForce"
+TextLabel_6.TextColor3 = Color3.fromRGB(180, 180, 180)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 14.000
+TextLabel_6.TextTransparency = 0.700
+TextLabel_6.TextWrapped = true
+
+Apply.Name = "Apply"
+Apply.Parent = Buttons
+Apply.AnchorPoint = Vector2.new(1, 1)
+Apply.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+Apply.BorderSizePixel = 0
+Apply.Position = UDim2.new(1, -20, 1, -25)
+Apply.Size = UDim2.new(0, 200, 0, 50)
+Apply.Font = Enum.Font.SourceSansBold
+Apply.Text = "Apply Selected"
+Apply.TextColor3 = Color3.fromRGB(97, 194, 0)
+Apply.TextSize = 25.000
+Apply.TextWrapped = true
+
+FV.Name = "FV"
+FV.Parent = Frame
+FV.AnchorPoint = Vector2.new(0.5, 0.600000024)
+FV.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FV.BackgroundTransparency = 1.000
+FV.Position = UDim2.new(0.5, 0, 0.600000024, 0)
+FV.Size = UDim2.new(1, 0, 0, 50)
+FV.Font = Enum.Font.SourceSansBold
+FV.Text = "Press Find Vehicle to use"
+FV.TextColor3 = Color3.fromRGB(170, 0, 0)
+FV.TextSize = 25.000
+FV.TextWrapped = true
+
+FV2.Name = "FV2"
+FV2.Parent = Frame
+FV2.AnchorPoint = Vector2.new(0.5, 0.600000024)
+FV2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FV2.BackgroundTransparency = 1.000
+FV2.Position = UDim2.new(0.5, 0, 0.703999996, 0)
+FV2.Size = UDim2.new(1, 0, -0.0350000001, 50)
+FV2.Font = Enum.Font.SourceSansBold
+FV2.Text = "Sit in driver seat to attach."
+FV2.TextColor3 = Color3.fromRGB(170, 0, 0)
+FV2.TextSize = 25.000
+FV2.TextWrapped = true
+
+Instances.Name = "Instances"
+Instances.Parent = ScreenGui
+
+Wheel.Name = "Wheel"
+Wheel.Parent = ScreenGui
+Wheel.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+Wheel.Size = UDim2.new(0, 200, 0, 50)
+Wheel.Visible = false
+Wheel.Font = Enum.Font.SourceSansBold
+Wheel.Text = "FRWheel"
+Wheel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Wheel.TextScaled = true
+Wheel.TextSize = 14.000
+Wheel.TextWrapped = true
+
+UICorner_2.Parent = Wheel
+
+-- Scripts:
+
+local function KFVQ_fake_script() -- Frame.Dragify 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(KFVQ_fake_script)()
+local function TZNH_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	SeatInstance = nil
+	WheelParent = nil
+	Buttons = script.Parent.Frame.Buttons
+	
+	script.Parent.Frame.FIND.MouseButton1Click:Connect(function()
+		for _,o in ipairs(Buttons.Wheels:GetChildren()) do
+			if o:IsA("TextButton") then
+				o:Destroy()
+			end
+			wait()
+		end
+		for _,o in ipairs(script.Parent.Instances:GetChildren()) do
+			if o:IsA("ObjectValue") then
+				o:Destroy()
+			end
+			wait()
+		end
+		for _,a in ipairs(workspace:GetDescendants()) do
+			if a:IsA("Seat") or a:IsA("VehicleSeat") then
+				if a.Occupant == game.Players.LocalPlayer.Character.Humanoid then
+					SeatInstance = a
+					script.Parent.Frame.FV.Visible = false
+					script.Parent.Frame.FV2.Visible = false
+					script.Parent.Frame.Buttons.Visible = true
+					for _,b in ipairs(a.Parent:GetDescendants()) do
+						if string.find(b.Name,"Wheel") or string.find(b.Name,"wheel") then
+							if string.find(b.Name,"Steering") or string.find(b.Name,"Fixed") or string.find(b.Name,"Weld") then
+							else
+								local gui = script.Parent.Wheel:Clone()
+								gui.Parent = script.Parent.Frame.Buttons.Wheels
+								gui.Text = b.Name
+								gui.Visible = true
+								WheelParent = b.Parent
+								local ObjectValue = Instance.new("ObjectValue",script.Parent.Instances)
+								ObjectValue.Name = b.Name
+								ObjectValue.Value = b
+								gui.MouseButton1Click:Connect(function()
+									script.Parent.Frame.Buttons.SW.Text = gui.Text
+									for _,a in ipairs(script.Parent.Instances:GetChildren()) do
+										if a.Name == gui.Text then
+											for _,m in ipairs(a.Value.Parent.Parent:GetDescendants()) do
+												if m:IsA("SpringConstraint") then
+													Buttons.LowerButtons.MaxForce.Text = tostring(math.floor(m.MaxForce))
+													Buttons.LowerButtons.MinLength.Text = tostring(math.floor(m.MinLength))
+													Buttons.LowerButtons.MaxLength.Text = tostring(math.floor(m.MaxLength))
+													Buttons.LowerButtons.Stiffness.Text = tostring(math.floor(m.Stiffness))
+													Buttons.LowerButtons.Damping.Text = tostring(math.floor(m.Damping))
+													Buttons.LowerButtons.FreeLength.Text = tostring(math.floor(m.FreeLength))
+												end
+											end
+										end
+									end
+								end)
+							end
+						end
+					end
+					if WheelParent == nil then
+						for _,b in ipairs(a.Parent.Parent:GetDescendants()) do
+							if a.Parent.Parent == workspace then
+							else
+								if string.find(b.Name,"Wheel") or string.find(b.Name,"wheel") then
+									if string.find(b.Name,"Steering") or string.find(b.Name,"Fixed") or string.find(b.Name,"Weld") then
+									else
+										local gui = script.Parent.Wheel:Clone()
+										gui.Parent = script.Parent.Frame.Buttons.Wheels
+										gui.Text = b.Name
+										gui.Visible = true
+										WheelParent = b.Parent
+										local ObjectValue = Instance.new("ObjectValue",script.Parent.Instances)
+										ObjectValue.Name = b.Name
+										ObjectValue.Value = b
+										gui.MouseButton1Click:Connect(function()
+											script.Parent.Frame.Buttons.SW.Text = gui.Text
+											for _,a in ipairs(script.Parent.Instances:GetChildren()) do
+												if a.Name == gui.Text then
+													for _,m in ipairs(a.Value.Parent.Parent:GetDescendants()) do
+														if m:IsA("SpringConstraint") then
+															Buttons.LowerButtons.MaxForce.Text = tostring(math.floor(m.MaxForce))
+															Buttons.LowerButtons.MinLength.Text = tostring(math.floor(m.MinLength))
+															Buttons.LowerButtons.MaxLength.Text = tostring(math.floor(m.MaxLength))
+															Buttons.LowerButtons.Stiffness.Text = tostring(math.floor(m.Stiffness))
+															Buttons.LowerButtons.Damping.Text = tostring(math.floor(m.Damping))
+															Buttons.LowerButtons.FreeLength.Text = tostring(math.floor(m.FreeLength))
+														end
+													end
+												end
+											end
+										end)
+									end
+								end
+							end
+						end
+					end
+					if WheelParent == nil then
+						for _,b in ipairs(a.Parent.Parent.Parent:GetDescendants()) do
+							if a.Parent.Parent.Parent == workspace then
+							else
+								if string.find(b.Name,"Wheel") or string.find(b.Name,"wheel") then
+									if string.find(b.Name,"Steering") or string.find(b.Name,"Fixed") or string.find(b.Name,"Weld") then
+									else
+										local gui = script.Parent.Wheel:Clone()
+										gui.Parent = script.Parent.Frame.Buttons.Wheels
+										gui.Text = b.Name
+										gui.Visible = true
+										WheelParent = b.Parent
+										local ObjectValue = Instance.new("ObjectValue",script.Parent.Instances)
+										ObjectValue.Name = b.Name
+										ObjectValue.Value = b
+										gui.MouseButton1Click:Connect(function()
+											script.Parent.Frame.Buttons.SW.Text = gui.Text
+											for _,a in ipairs(script.Parent.Instances:GetChildren()) do
+												if a.Name == gui.Text then
+													for _,m in ipairs(a.Value.Parent.Parent:GetDescendants()) do
+														if m:IsA("SpringConstraint") then
+															Buttons.LowerButtons.MaxForce.Text = tostring(math.floor(m.MaxForce))
+															Buttons.LowerButtons.MinLength.Text = tostring(math.floor(m.MinLength))
+															Buttons.LowerButtons.MaxLength.Text = tostring(math.floor(m.MaxLength))
+															Buttons.LowerButtons.Stiffness.Text = tostring(math.floor(m.Stiffness))
+															Buttons.LowerButtons.Damping.Text = tostring(math.floor(m.Damping))
+															Buttons.LowerButtons.FreeLength.Text = tostring(math.floor(m.FreeLength))
+														end
+													end
+												end
+											end
+										end)
+									end
+								end
+							end
+						end
+					end
+					if WheelParent == nil then
+						for _,b in ipairs(a.Parent.Parent.Parent.Parent:GetDescendants()) do
+							if a.Parent.Parent.Parent.Parent == workspace then
+							else
+								if string.find(b.Name,"Wheel") or string.find(b.Name,"wheel") then
+									if string.find(b.Name,"Steering") or string.find(b.Name,"Fixed") or string.find(b.Name,"Weld") then
+									else
+										local gui = script.Parent.Wheel:Clone()
+										gui.Parent = script.Parent.Frame.Buttons.Wheels
+										gui.Text = b.Name
+										gui.Visible = true
+										WheelParent = b.Parent
+										local ObjectValue = Instance.new("ObjectValue",script.Parent.Instances)
+										ObjectValue.Name = b.Name
+										ObjectValue.Value = b
+										gui.MouseButton1Click:Connect(function()
+											script.Parent.Frame.Buttons.SW.Text = gui.Text
+											for _,a in ipairs(script.Parent.Instances:GetChildren()) do
+												if a.Name == gui.Text then
+													for _,m in ipairs(a.Value.Parent.Parent:GetDescendants()) do
+														if m:IsA("SpringConstraint") then
+															Buttons.LowerButtons.MaxForce.Text = tostring(math.floor(m.MaxForce))
+															Buttons.LowerButtons.MinLength.Text = tostring(math.floor(m.MinLength))
+															Buttons.LowerButtons.MaxLength.Text = tostring(math.floor(m.MaxLength))
+															Buttons.LowerButtons.Stiffness.Text = tostring(math.floor(m.Stiffness))
+															Buttons.LowerButtons.Damping.Text = tostring(math.floor(m.Damping))
+															Buttons.LowerButtons.FreeLength.Text = tostring(math.floor(m.FreeLength))
+														end
+													end
+												end
+											end
+										end)
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end)
+	
+	script.Parent.Frame.Buttons.AW.MouseButton1Click:Connect(function()
+		script.Parent.Frame.Buttons.SW.Text = "All Wheels"
+	end)
+	
+	
+	script.Parent.Frame.Buttons.Apply.MouseButton1Click:Connect(function()
+		if script.Parent.Frame.Buttons.SW.Text == "All Wheels" then
+			for _,a in ipairs(script.Parent.Instances:GetChildren()) do
+				if a:IsA("ObjectValue") then
+					for _,n in ipairs(a.Value.Parent.Parent:GetDescendants()) do
+						if n:IsA("SpringConstraint") then
+							if n.LimitsEnabled == true then
+								n.MaxLength = tonumber(Buttons.LowerButtons.MaxLength.Text)
+								n.MinLength = tonumber(Buttons.LowerButtons.MinLength.Text)
+								n.MaxForce = tonumber(Buttons.LowerButtons.MaxForce.Text)
+								n.Stiffness = tonumber(Buttons.LowerButtons.Stiffness.Text)
+								n.Damping = tonumber(Buttons.LowerButtons.Damping.Text)
+								n.FreeLength = tonumber(Buttons.LowerButtons.FreeLength.Text)
+							end
+						end
+					end
+				end
+			end
+		else
+			local a = script.Parent.Instances:FindFirstChild(script.Parent.Frame.Buttons.SW.Text)
+			for _,n in ipairs(a.Value.Parent:GetDescendants()) do
+				if n:IsA("SpringConstraint") then
+					if n.LimitsEnabled == true then
+						n.MaxLength = tonumber(Buttons.LowerButtons.MaxLength.Text)
+						n.MinLength = tonumber(Buttons.LowerButtons.MinLength.Text)
+						n.MaxForce = tonumber(Buttons.LowerButtons.MaxForce.Text)
+						n.Stiffness = tonumber(Buttons.LowerButtons.Stiffness.Text)
+						n.Damping = tonumber(Buttons.LowerButtons.Damping.Text)
+						n.FreeLength = tonumber(Buttons.LowerButtons.FreeLength.Text)
+					end
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(TZNH_fake_script)()
