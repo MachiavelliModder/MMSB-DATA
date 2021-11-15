@@ -1,0 +1,1293 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+game.CoreGui.RobloxGui.NotificationFrame.ChildAdded:Connect(function()
+	local a = coroutine.create(function()
+		for _,v in ipairs(game.CoreGui.RobloxGui.NotificationFrame:GetDescendants()) do
+			if v.Name == ("NotificationTitle") then
+				if string.find(v.Text,"WARNING") or string.find(v.Text,"Warning") then
+					v.Parent.BackgroundColor3 = WarningColor
+					for _,b in ipairs(v.Parent:GetChildren()) do
+						if b:IsA("TextButton") then
+							b.BackgroundColor3 = WarningColor
+						end
+					end
+				elseif string.find(v.Text,"ATTENTION") or string.find(v.Text,"Attention") then
+					v.Parent.BackgroundColor3 = AttentionColor
+					for _,b in ipairs(v.Parent:GetChildren()) do
+						if b:IsA("TextButton") then
+							b.BackgroundColor3 = AttentionColor
+						end
+					end
+				elseif string.find(v.Text,"INFORMATION") or string.find(v.Text,"Information") then
+					v.Parent.BackgroundColor3 = InformationColor
+					for _,b in ipairs(v.Parent:GetChildren()) do
+						if b:IsA("TextButton") then
+							b.BackgroundColor3 = InformationColor
+						end
+					end
+				end
+			end
+		end
+	end)
+	coroutine.resume(a)
+end)
+
+local MMSBNOMAINV2 = Instance.new("ScreenGui")
+local Fullscreen = Instance.new("Frame")
+local Window = Instance.new("Frame")
+local Logo = Instance.new("Frame")
+local Circle = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local UICorner_2 = Instance.new("UICorner")
+local InnerCircle = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local ImageLabel_4 = Instance.new("ImageLabel")
+local ImageLabel_5 = Instance.new("ImageLabel")
+local MainGui = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local Frame_3 = Instance.new("Frame")
+local Frame_4 = Instance.new("Frame")
+local Frame_5 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local GRADIENT = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local TEXTSELECTION = Instance.new("Frame")
+local EXECUTABLES = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local Frame_6 = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local GRADIENT_2 = Instance.new("Frame")
+local UIGradient_2 = Instance.new("UIGradient")
+local UIGridLayout = Instance.new("UIGridLayout")
+local UIPageLayout = Instance.new("UIPageLayout")
+local EXECUTOR = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Frame_7 = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local GRADIENT_3 = Instance.new("Frame")
+local UIGradient_3 = Instance.new("UIGradient")
+local WIP = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Frame_8 = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local GRADIENT_4 = Instance.new("Frame")
+local UIGradient_4 = Instance.new("UIGradient")
+local EXECUTOR_2 = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local Execute = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local Clear = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local CodeEntry = Instance.new("TextBox")
+local TextContainer = Instance.new("TextLabel")
+local Inject = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local Minimize = Instance.new("TextButton")
+local Minimize_2 = Instance.new("TextButton")
+local Toggle = Instance.new("TextButton")
+
+--Properties:
+
+MMSBNOMAINV2.Name = "MMSBNOMAINV2"
+MMSBNOMAINV2.Parent = game.CoreGui.RobloxGui
+
+Fullscreen.Name = "Fullscreen"
+Fullscreen.Parent = MMSBNOMAINV2
+Fullscreen.AnchorPoint = Vector2.new(0.5, 0.5)
+Fullscreen.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+Fullscreen.BackgroundTransparency = 1.000
+Fullscreen.Position = UDim2.new(0.5, 0, 0.5, 0)
+Fullscreen.Size = UDim2.new(1, 100, 1, 100)
+Fullscreen.ZIndex = 5
+
+Window.Name = "Window"
+Window.Parent = MMSBNOMAINV2
+Window.AnchorPoint = Vector2.new(0.5, 0.5)
+Window.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Window.BackgroundTransparency = 1.000
+Window.Position = UDim2.new(0.5, 0, 0.5, 0)
+Window.Size = UDim2.new(1, 0, 1, 0)
+
+Logo.Name = "Logo"
+Logo.Parent = Window
+Logo.AnchorPoint = Vector2.new(0.5, 0.5)
+Logo.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Logo.Position = UDim2.new(0.5, 0, 0.5, 0)
+Logo.Size = UDim2.new(0, 200, 0, 200)
+Logo.Visible = false
+Logo.ZIndex = -2
+
+Circle.Name = "Circle"
+Circle.Parent = Logo
+Circle.AnchorPoint = Vector2.new(0.5, 0.5)
+Circle.BackgroundColor3 = Color3.fromRGB(107, 0, 0)
+Circle.Position = UDim2.new(0.5, 0, 0.5, 0)
+Circle.Size = UDim2.new(0.699999988, 0, 0.699999988, 0)
+Circle.ZIndex = 0
+
+UICorner.CornerRadius = UDim.new(1, 8)
+UICorner.Parent = Circle
+
+ImageLabel.Parent = Circle
+ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+ImageLabel.Size = UDim2.new(1, 30, 1, 30)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=6022668893"
+ImageLabel.ImageColor3 = Color3.fromRGB(156, 0, 0)
+
+ImageLabel_2.Parent = Circle
+ImageLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+ImageLabel_2.Rotation = 90.000
+ImageLabel_2.Size = UDim2.new(1, 50, 1, 50)
+ImageLabel_2.ZIndex = 2
+ImageLabel_2.Image = "http://www.roblox.com/asset/?id=6023426928"
+ImageLabel_2.ImageColor3 = Color3.fromRGB(136, 0, 0)
+
+UICorner_2.Parent = Logo
+
+InnerCircle.Name = "InnerCircle"
+InnerCircle.Parent = Logo
+InnerCircle.AnchorPoint = Vector2.new(0.5, 0.5)
+InnerCircle.BackgroundColor3 = Color3.fromRGB(45, 0, 0)
+InnerCircle.Position = UDim2.new(0.5, 0, 0.5, 0)
+InnerCircle.Size = UDim2.new(0.5, 0, 0.5, 0)
+
+UICorner_3.CornerRadius = UDim.new(1, 8)
+UICorner_3.Parent = InnerCircle
+
+ImageLabel_3.Parent = InnerCircle
+ImageLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel_3.BackgroundTransparency = 1.000
+ImageLabel_3.BorderSizePixel = 0
+ImageLabel_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+ImageLabel_3.Size = UDim2.new(1, -20, 1, -20)
+ImageLabel_3.ZIndex = 2
+ImageLabel_3.Image = "http://www.roblox.com/asset/?id=6031251532"
+ImageLabel_3.ImageColor3 = Color3.fromRGB(156, 0, 0)
+
+ImageLabel_4.Parent = InnerCircle
+ImageLabel_4.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel_4.BackgroundTransparency = 1.000
+ImageLabel_4.BorderSizePixel = 0
+ImageLabel_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+ImageLabel_4.Size = UDim2.new(1, 50, 1, 50)
+ImageLabel_4.Image = "http://www.roblox.com/asset/?id=6031280882"
+ImageLabel_4.ImageColor3 = Color3.fromRGB(45, 0, 0)
+ImageLabel_4.SliceScale = 0.000
+
+ImageLabel_5.Parent = Logo
+ImageLabel_5.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel_5.BackgroundTransparency = 1.000
+ImageLabel_5.BorderSizePixel = 0
+ImageLabel_5.Position = UDim2.new(0.5, 0, 0.5, 0)
+ImageLabel_5.Size = UDim2.new(1, 30, 1, 30)
+ImageLabel_5.ZIndex = -1
+ImageLabel_5.Image = "http://www.roblox.com/asset/?id=6429584813"
+ImageLabel_5.ImageColor3 = Color3.fromRGB(156, 0, 0)
+ImageLabel_5.SliceScale = 5.000
+
+MainGui.Name = "MainGui"
+MainGui.Parent = Window
+MainGui.AnchorPoint = Vector2.new(0.5, 0.5)
+MainGui.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+MainGui.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainGui.Size = UDim2.new(0, 700, 0, 400)
+MainGui.Visible = false
+MainGui.ZIndex = -3
+
+UICorner_4.Parent = MainGui
+
+Frame.Parent = MainGui
+Frame.AnchorPoint = Vector2.new(0.5, 0)
+Frame.BackgroundColor3 = Color3.fromRGB(107, 0, 0)
+Frame.Position = UDim2.new(0.5, 0, 0, 0)
+Frame.Size = UDim2.new(1, 0, 0, 50)
+
+UICorner_5.Parent = Frame
+
+Frame_2.Parent = MainGui
+Frame_2.AnchorPoint = Vector2.new(0.5, 0.0500000007)
+Frame_2.BackgroundColor3 = Color3.fromRGB(107, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.5, 0, 0.0500000007, 0)
+Frame_2.Size = UDim2.new(1, 0, 0, 80)
+
+Frame_3.Parent = MainGui
+Frame_3.AnchorPoint = Vector2.new(0.5, 0.300000012)
+Frame_3.BackgroundColor3 = Color3.fromRGB(107, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0.5, 0, 0.300000012, 0)
+Frame_3.Size = UDim2.new(1, 0, 0, 10)
+
+Frame_4.Parent = MainGui
+Frame_4.AnchorPoint = Vector2.new(0.5, 0.300000012)
+Frame_4.BackgroundColor3 = Color3.fromRGB(58, 0, 0)
+Frame_4.BorderSizePixel = 0
+Frame_4.Position = UDim2.new(0.5, 0, 0.300000012, 0)
+Frame_4.Size = UDim2.new(1, 0, 0, 15)
+Frame_4.ZIndex = 0
+
+Frame_5.Parent = MainGui
+Frame_5.AnchorPoint = Vector2.new(0.5, 0.0500000007)
+Frame_5.BackgroundColor3 = Color3.fromRGB(58, 0, 0)
+Frame_5.BorderSizePixel = 0
+Frame_5.Position = UDim2.new(0.5, 0, 0.0500000007, 0)
+Frame_5.Size = UDim2.new(1, 0, 0, 85)
+Frame_5.ZIndex = 0
+
+TextLabel.Parent = MainGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 10
+TextLabel.Size = UDim2.new(1, 0, 0.239999995, 0)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "MMSB NOMAIN V2"
+TextLabel.TextColor3 = Color3.fromRGB(167, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeColor3 = Color3.fromRGB(85, 0, 0)
+TextLabel.TextStrokeTransparency = 0.000
+TextLabel.TextWrapped = true
+
+GRADIENT.Name = "GRADIENT"
+GRADIENT.Parent = MainGui
+GRADIENT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GRADIENT.BorderSizePixel = 0
+GRADIENT.Size = UDim2.new(1, 0, 1, 0)
+GRADIENT.ZIndex = -1
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 85, 0)), ColorSequenceKeypoint.new(0.37, Color3.fromRGB(126, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(103, 0, 0))}
+UIGradient.Rotation = 90
+UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 1.00), NumberSequenceKeypoint.new(0.21, 0.00), NumberSequenceKeypoint.new(1.00, 1.00)}
+UIGradient.Parent = GRADIENT
+
+TEXTSELECTION.Name = "TEXTSELECTION"
+TEXTSELECTION.Parent = MainGui
+TEXTSELECTION.AnchorPoint = Vector2.new(0.5, 0.449999988)
+TEXTSELECTION.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TEXTSELECTION.BackgroundTransparency = 1.000
+TEXTSELECTION.Position = UDim2.new(0.5, 0, 0.449999988, 0)
+TEXTSELECTION.Size = UDim2.new(1, -10, 0, 50)
+
+EXECUTABLES.Name = "EXECUTABLES"
+EXECUTABLES.Parent = TEXTSELECTION
+EXECUTABLES.BackgroundColor3 = Color3.fromRGB(132, 0, 0)
+EXECUTABLES.BorderSizePixel = 0
+EXECUTABLES.Size = UDim2.new(0, 200, 0, 50)
+EXECUTABLES.Font = Enum.Font.SourceSansBold
+EXECUTABLES.Text = "EXECUTABLES"
+EXECUTABLES.TextColor3 = Color3.fromRGB(198, 0, 0)
+EXECUTABLES.TextSize = 35.000
+EXECUTABLES.TextStrokeColor3 = Color3.fromRGB(75, 0, 0)
+EXECUTABLES.TextStrokeTransparency = 0.000
+EXECUTABLES.TextWrapped = true
+
+UICorner_6.Parent = EXECUTABLES
+
+Frame_6.Parent = EXECUTABLES
+Frame_6.BackgroundColor3 = Color3.fromRGB(58, 0, 0)
+Frame_6.Size = UDim2.new(1, 0, 1, 5)
+Frame_6.ZIndex = 0
+
+UICorner_7.Parent = Frame_6
+
+GRADIENT_2.Name = "GRADIENT"
+GRADIENT_2.Parent = EXECUTABLES
+GRADIENT_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GRADIENT_2.BorderSizePixel = 0
+GRADIENT_2.Position = UDim2.new(0, 0, 0, 10)
+GRADIENT_2.Size = UDim2.new(1, 0, 1, 100)
+GRADIENT_2.ZIndex = -1
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 85, 0)), ColorSequenceKeypoint.new(0.37, Color3.fromRGB(126, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(103, 0, 0))}
+UIGradient_2.Rotation = 90
+UIGradient_2.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 1.00), NumberSequenceKeypoint.new(0.21, 0.00), NumberSequenceKeypoint.new(1.00, 1.00)}
+UIGradient_2.Parent = GRADIENT_2
+
+UIGridLayout.Parent = TEXTSELECTION
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellPadding = UDim2.new(0, 45, 0, 5)
+UIGridLayout.CellSize = UDim2.new(0, 200, 0, 50)
+
+UIPageLayout.Parent = TEXTSELECTION
+UIPageLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+EXECUTOR.Name = "EXECUTOR"
+EXECUTOR.Parent = TEXTSELECTION
+EXECUTOR.BackgroundColor3 = Color3.fromRGB(132, 0, 0)
+EXECUTOR.BorderSizePixel = 0
+EXECUTOR.Size = UDim2.new(0, 200, 0, 50)
+EXECUTOR.Font = Enum.Font.SourceSansBold
+EXECUTOR.Text = "EXECUTOR"
+EXECUTOR.TextColor3 = Color3.fromRGB(198, 0, 0)
+EXECUTOR.TextSize = 35.000
+EXECUTOR.TextStrokeColor3 = Color3.fromRGB(75, 0, 0)
+EXECUTOR.TextStrokeTransparency = 0.000
+EXECUTOR.TextWrapped = true
+
+UICorner_8.Parent = EXECUTOR
+
+Frame_7.Parent = EXECUTOR
+Frame_7.BackgroundColor3 = Color3.fromRGB(58, 0, 0)
+Frame_7.Size = UDim2.new(1, 0, 1, 5)
+Frame_7.ZIndex = 0
+
+UICorner_9.Parent = Frame_7
+
+GRADIENT_3.Name = "GRADIENT"
+GRADIENT_3.Parent = EXECUTOR
+GRADIENT_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GRADIENT_3.BorderSizePixel = 0
+GRADIENT_3.Position = UDim2.new(0, 0, 0, 10)
+GRADIENT_3.Size = UDim2.new(1, 0, 1, 100)
+GRADIENT_3.ZIndex = -1
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 85, 0)), ColorSequenceKeypoint.new(0.37, Color3.fromRGB(126, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(103, 0, 0))}
+UIGradient_3.Rotation = 90
+UIGradient_3.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 1.00), NumberSequenceKeypoint.new(0.21, 0.00), NumberSequenceKeypoint.new(1.00, 1.00)}
+UIGradient_3.Parent = GRADIENT_3
+
+WIP.Name = "WIP"
+WIP.Parent = TEXTSELECTION
+WIP.BackgroundColor3 = Color3.fromRGB(132, 0, 0)
+WIP.BorderSizePixel = 0
+WIP.Size = UDim2.new(0, 200, 0, 50)
+WIP.Font = Enum.Font.SourceSansBold
+WIP.Text = "WIP"
+WIP.TextColor3 = Color3.fromRGB(198, 0, 0)
+WIP.TextSize = 35.000
+WIP.TextStrokeColor3 = Color3.fromRGB(75, 0, 0)
+WIP.TextStrokeTransparency = 0.000
+WIP.TextWrapped = true
+
+UICorner_10.Parent = WIP
+
+Frame_8.Parent = WIP
+Frame_8.BackgroundColor3 = Color3.fromRGB(58, 0, 0)
+Frame_8.Size = UDim2.new(1, 0, 1, 5)
+Frame_8.ZIndex = 0
+
+UICorner_11.Parent = Frame_8
+
+GRADIENT_4.Name = "GRADIENT"
+GRADIENT_4.Parent = WIP
+GRADIENT_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GRADIENT_4.BorderSizePixel = 0
+GRADIENT_4.Position = UDim2.new(0, 0, 0, 10)
+GRADIENT_4.Size = UDim2.new(1, 0, 1, 100)
+GRADIENT_4.ZIndex = -1
+
+UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 85, 0)), ColorSequenceKeypoint.new(0.37, Color3.fromRGB(126, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(103, 0, 0))}
+UIGradient_4.Rotation = 90
+UIGradient_4.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 1.00), NumberSequenceKeypoint.new(0.21, 0.00), NumberSequenceKeypoint.new(1.00, 1.00)}
+UIGradient_4.Parent = GRADIENT_4
+
+EXECUTOR_2.Name = "EXECUTOR"
+EXECUTOR_2.Parent = MainGui
+EXECUTOR_2.AnchorPoint = Vector2.new(0.5, 0.800000012)
+EXECUTOR_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+EXECUTOR_2.Position = UDim2.new(0.5, 0, 0.800000012, 0)
+EXECUTOR_2.Size = UDim2.new(0, 650, 0, 220)
+EXECUTOR_2.Visible = false
+EXECUTOR_2.ZIndex = 0
+
+UICorner_12.Parent = EXECUTOR_2
+
+Execute.Name = "Execute"
+Execute.Parent = EXECUTOR_2
+Execute.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Execute.Position = UDim2.new(0, 0, 0, 200)
+Execute.Size = UDim2.new(0, 200, 0, 50)
+Execute.ZIndex = 0
+Execute.Font = Enum.Font.SourceSansBold
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute.TextSize = 30.000
+
+UICorner_13.Parent = Execute
+
+Clear.Name = "Clear"
+Clear.Parent = EXECUTOR_2
+Clear.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Clear.Position = UDim2.new(0, 210, 0, 200)
+Clear.Size = UDim2.new(0, 100, 0, 50)
+Clear.ZIndex = 0
+Clear.Font = Enum.Font.SourceSansBold
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clear.TextSize = 30.000
+
+UICorner_14.Parent = Clear
+
+ScrollingFrame.Parent = EXECUTOR_2
+ScrollingFrame.Active = true
+ScrollingFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+ScrollingFrame.Size = UDim2.new(1, -30, 1, -30)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 2000, 0)
+ScrollingFrame.ScrollBarThickness = 5
+
+CodeEntry.Name = "CodeEntry"
+CodeEntry.Parent = ScrollingFrame
+CodeEntry.AnchorPoint = Vector2.new(0.5, 0.5)
+CodeEntry.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CodeEntry.BackgroundTransparency = 1.000
+CodeEntry.BorderSizePixel = 0
+CodeEntry.Position = UDim2.new(0.5, 0, 0.5, 0)
+CodeEntry.Size = UDim2.new(1, -5, 1, -5)
+CodeEntry.ClearTextOnFocus = false
+CodeEntry.Font = Enum.Font.Code
+CodeEntry.PlaceholderText = "warn(\"Warned for existing!\")"
+CodeEntry.Text = "warn(\"Warned for existing!\")"
+CodeEntry.TextColor3 = Color3.fromRGB(255, 255, 255)
+CodeEntry.TextSize = 15.000
+CodeEntry.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+CodeEntry.TextWrapped = true
+CodeEntry.TextXAlignment = Enum.TextXAlignment.Left
+CodeEntry.TextYAlignment = Enum.TextYAlignment.Top
+
+TextContainer.Name = "TextContainer"
+TextContainer.Parent = ScrollingFrame
+TextContainer.AnchorPoint = Vector2.new(0.5, 0.5)
+TextContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextContainer.BackgroundTransparency = 1.000
+TextContainer.BorderSizePixel = 0
+TextContainer.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextContainer.Size = UDim2.new(1, -5, 1, -5)
+TextContainer.ZIndex = 0
+TextContainer.Font = Enum.Font.Code
+TextContainer.Text = "warn(\"Warned for existing!\")"
+TextContainer.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextContainer.TextSize = 15.000
+TextContainer.TextTransparency = 1.000
+TextContainer.TextXAlignment = Enum.TextXAlignment.Left
+TextContainer.TextYAlignment = Enum.TextYAlignment.Top
+
+Inject.Name = "Inject"
+Inject.Parent = EXECUTOR_2
+Inject.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Inject.Position = UDim2.new(0, 320, 0, 200)
+Inject.Size = UDim2.new(0, 100, 0, 50)
+Inject.ZIndex = 0
+Inject.Font = Enum.Font.SourceSansBold
+Inject.Text = "Inject"
+Inject.TextColor3 = Color3.fromRGB(255, 255, 255)
+Inject.TextSize = 30.000
+
+UICorner_15.Parent = Inject
+
+Minimize.Name = "Minimize"
+Minimize.Parent = EXECUTOR_2
+Minimize.AnchorPoint = Vector2.new(1, 0)
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.BackgroundTransparency = 1.000
+Minimize.Position = UDim2.new(1, 0, 0, 0)
+Minimize.Size = UDim2.new(0, 20, 0, 20)
+Minimize.Font = Enum.Font.SourceSansBold
+Minimize.Text = "X"
+Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.TextScaled = true
+Minimize.TextSize = 14.000
+Minimize.TextWrapped = true
+
+Minimize_2.Name = "Minimize"
+Minimize_2.Parent = MainGui
+Minimize_2.AnchorPoint = Vector2.new(1, 0)
+Minimize_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize_2.BackgroundTransparency = 1.000
+Minimize_2.Position = UDim2.new(1, 0, 0, 0)
+Minimize_2.Size = UDim2.new(0, 20, 0, 20)
+Minimize_2.Font = Enum.Font.SourceSansBold
+Minimize_2.Text = "X"
+Minimize_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize_2.TextScaled = true
+Minimize_2.TextSize = 14.000
+Minimize_2.TextWrapped = true
+
+Toggle.Name = "Toggle"
+Toggle.Parent = Window
+Toggle.AnchorPoint = Vector2.new(0.5, 0)
+Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.BackgroundTransparency = 1.000
+Toggle.Position = UDim2.new(0.5, 0, 0, 0)
+Toggle.Size = UDim2.new(0, 100, 0, 50)
+Toggle.Font = Enum.Font.SourceSansBold
+Toggle.Text = "MMSB NOMAIN V2 TOGGLE"
+Toggle.TextColor3 = Color3.fromRGB(85, 0, 0)
+Toggle.TextScaled = true
+Toggle.TextSize = 14.000
+Toggle.TextWrapped = true
+
+-- Scripts:
+
+local function JQXIAXT_fake_script() -- CodeEntry.LocalScript 
+	local script = Instance.new('LocalScript', CodeEntry)
+
+	local Code = script.Parent
+	
+	function onKeyPress(inputObject, gameProcessedEvent)
+		local len = Code.Text:len()
+		if inputObject.KeyCode == Enum.KeyCode.Return and script.Parent:IsFocused() then
+			if string.match(Code.Text:sub(len-2), "do") or string.match(Code.Text:sub(len-4), "then") or string.match(Code.Text:sub(len-3), "do ") or string.match(Code.Text:sub(len-5), "then ") or string.match(Code.Text:sub(len-10), "function()") then
+				Code.Text = Code.Text .. "    " .. "\nend" 
+				script.Parent.CursorPosition = len + 5
+			end
+		end
+	end
+	
+	
+	game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+end
+coroutine.wrap(JQXIAXT_fake_script)()
+local function TOSEM_fake_script() -- ScrollingFrame.LocalScript 
+	local script = Instance.new('LocalScript', ScrollingFrame)
+
+    stringArrayToTextLabels = (function(strings, par) 
+    	local pos = UDim2.new(0,0,0,0)
+    	for q,w in pairs(strings) do
+    		if (w[1]:sub(1,1) == "^") then
+    			if (w[1]:sub(2,2) == "n") then
+    				pos = UDim2.new(0,0,0, pos.Y.Offset + 15)
+    			elseif (w[1]:sub(2,2) == "r") then
+    				pos = UDim2.new(0,pos.X.Offset,0, pos.Y.Offset + 15)
+    			elseif (w[1]:sub(2,2) == "t") then
+    				pos = UDim2.new(0, math.floor((pos.X.Offset + 25)/10)*10, 0, pos.Y.Offset)
+    			end
+    		else
+    			local lab = Instance.new("TextLabel")
+    			lab.Name = "elem" .. tostring(q);
+    			lab.Parent = par
+    			lab.Text = w[1]
+    			lab.TextColor3 = w[2]
+    			lab.Position = pos
+    			lab.BackgroundTransparency = 1
+    			lab.Font = "Arial" .. (w[3]~=nil and "Bold" or "")
+    			lab.FontSize = "Size12"
+    
+    			wait()
+    
+    			lab.Size = UDim2.new(0, lab.TextBounds.X, 0, lab.TextBounds.Y)
+    			pos = pos + UDim2.new(0, lab.TextBounds.X, 0,0)
+    		end
+    	end
+    end)
+    
+    Colors = {
+    	BLUE = Color3.new(34/255, 70/255, 128/255),
+    	GREEN = Color3.new(35/255, 110/255, 20/255),
+    	BLACK = Color3.new(.7, .7, .7),
+    	AQUA = Color3.new(46/255, 111/255, 125/255),
+    }
+    
+    Syntax = {
+    	BLUE = {"and", "break", "do", "else", "elseif", "end", "false", "for", "function", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while"}
+    }
+    
+    NEWLINE = {"^n"}
+    TAB = {"^t"}
+    LINEBREAK = {"^r"}
+    
+    -- tab is char 9
+    colorizeLines = (function(lines)
+    	local instructs = {}
+    
+    	local currLine = 0
+    	for q,w in pairs(lines) do
+    		currLine = currLine + 1
+    		table.insert(instructs, {tostring(currLine)..".",  Colors.AQUA})
+    		table.insert(instructs, {"^t"})
+    
+    		local contigiousWord = ""
+    
+    		local induceContig = function(dontAppendSpace)
+    			local contigColor = Colors.BLACK
+    			local met = false
+    
+    			for e,r in pairs(Syntax) do
+    				if (not met) then
+    					for t,y in pairs(r) do
+    						if (contigiousWord == y) then
+    							contigColor = Colors[e]
+    							met = true
+    							break
+    						end
+    					end
+    				end
+    			end
+    
+    			if (contigColor == Colors.BLUE) then
+    				table.insert(instructs, {contigiousWord..(dontAppendSpace and "" or " "), contigColor, true})
+    			else
+    				table.insert(instructs, {contigiousWord..(dontAppendSpace and "" or " "), contigColor})
+    			end
+    			contigiousWord = ""
+    		end
+    
+    		for i = 1,w:len() do
+    			local j = w:sub(i,i)
+    			if (string.byte(j) == 9) then
+    				table.insert(instructs, TAB)
+    			elseif (string.byte(j) == 32) then
+    				induceContig()
+    			elseif (string.byte(j) >= 48 and string.byte(j) <=57) then -- check if number
+    				induceContig(true)
+    
+    				table.insert(instructs, {j, Colors.AQUA})
+    			else
+    				if i > 1 then
+    					if (j=="-" and w:sub(i-1,i-1)=="-") then
+    						table.insert(instructs, {w:sub(i-1), Colors.GREEN})
+    						break
+    					end
+    				end
+    
+    				contigiousWord = contigiousWord .. j
+    			end
+    		end
+    
+    		induceContig()
+    
+    		table.insert(instructs, NEWLINE)
+    	end
+    
+    	return instructs;
+    end)
+    
+    EXECUTOR = nil
+    
+    script.Parent.Parent.Execute.MouseButton1Click:Connect(function()
+    	script.Parent.CodeEntry.TextTransparency = 1
+    	for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+    		if a:IsA("UIPageLayout") then
+    		else
+    			a:Destroy()
+    			game["Run Service"].Heartbeat:Wait()
+    		end
+    	end
+    	if EXECUTOR == nil then
+    		stringArrayToTextLabels(colorizeLines({"Can't execute! There's no backdoor to execute to."}),script.Parent.TextContainer)		
+    	else
+    		stringArrayToTextLabels(colorizeLines({script.Parent.CodeEntry.Text}),script.Parent.TextContainer)	
+    		EXECUTOR:FireServer(script.Parent.CodeEntry.Text)
+    	end
+    end)
+    
+    
+    script.Parent.CodeEntry.Focused:Connect(function()
+    	for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+    		if a:IsA("UIPageLayout") then
+    		else
+    			a:Destroy()
+    			game["Run Service"].Heartbeat:Wait()
+    		end
+    	end
+    	script.Parent.CodeEntry.TextTransparency = 0
+    end)
+    
+    script.Parent.Parent.Inject.MouseButton1Click:Connect(function()
+    	local a = coroutine.create(function()
+    		for _,selectedobject in pairs(game:GetDescendants()) do
+    			if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
+    				EXECUTOR = selectedobject
+    			elseif selectedobject:IsA("ModuleScript") then
+    				for _,children in pairs(selectedobject:GetChildren()) do
+    				    if children.Name == "RemoteHandler" and children:IsA("Script") then
+    				        for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
+    							if remotesearch:IsA("RemoteEvent") then
+    							    if EXECUTOR == nil then
+    								EXECUTOR = remotesearch
+    								script.Parent.CodeEntry.TextTransparency = 1
+    								stringArrayToTextLabels(colorizeLines({"Backdoor found."}),script.Parent.TextContainer)
+    								warn(EXECUTOR.Name)
+    								wait(4)
+    								for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+    									if a:IsA("UIPageLayout") then
+    									else
+    										a:Destroy()
+    										game["Run Service"].Heartbeat:Wait()
+    									end
+    								end
+    								script.Parent.CodeEntry.TextTransparency = 0
+    							end
+    							end
+						end
+    					elseif children.Name == "Rerubi" or children.Name == "LuaU" or children.Name == "LBI" or children.Parent.Name == "Loadstring" then
+    						for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
+    							if remotesearch:IsA("RemoteEvent") then
+    							    if EXECUTOR == nil then
+    								EXECUTOR = remotesearch
+    								script.Parent.CodeEntry.TextTransparency = 1
+    								stringArrayToTextLabels(colorizeLines({"Backdoor found."}),script.Parent.TextContainer)
+    								warn(EXECUTOR.Name)
+    								wait(4)
+    								for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+    									if a:IsA("UIPageLayout") then
+    									else
+    										a:Destroy()
+    										game["Run Service"].Heartbeat:Wait()
+    									end
+    								end
+    								script.Parent.CodeEntry.TextTransparency = 0
+    							    end
+						    	end
+    						end
+    					end
+    				end
+    			end
+    		end
+    		if EXECUTOR == nil then
+    			script.Parent.CodeEntry.TextTransparency = 1
+    			stringArrayToTextLabels(colorizeLines({"Failed to allocate Backdoor."}),script.Parent.TextContainer)
+    			wait(4)
+    			for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+    				if a:IsA("UIPageLayout") then
+    				else
+    					a:Destroy()
+    					game["Run Service"].Heartbeat:Wait()
+    				end
+    			end
+    			script.Parent.CodeEntry.TextTransparency = 0
+    		end
+    	end)
+    	coroutine.resume(a)
+    end)
+end
+coroutine.wrap(TOSEM_fake_script)()
+
+wait(1)
+
+GUI = game.CoreGui.RobloxGui.MMSBNOMAINV2
+EXEVISIBLE = false
+
+
+GUI.Window.MainGui.TEXTSELECTION.Visible = true
+GUI.Window.MainGui.EXECUTOR.Visible = false
+
+
+GUI.Window.MainGui.TEXTSELECTION.EXECUTOR.MouseButton1Click:Connect(function()
+	if EXEVISIBLE == false then
+		EXEVISIBLE = true
+		GUI.Window.MainGui.TEXTSELECTION.Visible = false
+		GUI.Window.MainGui.EXECUTOR.Visible = true
+	end
+end)
+
+GUI.Window.MainGui.EXECUTOR.Minimize.MouseButton1Click:Connect(function()
+	EXEVISIBLE = false
+	GUI.Window.MainGui.TEXTSELECTION.Visible = true
+	GUI.Window.MainGui.EXECUTOR.Visible = false
+end)
+
+GUI.Window.MainGui.TEXTSELECTION.EXECUTABLES.MouseButton1Click:Connect(function()
+	local TSE = coroutine.create(function()
+maxspeed = 60
+velocityoverlimit = false
+savedpos = Vector3.new(0,0,0)
+savedori = Vector3.new(0,0,0)
+tracebackactive = false
+savedtools = {}
+StarterGui = game:GetService("StarterGui")
+bindable = Instance.new("BindableFunction")
+aduration = 30
+
+
+SInsults = {"you lookin MIGHTY fine.","im gonna DEVOUR you tonight","DAMNNNNN","get on the bed","im finna make a model of you and put it in a jar capable of holding liquids for a long period of time","you'd look better with my liquids on you","penor","what dat mouth do","im widen a hole for you","you lookin extra breedable today, DAMN","if i was a whistle you'd be blowing on plastic right about now","gimme them slobbery lips","damn those are some thick thighs","you make me wanna whack my penor","give me them legs","im boutta start spreading ur legs","after im done with you, you wont be able to sit without making a puddle in the chair","them melons boutta be boing boing bouncing up and down","if you were a transformer, you'd be optimus fine","you lookin EXTRA crispy TODAY"}
+TInsults = {"ur a noob","ur a furry","what a poo poo head you are","child","ur dogwater","low intellect","absolute baboon","you are a toilet issue person","you're a school threat","ez","mad cuz bad","you probably a frog","you use freemodels","why are you such a loser","you are so funny omg im dying","ur sister is a witch","you probably dont even have 1TB","Dunkin' Donuts employee accused of killing customer with one punch after he was called a racial slur","suck a golfball","welcome to san adreas im cj from grove street","homicide is an optional choice","i am armed and dangerous","u converted to domestic terrorism","im gonna DEVOUR you.","gimme them legs","Geese is its own plural, stupid.","you're a joke at this point","yo mamma on my bed sheets and you're under 14","big failure","not even a belt can keep my jeans from sagging","how else could you afford all the soap that you drop?","my reputation leaves room for speculation","writin poems on tombstones","closest you ever came to a punchline was waitin for refreshments in the prom in 89'","you a punk","you probably cant even throw a football correctly","stay losing","cope harder","absolute baboon mentality","take a shower","gn kid","im staying winning and you're staying losing","what has the dog done","bye","he eatin soap","clam activity","bruh nawhhh nah bruhh nah no way bruhhh fr? Bruhhh","get real","can we ban this guy","cope on deez","this will drastically affect fishing season","diagnosis: skill issue","didnt cry about it","ok and?"}
+
+LastInsult = nil
+
+game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
+	for index,tableval in ipairs(savedtools) do
+		table.remove(savedtools,tableval)
+	end
+end)
+
+function repeatstand()
+	wait(.01)
+	game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+end
+
+AttentionColor = Color3.fromRGB(255,0,0)
+WarningColor = Color3.fromRGB(255,255,0)
+InformationColor = Color3.fromRGB(85,170,0)
+
+
+function colornotification(text,colortype)
+	for _,v in ipairs(game.CoreGui.RobloxGui.NotificationFrame:GetDescendants()) do
+		if v.Name == ("NotificationTitle") then
+			if v.Text == text then
+				v.Parent.BackgroundColor3 = Color3.fromRGB(colortype)
+				for _,b in ipairs(v.Parent:GetChildren()) do
+					if b:IsA("TextButton") then
+						b.BackgroundColor3 = Color3.fromRGB(colortype)
+					end
+				end
+			end
+		end
+	end
+end
+
+
+function bruh()
+	for _,v in pairs(game.CoreGui.RobloxGui.NotificationFrame:GetChildren()) do
+		if v.Name == "Notification" and v.NotificationTitle.Text == "Code Execution" then
+			v:Remove()
+		end
+	end	
+end
+
+function fireresponse(name)
+	if name == "CopyToClip" then
+		StarterGui:SetCore("SendNotification", {
+			Title = "MMSB NOMAIN",
+			Text = "Successfully copied code to clipboard",
+			Duration = 5,
+			Callback = bindable
+		})
+	end
+
+	if name == "Y" then
+		loadstring(game.CoreGui.NOMAINDEV.Frame.TextBox.Text)()
+	elseif name == "N" then
+	end
+
+	if name == "SexualRemark" then
+		local insulttable = SInsults
+		local ftable = insulttable[math.random(1,#insulttable)]
+		if ftable == LastInsult then 
+			local ftable = insulttable[math.random(1,#insulttable)]
+			if ftable == LastInsult then 
+				StarterGui:SetCore("SendNotification", {
+					Title = "SEXUAL REMARK",
+					Text = "Canceled Remark, Repeated Text x2.",
+					Duration = 5,
+					Callback = bindable
+				})
+				colornotification("SEXUAL REMARK",WarningColor)
+			else
+				if string.find(ftable,"#") then
+					StarterGui:SetCore("SendNotification", {
+						Title = "SEXUAL REMARK ERROR",
+						Text = "Message Contained Hashtags. Check Console for message",
+						Duration = 5,
+						Callback = bindable
+					})
+					warn(ftable)
+					colornotification("SEXUAL REMARK",AttentionColor)
+				else
+					game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
+					LastInsult = ftable
+				end
+			end
+		else
+			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
+			LastInsult = ftable
+		end
+	elseif name == "MakeARemark" then
+		local insulttable = TInsults
+		local ftable = insulttable[math.random(1,#insulttable)]
+		if ftable == LastInsult then 
+			local ftable = insulttable[math.random(1,#insulttable)]
+			if ftable == LastInsult then 
+				StarterGui:SetCore("SendNotification", {
+					Title = "REMARK",
+					Text = "Canceled Remark, Repeated Text x2.",
+					Duration = 5,
+					Callback = bindable
+				})
+				colornotification("REMARK",WarningColor)
+			else
+				if string.find(ftable,"#") then
+					StarterGui:SetCore("SendNotification", {
+						Title = "REMARK ERROR",
+						Text = "Message Contained Hashtags. Check Console for message.",
+						Duration = 5,
+						Callback = bindable
+					})
+					warn(ftable)
+					colornotification("REMARK",AttentionColor)
+				else
+					game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
+					LastInsult = ftable
+				end
+			end
+		else
+			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
+			LastInsult = ftable
+		end
+	end
+
+	if name == "RandomMath" then
+		local val  = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame local r1 = math.random(-math.pi,math.pi) local r = math.random(1,2) local t = nil
+		local tg = nil
+		if r == 1 then
+			t="*"
+		else
+			t="/"
+		end
+		local m = r1 * math.random(10,28462) / r * math.floor(math.pi)
+		local args = {
+			[1] =  "you have ".. tostring(m).. " ¤™",
+			[2] = "All"
+		}
+		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+		if m <= 0 then
+			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("you are in debt.", "All")
+		else
+			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("you are rich", "All")
+		end
+	end
+
+	if name == "Anti-Fling" then
+		StarterGui:SetCore("SendNotification", {
+			Title = "MMSB NOMAIN INFORMATION",
+			Text = "Anti-Fling Enabled",
+			Duration = 5,
+			Callback = bindable
+		})
+
+		game["Run Service"].RenderStepped:Connect(function()
+			if game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Z >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.Z >= maxspeed then
+				if game.Players.LocalPlayer.Character.Humanoid.Sit ~= true then
+					velocityoverlimit = true
+					if tracebackactive ~= true then
+						--  if game.Players.LocalPlayer.Character.Humanoid.FloorMaterial == Enum.Material.Air then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(savedpos) * CFrame.Angles(math.rad(savedori.X),math.rad(savedori.Y),math.rad(savedori.Z))
+						game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)  game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0) 
+						game.Players.LocalPlayer.Character.Torso.Velocity = Vector3.new(0,0,0) game.Players.LocalPlayer.Character.Torso.RotVelocity = Vector3.new(0,0,0)
+						repeatstand()
+						velocityoverlimit = false
+						tracebackactive = false
+						StarterGui:SetCore("SendNotification", {
+							Title = "ANTI-FLING ATTENTION",
+							Text = "Someone tried to fling you",
+							Duration = 5,
+							Callback = bindable
+						})
+					end
+					--	end
+				end
+			else
+				velocityoverlimit = false
+			end
+		end)
+		local ap = coroutine.create(function()
+			while wait() do
+				if velocityoverlimit == false then
+					savedpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+					savedori = game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation
+					--	a = Instance.new("Part",workspace) a.CanCollide = false a.Transparency = 1 a.Anchored = true a.Size = Vector3.new(0.1,0.1,0.1)
+					--		a.CFrame = game.Players.LocalPlayer.Character.Head.CFrame game.Debris:AddItem(a,20) 
+				else
+
+				end
+			end
+		end)
+		coroutine.resume(ap)
+	elseif name == "Anti-ToolKill" then
+		StarterGui:SetCore("SendNotification", {
+			Title = "MMSB NOMAIN INFORMATION",
+			Text = "Anti-ToolKill Enabled",
+			Duration = 5,
+			Callback = bindable
+		})
+
+		for _,tool in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if tool:IsA("Tool") then
+				table.insert(savedtools,tool) 
+			end
+		end
+		for _,tool in ipairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if tool:IsA("Tool") then
+				table.insert(savedtools,tool) 
+			end
+		end
+
+		game.Players.LocalPlayer.Character.ChildAdded:Connect(function(child)
+			if child:IsA("Tool") then
+				if table.find(savedtools,child) then
+				else
+					StarterGui:SetCore("SendNotification", {
+						Title = "ANTI-TOOKILL WARNING",
+						Text = child.Name.." was removed from your inventory.",
+						Duration = 5,
+						Callback = bindable
+					})
+
+					game.Debris:AddItem(child,0)
+				end
+			end
+		end)
+	end
+
+	if name == "NameDist" then
+		for _,v in ipairs(game.Players:GetChildren()) do
+			if v:IsA("Player") then
+				v.Character.Humanoid.NameDisplayDistance = math.huge
+			end
+		end
+	end
+
+	if name == "StunFly" then
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/StunFly'),true))()
+		StarterGui:SetCore("SendNotification", {
+			Title = "MMSB NOMAIN",
+			Text = "Reset to remove StunFly",
+			Duration = 5,
+			Callback = bindable
+		})
+	end
+
+	if name == "Empty" or name == "WIP" then
+		bruh()
+	end
+end
+
+
+--[[
+for _,v in ipairs(game.CoreGui.RobloxGui:GetDescendants()) do
+    if v:IsA("Frame") or v:IsA("ImageLabel") or v:IsA("ImageButton") or v:IsA("TextLabel") then
+        v.BackgroundColor3 = Color3.fromRGB(134,0,0)
+    elseif v:IsA("TextBox") or v:IsA("TextButton") then
+        v.BackgroundColor3 = Color3.fromRGB(234,0,0)
+    end
+end
+]]
+	function bindable.OnInvoke(response)
+		if response == "Y" then
+			fireresponse("Y")
+			bruh()      
+
+		elseif response == "CopyToClip" then
+			fireresponse("CopyToClip")
+			bruh()
+
+		elseif response == "N" then
+			fireresponse("N")
+			bruh()
+
+		elseif response == "SaveToFile" then
+			fireresponse("SaveToFile")
+			bruh()
+
+		elseif response == "RandomMath" then
+			fireresponse("RandomMath")
+			bruh()
+
+		elseif response == "MakeARemark" then
+			fireresponse("MakeARemark")
+			bruh()
+
+		elseif response == "SexualRemark" then
+			fireresponse("SexualRemark")
+			bruh()
+
+		elseif response == "Anti-Fling" then
+			fireresponse("Anti-Fling")
+			bruh()
+
+		elseif response == "NameDist" then
+			fireresponse("NameDist")
+			bruh()
+
+		elseif response == "Anti-ToolKill" then
+			fireresponse("Anti-ToolKill")
+			bruh()
+
+		elseif response == "StunFly" then
+			fireresponse("StunFly")
+			bruh()
+
+		elseif response == "Empty" then
+			fireresponse("Empty")
+			bruh()
+
+		elseif response == "Page2" then --------PAGE 2
+			bruh()
+			local a = coroutine.create(function()
+				wait(.1)
+				StarterGui:SetCore("SendNotification", {
+					Title = "Code Execution",
+					Text = "4th Option",
+					Duration = aduration,
+					Callback = bindable,
+					Button1 = "Anti-ToolKill",
+					Button2 = "NameDist",
+				})
+				wait(.1)
+				StarterGui:SetCore("SendNotification", {
+					Title = "Code Execution",
+					Text = "5th Option",
+					Duration = aduration,
+					Callback = bindable,
+					Button1 = "MakeARemark",
+					Button2 = "SexualRemark",
+				})
+				wait(.1)
+				StarterGui:SetCore("SendNotification", {
+					Title = "Code Execution",
+					Text = "6th Option",
+					Duration = aduration,
+					Callback = bindable,
+					Button1 = "RandomMath",
+					Button2 = "Page3",
+				})
+			end)
+			coroutine.resume(a)
+
+		elseif response == "Page3" then --------PAGE 3
+			bruh()
+			local a = coroutine.create(function()
+				wait(.1)
+				StarterGui:SetCore("SendNotification", {
+					Title = "Code Execution",
+					Text = "7th Option",
+					Duration = aduration,
+					Callback = bindable,
+					Button1 = "StunFly",
+					Button2 = "Empty",
+				})
+				wait(.1)
+				StarterGui:SetCore("SendNotification", {
+					Title = "Code Execution",
+					Text = "8th Option",
+					Duration = aduration,
+					Callback = bindable,
+					Button1 = "Empty",
+					Button2 = "Empty",
+				})
+				wait(.1)
+				StarterGui:SetCore("SendNotification", {
+					Title = "Code Execution",
+					Text = "9th Option",
+					Duration = aduration,
+					Callback = bindable,
+					Button1 = "Empty",
+					Button2 = "Page4",
+				})
+			end)
+			coroutine.resume(a)
+		end
+	end
+	StarterGui:SetCore("SendNotification", {
+		Title = "Code Execution",
+		Text = "rawr uwu X3",
+		Duration = aduration,
+		Callback = bindable,
+		Button1 = "what",
+		Button2 = "wtf",
+	})
+	wait(.1)
+	StarterGui:SetCore("SendNotification", {
+		Title = "Code Execution",
+		Text = "2nd Option",
+		Duration = aduration,
+		Callback = bindable,
+		Button1 = "CopyToClip",
+		Button2 = "SaveToFile",
+	})
+	wait(.1)
+	StarterGui:SetCore("SendNotification", {
+		Title = "Code Execution",
+		Text = "3rd Option",
+		Duration = aduration,
+		Callback = bindable,
+		Button1 = "Anti-Fling",
+		Button2 = "Page2",
+	})
+
+
+	end)
+	coroutine.resume(TSE)
+end)
+
+GUI.Window.Toggle.MouseButton1Click:Connect(function()
+	GUI.Window.Toggle.Visible = false
+	GUI.Window.MainGui.Visible = true
+end)
+GUI.Window.MainGui.Minimize.MouseButton1Click:Connect(function()
+	GUI.Window.Toggle.Visible = true
+	GUI.Window.MainGui.Visible = false
+end)
+
+
+--///////////////////////////////////////////////////
+
+enabled = true
+spyOnMyself = true
+public = false
+publicItalics = true
+privateProperties = {
+	Color = Color3.fromRGB(195,0,0); 
+	Font = Enum.Font.SourceSansItalic;
+	TextSize = 18;
+}
+
+local StarterGui = game:GetService("StarterGui")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+local instance = (_G.chatSpyInstance or 0) + 1
+_G.chatSpyInstance = instance
+
+local function onChatted(p,msg)
+	if _G.chatSpyInstance == instance then
+		if p==player and msg:lower():sub(1,4)=="/a" then
+			enabled = not enabled
+			wait(0.3)
+			privateProperties.Text = "{-{MMSB-NOMAIN-V2}- "..(enabled and "EN" or "DIS").."ABLED}"
+			StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+		elseif enabled and (spyOnMyself==true or p~=player) then
+			msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
+			local hidden = true
+			local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
+				if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
+					hidden = false
+				end
+			end)
+			wait(1)
+			conn:Disconnect()
+			if hidden and enabled then
+				if public then
+					saymsg:FireServer((publicItalics and "/me " or '').."-{MMSB-NOMAIN-V2}- [".. p.Name .."]: "..msg,"All")
+				else
+					if string.find(msg,"/e MMSB NOMAIN") then
+					else
+						privateProperties.Text = "-{MMSB-NOMAIN-V2}- [".. p.Name .."]: "..msg
+						StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+					end
+				end
+			end
+		end
+	end
+end
+
+for _,p in ipairs(Players:GetPlayers()) do
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end
+Players.PlayerAdded:Connect(function(p)
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end)
+privateProperties.Text = "{-{MMSB-NOMAIN-DEV}- "..(enabled and "EN" or "DIS").."ABLED}"
+StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+local chatFrame = player.PlayerGui.Chat.Frame
+chatFrame.ChatChannelParentFrame.Visible = true
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
