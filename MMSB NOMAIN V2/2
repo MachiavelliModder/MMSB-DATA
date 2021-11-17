@@ -110,15 +110,11 @@ local Center = Instance.new("ImageLabel")
 local Cog = Instance.new("ImageLabel")
 local ImageLabel_7 = Instance.new("ImageLabel")
 local Toggle = Instance.new("TextButton")
-local Notifications = Instance.new("Frame")
-local UIListLayout = Instance.new("UIListLayout")
-local Notif = Instance.new("Frame")
-local TextLabel_2 = Instance.new("TextLabel")
 
 --Properties:
 
 MMSBNOMAINV2.Name = "MMSBNOMAINV2"
-MMSBNOMAINV2.Parent = game.CoreGui.RobloxGui
+MMSBNOMAINV2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 Fullscreen.Name = "Fullscreen"
 Fullscreen.Parent = MMSBNOMAINV2
@@ -424,7 +420,7 @@ EXECUTOR_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 EXECUTOR_2.Position = UDim2.new(0.5, 0, 0.800000012, 0)
 EXECUTOR_2.Size = UDim2.new(0, 650, 0, 220)
 EXECUTOR_2.Visible = false
-EXECUTOR_2.ZIndex = 0
+EXECUTOR_2.ZIndex = 200
 
 UICorner_12.Parent = EXECUTOR_2
 
@@ -433,7 +429,7 @@ Execute.Parent = EXECUTOR_2
 Execute.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Execute.Position = UDim2.new(0, 0, 0, 200)
 Execute.Size = UDim2.new(0, 200, 0, 50)
-Execute.ZIndex = 0
+Execute.ZIndex = 2000
 Execute.Font = Enum.Font.SourceSansBold
 Execute.Text = "Execute"
 Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -446,7 +442,7 @@ Clear.Parent = EXECUTOR_2
 Clear.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Clear.Position = UDim2.new(0, 210, 0, 200)
 Clear.Size = UDim2.new(0, 100, 0, 50)
-Clear.ZIndex = 0
+Clear.ZIndex = 2000
 Clear.Font = Enum.Font.SourceSansBold
 Clear.Text = "Clear"
 Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -461,6 +457,7 @@ ScrollingFrame.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 ScrollingFrame.Size = UDim2.new(1, -30, 1, -30)
+ScrollingFrame.ZIndex = 2001
 ScrollingFrame.CanvasSize = UDim2.new(0, 0, 2000, 0)
 ScrollingFrame.ScrollBarThickness = 5
 
@@ -472,6 +469,7 @@ CodeEntry.BackgroundTransparency = 1.000
 CodeEntry.BorderSizePixel = 0
 CodeEntry.Position = UDim2.new(0.5, 0, 0.5, 0)
 CodeEntry.Size = UDim2.new(1, -5, 1, -5)
+CodeEntry.ZIndex = 2002
 CodeEntry.ClearTextOnFocus = false
 CodeEntry.Font = Enum.Font.Code
 CodeEntry.PlaceholderText = "warn(\"Warned for existing!\")"
@@ -491,7 +489,7 @@ TextContainer.BackgroundTransparency = 1.000
 TextContainer.BorderSizePixel = 0
 TextContainer.Position = UDim2.new(0.5, 0, 0.5, 0)
 TextContainer.Size = UDim2.new(1, -5, 1, -5)
-TextContainer.ZIndex = 0
+TextContainer.ZIndex = 20001
 TextContainer.Font = Enum.Font.Code
 TextContainer.Text = "warn(\"Warned for existing!\")"
 TextContainer.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -505,7 +503,7 @@ Inject.Parent = EXECUTOR_2
 Inject.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Inject.Position = UDim2.new(0, 320, 0, 200)
 Inject.Size = UDim2.new(0, 100, 0, 50)
-Inject.ZIndex = 0
+Inject.ZIndex = 2000
 Inject.Font = Enum.Font.SourceSansBold
 Inject.Text = "Inject"
 Inject.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -520,6 +518,7 @@ Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Minimize.BackgroundTransparency = 1.000
 Minimize.Position = UDim2.new(1, 0, 0, 0)
 Minimize.Size = UDim2.new(0, 20, 0, 20)
+Minimize.ZIndex = 2000
 Minimize.Font = Enum.Font.SourceSansBold
 Minimize.Text = "X"
 Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -644,38 +643,9 @@ Toggle.TextScaled = true
 Toggle.TextSize = 14.000
 Toggle.TextWrapped = true
 
-Notifications.Name = "Notifications"
-Notifications.Parent = MMSBNOMAINV2
-Notifications.AnchorPoint = Vector2.new(1, 0.5)
-Notifications.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Notifications.BackgroundTransparency = 1.000
-Notifications.Position = UDim2.new(1, 0, 0.5, 0)
-Notifications.Size = UDim2.new(0, 400, 1, 0)
-Notifications.Visible = false
-
-UIListLayout.Parent = Notifications
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-
-Notif.Name = "Notif"
-Notif.Parent = Notifications
-Notif.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
-Notif.BackgroundTransparency = 0.500
-Notif.Size = UDim2.new(1, 0, 0, 150)
-Notif.Visible = false
-
-TextLabel_2.Parent = Notif
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Size = UDim2.new(1, 0, 0, 50)
-TextLabel_2.Font = Enum.Font.SourceSansBold
-TextLabel_2.Text = "StunFly"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextSize = 25.000
-TextLabel_2.TextWrapped = true
-
 -- Scripts:
 
-local function WJDL_fake_script() -- CodeEntry.LocalScript 
+local function PMDHI_fake_script() -- CodeEntry.LocalScript 
 	local script = Instance.new('LocalScript', CodeEntry)
 
 	local Code = script.Parent
@@ -693,8 +663,8 @@ local function WJDL_fake_script() -- CodeEntry.LocalScript
 	
 	game:GetService("UserInputService").InputBegan:connect(onKeyPress)
 end
-coroutine.wrap(WJDL_fake_script)()
-local function AXHCER_fake_script() -- ScrollingFrame.LocalScript 
+coroutine.wrap(PMDHI_fake_script)()
+local function JCRQUH_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	stringArrayToTextLabels = (function(strings, par) 
@@ -883,9 +853,13 @@ local function AXHCER_fake_script() -- ScrollingFrame.LocalScript
 		end)
 		coroutine.resume(a)
 	end)
+	
+	script.Parent.Parent.Clear.MouseButton1Click:Connect(function()
+		script.Parent.CodeEntry.Text = ""
+	end)
 end
-coroutine.wrap(AXHCER_fake_script)()
-local function PMRPF_fake_script() -- MainGui.Dragify 
+coroutine.wrap(JCRQUH_fake_script)()
+local function RDBUO_fake_script() -- MainGui.Dragify 
 	local script = Instance.new('LocalScript', MainGui)
 
 	local UIS = game:GetService("UserInputService")
@@ -942,7 +916,7 @@ local function PMRPF_fake_script() -- MainGui.Dragify
 	
 	coroutine.resume(rotate)
 end
-coroutine.wrap(PMRPF_fake_script)()
+coroutine.wrap(RDBUO_fake_script)()
 
 wait(1)
 
