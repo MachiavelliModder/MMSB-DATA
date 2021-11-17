@@ -114,7 +114,7 @@ local Toggle = Instance.new("TextButton")
 --Properties:
 
 MMSBNOMAINV2.Name = "MMSBNOMAINV2"
-MMSBNOMAINV2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+MMSBNOMAINV2.Parent = game.CoreGui.RobloxGui
 
 Fullscreen.Name = "Fullscreen"
 Fullscreen.Parent = MMSBNOMAINV2
