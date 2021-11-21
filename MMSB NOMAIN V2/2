@@ -1049,7 +1049,7 @@ function fireresponse(name)
 			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
 			LastInsult = ftable
 		end
-	elseif name == "MakeARemark" thenl
+	elseif name == "MakeARemark" then
 		local insulttable = TInsults
 		local ftable = insulttable[math.random(1,#insulttable)]
 		if ftable == LastInsult then 
