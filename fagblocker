@@ -1,5 +1,6 @@
-
 local gayshit = {"sexual", "gay", "pride", "les", "trans", "lgb","binary","demi","neptun","uran","homo","rainbow","gender"}
+
+local exclusion = {"toggles","locales","binarysearch","modules","profilesocialcircle","examples","graphicsparticles","translation","vehicleseat","transparen"}
 
 for _,a in ipairs(workspace:GetChildren()) do
     if a:IsA("Hint") then
@@ -18,16 +19,23 @@ for _,a in pairs(game:GetDescendants()) do
 	local name = string.lower(a.Name)
 	for key,value in pairs(gayshit) do
 	    if string.find(name,value) then
-	        if string.find(name,"transparency") then
+	        local dontdelete = false
+	        for k,v in pairs(exclusion) do
+	            if string.find(name,v) then
+	                passed = true
+	            end
+	        end
+	        
+	        if passed == true then
         	else
-		if a:IsA("LocalScript") or a:IsA("ModuleScript") then else
+	        	if a:IsA("LocalScript") or a:IsA("ModuleScript") then else
     	     		thingsremoved = thingsremoved + 1
     	    		h.Text = tostring(thingsremoved).." objects have been detected as pride bullshit, instantly removed. (slow to prevent lag)"
-			warn(a.Name)
-			a:Destroy()
+		        	warn(a.Name)
+			        a:Destroy()
     	    		game["Run Service"].Heartbeat:Wait()
-    		end
-	end
+    	    	end
+        	end
     	end
 	end
 	
