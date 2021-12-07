@@ -20,13 +20,13 @@ for _,a in pairs(game:GetDescendants()) do
 	    if string.find(name,value) then
 	        if string.find(name,"transparency") then
         	else
-    	     	thingsremoved = thingsremoved + 1
-    	    	h.Text = tostring(thingsremoved).." objects have been detected as pride bullshit, instantly removed. (slow to prevent lag)"
 		if a:IsA("LocalScript") or a:IsA("ModuleScript") then else
+    	     		thingsremoved = thingsremoved + 1
+    	    		h.Text = tostring(thingsremoved).." objects have been detected as pride bullshit, instantly removed. (slow to prevent lag)"
 			a:Destroy()
-		end
-    	    	game["Run Service"].Heartbeat:Wait()
+    	    		game["Run Service"].Heartbeat:Wait()
     		end
+	end
     	end
 	end
 	
