@@ -1,6 +1,6 @@
 local gayshit = {"sexual", "gay", "pride", "les", "trans", "lgb","binary","demi","neptun","uran","homo","rainbow","gender"}
 
-local exclusion = {"toggles","locales","binarysearch","modules","profilesocialcircle","examples","graphicsparticles","translation","vehicleseat","transparen"}
+local exclusion = {"toggles","locales","binarysearch","modules","profilesocialcircle","examples","graphicsparticles","translation","vehicleseat","transparen","disables","enables"}
 
 for _,a in ipairs(workspace:GetChildren()) do
     if a:IsA("Hint") then
