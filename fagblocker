@@ -23,6 +23,7 @@ for _,a in pairs(game:GetDescendants()) do
 		if a:IsA("LocalScript") or a:IsA("ModuleScript") then else
     	     		thingsremoved = thingsremoved + 1
     	    		h.Text = tostring(thingsremoved).." objects have been detected as pride bullshit, instantly removed. (slow to prevent lag)"
+			warn(a.Name)
 			a:Destroy()
     	    		game["Run Service"].Heartbeat:Wait()
     		end
@@ -41,6 +42,7 @@ for _,a in pairs(game:GetDescendants()) do
             	     	thingsremoved = thingsremoved + 1
             	    	h.Text = tostring(thingsremoved).." objects have been detected as pride bullshit, instantly removed. (slow to prevent lag)"
             	    	a.Parent:Destroy()
+			warn(a.Parent.Name)
             	    	game["Run Service"].Heartbeat:Wait()
         	    	end
         		end
@@ -69,5 +71,5 @@ game.Debris:AddItem(h,3)
 wait(4)
 local h = Instance.new("Hint")
 h.Parent = workspace
-h.Text = "Some game assets may be broken, if any are, Machiavelli_Modder#0453 on discord."
+h.Text = "Some game assets may be broken, if any are, Machiavelli_Modder#0453 on discord. Open Developer Console to see what was removed"
 game.Debris:AddItem(h,6)
