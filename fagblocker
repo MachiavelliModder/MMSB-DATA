@@ -49,8 +49,8 @@ for _,a in pairs(game:GetDescendants()) do
             	    else
             	     	thingsremoved = thingsremoved + 1
             	    	h.Text = tostring(thingsremoved).." objects have been detected as pride bullshit, instantly removed. (slow to prevent lag)"
-            	    	a.Parent:Destroy()
 			warn(a.Parent.Name)
+            	    	a.Parent:Destroy()
             	    	game["Run Service"].Heartbeat:Wait()
         	    	end
         		end
