@@ -22,11 +22,11 @@ for _,a in pairs(game:GetDescendants()) do
 	        local dontdelete = false
 	        for k,v in pairs(exclusion) do
 	            if string.find(name,v) then
-	                passed = true
+	                dontdelete = true
 	            end
 	        end
 	        
-	        if passed == true then
+	        if dontdelete == true then
         	else
 	        	if a:IsA("LocalScript") or a:IsA("ModuleScript") then else
     	     		thingsremoved = thingsremoved + 1
