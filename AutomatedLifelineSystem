@@ -1,0 +1,587 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Auto = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Console = Instance.new("Frame")
+local Text = Instance.new("TextLabel")
+local Confirmation = Instance.new("TextLabel")
+local Text2 = Instance.new("TextLabel")
+local consoletext = Instance.new("TextBox")
+local Configuration = Instance.new("Configuration")
+local TextBox = Instance.new("Folder")
+local TextLabel = Instance.new("Folder")
+local HIGHLIGHT210 = Instance.new("BillboardGui")
+local Frame_2 = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local MAG = Instance.new("TextLabel")
+local VEL = Instance.new("TextLabel")
+
+--Properties:
+
+Auto.Name = "Auto"
+Auto.Parent = game.CoreGui.RobloxGui
+Auto.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = Auto
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Size = UDim2.new(1, 0, 1, 0)
+
+Console.Name = "Console"
+Console.Parent = Frame
+Console.AnchorPoint = Vector2.new(0.5, 0.5)
+Console.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Console.BackgroundTransparency = 1.000
+Console.Position = UDim2.new(0.5, 0, 0.5, 0)
+Console.Size = UDim2.new(0.699999988, 0, 0.899999976, 0)
+
+Text.Name = "Text"
+Text.Parent = Console
+Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text.BackgroundTransparency = 1.000
+Text.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Text.Size = UDim2.new(1, 0, 1, 0)
+Text.Font = Enum.Font.Code
+Text.TextColor3 = Color3.fromRGB(255, 0, 0)
+Text.TextSize = 18.000
+Text.TextStrokeColor3 = Color3.fromRGB(85, 0, 0)
+Text.TextStrokeTransparency = 0.000
+Text.TextXAlignment = Enum.TextXAlignment.Left
+Text.TextYAlignment = Enum.TextYAlignment.Top
+
+Confirmation.Name = "Confirmation"
+Confirmation.Parent = Console
+Confirmation.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Confirmation.BackgroundTransparency = 1.000
+Confirmation.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Confirmation.Size = UDim2.new(1, 0, 1, 0)
+Confirmation.Font = Enum.Font.Code
+Confirmation.TextColor3 = Color3.fromRGB(255, 0, 0)
+Confirmation.TextSize = 18.000
+Confirmation.TextStrokeColor3 = Color3.fromRGB(85, 0, 0)
+Confirmation.TextStrokeTransparency = 0.000
+Confirmation.TextXAlignment = Enum.TextXAlignment.Right
+Confirmation.TextYAlignment = Enum.TextYAlignment.Bottom
+
+Text2.Name = "Text2"
+Text2.Parent = Console
+Text2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text2.BackgroundTransparency = 1.000
+Text2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Text2.Size = UDim2.new(1, 0, 1, 0)
+Text2.Font = Enum.Font.Code
+Text2.TextColor3 = Color3.fromRGB(255, 0, 0)
+Text2.TextSize = 18.000
+Text2.TextStrokeColor3 = Color3.fromRGB(85, 0, 0)
+Text2.TextStrokeTransparency = 0.000
+Text2.TextXAlignment = Enum.TextXAlignment.Left
+Text2.TextYAlignment = Enum.TextYAlignment.Bottom
+
+consoletext.Name = "consoletext"
+consoletext.Parent = Console
+consoletext.AnchorPoint = Vector2.new(1, 1)
+consoletext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+consoletext.BackgroundTransparency = 1.000
+consoletext.Position = UDim2.new(1, 0, 1, 25)
+consoletext.Size = UDim2.new(1, 0, 0, 25)
+consoletext.Font = Enum.Font.Code
+consoletext.Text = ""
+consoletext.TextColor3 = Color3.fromRGB(255, 0, 0)
+consoletext.TextSize = 14.000
+consoletext.TextStrokeColor3 = Color3.fromRGB(85, 0, 0)
+consoletext.TextStrokeTransparency = 0.800
+consoletext.TextTransparency = 0.500
+consoletext.TextXAlignment = Enum.TextXAlignment.Left
+
+Configuration.Parent = Auto
+
+TextBox.Name = "TextBox"
+TextBox.Parent = Configuration
+
+TextLabel.Name = "TextLabel"
+TextLabel.Parent = Configuration
+
+HIGHLIGHT210.Name = "HIGHLIGHT#210"
+HIGHLIGHT210.Parent = Auto
+HIGHLIGHT210.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+HIGHLIGHT210.Active = true
+HIGHLIGHT210.AlwaysOnTop = true
+HIGHLIGHT210.LightInfluence = 1.000
+HIGHLIGHT210.MaxDistance = 99999997781963083612160.000
+HIGHLIGHT210.Size = UDim2.new(0, 125, 0, 25)
+
+Frame_2.Parent = HIGHLIGHT210
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.Size = UDim2.new(1, 0, 1, 0)
+
+TextLabel_2.Parent = Frame_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "!"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextTransparency = 0.500
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = Frame_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0, 1, 0, 1)
+TextLabel_3.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "!"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextTransparency = 0.500
+TextLabel_3.TextWrapped = true
+
+TextLabel_4.Parent = Frame_2
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0, -1, 0, -1)
+TextLabel_4.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "!"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextTransparency = 0.500
+TextLabel_4.TextWrapped = true
+
+TextLabel_5.Parent = Frame_2
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(0, 0, 0, -1)
+TextLabel_5.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "!"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextTransparency = 0.500
+TextLabel_5.TextWrapped = true
+
+MAG.Name = "MAG"
+MAG.Parent = Frame_2
+MAG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MAG.BackgroundTransparency = 1.000
+MAG.Size = UDim2.new(0.400000006, 0, 1, 0)
+MAG.Font = Enum.Font.SourceSans
+MAG.Text = "Magnitude"
+MAG.TextColor3 = Color3.fromRGB(255, 0, 0)
+MAG.TextScaled = true
+MAG.TextSize = 14.000
+MAG.TextWrapped = true
+
+VEL.Name = "VEL"
+VEL.Parent = Frame_2
+VEL.AnchorPoint = Vector2.new(1, 0)
+VEL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VEL.BackgroundTransparency = 1.000
+VEL.Position = UDim2.new(1, 0, 0, 0)
+VEL.Size = UDim2.new(0.400000006, 0, 1, 0)
+VEL.Font = Enum.Font.SourceSans
+VEL.Text = "Velocity"
+VEL.TextColor3 = Color3.fromRGB(255, 0, 0)
+VEL.TextScaled = true
+VEL.TextSize = 14.000
+VEL.TextWrapped = true
+
+local player = game:GetService("Players").LocalPlayer
+local mouse = player:GetMouse()
+local core = game.CoreGui.RobloxGui.Auto
+
+
+local consoleenabled = true
+
+
+local EmergencyModuleStatus = "ONLINE"
+local CombatModuleStatus = "ONLINE"
+local AgilityModuleStatus = "ONLINE"
+
+
+local sounds = {
+	Beep = "rbxassetid://5289642056"
+
+}
+
+local Volume = 1
+
+local function PlaySound(sID,Pitch,CVolume)
+	local plays = coroutine.create(function()
+		local sFOUND = false
+		for key,value in pairs(sounds) do
+			if key == sID then
+				--warn(sID)
+				warn("play")
+				local SOUND = Instance.new("Sound",workspace)
+				SOUND.SoundId = value
+				SOUND.PlaybackSpeed = Pitch
+				SOUND.Volume = Volume + CVolume
+				SOUND:Play()
+
+				game:GetService("Debris"):AddItem(SOUND,SOUND.TimeLength + .1)
+				sFOUND = true
+			end
+		end
+		if sFOUND == false then
+			warn("Unable to find sound. sID: "..sID)
+		end
+	end)
+	coroutine.resume(plays)
+end
+
+local function PlayMessage(Message,TextPath,Speed)
+	local msg = coroutine.create(function()
+		local CharacterNumber = #Message
+		local CGraphine = 0
+
+		TextPath.MaxVisibleGraphemes = CGraphine
+		TextPath.Text = Message
+
+		if TextPath then
+			local skip = false
+			local mcw23 = coroutine.create(function()
+				while wait(Speed) do
+					if skip == true then
+						wait(.1)
+						PlaySound("Beep",3,-.8)
+						TextPath.MaxVisibleGraphemes = -1
+						break
+					else
+						TextPath.MaxVisibleGraphemes = CGraphine
+						if CGraphine < CharacterNumber then
+							CGraphine = CGraphine + 1	
+							--warn(string.sub(Message,CGraphine,CGraphine))
+							local s = string.sub(Message,CGraphine,CGraphine)
+							if s == " " or s == "	" then
+							else
+								PlaySound("Beep",5,-.8)
+							end
+						else
+							break
+						end
+					end
+				end
+			end)
+			coroutine.resume(mcw23)
+			mouse.KeyDown:Connect(function(k)
+				if skip == false then
+					if k == "c" then
+						skip = true
+						core.Frame.Console.Confirmation.Text = ""
+					end
+				end
+			end)
+		end
+	end)
+	coroutine.resume(msg)
+end
+
+local function clearconsole()
+	core.Frame.Console.Text.Text = ""
+end
+
+for _,b in pairs(core.Configuration:GetChildren()) do
+	for _,a in pairs(core:GetDescendants()) do
+		if a:IsA(b.Name) then
+			for _,c in pairs(b:GetChildren()) do
+				if a.TextColor3 and c.Name == "TextColor3" then
+					warn("changed color")
+					a.TextColor3 = c.Value
+				elseif a.TextStrokeColor3 and c.Name == "TextStrokeColor3" then
+					warn("changed stroke color")
+					a.TextStrokeColor3 = c.Value
+				elseif a.TextStrokeTransparency and c.Name == "TextStrokeTransparency" then
+					warn("changed stroke transparency")
+					a.TextStrokeTransparency = c.Value
+				end
+			end
+		end
+	end
+end
+
+
+
+if core then
+	local a = coroutine.create(function()
+		PlayMessage([[
+				
+				=--{MMSB-AUTOMATED-LIFELINE-SYSTEM}--=;
+				
+				
+				WELCOME TO MMSB-AUTOMATED-LIFELINE-SYSTEM VERSION-1. THIS WILL APPLY TO ALL CURRENT LIFEFORMS AND WILL ATTEMPT TO KEEP
+				YOU ALIVE AS LONG AS POSSIBLE WITHOUT POSSIBILITY OF DEATH. YOU HAVE THE OPTION TO SKIP THIS INTRODUCTION.
+				
+				ALS[AUTOMATED-LIFELINE-SYSTEM] IS AN AUTOMATED ARTIFICIAL INTELLIGENCE ROBOT MANUFACTURED TO GIVE THE USER
+				A GREATER FIGHTING CHANCE IN COMBAT, OR EVERYDAY SKILLS.
+				
+				THIS AI WILL AID YOU IN TROUBLESOME EVENTS SUCH AS, PARKOUR, COMBAT, EXPLOITERS, AND MANUVERING.
+				YOU WILL BE GIVEN A CONSOLE-TYPE UI TO USE FOR YOUR ADVANTAGE. USE WITH RESPONSIBILITY AND UTMOST CARE.
+				
+				WELCOME, ]]..string.upper(player.Name)..[[. USE WITH CAUTION, USE WITH CARE.]],core.Frame.Console.Text,.02)
+
+		PlayMessage([[
+				
+				// ONLINE // OFFLINE // AVAILABLE;
+				
+				Emergency_Module Avalibility = { ]]..EmergencyModuleStatus..[[ };
+				Combat_Module Avalibility = { ]]..CombatModuleStatus..[[ };
+				Agility_Module Avalibility = { ]]..AgilityModuleStatus..[[ };
+				
+				]],core.Frame.Console.Text2,.02)
+
+		wait(10)
+		PlayMessage([[
+				Press "C" to skip
+				]],core.Frame.Console.Confirmation,.02)
+	end)
+	coroutine.resume(a)
+end
+
+local commands = {
+	clear = "clears console";
+	help = "shows commands";
+	enable_master = "enables/disables all modules";
+	enable_emergencymodule = "enables/disables Emergency_Module";
+	enable_combatmodule = "enables/disables Combat_Module";
+	enable_agilitymodule = "enables/disables Agility_Module";
+}
+
+local function updatemodules()
+	PlayMessage([[
+				
+				// ONLINE // OFFLINE // AVAILABLE;
+				
+				Emergency_Module Avalibility = { ]]..EmergencyModuleStatus..[[ };
+				Combat_Module Avalibility = { ]]..CombatModuleStatus..[[ };
+				Agility_Module Avalibility = { ]]..AgilityModuleStatus..[[ };
+				
+				]],core.Frame.Console.Text2,.02)
+
+end
+
+core.Frame.Console.consoletext.FocusLost:Connect(function()
+	local a21 = coroutine.create(function()
+		local value = string.lower(core.Frame.Console.consoletext.Text)
+		if string.lower(core.Frame.Console.consoletext.Text) == value then
+			if value == "clear" then
+				clearconsole()
+				core.Frame.Console.consoletext.Text = ""
+			elseif value == "help" then
+				local str = ""
+				for key,value in pairs(commands) do
+					str = str..[[
+					(]]..key..[[ : ]]..value..[[)
+					]]
+				end
+
+				PlayMessage(str,core.Frame.Console.Text,.02)
+			elseif value == "enable_emergencymodule" then
+				EmergencyModuleStatus = "ONLINE"
+				updatemodules()
+			elseif value == "disable_emergencymodule" then
+				EmergencyModuleStatus = "AVAILABLE"
+				updatemodules()
+			elseif value == "enable_combatmodule" then
+				CombatModuleStatus = "ONLINE"
+				updatemodules()
+			elseif value == "disable_combatmodule" then
+				CombatModuleStatus = "AVAILABLE"
+				updatemodules()
+			elseif value == "enable_agilitymodule" then
+				AgilityModuleStatus = "ONLINE"
+				updatemodules()
+			elseif value == "disable_agilitymodule" then
+				AgilityModuleStatus = "AVAILABLE"
+				updatemodules()
+
+			elseif value == "disable_master" then
+				CombatModuleStatus = "AVAILABLE"
+				AgilityModuleStatus = "AVAILABLE"
+				EmergencyModuleStatus = "AVAILABLE"
+				updatemodules()
+			elseif value == "enable_master" then
+				CombatModuleStatus = "ONLINE"
+				AgilityModuleStatus = "ONLINE"
+				EmergencyModuleStatus = "ONLINE"
+				updatemodules()
+			end
+		end
+	end)
+	coroutine.resume(a21)
+end)
+
+local out = true
+
+mouse.KeyDown:Connect(function(k)
+	if k == "h" then
+		if out == true then
+			out = false
+			local TweenService = game:GetService("TweenService")
+			local tween = TweenService:Create(core.Frame.Console, TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut, 0, false, 0), {Size = UDim2.new(2,0,2,0)})
+			tween:Play()
+		else
+			out = true
+			local TweenService = game:GetService("TweenService")
+			local tween = TweenService:Create(core.Frame.Console, TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut, 0, false, 0), {Size = UDim2.new(.7,0,.9,0)})
+			tween:Play()
+		end
+	end
+end)
+
+
+LLACTIVE = false
+
+wait(1)
+local b = coroutine.create(function()
+player.Character:FindFirstChild("Humanoid").Changed:Connect(function(prop)
+	if prop == "Health" then
+		if player.Character:FindFirstChild("Humanoid").Health < player.Character:FindFirstChild("Humanoid").MaxHealth - 10 then
+			if LLACTIVE == false then
+				LLACTIVE = true
+				local a = coroutine.create(function()
+					PlaySound("Beep",4,0)
+					wait(.2)
+					PlaySound("Beep",4,0)
+					wait(.2)
+					PlaySound("Beep",4,0)
+				end)
+				coroutine.resume(a)
+			end
+			if player.Character:FindFirstChild("Humanoid").Health < 20 then
+				local c = coroutine.create(function()
+					while player.Character:FindFirstChild("Humanoid").Health < 20 do
+						PlaySound("Beep",8,-.5)
+						wait(.5)
+					end
+				end)
+				coroutine.resume(c)
+			end
+		elseif player.Character:FindFirstChild("Humanoid").Health > player.Character:FindFirstChild("Humanoid").MaxHealth - 10 then
+			if LLACTIVE == true then
+				LLACTIVE = false
+				local a = coroutine.create(function()
+					PlaySound("Beep",6,0)
+					wait(.2)
+					PlaySound("Beep",7,0)
+				end)
+				coroutine.resume(a)
+			end
+		end
+	end
+end)
+end)
+coroutine.resume(b)
+
+wait(2)
+
+function highlightobj(object)
+    if object:IsA("Script") then else
+    	local c = core["HIGHLIGHT#210"]:Clone()
+    	c.Parent = object
+    	local cone = Instance.new("ConeHandleAdornment",workspace)
+    	cone.Color3 = Color3.fromRGB(0,0,255)
+    	cone.Parent = object
+    	cone.Adornee = object
+    	cone.AlwaysOnTop = true
+    	cone.Height = -20
+    	cone.Radius = .1
+    	
+    		local cone = Instance.new("ConeHandleAdornment",workspace)
+    		cone.Color3 = Color3.fromRGB(255,0,0)
+    	cone.Parent = object
+    	cone.Adornee = object
+    	cone.AlwaysOnTop = true
+    	cone.Height = 20
+    	cone.Radius = .2
+    	local a = coroutine.create(function()
+    		while object and c and wait(.1) do
+    			local x = object.Velocity.X
+    			local y = object.Velocity.Y
+    			local z = object.Velocity.Z
+    			
+    			if player.Character:FindFirstChild("HumanoidRootPart") then
+        			c.Frame.VEL.Text = tostring(x)..","..tostring(y)..","..tostring(z)
+        			c.Frame.MAG.Text = tostring(math.floor((player.Character.HumanoidRootPart.Position - object.Position).Magnitude))
+    			end
+    		end
+    	end)
+    	coroutine.resume(a)
+	end
+end
+
+
+local ch = coroutine.create(function()
+	workspace.ChildAdded:Connect(function(c)
+		local s = string.lower(c.Name)
+		if string.find(s,"bullet") then
+			warn(s)
+			highlightobj(c)
+		end
+	end)
+end)
+coroutine.resume(ch)
+
+local m = coroutine.create(function()
+    while wait(10) do
+        if CombatModuleStatus == "ONLINE" then
+            for _,a in pairs(game.Players:GetChildren()) do
+            	local ch = coroutine.create(function()
+            	    if a:IsA("Player") then
+            	        if a.Character:FindFirstChild("TRACKER#042") then
+            	            else
+            	                local i = Instance.new("BoolValue",a.Character)
+            	                i.Name = "TRACKER#042"
+            	                
+                	        	a.Character.ChildAdded:Connect(function(c)
+                	        	  if CombatModuleStatus == "ONLINE" then
+                        			local s = string.lower(c.Name)
+                        			if string.find(s,"bullet") then
+                        				highlightobj(c)
+                        			end
+                        			end
+                        		end)
+                	        for _,l in pairs(a.Character:GetDescendants()) do
+                        		l.ChildAdded:Connect(function(c)
+                        		            if CombatModuleStatus == "ONLINE" then
+                        			local s = string.lower(c.Name)
+                        			if string.find(s,"bullet") then
+                        				highlightobj(c)
+                        			end
+                        			end
+                        		end)
+                    		end
+            	        end
+        		    end
+            	end)
+            	coroutine.resume(ch)
+            end
+        end
+    end
+end)
+coroutine.resume(m)
+
+
+for _,a in pairs(workspace:GetDescendants()) do
+        	local ch = coroutine.create(function()
+        		a.ChildAdded:Connect(function(c)
+        			local s = string.lower(c.Name)
+        			if string.find(s,"bullet") then
+        				highlightobj(c)
+        			end
+        		end)
+        	end)
+        	coroutine.resume(ch)
+        end
