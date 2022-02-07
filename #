@@ -1,0 +1,293 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Cursor = Instance.new("ScreenGui")
+local Sprite = Instance.new("Frame")
+local Middle = Instance.new("Frame")
+local Ancestry = Instance.new("TextLabel")
+local Names = Instance.new("TextLabel")
+local Number = Instance.new("TextLabel")
+local Right = Instance.new("Frame")
+local Left = Instance.new("Frame")
+local Bottom = Instance.new("Frame")
+local Top = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+
+--Properties:
+
+Cursor.Name = "CUSCURSOR"
+Cursor.Parent = game.CoreGui.RobloxGui
+Cursor.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Sprite.Name = "Sprite"
+Sprite.Parent = Cursor
+Sprite.AnchorPoint = Vector2.new(0.5, 0.5)
+Sprite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sprite.BackgroundTransparency = 1.000
+Sprite.Position = UDim2.new(0.5, 0, 0.5, 0)
+Sprite.Size = UDim2.new(0, 80, 0, 80)
+
+Middle.Name = "Middle"
+Middle.Parent = Sprite
+Middle.AnchorPoint = Vector2.new(0.5, 0.5)
+Middle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Middle.Position = UDim2.new(0.5, 0, 0.5, 0)
+Middle.Size = UDim2.new(0, 2, 0, 2)
+
+Ancestry.Name = "Ancestry"
+Ancestry.Parent = Middle
+Ancestry.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Ancestry.BackgroundTransparency = 1.000
+Ancestry.Position = UDim2.new(1, 8, 1, 5)
+Ancestry.Size = UDim2.new(0, 20, 0, 20)
+Ancestry.Font = Enum.Font.Ubuntu
+Ancestry.Text = "Parent"
+Ancestry.TextColor3 = Color3.fromRGB(255, 255, 255)
+Ancestry.TextSize = 14.000
+Ancestry.TextTransparency = 1.000
+Ancestry.TextXAlignment = Enum.TextXAlignment.Left
+
+Names.Name = "Names"
+Names.Parent = Middle
+Names.AnchorPoint = Vector2.new(1, 1)
+Names.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Names.BackgroundTransparency = 1.000
+Names.Position = UDim2.new(1, -15, 1, -5)
+Names.Size = UDim2.new(0, 20, 0, 20)
+Names.Font = Enum.Font.Ubuntu
+Names.Text = "Names"
+Names.TextColor3 = Color3.fromRGB(255, 255, 255)
+Names.TextSize = 14.000
+Names.TextTransparency = 1.000
+Names.TextXAlignment = Enum.TextXAlignment.Right
+
+Number.Name = "Number"
+Number.Parent = Middle
+Number.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Number.BackgroundTransparency = 1.000
+Number.Position = UDim2.new(1, 8, 1, -25)
+Number.Size = UDim2.new(0, 20, 0, 20)
+Number.Font = Enum.Font.Ubuntu
+Number.Text = "10"
+Number.TextColor3 = Color3.fromRGB(255, 255, 255)
+Number.TextSize = 14.000
+Number.TextTransparency = 1.000
+Number.TextXAlignment = Enum.TextXAlignment.Left
+
+Right.Name = "Right"
+Right.Parent = Sprite
+Right.AnchorPoint = Vector2.new(0.5, 0.5)
+Right.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Right.BackgroundTransparency = 1.000
+Right.Position = UDim2.new(0.5, 7, 0.5, 0)
+Right.Size = UDim2.new(0, 6, 0, 2)
+
+Left.Name = "Left"
+Left.Parent = Sprite
+Left.AnchorPoint = Vector2.new(0.5, 0.5)
+Left.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Left.BackgroundTransparency = 1.000
+Left.Position = UDim2.new(0.5, -7, 0.5, 0)
+Left.Size = UDim2.new(0, 6, 0, 2)
+
+Bottom.Name = "Bottom"
+Bottom.Parent = Sprite
+Bottom.AnchorPoint = Vector2.new(0.5, 0.5)
+Bottom.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Bottom.BackgroundTransparency = 1.000
+Bottom.Position = UDim2.new(0.5, 0, 0.5, 7)
+Bottom.Size = UDim2.new(0, 2, 0, 6)
+
+Top.Name = "Top"
+Top.Parent = Sprite
+Top.AnchorPoint = Vector2.new(0.5, 0.5)
+Top.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Top.BackgroundTransparency = 1.000
+Top.Position = UDim2.new(0.5, 0, 0.5, -7)
+Top.Size = UDim2.new(0, 2, 0, 6)
+
+ImageLabel.Parent = Cursor
+ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+ImageLabel.Size = UDim2.new(2, 100, 2, 100)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=4579308801"
+
+
+
+
+
+
+script = game.CoreGui.RobloxGui.CUSCURSOR.Sprite
+
+m = game.Players.LocalPlayer:GetMouse()
+m.Icon = "http://www.roblox.com/asset/?id=5067913049"
+TweenService = game:GetService("TweenService")
+
+tracktarget = false
+UBO = false
+
+local TP = Instance.new("NumberValue",script.Parent.Sprite)
+TP.Name = "TPO"
+TP.Value = -30
+local BP = Instance.new("NumberValue",script.Parent.Sprite)
+BP.Name = "BPO"
+BP.Value = 30
+local RP = Instance.new("NumberValue",script.Parent.Sprite)
+RP.Name = "RPO"
+RP.Value = 30
+local LP = Instance.new("NumberValue",script.Parent.Sprite)
+LP.Name = "LPO"
+LP.Value = -30
+
+TPO = LP.Value
+BPO = BP.Value
+RPO = RP.Value
+LPO = LP.Value
+
+function updateBO(num)
+	TweenService:Create(TP, TweenInfo.new(.2, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {Value = -num}):Play()
+	TweenService:Create(BP, TweenInfo.new(.2, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {Value = num}):Play()
+	TweenService:Create(RP, TweenInfo.new(.2, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {Value = num}):Play()
+	TweenService:Create(LP, TweenInfo.new(.2, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {Value = -num}):Play()
+end
+
+function down(cframe)
+	local a = script.Parent.Sprite.Middle
+	TweenService:Create(a, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(100,100,100)}):Play()
+	updateBO(10)
+end
+
+function up(cframe)
+	local a = script.Parent.Sprite.Middle
+	TweenService:Create(a, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
+	updateBO(7)
+end
+
+function operate(key,op)
+	if op == "D" then
+		if key == "m" then
+			if tracktarget == true then
+				tracktarget = false
+				local a = script.Parent.Sprite.Middle.Ancestry
+				TweenService:Create(a, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {TextTransparency = 1,TextStrokeTransparency = 1}):Play()
+				local a = script.Parent.Sprite.Middle.Names
+				TweenService:Create(a, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {TextTransparency = 1,TextStrokeTransparency = 1}):Play()
+			else tracktarget = true
+				local a = script.Parent.Sprite.Middle.Ancestry
+				TweenService:Create(a, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {TextTransparency = 0,TextStrokeTransparency = 0}):Play()
+			end
+		elseif key == "c" then
+			if UBO == true then
+				UBO = false
+				local TRA = 1
+				updateBO(30)
+				TweenService:Create(script.Parent.Sprite.Right, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+				TweenService:Create(script.Parent.Sprite.Left, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+				TweenService:Create(script.Parent.Sprite.Bottom, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+				TweenService:Create(script.Parent.Sprite.Top, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+			else UBO = true
+				local TRA = 0
+				updateBO(7)
+				TweenService:Create(script.Parent.Sprite.Right, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+				TweenService:Create(script.Parent.Sprite.Left, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+				TweenService:Create(script.Parent.Sprite.Bottom, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+				TweenService:Create(script.Parent.Sprite.Top, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+			end
+		elseif key == "b" then
+			TweenService:Create(workspace.Camera, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {FieldOfView = 25}):Play()
+			TweenService:Create(script.Parent.ImageLabel, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Size = UDim2.new(1,100,1,100)}):Play()
+			TweenService:Create(script.Parent.Sprite.Middle, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundTransparency = 1}):Play()
+			if UBO == true then
+				local TRA = 1
+				updateBO(30)
+				TweenService:Create(script.Parent.Sprite.Right, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+				TweenService:Create(script.Parent.Sprite.Left, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+				TweenService:Create(script.Parent.Sprite.Bottom, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+				TweenService:Create(script.Parent.Sprite.Top, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+			end
+		end
+	elseif op == "U" then
+		if key == "b" then
+			TweenService:Create(workspace.Camera, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {FieldOfView = 70}):Play()
+			TweenService:Create(script.Parent.ImageLabel, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Size = UDim2.new(2,100,2,100)}):Play()
+			TweenService:Create(script.Parent.Sprite.Middle, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundTransparency = .5}):Play()
+			if UBO == true then
+				local TRA = 0
+				updateBO(7)
+				TweenService:Create(script.Parent.Sprite.Right, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+				TweenService:Create(script.Parent.Sprite.Left, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+				TweenService:Create(script.Parent.Sprite.Bottom, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+				TweenService:Create(script.Parent.Sprite.Top, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Transparency = TRA}):Play()
+			end
+		end
+	end
+end
+
+
+m.Button1Down:Connect(function()
+	down()
+end)
+m.Button1Up:Connect(function()
+	up()
+end)
+
+m.KeyDown:Connect(function(k)
+	operate(k,"D")
+end)
+m.KeyUp:Connect(function(k)
+	operate(k,"U")
+end)
+
+while task.wait() do
+	TPO = LP.Value
+	BPO = BP.Value
+	RPO = RP.Value
+	LPO = LP.Value
+	TweenService:Create(script.Parent.Sprite, TweenInfo.new(.02, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {AnchorPoint = Vector2.new(0,0),Position = UDim2.new(0,m.X + -script.Parent.Sprite.Size.X.Offset / 2,0,m.Y + -script.Parent.Sprite.Size.Y.Offset / 2)}):Play()
+	TweenService:Create(script.Parent.Sprite.Right, TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {Position = UDim2.new(.5,RPO,.5,0)}):Play()
+	TweenService:Create(script.Parent.Sprite.Left, TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {Position = UDim2.new(.5,LPO,.5,0)}):Play()
+	TweenService:Create(script.Parent.Sprite.Bottom, TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {Position = UDim2.new(.5,0,.5,BPO)}):Play()
+	TweenService:Create(script.Parent.Sprite.Top, TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {Position = UDim2.new(.5,0,.5,TPO)}):Play()
+	if tracktarget == true then
+		if m.Target == nil then else
+			script.Parent.Sprite.Middle.Ancestry.Text = m.Target:GetFullName()
+			if game:GetService("Players"):GetPlayerFromCharacter(m.Target.Parent) then
+				local a = script.Parent.Sprite.Middle.Names
+				a.Text = game:GetService("Players"):GetPlayerFromCharacter(m.Target.Parent).Name.." , "..game:GetService("Players"):GetPlayerFromCharacter(m.Target.Parent).UserId
+				TweenService:Create(a, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {TextTransparency = 0,TextStrokeTransparency = 0}):Play()
+			else
+				local a = script.Parent.Sprite.Middle.Names
+				TweenService:Create(a, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {TextTransparency = 1,TextStrokeTransparency = 1}):Play()
+			end
+		end
+	end
+	if m.Target == nil then else
+    	if m.Target:FindFirstChildWhichIsA("ClickDetector") then
+    		TweenService:Create(script.Parent.Sprite.Middle, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(255,100,100)}):Play()
+    		TweenService:Create(script.Parent.Sprite.Right, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(100,100,100)}):Play()
+    		TweenService:Create(script.Parent.Sprite.Left, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(100,100,100)}):Play()
+    		TweenService:Create(script.Parent.Sprite.Bottom, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(100,100,100)}):Play()
+    		TweenService:Create(script.Parent.Sprite.Top, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(100,100,100)}):Play()
+    		if (m.Target.Position - game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position).Magnitude > m.Target:FindFirstChildWhichIsA("ClickDetector").MaxActivationDistance then
+    			local a = script.Parent.Sprite.Middle.Number
+    			a.Text = tostring(-math.round(m.Target:FindFirstChildWhichIsA("ClickDetector").MaxActivationDistance - (m.Target.Position - game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position).Magnitude))
+    			TweenService:Create(a, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {TextTransparency = 0,TextStrokeTransparency = 0,TextColor3 = Color3.fromRGB(255,100,100)}):Play()
+    		else
+    			local a = script.Parent.Sprite.Middle.Number
+    			TweenService:Create(a, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {TextTransparency = 1,TextStrokeTransparency = 1,TextColor3 = Color3.fromRGB(255,255,255)}):Play()
+    		end
+    	else
+    		TweenService:Create(script.Parent.Sprite.Middle, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
+    		TweenService:Create(script.Parent.Sprite.Right, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
+    		TweenService:Create(script.Parent.Sprite.Left, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
+    		TweenService:Create(script.Parent.Sprite.Bottom, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
+    		TweenService:Create(script.Parent.Sprite.Top, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
+    		local a = script.Parent.Sprite.Middle.Number
+    		TweenService:Create(a, TweenInfo.new(.05, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {TextTransparency = 1,TextStrokeTransparency = 1,TextColor3 = Color3.fromRGB(255,255,255)}):Play()
+    	end
+	end
+end
