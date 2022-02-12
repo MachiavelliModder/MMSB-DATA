@@ -39,7 +39,7 @@ local UICorner_2 = Instance.new("UICorner")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Parent = game.CoreGui.RobloxGui
 
 Frame.Parent = ScreenGui
 Frame.AnchorPoint = Vector2.new(0.800000012, 0.5)
