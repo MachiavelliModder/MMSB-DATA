@@ -1,9 +1,9 @@
 Phrases = {
+
 "you lookin MIGHTY fine.";
 "im gonna DEVOUR you tonight";
 "DAMNNNNN";
 "get on the bed";
-"im finna make a model of you and put it in a jar capable of holding liquids for a long period of time";
 "you'd look better with my liquids on you";
 "penor";
 "what dat mouth do";
@@ -24,6 +24,7 @@ Phrases = {
 "come on, lets do it more faster~";
 "i dream about me going hard on you on the bed";
 "im gonna fly in from down below";
+
 }
 
 _G.SInsults = Phrases
