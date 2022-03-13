@@ -1,4 +1,4 @@
-SInsults = {
+Phrases = {
 "you lookin MIGHTY fine.";
 "im gonna DEVOUR you tonight";
 "DAMNNNNN";
@@ -25,3 +25,5 @@ SInsults = {
 "i dream about me going hard on you on the bed";
 "im gonna fly in from down below";
 }
+
+_G.SInsults = Phrases
