@@ -1,0 +1,47 @@
+Phrases = {
+
+"ur a noob";
+"ur a furry";
+"what a poo poo head you are";
+"child";
+"ur dogwater";
+"low intellect";
+"absolute baboon";
+"you are a toilet issue person";
+"you're a school threat";
+"ez";
+"mad cuz bad";
+"you probably a frog";
+"you use freemodels";
+"why are you such a loser";
+"you are so funny omg im dying";
+"ur sister is a witch";
+"you probably dont even have 1TB";
+"Dunkin' Donuts employee accused of killing customer with one punch after he was called a racial slur";
+"suck a golfball";
+"welcome to san adreas im cj from grove street";
+"homicide is an optional choice";
+"i am armed and dangerous";
+"u converted to domestic terrorism";
+"Geese is its own plural, stupid.";
+"you're a joke at this point";
+"yo mamma on my bed sheets and you're under 14";
+"big failure";
+"you a punk";
+"you probably cant even throw a football correctly";
+"stay losing";
+"cope harder";
+"absolute baboon mentality";
+"take a shower";
+"gn kid";
+"im staying winning and you're staying losing";
+"what has the dog done";
+"bye";
+"he eatin soap";
+"clam activity";
+"bruh nawhhh nah bruhh nah no way bruhhh fr? Bruhhh";
+"ok and?";
+
+}
+
+_G.Insults = Phrases
