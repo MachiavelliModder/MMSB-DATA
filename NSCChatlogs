@@ -14,7 +14,7 @@ local TextBox = Instance.new("TextBox")
 --Properties:
 
 NSCChatlogs.Name = "NSCChatlogs"
-NSCChatlogs.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NSCChatlogs.Parent = game.CoreGui
 NSCChatlogs.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = NSCChatlogs
