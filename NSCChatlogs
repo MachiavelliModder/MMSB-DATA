@@ -191,19 +191,19 @@ local bruh = coroutine.create(function()
 					wait(.31)
 					conn:Disconnect()
 					if hidden and enabled then
-						printmsg("{"..p.Name.."}: "..msg,"cstom",Color3.fromRGB(255,255,0),#msg/3)
+						printmsg("{"..p.Name.."}: "..msg,"cstom",Color3.fromRGB(255,255,0),#msg/2)
 					elseif not hidden then
 						if enabled then
 							local hnfound = false
 							for k,v in pairs(hnames) do
 								if p.Name == v then
-									printmsg("{"..p.Name.."}: "..msg,"cstom",Color3.fromRGB(0,255,255),#msg/3)
+									printmsg("{"..p.Name.."}: "..msg,"cstom",Color3.fromRGB(0,255,255),#msg/2)
 									hnfound = true
 									break
 								end
 							end
 							if hnfound == false then
-								printmsg("{"..p.Name.."}: "..msg,"cstom",Color3.fromRGB(255,255,255),#msg/3)
+								printmsg("{"..p.Name.."}: "..msg,"cstom",Color3.fromRGB(255,255,255),#msg/2)
 							end
 						end
 					end
