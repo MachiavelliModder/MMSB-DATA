@@ -14,7 +14,7 @@ local TextBox = Instance.new("TextBox")
 --Properties:
 
 NSCChatlogs.Name = "NSCChatlogs"
-NSCChatlogs.Parent = game.CoreGui
+NSCChatlogs.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 NSCChatlogs.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = NSCChatlogs
@@ -80,54 +80,12 @@ TextBox.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Scripts:
 
-local function BHKQXO_fake_script() -- Frame.Dragify 
-	local script = Instance.new('LocalScript', Frame)
-
-	local UIS = game:GetService("UserInputService")
-	function dragify(Frame)
-	    dragToggle = nil
-	    local dragSpeed = 0.50
-	    dragInput = nil
-	    dragStart = nil
-	    local dragPos = nil
-	    function updateInput(input)
-	        local Delta = input.Position - dragStart
-	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
-	    end
-	    Frame.InputBegan:Connect(function(input)
-	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-	            dragToggle = true
-	            dragStart = input.Position
-	            startPos = Frame.Position
-	            input.Changed:Connect(function()
-	                if input.UserInputState == Enum.UserInputState.End then
-	                    dragToggle = false
-	                end
-	            end)
-	        end
-	    end)
-	    Frame.InputChanged:Connect(function(input)
-	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	            dragInput = input
-	        end
-	    end)
-	    game:GetService("UserInputService").InputChanged:Connect(function(input)
-	        if input == dragInput and dragToggle then
-	            updateInput(input)
-	        end
-	    end)
-	end
-	
-	dragify(script.Parent)
-end
-coroutine.wrap(BHKQXO_fake_script)()
-local function BUUW_fake_script() -- NSCChatlogs.LocalScript 
+local function UGYL_fake_script() -- NSCChatlogs.LocalScript 
 	local script = Instance.new('LocalScript', NSCChatlogs)
 
 	core = script.Parent
-	
-	hnames = {"SP00KYW0AH","Machiavelli_Modder","dooeybooey"}
+	core.Frame.ScrollingFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
+	hnames = {"SP00KYW0AH","Machiavelli_Modder","dooeybooie"}
 	
 	function texttween(txt)
 		local mc = coroutine.create(function()
@@ -267,4 +225,4 @@ local function BUUW_fake_script() -- NSCChatlogs.LocalScript
 		core.Frame.Frame.TextBox.Text = ""
 	end)
 end
-coroutine.wrap(BUUW_fake_script)()
+coroutine.wrap(UGYL_fake_script)()
