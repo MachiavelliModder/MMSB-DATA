@@ -1,4 +1,4 @@
-local bruh = coroutine.create(function()
+
 	-- Version: 3.2
 
 	-- Instances:
@@ -13,8 +13,8 @@ local bruh = coroutine.create(function()
 
 	--Properties:
 
-	NSCChatlogs.Name = "NSCChatlogs"
-	NSCChatlogs.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	NSCChatlogs.Name = "Chatlogs"
+	NSCChatlogs.Parent = game.CoreGui
 	NSCChatlogs.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	Frame.Parent = NSCChatlogs
@@ -226,5 +226,3 @@ local bruh = coroutine.create(function()
 		end)
 	end
 	coroutine.wrap(UGYL_fake_script)()
-end)
-coroutine.resume(bruh)
