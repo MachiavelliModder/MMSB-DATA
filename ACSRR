@@ -1,0 +1,42 @@
+
+local cam = workspace.Camera
+
+function lagserver()
+for _,a in pairs(workspace:GetDescendants()) do
+        if a:IsA("ClickDetector") then
+           fireclickdetector(a)
+        end
+    end
+end
+
+local part = Instance.new("Part",workspace) part.Anchored = true
+local newpart = Instance.new("Part",workspace) newpart.Anchored = true newpart.Transparency = 1
+
+part.Size = Vector3.new(100,1,100)
+part.Position = Vector3.new(0,-100,0)
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(part.Position.X, part.Position.Y + 2,part.Position.Z)
+
+timescrash = math.huge
+newpart.Position = Vector3.new(0,math.huge,0)
+
+game.Players.LocalPlayer.Character.ChildAdded:Connect(function(c)
+    if c:IsA("Tool") then
+        c:Remove()
+    end
+end)
+
+cam.CameraSubject = newpart
+
+cam.Changed:Connect(function()
+    if cam.CameraSubject ~= newpart then
+        cam.CameraSubject = newpart
+    end
+end)
+
+repeat wait(.1)
+    local StarterGui = game:GetService("StarterGui")
+    StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+	timescrash = timescrash - 1
+	lagserver()
+until timescrash <= 0
