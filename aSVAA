@@ -1,0 +1,116 @@
+for _,a in pairs(game.CoreGui:GetChildren()) do
+    if a.Name == "Message" then
+        a:Destroy()
+    end
+end
+
+local Message = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+Message.Name = "Message"
+Message.Parent = game.CoreGui
+Message.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = Message
+Frame.AnchorPoint = Vector2.new(0.5, 0.699999988)
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.5, 0, 0.699999988, 0)
+Frame.Size = UDim2.new(0, 100, 0, 100)
+
+TextLabel.Parent = Frame
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.Code
+TextLabel.Text = "hii"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 13.000
+TextLabel.TextTransparency = 1.000
+
+-- Scripts:
+
+function sendmsg(msg)
+    local function ZNPD_fake_script() -- Frame.LocalScript 
+    	local script = Instance.new('LocalScript', Frame)
+    		local m3258 = coroutine.create(function()
+    			if script.Parent:FindFirstChild("a") then
+    				script.Parent:FindFirstChild("a"):Destroy()
+    			end
+    			local _txt = script.Parent.TextLabel:Clone()
+    			_txt.Parent = script.Parent
+    			_txt.Text = msg
+    			_txt.TextStrokeTransparency = 0
+    			_txt.TextTransparency = 0
+    			_txt.Name = "a"
+    			wait(1 + #msg/30)
+    			game:GetService("TweenService"):Create(_txt, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {TextStrokeTransparency = 1,TextTransparency = 1}):Play()
+    			game:GetService("Debris"):AddItem(_txt,5.2)
+    	end)
+    	coroutine.resume(m3258)
+    end
+    coroutine.wrap(ZNPD_fake_script)()
+end
+
+
+m = game:GetService("Players").LocalPlayer:GetMouse()
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Tool") then
+    t = game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
+    local continuet = false
+    if game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Tool") then
+        if game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("Remote") then
+            if game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("Remote"):FindFirstChild("Hit") then
+                continuet = true
+                 sendmsg("Successfully attached.")
+            end
+        end
+    end
+    if continuet == true then
+        t.Activated:Connect(function()
+            for i=1,1 do
+          local m271 = coroutine.create(function()
+                n = game.Players.LocalPlayer.Character.HumanoidRootPart
+                local b381 = coroutine.create(function()
+    
+                    local playerregionouter = Region3.new(
+                        n.Position + Vector3.new(-3, -3, -3), n.Position + Vector3.new(3, 3, 3)
+                    )
+    
+                    local playerparts1 = workspace:FindPartsInRegion3(playerregionouter,n.Parent)
+    
+    
+                    local b23 = coroutine.create(function()
+                        for _, partinregion in pairs(playerparts1) do
+                            if game.Players:GetPlayerFromCharacter(partinregion.Parent) then
+                                
+                                local plr = game.Players:GetPlayerFromCharacter(partinregion.Parent)
+                                local args = {
+                                        [1] = plr.Character.Torso,
+                                        [2] = plr.Character.Humanoid,
+                                        [3] = plr.Character.Torso.Position
+                                    }
+    
+                                game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Tool").Remote.Hit:FireServer(unpack(args))
+                                
+                            end
+                        end
+                    end)
+                    coroutine.resume(b23)
+                end)
+                coroutine.resume(b381)
+        end)
+        coroutine.resume(m271)
+        end
+        end)
+        else
+        sendmsg("Unable to attach tool. (INCOMPATIBILITY)")
+    end
+    else
+        sendmsg("Equip a fucking tool first retard.")
+end
